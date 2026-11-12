@@ -1,0 +1,10 @@
+카페24 고운밤 (Cafe24 Oneprettynight) — Cafe24 Corp.
+Publisher's page: https://fonts.cafe24.com/
+Licence kind: OFL-1.1
+Fetched: 2026-11-12
+
+Cafe24Oneprettynight-v2.0.woff2 (weight 400)
+  published as: Cafe24Oneprettynight-v2.0/webfont/Cafe24Oneprettynight-v2.0.woff2 in https://img.cafe24.com/csdstatic/freefonts/download/kr/Cafe24Oneprettynight-v2.0.zip
+  sha256 of the published file: e51ec147227fd77b053a3c3d89b516bc5bb4c00e4cf55411fa5d3beb05ce902f (687816 bytes)
+  in this folder as published, unchanged
+

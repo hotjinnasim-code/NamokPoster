@@ -1,0 +1,29 @@
+/* calli — brush-pen calligraphy: a handwritten wedding card, a tea house's menu, the title of a travel essay (붓펜 캘리그라피; 나눔손글씨 붓): quick slanted strokes that end in a dry tail, over a quiet 명조. Faces: Nanum Brush Script for Hangul, with its own figures and Latin, over Gowun Batang; Kaushan Script sets a Latin headline. */
+.poster[data-type="calli"] {
+  --font-title: "Kaushan Script", "Nanum Brush Script", "Gowun Batang", serif;           /* a Latin headline */
+  --font-title-ko: "Nanum Brush Script", "Gowun Batang", "Hahmlet", serif;               /* a Hangul headline keeps the brush pen's own figures */
+  --font-subtitle: "Kaushan Script", "Nanum Brush Script", "Gowun Batang", serif; --font-subtitle-ko: "Nanum Brush Script", "Gowun Batang", serif;
+  --font-eyebrow: "EB Garamond KR", "Gowun Batang", "Hahmlet", serif; --font-eyebrow-ko: "Gowun Batang", "Hahmlet", serif;
+  --font-body: "EB Garamond KR", "Gowun Batang", "Hahmlet", "Noto Serif KR", serif;
+  --font-label-ko: "Gowun Batang", "Hahmlet", "Noto Serif KR", serif;
+  --title-size: 13; --title-weight: 400; --title-leading: 1.12; --title-tracking: 0em; --title-fit-max: 1.22;
+  --title-leading-ko: 1.14; --title-tracking-ko: 0em; --title-wordspace-ko: 0.1em;
+  --eyebrow-size: 1.5; --eyebrow-weight: 400; --eyebrow-tracking: 0.3em; --eyebrow-tracking-ko: 0.22em;
+  --subtitle-size: 4; --subtitle-weight: 400; --subtitle-leading: 1.2; --subtitle-tracking: 0em; --subtitle-leading-ko: 1.14; --subtitle-tracking-ko: 0em;
+  --body-size: 1.82; --body-weight: 400; --body-leading: 1.64; --body-leading-ko: 1.8; --body-measure: 28;
+  --meta-size: 2.6; --meta-weight: 400; --meta-label-weight: 400;
+  --footer-size: 1.46; --footer-weight: 400; --footer-tracking: 0.08em; --footer-tracking-ko: 0.04em; --footer-rule: 1;
+  --gap-eyebrow: 2.2; --gap-subtitle: 2; --grain: 0.24;
+}
+.poster[data-type="calli"]:lang(ko) { --font-body: "Gowun Batang", "EB Garamond KR", "Hahmlet", "Noto Serif KR", serif; }   /* Korean details: the 명조's own figures, drawn level with its Hangul */
+.poster[data-type="calli"] .subtitle[data-script="latin"] { --subtitle-size: 2.9; }
+.poster[data-type="calli"] .title em { color: var(--c-accent); }
+/* a short stroke under the label, the brush pen tried on the corner of the card */
+.poster[data-type="calli"] .eyebrow { color: color-mix(in srgb, var(--c-ink) 88%, transparent); }
+.poster[data-type="calli"] .subtitle { color: color-mix(in srgb, var(--c-ink) 92%, transparent); }
+.poster[data-type="calli"] .body { color: color-mix(in srgb, var(--c-ink) 82%, transparent); }
+.poster[data-type="calli"] .meta dt { color: color-mix(in srgb, var(--c-accent) 55%, var(--c-ink)); }
+.poster[data-type="calli"] .cta { background: transparent; color: var(--c-ink); border-radius: 0; padding: 0 0 0.3em; border-bottom: var(--hair) solid var(--c-ink); font-weight: 400; letter-spacing: 0.06em; }
+/* the badge is a seal: a small block in the accent colour, set upright */
+.poster[data-type="calli"] .badge { border-radius: calc(var(--u) * 0.3); background: var(--c-accent); font-weight: 400; letter-spacing: 0.14em; writing-mode: vertical-rl; padding: 0.9em 0.56em; }
+.poster[data-type="calli"] .bottom.ruled { border-top-color: color-mix(in srgb, var(--c-ink) 40%, transparent); }

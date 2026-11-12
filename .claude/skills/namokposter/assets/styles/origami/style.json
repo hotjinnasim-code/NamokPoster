@@ -1,0 +1,179 @@
+{
+  "id": "origami",
+  "label": "Origami",
+  "engine": "blender",
+  "kind": "object",
+  "mood": "folded paper — crisp creased forms with paper grain, a coloured face and a pale reverse, under one soft top light with clean contact shadows; light, precise, hand-made. Good for culture and craft programmes, education, travel, seasonal greetings, design talks.",
+  "tone": "light",
+  "type": "swiss",
+  "types": [
+    "editorial",
+    "round",
+    "story",
+    "humanist",
+    "bold",
+    "myeongjo",
+    "friendly"
+  ],
+  "matchBackground": true,
+  "fallback": "bauhaus",
+  "defaultPalette": "kami",
+  "palettes": {
+    "kami": {
+      "bg": "#f2ede3",
+      "ink": "#1f1b18",
+      "accent": "#d5432b",
+      "colors": [
+        "#e2492d",
+        "#2c4f7c",
+        "#f1b233",
+        "#3b8f86"
+      ]
+    },
+    "sky": {
+      "bg": "#e4eef3",
+      "ink": "#11263a",
+      "accent": "#e8553a",
+      "colors": [
+        "#f0623f",
+        "#3f86b8",
+        "#1d4e7a",
+        "#f6c453"
+      ]
+    },
+    "blossom": {
+      "bg": "#f8e9e6",
+      "ink": "#3a1d27",
+      "accent": "#d63f6c",
+      "colors": [
+        "#e8537d",
+        "#f4a7a0",
+        "#7c3f6b",
+        "#f3c969"
+      ]
+    },
+    "moss": {
+      "bg": "#ebeedf",
+      "ink": "#1d2a1f",
+      "accent": "#c7602a",
+      "colors": [
+        "#dd7a2e",
+        "#5f8f5a",
+        "#2f5d47",
+        "#e9c46a"
+      ]
+    },
+    "night": {
+      "bg": "#182036",
+      "ink": "#f2ecdf",
+      "accent": "#f2c261",
+      "colors": [
+        "#f2c261",
+        "#5d7fd0",
+        "#e2604a",
+        "#b9c8ee"
+      ]
+    }
+  },
+  "params": {
+    "motif": {
+      "default": "cranes",
+      "note": "cranes | boats | peaks | relief"
+    }
+  },
+  "layouts": {
+    "landscape": {
+      "layout": "left",
+      "also": [
+        "right",
+        "top",
+        "bottom",
+        "corners",
+        "headline",
+        "baseline",
+        "vertical",
+        "axis",
+        "band",
+        "strip"
+      ]
+    },
+    "portrait": {
+      "layout": "top",
+      "also": [
+        "bottom",
+        "corners",
+        "baseline",
+        "vertical",
+        "axis",
+        "side"
+      ]
+    },
+    "square": {
+      "layout": "top",
+      "also": [
+        "bottom",
+        "corners",
+        "baseline",
+        "vertical",
+        "axis",
+        "left",
+        "right"
+      ]
+    }
+  },
+  "motifs": {
+    "cranes": {
+      "note": "a flight of folded paper cranes",
+      "topics": [
+        "tradition",
+        "celebration",
+        "culture",
+        "wellness"
+      ]
+    },
+    "boats": {
+      "note": "paper boats on a pleated sea",
+      "topics": [
+        "travel",
+        "summer",
+        "kids",
+        "literature"
+      ]
+    },
+    "peaks": {
+      "note": "a folded landscape of mountains and trees",
+      "topics": [
+        "outdoor",
+        "nature",
+        "winter",
+        "travel"
+      ]
+    },
+    "relief": {
+      "note": "a tessellated folded relief under raking light",
+      "topics": [
+        "design",
+        "architecture",
+        "art",
+        "education"
+      ]
+    }
+  },
+  "topics": [
+    "craft",
+    "culture",
+    "design",
+    "education"
+  ],
+  "cutout": true,
+  "grounds": [
+    "pattern/checker",
+    "pattern/stripes",
+    "pattern/dots",
+    "pattern/terrazzo",
+    "pattern/arches",
+    "pattern/grid",
+    "haze",
+    "halftone"
+  ]
+}

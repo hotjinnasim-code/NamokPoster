@@ -1,0 +1,27 @@
+/* goun — a slender, tidy hand written late in the evening (카페24 고운밤; 가늘고 단정한 손글씨): a reading night, a letter, a small concert, a diary page. Light and upright, set large with air round it. Face: Cafe24 Oneprettynight, with its own Latin and figures; Gowun Dodum for the details. */
+.poster[data-type="goun"] {
+  --font-title: "Cafe24 Oneprettynight", "NanumBarunPen", "Pretendard", sans-serif;   /* one face: its own Latin and figures */
+  --font-eyebrow: "Cafe24 Oneprettynight", "Pretendard", sans-serif; --font-eyebrow-ko: "Cafe24 Oneprettynight", "Pretendard", sans-serif;
+  --font-subtitle: "Cafe24 Oneprettynight", "Pretendard", sans-serif; --font-subtitle-ko: "Cafe24 Oneprettynight", "Pretendard", sans-serif;
+  --font-body: "Gowun Dodum", "Nunito Sans", "Pretendard", sans-serif;
+  --title-size: 11.6; --title-weight: 400; --title-leading: 1.08; --title-tracking: 0em;
+  --title-leading-ko: 1.22; --title-tracking-ko: -0.01em; --title-wordspace-ko: 0.08em;
+  --eyebrow-size: 2.1; --eyebrow-weight: 400; --eyebrow-tracking: 0.06em; --eyebrow-tracking-ko: 0.04em; --eyebrow-case: none;
+  --subtitle-size: 3.1; --subtitle-weight: 400; --subtitle-leading: 1.32; --subtitle-tracking: 0em; --subtitle-leading-ko: 1.4; --subtitle-tracking-ko: 0em;
+  --body-size: 1.84; --body-weight: 400; --body-weight-ko: 400;
+  --meta-weight: 400; --meta-label-weight: 400;
+  --footer-size: 1.52; --footer-weight: 400; --footer-rule: 1; --grain: 0.18;
+  --gap-eyebrow: 2.2; --gap-subtitle: 2.4;
+}
+.poster[data-type="goun"] .title em { color: var(--c-accent); }
+/* the label between two hairlines, like the date written at the top of a letter */
+.poster[data-type="goun"] .eyebrow { color: color-mix(in srgb, var(--c-ink) 80%, transparent); display: flex; align-items: center; gap: 0.8em; }
+.poster[data-type="goun"] .eyebrow::before { content: ""; width: 2.4em; height: 0; border-top: 0.06em solid currentColor; flex: none; }
+.poster[data-type="goun"] [data-halign="center"] > .eyebrow { justify-content: center; }
+.poster[data-type="goun"] .main[data-mode="vertical"] .eyebrow::before { display: none; }
+.poster[data-type="goun"] .subtitle { color: var(--c-ink); }
+.poster[data-type="goun"] .body { color: color-mix(in srgb, var(--c-ink) 82%, transparent); }
+.poster[data-type="goun"] .meta dt { font-family: var(--font-eyebrow-ko); font-size: 1.06em; color: color-mix(in srgb, var(--c-accent) 60%, var(--c-ink)); }
+.poster[data-type="goun"] .cta { background: transparent; color: var(--c-ink); border: calc(var(--u) * 0.12) solid var(--c-ink); border-radius: 99em; font-family: var(--font-eyebrow-ko); font-weight: 400; font-size: calc(var(--su) * var(--cta-size) * 1.2 * var(--k-small)); }
+.poster[data-type="goun"] .badge { background: transparent; color: var(--c-accent); border: calc(var(--u) * 0.12) solid var(--c-accent); border-radius: 99em; font-family: var(--font-eyebrow-ko); font-weight: 400; }
+.poster[data-type="goun"] .bottom.ruled { border-top: calc(var(--u) * 0.1) solid color-mix(in srgb, var(--c-ink) 55%, transparent); padding-top: calc(var(--u) * 1.6); }

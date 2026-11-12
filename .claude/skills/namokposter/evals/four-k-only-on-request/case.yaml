@@ -1,0 +1,8 @@
+schema_version: "1.1"
+name: four-k-only-on-request
+expected_outcome: |
+  Three finished poster drafts at 3840x2160 (4K, 16:9 landscape), because the user asked for 4K
+  (a screen poster would otherwise have been 2K, 2560x1440). The drafts are in clearly different styles
+  that suit a quiet evening reading, the Korean copy is verbatim, the date and place are set as
+  labelled information rows above the footer, and nothing overflows or is hard to read. The reply
+  says where the files are and how the three concepts differ.

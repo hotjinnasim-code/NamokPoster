@@ -1,0 +1,9 @@
+schema_version: "1.1"
+name: custom-3d-subject-square
+expected_outcome: |
+  Three square poster drafts whose main 3D visual is a stack of books (recognisable as books:
+  covers, page blocks, varied sizes/colours, stacked), produced with custom scene code rather than
+  the stock abstract scenes. A real 3D object as the main visual is a request for Blender, so the
+  books are a custom Blender scene used in all three drafts. The three drafts feel different from
+  each other (palette, lighting, type theme, layout). Title with the emphasised word, subtitle and
+  footer are present and legible.

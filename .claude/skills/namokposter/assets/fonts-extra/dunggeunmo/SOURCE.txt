@@ -1,0 +1,11 @@
+둥근모꼴+ Fixedsys (DungGeunMo) — 길형진 (orioncactus), after 둥근모꼴 (김중태) and Fixedsys Excelsior (Darien Gavin Valentine)
+Publisher's page: https://cactus.tistory.com/193
+Licence kind: public-domain
+Fetched: 2026-11-12
+
+DungGeunMo.woff2 (weight 400)
+  published as: DungGeunMo.ttf in https://cactus.tistory.com/193 (attachment "DungGeunMo TTF.zip" on blog.kakaocdn.net)
+  sha256 of the published file: 3f184d949149f2e7e6a853593e25161fb1d3b6d3708ebf79ce78600788fdea30 (7354268 bytes)
+  converted to WOFF2 with Google's woff2 encoder (npm wawoff2 2.0.1); nothing else changed (17651 glyphs before and after)
+  sha256 in this folder: a58716f538284753a7d8c70f9127f1cc8934c9cdffa07fb487136c817dcd7998 (893464 bytes)
+

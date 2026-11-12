@@ -1,0 +1,175 @@
+{
+  "id": "knit",
+  "label": "Hand Knit",
+  "engine": "blender",
+  "kind": "object",
+  "mood": "chunky hand-knitted wool — every stitch is real yarn looped along the form: stockinette, ribbing, garter ridges, stripes and a little colourwork, with pom-poms and a haze of loose fibre under a soft raking light; cosy, generous, home-made. Good for winter and year-end events, markets and fairs, craft classes, family and community programmes, charity drives.",
+  "tone": "light",
+  "type": "friendly",
+  "types": ["hand", "gamja", "goun", "story", "melody", "round", "editorial", "retro", "bold", "starlight"],
+  "matchBackground": true,
+  "fallback": "aurora",
+  "defaultPalette": "cocoa",
+  "palettes": {
+    "cocoa": {
+      "bg": "#f2e8dc",
+      "ink": "#33221b",
+      "accent": "#c8452f",
+      "colors": [
+        "#c8452f",
+        "#2f5d73",
+        "#e3a53c",
+        "#f7f1e5"
+      ]
+    },
+    "fjord": {
+      "bg": "#dde6ee",
+      "ink": "#16263a",
+      "accent": "#d24b3e",
+      "colors": [
+        "#2b4f7a",
+        "#d24b3e",
+        "#7fa6bf",
+        "#f4f1ea"
+      ]
+    },
+    "candy": {
+      "bg": "#fbe3dc",
+      "ink": "#3b1f33",
+      "accent": "#e2557b",
+      "colors": [
+        "#e2557b",
+        "#5aa9a3",
+        "#f2b84b",
+        "#fbf5ee"
+      ]
+    },
+    "pine": {
+      "bg": "#1f3329",
+      "ink": "#f3ecdd",
+      "accent": "#e9b44c",
+      "colors": [
+        "#d9503f",
+        "#e9b44c",
+        "#7fae8e",
+        "#f3ecdd"
+      ]
+    },
+    "plum": {
+      "bg": "#2b2036",
+      "ink": "#f4ecf2",
+      "accent": "#f2a65a",
+      "colors": [
+        "#e06d8c",
+        "#f2a65a",
+        "#7c8fd6",
+        "#f6efe6"
+      ]
+    }
+  },
+  "params": {
+    "motif": {
+      "default": "winter",
+      "note": "winter (bobble hat and mittens) | bunting (garland of knitted pennants and pom-poms) | shapes (abstract knitted ball, cone, pouf and ring)"
+    },
+    "fuzz": {
+      "default": 1.0,
+      "note": "loose fibre standing off the yarn: 0 = smooth cotton … 1.5 = mohair"
+    },
+    "rim": {
+      "default": 1.0,
+      "note": "strength of the warm back light (0 = off)"
+    }
+  },
+  "motifs": {
+    "winter": {
+      "note": "a bobble hat with a colourwork band and ribbed brim, a pair of mittens, loose pom-poms",
+      "topics": [
+        "winter",
+        "family",
+        "market",
+        "celebration",
+        "community"
+      ]
+    },
+    "bunting": {
+      "note": "a garland of knitted pennants on a twisted cord with a string of pom-poms",
+      "topics": [
+        "celebration",
+        "community",
+        "market",
+        "kids",
+        "spring"
+      ]
+    },
+    "shapes": {
+      "note": "abstract knitted solids: striped ball, cone, garter pouf, ring",
+      "topics": [
+        "design",
+        "art",
+        "education",
+        "kids",
+        "wellness"
+      ]
+    }
+  },
+  "topics": [
+    "craft",
+    "winter",
+    "family",
+    "community",
+    "market",
+    "autumn"
+  ],
+  "layouts": {
+    "landscape": {
+      "layout": "left",
+      "also": [
+        "right",
+        "top",
+        "bottom",
+        "corners",
+        "headline",
+        "baseline",
+        "vertical",
+        "axis",
+        "band",
+        "strip"
+      ]
+    },
+    "portrait": {
+      "layout": "top",
+      "also": [
+        "bottom",
+        "corners",
+        "baseline",
+        "vertical",
+        "axis",
+        "side"
+      ]
+    },
+    "square": {
+      "layout": "top",
+      "also": [
+        "bottom",
+        "corners",
+        "baseline",
+        "vertical",
+        "axis",
+        "left",
+        "right"
+      ]
+    }
+  },
+  "cutout": true,
+  "grounds": [
+    "pattern/checker",
+    "pattern/stripes",
+    "pattern/dots",
+    "pattern/terrazzo",
+    "pattern/arches",
+    "pattern/grid",
+    "haze",
+    "halftone"
+  ]
+}

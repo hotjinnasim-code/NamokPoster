@@ -1,0 +1,32 @@
+/* garamond — literary book typography: Penguin Classics, Gallimard's "Blanche", Korean 문학 전집 covers (Garamond, Sabon; SM 신명조). Cormorant Garamond for Latin, Nanum Myeongjo Regular — the bookish 명조 — for Hangul; italics and spaced capitals, nothing louder. */
+.poster[data-type="garamond"] {
+  --font-title: "Cormorant Garamond KR", "Nanum Myeongjo", "Hahmlet", serif; --font-subtitle: "Cormorant Garamond", "Nanum Myeongjo", "Hahmlet", serif;   /* a Garamond sits small on its body: the headline always uses the larger cut, so a Hangul word inside an English title keeps level */
+  --font-title-ko: "Cormorant Garamond KR", "Nanum Myeongjo", "Hahmlet", serif; --font-subtitle-ko: "Cormorant Garamond KR", "Nanum Myeongjo", "Hahmlet", serif;
+  --font-body: "Cormorant Garamond", "Nanum Myeongjo", "Hahmlet", serif; --font-label-ko: "Nanum Myeongjo", "Hahmlet", serif;
+  --title-size: 11.9; --title-weight: 500; --title-leading: 1.04; --title-tracking: -0.015em;
+  --title-leading-ko: 1.24; --title-tracking-ko: -0.03em; --title-wordspace-ko: 0.06em; --title-weight-ko: 400;
+  --eyebrow-size: 1.66; --eyebrow-weight: 600; --eyebrow-tracking: 0.28em; --eyebrow-tracking-ko: 0.2em;
+  --subtitle-size: 3.3; --subtitle-weight: 500; --subtitle-leading: 1.26; --subtitle-tracking: 0em; --subtitle-weight-ko: 400; --subtitle-leading-ko: 1.5; --subtitle-tracking-ko: -0.015em;
+  --body-size: 2.1; --body-weight: 500; --body-leading: 1.46; --body-leading-ko: 1.78; --body-tracking-ko: -0.01em; --body-weight-ko: 400; --body-measure: 31;
+  --meta-size: 3.0; --meta-weight: 500; --meta-label-weight: 700;
+  --footer-size: 1.68; --footer-weight: 600; --footer-tracking: 0.05em; --footer-tracking-ko: 0.02em; --footer-rule: 1;
+  --gap-eyebrow: 3.2; --gap-subtitle: 2.8; --grain: 0.2;
+}
+/* Hangul sets larger than a Garamond at the same size: Korean copy takes the ordinary scale, in 명조 throughout */
+.poster[data-type="garamond"]:lang(ko) { --title-size: 11.4; --meta-size: 2.64; --meta-weight: 400; }
+.poster[data-type="garamond"]:lang(ko) .meta { font-family: "Nanum Myeongjo", "Hahmlet", serif; }
+.poster[data-type="garamond"] .body[data-script="ko"] { --body-size: 1.78; font-family: "Nanum Myeongjo", "Hahmlet", serif; }
+.poster[data-type="garamond"] .subtitle[data-script="ko"] { --subtitle-size: 2.72; font-style: normal; }
+.poster[data-type="garamond"] .eyebrow[data-script="ko"] { --eyebrow-size: 1.46; font-weight: 400; }
+.poster[data-type="garamond"] .footer span[data-script="ko"] { font-size: 0.86em; font-weight: 400; }
+.poster[data-type="garamond"] .title em { font-style: italic; color: var(--c-accent); }
+.poster[data-type="garamond"] .title[data-script="ko"] em { font-style: normal; }
+.poster[data-type="garamond"] .subtitle { font-style: italic; color: color-mix(in srgb, var(--c-ink) 88%, transparent); }
+.poster[data-type="garamond"] .eyebrow { color: var(--c-accent); }
+.poster[data-type="garamond"] .body { color: color-mix(in srgb, var(--c-ink) 84%, transparent); }
+.poster[data-type="garamond"] .footer { color: color-mix(in srgb, var(--c-ink) 88%, transparent); }
+.poster[data-type="garamond"] .cta { background: transparent; color: var(--c-ink); border-radius: 0; padding: 0 0 0.3em; border-bottom: var(--hair) solid var(--c-ink); font-style: italic; font-weight: 600; font-size: calc(var(--su) * var(--cta-size) * 1.2 * var(--k-small)); }
+.poster[data-type="garamond"] .badge { background: transparent; color: var(--c-accent); border: var(--hair) solid var(--c-accent); border-radius: 0; letter-spacing: 0.24em; }
+.poster[data-type="garamond"] .badge[data-script="ko"] { letter-spacing: 0.1em; }
+.poster[data-type="garamond"]:lang(ko) .cta { letter-spacing: 0.06em; }
+.poster[data-type="garamond"] .bottom.ruled { border-top-color: color-mix(in srgb, var(--c-ink) 42%, transparent); }

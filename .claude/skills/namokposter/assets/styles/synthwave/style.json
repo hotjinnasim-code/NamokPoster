@@ -1,0 +1,181 @@
+{
+  "id": "synthwave",
+  "label": "Synthwave",
+  "engine": "three",
+  "kind": "picture",
+  "mood": "the 1980s retro-future as a full picture — a neon grid in true perspective to a glowing horizon, a big sun cut by horizontal slits, chrome-faceted low-poly mountains or a mirrored skyline, soft bloom; nostalgic, electric, cinematic. Good for music and club nights, retro gaming, film screenings, summer festivals, tech parties, launch teasers.",
+  "tone": "dark",
+  "type": "retro",
+  "types": ["impact", "comic", "cute", "techno", "brutal", "bold", "dunggeunmo"],
+  "defaultPalette": "outrun",
+  "palettes": {
+    "outrun": {
+      "bg": "#120a2e",
+      "ink": "#fff3fb",
+      "accent": "#ffd23f",
+      "colors": [
+        "#5a1a8c",
+        "#ff2e93",
+        "#ff4fd8",
+        "#ffd23f"
+      ]
+    },
+    "miami": {
+      "bg": "#0b1740",
+      "ink": "#f2fbff",
+      "accent": "#5ff2e6",
+      "colors": [
+        "#7a2a8f",
+        "#ff5fa2",
+        "#35e6e0",
+        "#ffd98a"
+      ]
+    },
+    "laser": {
+      "bg": "#0b0710",
+      "ink": "#fff4ec",
+      "accent": "#ff9f43",
+      "colors": [
+        "#5c1030",
+        "#ff2d55",
+        "#ff7a2a",
+        "#ffe066"
+      ]
+    },
+    "ice": {
+      "bg": "#060f26",
+      "ink": "#eef8ff",
+      "accent": "#7fe3ff",
+      "colors": [
+        "#1b3f8f",
+        "#4d7dff",
+        "#5fe6ff",
+        "#e8fbff"
+      ]
+    },
+    "vapor": {
+      "bg": "#f1e4f3",
+      "ink": "#2a1a4a",
+      "accent": "#d6247f",
+      "colors": [
+        "#ffc7b8",
+        "#ff5fa8",
+        "#17a5a8",
+        "#ffe07a"
+      ]
+    }
+  },
+  "params": {
+    "motif": {
+      "default": "sun",
+      "note": "what stands on the horizon: sun | city | canyon"
+    },
+    "sun": {
+      "default": 1,
+      "note": "size of the sun, 0.5–1.6"
+    },
+    "slits": {
+      "default": 6,
+      "note": "horizontal slits in the lower half of the sun, 0–10"
+    },
+    "grid": {
+      "default": 1,
+      "note": "grid density, 0.5 = wide cells … 2 = fine"
+    },
+    "height": {
+      "default": 1,
+      "note": "height of mountains or towers, 0.4–1.6"
+    },
+    "chrome": {
+      "default": 1,
+      "note": "chrome sheen on mountain facets and tower flanks, 0–1.5"
+    },
+    "glow": {
+      "default": 1,
+      "note": "bloom and sun glow, 0–2"
+    },
+    "stars": {
+      "default": 1,
+      "note": "stars in the upper sky, 0–2"
+    }
+  },
+  "motifs": {
+    "sun": {
+      "note": "grid and slit sun with a distant chrome range on the horizon",
+      "topics": [
+        "music",
+        "retro",
+        "summer",
+        "film"
+      ]
+    },
+    "city": {
+      "note": "a skyline with lit windows in front of the sun, mirrored in the glossy floor",
+      "topics": [
+        "nightlife",
+        "city",
+        "gaming",
+        "tech"
+      ]
+    },
+    "canyon": {
+      "note": "wireframe mountain walls on both sides, the sun in the gap",
+      "topics": [
+        "travel",
+        "outdoor",
+        "gaming",
+        "film"
+      ]
+    }
+  },
+  "topics": [
+    "music",
+    "nightlife",
+    "retro",
+    "gaming",
+    "film",
+    "summer"
+  ],
+  "vars": {
+    "--halo": 0.55
+  },
+  "layouts": {
+    "landscape": {
+      "layout": "top",
+      "also": [
+        "left",
+        "right",
+        "bottom",
+        "corners",
+        "headline",
+        "baseline",
+        "axis",
+        "band",
+        "strip"
+      ]
+    },
+    "portrait": {
+      "layout": "top",
+      "also": [
+        "bottom",
+        "corners",
+        "baseline",
+        "vertical",
+        "axis",
+        "side"
+      ]
+    },
+    "square": {
+      "layout": "top",
+      "also": [
+        "bottom",
+        "corners",
+        "baseline",
+        "vertical",
+        "axis",
+        "left",
+        "right"
+      ]
+    }
+  }
+}

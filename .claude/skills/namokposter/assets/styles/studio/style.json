@@ -1,0 +1,143 @@
+{
+  "id": "studio",
+  "label": "Soft Studio",
+  "engine": "blender",
+  "mood": "warm, polished, optimistic — a path-traced still life of soft 3D shapes (clay, gloss, glass, metal) floating in front of a pastel wall. Good for product/brand launches, startups, education, recruiting, anything that should feel premium but approachable.",
+  "tone": "light",
+  "type": "bold",
+  "types": ["friendly", "round", "gmarket", "dongle", "comic", "pop", "retro", "swiss", "ssurround"],
+  "matchBackground": true,
+  "fallback": "aurora",
+  "defaultPalette": "peach",
+  "palettes": {
+    "peach": {
+      "bg": "#f6d5c2",
+      "ink": "#2a1a14",
+      "accent": "#cf3a22",
+      "colors": [
+        "#ff6b4a",
+        "#2f4bdc",
+        "#ffc145",
+        "#fff6ee"
+      ]
+    },
+    "lilac": {
+      "bg": "#dcd4fa",
+      "ink": "#1c1440",
+      "accent": "#5438e8",
+      "colors": [
+        "#6b4eff",
+        "#ff7ea8",
+        "#ffd166",
+        "#ffffff"
+      ]
+    },
+    "mint": {
+      "bg": "#cbeddc",
+      "ink": "#0c2b22",
+      "accent": "#0a8763",
+      "colors": [
+        "#12b886",
+        "#ffd43b",
+        "#ff7b7b",
+        "#ffffff"
+      ]
+    },
+    "sky": {
+      "bg": "#cde2ff",
+      "ink": "#0c1a3d",
+      "accent": "#1c50e0",
+      "colors": [
+        "#2f6bff",
+        "#ff9f43",
+        "#ff5d8f",
+        "#ffffff"
+      ]
+    },
+    "sand": {
+      "bg": "#ebe3d5",
+      "ink": "#221d16",
+      "accent": "#b3412b",
+      "colors": [
+        "#c8553d",
+        "#28536b",
+        "#f2c14e",
+        "#f8f4ec"
+      ]
+    },
+    "noir": {
+      "bg": "#1b1b21",
+      "ink": "#f5f4f0",
+      "accent": "#ff7a5c",
+      "colors": [
+        "#ff5d3b",
+        "#f2f2f2",
+        "#6b6bff",
+        "#ffd166"
+      ]
+    }
+  },
+  "params": {
+    "glass": {
+      "default": true,
+      "note": "include a glass sphere (slower to render, prettier)"
+    },
+    "metal": {
+      "default": "chrome",
+      "note": "chrome | gold | none — finish of the small accent sphere"
+    }
+  },
+  "layouts": {
+    "landscape": {
+      "layout": "left",
+      "also": [
+        "right",
+        "top",
+        "bottom",
+        "corners",
+        "headline",
+        "baseline",
+        "vertical",
+        "axis",
+        "band",
+        "strip"
+      ]
+    },
+    "portrait": {
+      "layout": "top",
+      "also": [
+        "bottom",
+        "corners",
+        "baseline",
+        "axis",
+        "side"
+      ]
+    },
+    "square": {
+      "layout": "top",
+      "also": [
+        "bottom",
+        "corners",
+        "baseline",
+        "axis",
+        "left",
+        "right"
+      ]
+    }
+  },
+  "cutout": true,
+  "grounds": [
+    "pattern/checker",
+    "pattern/stripes",
+    "pattern/dots",
+    "pattern/terrazzo",
+    "pattern/arches",
+    "pattern/grid",
+    "haze",
+    "halftone",
+    "liquid",
+    "watercolor",
+    "memphis",
+    "turing"
+  ]
+}

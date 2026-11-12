@@ -1,0 +1,15 @@
+/* bold — confident geometric sans. The all-rounder. */
+.poster[data-type="bold"] {
+  --title-size: 11.2; --title-weight: 800; --title-leading: 1.02; --title-tracking: -0.04em;
+  --title-leading-ko: 1.16; --title-tracking-ko: -0.035em; --title-wordspace-ko: 0.05em;
+  --eyebrow-size: 1.51; --eyebrow-weight: 700; --eyebrow-tracking: 0.16em; --eyebrow-tracking-ko: 0.05em;
+  --subtitle-size: 2.86; --subtitle-weight: 600; --subtitle-tracking: -0.02em;
+  --body-size: 1.84; --body-weight-ko: 450; --footer-rule: 1; --grain: 0.12;
+}
+.poster[data-type="bold"] .eyebrow { display: flex; align-items: center; gap: 0.9em; }
+.poster[data-type="bold"] .eyebrow::before { content: ""; width: 2.2em; height: calc(var(--u) * 0.22); border-radius: 99em; background: currentColor; flex: none; }
+.poster[data-type="bold"] [data-halign="center"] > .eyebrow::before { display: none; }
+.poster[data-type="bold"] .title em { color: var(--c-accent); }
+.poster[data-type="bold"] .subtitle { color: color-mix(in srgb, var(--c-ink) 88%, transparent); }
+.poster[data-type="bold"] .body { color: color-mix(in srgb, var(--c-ink) 78%, transparent); }
+.poster[data-type="bold"] .footer { color: color-mix(in srgb, var(--c-ink) 86%, transparent); }

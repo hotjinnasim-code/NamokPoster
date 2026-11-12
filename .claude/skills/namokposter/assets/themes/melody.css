@@ -1,0 +1,28 @@
+/* melody — thin, round handwriting from a diary margin or a café's menu card (가늘고 동글한 손글씨): light as a pencil line, set large with air around it. Faces: Hi Melody for Hangul, with its own figures and Latin; Indie Flower — as loose and as light — sets a Latin headline. */
+.poster[data-type="melody"] {
+  --font-title: "Indie Flower", "Hi Melody", "Pretendard", sans-serif;       /* a Latin headline */
+  --font-title-ko: "Hi Melody", "Pretendard", sans-serif;                    /* a Hangul headline keeps the pen's own figures */
+  --font-subtitle: "Indie Flower", "Hi Melody", "Pretendard", sans-serif; --font-subtitle-ko: "Hi Melody", "Pretendard", sans-serif;
+  --font-eyebrow: "Indie Flower", "Hi Melody", "Pretendard", sans-serif; --font-eyebrow-ko: "Hi Melody", "Pretendard", sans-serif;
+  --title-size: 13.2; --title-weight: 400; --title-leading: 1.04; --title-tracking: 0em;
+  --title-leading-ko: 1.1; --title-tracking-ko: -0.04em; --title-wordspace-ko: 0em;   /* the pen sets its syllables wide apart: closed up, a word reads as one */
+  --eyebrow-size: 2.5; --eyebrow-weight: 400; --eyebrow-tracking: 0.02em; --eyebrow-tracking-ko: -0.02em; --eyebrow-case: none;
+  --subtitle-size: 3.5; --subtitle-weight: 400; --subtitle-leading: 1.24; --subtitle-tracking: 0em; --subtitle-leading-ko: 1.26; --subtitle-tracking-ko: -0.04em;
+  --body-size: 1.84; --body-weight: 400; --body-weight-ko: 400;
+  --meta-weight: 400; --meta-label-weight: 400;
+  --footer-size: 1.52; --footer-weight: 500; --footer-rule: 1; --grain: 0.14;
+  --gap-eyebrow: 1.4; --gap-subtitle: 2;
+}
+.poster[data-type="melody"] .title em { color: var(--c-accent); }
+/* a small ring before the label, as a bullet is drawn in a notebook */
+.poster[data-type="melody"] .eyebrow { display: flex; align-items: center; gap: 0.5em; color: var(--c-ink); }
+.poster[data-type="melody"] .eyebrow::before { content: ""; width: 0.42em; height: 0.42em; border: 0.09em solid var(--c-accent); border-radius: 50%; flex: none; }
+.poster[data-type="melody"] [data-halign="center"] > .eyebrow { justify-content: center; }
+.poster[data-type="melody"] .main[data-mode="vertical"] .eyebrow::before { display: none; }
+.poster[data-type="melody"] .subtitle { color: color-mix(in srgb, var(--c-ink) 92%, transparent); }
+.poster[data-type="melody"] .body { color: color-mix(in srgb, var(--c-ink) 82%, transparent); }
+.poster[data-type="melody"] .footer { color: color-mix(in srgb, var(--c-ink) 90%, transparent); }
+.poster[data-type="melody"] .meta dt { font-family: var(--font-eyebrow-ko); font-size: 1.16em; line-height: 1.1; letter-spacing: -0.03em; color: color-mix(in srgb, var(--c-accent) 62%, var(--c-ink)); }   /* the label in the pen, the value plain */
+.poster[data-type="melody"] .cta { background: transparent; color: var(--c-ink); border: calc(var(--u) * 0.14) solid var(--c-ink); font-family: var(--font-eyebrow-ko); font-weight: 400; font-size: calc(var(--su) * var(--cta-size) * 1.4 * var(--k-small)); padding: 0.36em 1.2em; }
+.poster[data-type="melody"] .badge { background: transparent; color: var(--c-accent); border: calc(var(--u) * 0.14) solid var(--c-accent); transform: rotate(-4deg); font-weight: 400; font-size: calc(var(--fu) * 2.2 * var(--k-small)); letter-spacing: 0; }
+.poster[data-type="melody"] .bottom.ruled { border-top: calc(var(--u) * 0.22) dotted color-mix(in srgb, var(--c-ink) 60%, transparent); }

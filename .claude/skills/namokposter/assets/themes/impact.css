@@ -1,0 +1,27 @@
+/* impact — expanded grotesk caps / heavy Hangul display, mono details, crop marks. */
+.poster[data-type="impact"] {
+  --font-title: "Archivo", "Black Han Sans", "Pretendard", sans-serif;
+  --font-title-ko: "Archivo KR", "Black Han Sans", "Pretendard", sans-serif;
+  --font-eyebrow: var(--font-mono); --font-footer: var(--font-mono);
+  --title-size: 11.8; --title-weight: 800; --title-leading: 1.0; --title-tracking: -0.02em; --title-case: uppercase;
+  --title-leading-ko: 1.14; --title-tracking-ko: -0.01em; --title-wordspace-ko: 0.02em; --title-weight-ko: 400;
+  --eyebrow-size: 1.4; --eyebrow-weight: 500; --eyebrow-tracking: 0.16em; --eyebrow-tracking-ko: 0.08em;
+  --subtitle-size: 2.7; --subtitle-weight: 500; --subtitle-leading: 1.36;
+  --body-size: 1.76; --body-weight: 400; --footer-size: 1.39; --footer-tracking: 0.06em;
+  --footer-rule: 1; --grain: 0.22;
+}
+.poster[data-type="impact"] .title { font-stretch: 112%; text-shadow: 0 0 calc(var(--u) * 4) color-mix(in srgb, var(--c-1) 22%, transparent); }
+.poster[data-type="impact"][data-tone="light"] .title { text-shadow: none; }
+.poster[data-type="impact"] .title em { color: var(--c-accent); }
+.poster[data-type="impact"] .eyebrow { display: flex; align-items: center; gap: 1em; color: var(--c-accent); }
+.poster[data-type="impact"] .eyebrow::before { content: ""; width: 2.6em; height: calc(var(--u) * 0.14); background: currentColor; flex: none; }
+.poster[data-type="impact"] [data-halign="center"] > .eyebrow::after { content: ""; width: 2.6em; height: calc(var(--u) * 0.14); background: currentColor; flex: none; }
+.poster[data-type="impact"] .subtitle { color: color-mix(in srgb, var(--c-ink) 90%, transparent); }
+.poster[data-type="impact"] .cta { background: var(--c-accent); color: var(--c-paper); border-radius: calc(var(--u) * 0.5); font-family: var(--font-mono); text-transform: uppercase; letter-spacing: 0.08em; font-size: calc(var(--su) * var(--cta-size) * 0.84 * var(--k-small)); }
+.poster[data-type="impact"] .badge { background: transparent; color: var(--c-accent); border: calc(var(--u) * 0.14) solid var(--c-accent); border-radius: calc(var(--u) * 0.5); }
+.poster[data-type="impact"] .bottom.ruled { border-top-color: color-mix(in srgb, var(--c-ink) 22%, transparent); }
+.poster[data-type="impact"] .frame::before, .poster[data-type="impact"] .frame::after {
+  content: ""; position: absolute; width: calc(var(--u) * 2.2); height: calc(var(--u) * 2.2); opacity: 0.55; border: calc(var(--u) * 0.12) solid var(--c-ink);
+}
+.poster[data-type="impact"] .frame::before { top: calc(var(--u) * -2.6); right: calc(var(--u) * -2.6); border-left: 0; border-bottom: 0; }
+.poster[data-type="impact"] .frame::after { top: calc(var(--u) * -2.6); left: calc(var(--u) * -2.6); border-right: 0; border-bottom: 0; }

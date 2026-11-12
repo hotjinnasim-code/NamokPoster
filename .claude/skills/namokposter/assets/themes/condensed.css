@@ -1,0 +1,27 @@
+/* condensed — film one-sheets, fight bills and stadium signage (Trade Gothic Bold Condensed, Knockout, Champion Gothic). Big Shoulders Display for Latin, Black Han Sans — the heavy Korean headline gothic — for Hangul; tall capitals, a billing-block footer. */
+.poster[data-type="condensed"] {
+  --font-title: "Big Shoulders Display", "Black Han Sans", "Pretendard", sans-serif;
+  --font-title-ko: "Big Shoulders Display KR", "Black Han Sans", "Pretendard", sans-serif;
+  --font-subtitle: "Big Shoulders Display", "Pretendard", sans-serif; --font-subtitle-ko: "Pretendard", sans-serif;
+  --font-eyebrow: "Big Shoulders Display", "Pretendard", sans-serif; --font-footer: "Big Shoulders Display", "Pretendard", sans-serif;
+  --title-size: 14.6; --title-weight: 800; --title-leading: 0.9; --title-tracking: 0.004em; --title-case: uppercase; --title-fit-max: 1.25;
+  --title-leading-ko: 1.14; --title-tracking-ko: -0.01em; --title-wordspace-ko: 0.02em; --title-weight-ko: 400;
+  --eyebrow-size: 2.04; --eyebrow-weight: 700; --eyebrow-tracking: 0.2em; --eyebrow-tracking-ko: 0.08em;
+  --subtitle-size: 3.7; --subtitle-weight: 600; --subtitle-leading: 1.14; --subtitle-tracking: 0.015em; --subtitle-weight-ko: 700; --subtitle-leading-ko: 1.36; --subtitle-tracking-ko: -0.02em;
+  --body-size: 1.8; --body-weight: 500; --body-leading: 1.5; --body-leading-ko: 1.64; --body-weight-ko: 500;
+  --meta-size: 2.6; --meta-weight: 500; --meta-label-weight: 800;
+  --footer-size: 1.96; --footer-weight: 600; --footer-tracking: 0.14em; --footer-case: uppercase; --footer-rule: 1;
+  --gap-eyebrow: 1.6; --gap-subtitle: 2.2; --grain: 0.2;
+}
+.poster[data-type="condensed"]:lang(ko) { --title-size: 12.6; --title-fit-max: 1.16; }                              /* Hangul is wider and fuller than condensed capitals */
+.poster[data-type="condensed"] .subtitle[data-script="ko"] { --subtitle-size: 2.8; }
+.poster[data-type="condensed"] .eyebrow[data-script="ko"] { --eyebrow-size: 1.56; font-weight: 800; }
+.poster[data-type="condensed"] .footer span[data-script="ko"] { font-size: 0.78em; font-weight: 700; letter-spacing: 0.01em; }
+.poster[data-type="condensed"] .title em { color: var(--c-accent); }
+.poster[data-type="condensed"] .eyebrow { color: var(--c-accent); }
+.poster[data-type="condensed"] .subtitle, .poster[data-type="condensed"] .footer { color: var(--c-ink); }
+.poster[data-type="condensed"] .body { color: color-mix(in srgb, var(--c-ink) 84%, transparent); }
+.poster[data-type="condensed"] .cta { border-radius: 0; background: var(--c-accent); color: var(--c-on-accent, var(--c-paper)); font-weight: 800; }
+.poster[data-type="condensed"] .badge { border-radius: 0; font-size: calc(var(--fu) * 1.9 * var(--k-small)); letter-spacing: 0.14em; }
+.poster[data-type="condensed"] .badge[data-script="ko"] { font-size: calc(var(--fu) * 1.5 * var(--k-small)); }
+.poster[data-type="condensed"] .bottom.ruled { border-top: calc(var(--u) * 0.3) solid var(--c-ink); padding-top: calc(var(--u) * 1.4); }

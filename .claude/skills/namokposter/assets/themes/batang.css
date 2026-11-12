@@ -1,0 +1,33 @@
+/* batang — Korean literary book design (문학동네·민음사 시집 표지, 본문 명조: SM신명조 / 산돌명조 beside Garamond): one regular-weight 명조, large and quiet. Stand-ins: Gowun Batang + EB Garamond. */
+.poster[data-type="batang"] {
+  --font-title: "EB Garamond", "Gowun Batang", "Hahmlet", "Noto Serif KR", serif;
+  --font-title-ko: "EB Garamond KR", "Gowun Batang", "Hahmlet", "Noto Serif KR", serif;
+  --font-subtitle: var(--font-title); --font-subtitle-ko: var(--font-title-ko);
+  --font-body: "EB Garamond KR", "Gowun Batang", "Hahmlet", "Noto Serif KR", serif;   /* the whole sheet is one serif, as on a book page */
+  --font-label-ko: "Gowun Batang", "Hahmlet", "Noto Serif KR", serif;
+  --title-size: 11.8; --title-weight: 400; --title-leading: 1.04; --title-tracking: -0.025em;
+  --title-leading-ko: 1.24; --title-tracking-ko: -0.03em; --title-wordspace-ko: 0.08em; --title-weight-ko: 400;
+  --eyebrow-size: 1.5; --eyebrow-weight: 400; --eyebrow-tracking: 0.32em; --eyebrow-tracking-ko: 0.22em;
+  --subtitle-size: 2.9; --subtitle-weight: 400; --subtitle-leading: 1.36; --subtitle-tracking: 0em; --subtitle-leading-ko: 1.5; --subtitle-tracking-ko: -0.02em;
+  --body-size: 1.86; --body-weight: 400; --body-leading: 1.62; --body-leading-ko: 1.8; --body-tracking-ko: -0.01em; --body-measure: 28;
+  --meta-size: 2.7; --meta-weight: 400; --meta-label-weight: 400;   /* one weight: the label is set apart by colour */
+  --footer-size: 1.5; --footer-weight: 400; --footer-tracking: 0.08em; --footer-tracking-ko: 0.03em; --footer-rule: 1;
+  --gap-eyebrow: 3.2; --gap-subtitle: 3; --grain: 0.24;
+}
+/* Gowun Batang draws its Latin and figures on a raised line to sit level with Hangul, which no outside face follows:
+   on a Korean sheet it leads and sets its own figures; EB Garamond leads when the copy is Latin. */
+.poster[data-type="batang"]:lang(ko) {
+  --font-title: "Gowun Batang", "EB Garamond KR", "Hahmlet", "Noto Serif KR", serif;
+  --font-title-ko: "Gowun Batang", "EB Garamond KR", "Hahmlet", "Noto Serif KR", serif;
+  --font-body: "Gowun Batang", "EB Garamond KR", "Hahmlet", "Noto Serif KR", serif;
+}
+.poster[data-type="batang"] .title em { font-style: italic; color: var(--c-accent); }
+.poster[data-type="batang"] .title[data-script="ko"] em { font-style: normal; }      /* no slanted Hangul */
+.poster[data-type="batang"] .subtitle { font-style: italic; color: color-mix(in srgb, var(--c-ink) 88%, transparent); }
+.poster[data-type="batang"] .subtitle[data-script="ko"] { font-style: normal; }
+.poster[data-type="batang"] .body { color: color-mix(in srgb, var(--c-ink) 84%, transparent); }
+.poster[data-type="batang"] .footer { color: color-mix(in srgb, var(--c-ink) 88%, transparent); }
+.poster[data-type="batang"] .cta { background: transparent; color: var(--c-ink); border-radius: 0; padding: 0 0 0.36em; border-bottom: var(--hair) solid var(--c-ink); font-weight: 400; letter-spacing: 0.04em; }
+.poster[data-type="batang"] .badge { background: transparent; color: var(--c-accent); border: var(--hair) solid var(--c-accent); border-radius: 0; font-weight: 400; letter-spacing: 0.22em; }
+.poster[data-type="batang"] .bottom.ruled { border-top-color: color-mix(in srgb, var(--c-ink) 42%, transparent); }
+.poster[data-type="batang"] .meta dt { color: color-mix(in srgb, var(--c-accent) 55%, var(--c-ink)); }

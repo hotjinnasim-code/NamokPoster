@@ -1,0 +1,23 @@
+/* sunflower — Korean modernist 탈네모꼴 lettering (안상수체 1985, 공한체) in the line of Bauhaus and Futura: modular bold headline for exhibitions and design events. Stand-ins: Sunflower Bold + Outfit. */
+.poster[data-type="sunflower"] {
+  --font-title: "Outfit KR", "Sunflower", "Pretendard", sans-serif;   /* Korean-led: the size-matched Latin in every headline */
+  --font-title-ko: "Outfit KR", "Sunflower", "Pretendard", sans-serif;
+  --font-body: "Outfit KR", "Pretendard", sans-serif;
+  --font-eyebrow-ko: "Outfit KR", "Sunflower", "Pretendard", sans-serif;
+  --title-size: 11.4; --title-weight: 620; --title-leading: 1.0; --title-tracking: -0.03em;
+  --title-leading-ko: 1.18; --title-tracking-ko: -0.035em; --title-wordspace-ko: 0.02em; --title-weight-ko: 620;   /* Outfit at 620 has the stem of Sunflower Bold */
+  --eyebrow-size: 1.5; --eyebrow-weight: 700; --eyebrow-tracking: 0.22em; --eyebrow-tracking-ko: 0.1em;
+  --subtitle-size: 2.86; --subtitle-weight: 400; --subtitle-leading: 1.36; --subtitle-tracking: -0.01em; --subtitle-weight-ko: 500;
+  --body-size: 1.82; --body-weight: 400; --body-leading: 1.6; --body-weight-ko: 450;
+  --meta-weight: 500; --meta-label-weight: 700;
+  --footer-size: 1.5; --footer-weight: 600; --footer-tracking: 0.04em; --footer-rule: 1;
+  --gap-eyebrow: 2.4; --gap-subtitle: 2.6; --grain: 0.12;
+}
+.poster[data-type="sunflower"] .eyebrow { display: flex; align-items: center; gap: 0.8em; color: var(--c-ink); }
+.poster[data-type="sunflower"] .eyebrow::before { content: ""; width: 0.86em; height: 0.86em; border-radius: 50%; background: var(--c-accent); flex: none; }
+.poster[data-type="sunflower"] .main[data-mode="vertical"] .eyebrow::before { display: none; }
+.poster[data-type="sunflower"] .title em { color: var(--c-accent); }
+.poster[data-type="sunflower"] .subtitle { color: var(--c-ink); }
+.poster[data-type="sunflower"] .cta { font-weight: 700; }
+.poster[data-type="sunflower"] .badge { background: var(--c-accent); font-weight: 700; }
+.poster[data-type="sunflower"] .bottom.ruled { border-top: calc(var(--u) * 0.3) solid var(--c-ink); padding-top: calc(var(--u) * 1.6); }

@@ -1,0 +1,25 @@
+/* starlight — a bold felt-pen hand, quick and bright (카페24 빛나는별; 굵은 마커 손글씨): a class notice, a café's chalk sign, a children's workshop, a hand-made sale card. Face: Cafe24 Shiningstar, with its own Latin and figures; Pretendard for the details. */
+.poster[data-type="starlight"] {
+  --font-title: "Cafe24 Shiningstar", "Nanum Pen Script", "Pretendard", sans-serif;   /* one face: its own Latin and figures */
+  --font-eyebrow: "Cafe24 Shiningstar", "Pretendard", sans-serif; --font-eyebrow-ko: "Cafe24 Shiningstar", "Pretendard", sans-serif;
+  --font-subtitle: "Cafe24 Shiningstar", "Pretendard", sans-serif; --font-subtitle-ko: "Cafe24 Shiningstar", "Pretendard", sans-serif;
+  --title-size: 12.6; --title-weight: 400; --title-leading: 1.02; --title-tracking: 0em;
+  --title-leading-ko: 1.14; --title-tracking-ko: 0em; --title-wordspace-ko: 0.12em;   /* narrow handwritten syllables: open the gap between words */
+  --eyebrow-size: 2.3; --eyebrow-weight: 400; --eyebrow-tracking: 0.02em; --eyebrow-tracking-ko: 0em; --eyebrow-case: none;
+  --subtitle-size: 3.3; --subtitle-weight: 400; --subtitle-leading: 1.26; --subtitle-tracking: 0em; --subtitle-leading-ko: 1.3; --subtitle-tracking-ko: 0em;
+  --body-size: 1.84; --body-weight: 500; --body-weight-ko: 500;
+  --meta-weight: 500; --meta-label-weight: 400;
+  --footer-size: 1.54; --footer-weight: 600; --footer-rule: 1; --grain: 0.16;
+  --gap-eyebrow: 1.8; --gap-subtitle: 2.2;
+}
+/* emphasis is a marker stroke over the lower half of the word (bands of the face's own text box: ascent to descent) */
+.poster[data-type="starlight"] .title em { color: var(--c-ink); background: linear-gradient(transparent 38%, color-mix(in srgb, var(--c-accent) 50%, transparent) 38%, color-mix(in srgb, var(--c-accent) 50%, transparent) 64%, transparent 64%); -webkit-box-decoration-break: clone; box-decoration-break: clone; padding: 0 0.04em; }
+.poster[data-type="starlight"] .eyebrow { color: color-mix(in srgb, var(--c-accent) 72%, var(--c-ink)); }
+.poster[data-type="starlight"] .eyebrow::before { content: "★ "; }
+.poster[data-type="starlight"] .main[data-mode="vertical"] .eyebrow::before { content: none; }
+.poster[data-type="starlight"] .subtitle { color: var(--c-ink); }
+.poster[data-type="starlight"] .body { color: color-mix(in srgb, var(--c-ink) 84%, transparent); }
+.poster[data-type="starlight"] .meta dt { font-family: var(--font-eyebrow-ko); font-size: 1.12em; line-height: 1.12; color: color-mix(in srgb, var(--c-accent) 62%, var(--c-ink)); }   /* the label in the marker, the value plain */
+.poster[data-type="starlight"] .cta { border-radius: 0.4em; background: var(--c-accent); color: var(--c-on-accent, var(--c-paper)); font-family: var(--font-eyebrow-ko); font-weight: 400; font-size: calc(var(--su) * var(--cta-size) * 1.3 * var(--k-small)); transform: rotate(-1.5deg); }
+.poster[data-type="starlight"] .badge { border-radius: 0.4em; transform: rotate(-6deg); font-family: var(--font-eyebrow-ko); font-weight: 400; font-size: calc(var(--fu) * 2.1 * var(--k-small)); }
+.poster[data-type="starlight"] .bottom.ruled { border-top: calc(var(--u) * 0.22) dashed color-mix(in srgb, var(--c-ink) 70%, transparent); padding-top: calc(var(--u) * 1.6); }

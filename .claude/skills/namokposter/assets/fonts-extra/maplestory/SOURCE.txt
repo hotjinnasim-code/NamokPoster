@@ -1,0 +1,10 @@
+넥슨 메이플스토리 (Maplestory) — NEXON Korea
+Publisher's page: https://brand.nexon.com/ko/ci-brand-guidelines/typeface
+Licence kind: publisher-redistributable
+Fetched: 2026-11-12
+
+Maplestory OTF Bold.otf (weight 700)
+  published as: OTF/Maplestory OTF Bold.otf in https://brand.nexon.com/resources/NEXON_Maplestory.zip
+  sha256 of the published file: b1eb822fec7963a34689bf6381e4c4bf0fcfde1ad5c90125d800345cbcfd9ced (698184 bytes)
+  in this folder as published, unchanged
+

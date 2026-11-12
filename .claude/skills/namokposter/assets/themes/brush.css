@@ -1,0 +1,25 @@
+/* brush — 붓글씨 title calligraphy of Korean film posters, 전통주 labels and exhibition titles (hand-lettered 캘리그라피 over a quiet 명조): one sweeping brush headline, everything else small and still. Stand-ins: East Sea Dokdo (its Latin is the same brush) over Gowun Batang + EB Garamond. */
+.poster[data-type="brush"] {
+  --font-title: "East Sea Dokdo", "Song Myung", "Hahmlet", serif;
+  --font-body: "EB Garamond KR", "Gowun Batang", "Hahmlet", "Noto Serif KR", serif;
+  --font-label-ko: "Gowun Batang", "Hahmlet", "Noto Serif KR", serif;
+  --title-size: 12.6; --title-weight: 400; --title-leading: 0.98; --title-tracking: 0em; --title-fit-max: 1.25;
+  --title-leading-ko: 1.14; --title-tracking-ko: 0em; --title-wordspace-ko: 0.08em;
+  --eyebrow-size: 1.46; --eyebrow-weight: 400; --eyebrow-tracking: 0.32em; --eyebrow-tracking-ko: 0.24em;
+  --subtitle-size: 2.8; --subtitle-weight: 400; --subtitle-leading: 1.4; --subtitle-tracking: 0em; --subtitle-leading-ko: 1.5; --subtitle-tracking-ko: -0.02em;
+  --body-size: 1.82; --body-weight: 400; --body-leading: 1.64; --body-leading-ko: 1.8; --body-measure: 27;
+  --meta-size: 2.6; --meta-weight: 400; --meta-label-weight: 400;
+  --footer-size: 1.46; --footer-weight: 400; --footer-tracking: 0.08em; --footer-tracking-ko: 0.04em; --footer-rule: 1;
+  --gap-eyebrow: 2.2; --gap-subtitle: 3.2; --grain: 0.28;
+}
+.poster[data-type="brush"]:lang(ko) { --font-body: "Gowun Batang", "EB Garamond KR", "Hahmlet", "Noto Serif KR", serif; }   /* Korean details: the 명조's own figures, drawn level with its Hangul */
+/* the brush's Latin is drawn small beside its Hangul: a Latin headline is set larger to hold the same weight on the sheet */
+.poster[data-type="brush"] .title[data-script="latin"] { font-size: calc(var(--title-px, calc(var(--su) * var(--title-size))) * 1.3); }
+.poster[data-type="brush"] .title em { color: var(--c-accent); }
+.poster[data-type="brush"] .subtitle { color: color-mix(in srgb, var(--c-ink) 90%, transparent); }
+.poster[data-type="brush"] .body { color: color-mix(in srgb, var(--c-ink) 82%, transparent); }
+.poster[data-type="brush"] .cta { background: transparent; color: var(--c-ink); border-radius: 0; border: var(--hair) solid var(--c-ink); font-weight: 400; letter-spacing: 0.1em; padding: 0.8em 1.6em; }
+/* the badge is a seal (낙관): a small vermilion block set vertically */
+.poster[data-type="brush"] .badge { border-radius: calc(var(--u) * 0.3); background: var(--c-accent); font-weight: 400; letter-spacing: 0.16em; writing-mode: vertical-rl; padding: 0.9em 0.56em; }
+.poster[data-type="brush"] .bottom.ruled { border-top-color: color-mix(in srgb, var(--c-ink) 40%, transparent); }
+.poster[data-type="brush"] .meta dt { color: color-mix(in srgb, var(--c-accent) 55%, var(--c-ink)); }

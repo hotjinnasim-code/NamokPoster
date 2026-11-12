@@ -1,0 +1,25 @@
+/* bitmap — the pixel type of handheld consoles and early Korean PC screens (Nintendo DS system font, 도트 글꼴 of 1990s 한글 BBS): everything on one pixel grid, the headline a pixel bolder. Face: Galmuri11 Regular and Bold (Hangul and Latin drawn on the same grid). */
+.poster[data-type="bitmap"] {
+  --font-title: "Galmuri11", "JetBrains Mono", "Pretendard", monospace;
+  --font-body: "Galmuri11", "JetBrains Mono", "Pretendard", monospace;
+  --font-label-ko: "Galmuri11", "Pretendard", monospace;
+  --title-size: 9.6; --title-weight: 700; --title-leading: 1.14; --title-tracking: 0em;   /* a pixel face is never tracked: the grid is the spacing */
+  --title-leading-ko: 1.24; --title-tracking-ko: 0em; --title-wordspace-ko: -0.12em;
+  --eyebrow-size: 1.44; --eyebrow-weight: 400; --eyebrow-tracking: 0.08em; --eyebrow-tracking-ko: 0em;
+  --subtitle-size: 2.5; --subtitle-weight: 400; --subtitle-leading: 1.4; --subtitle-tracking: 0em; --subtitle-leading-ko: 1.5; --subtitle-tracking-ko: 0em;
+  --body-size: 1.7; --body-weight: 400; --body-leading: 1.6; --body-leading-ko: 1.75; --body-tracking-ko: 0em; --body-measure: 30;
+  --meta-size: 2.4; --meta-weight: 400; --meta-label-weight: 700;
+  --footer-size: 1.4; --footer-weight: 400; --footer-tracking: 0.02em; --footer-tracking-ko: 0em; --footer-rule: 1;
+  --gap-eyebrow: 2.4; --gap-subtitle: 2.8; --grain: 0.1;
+}
+/* drop shadow of exactly one font pixel (Galmuri11 is drawn 12 px to the em) */
+.poster[data-type="bitmap"] .title { text-shadow: 0.0833em 0.0833em 0 color-mix(in srgb, var(--c-accent) 85%, transparent); }
+.poster[data-type="bitmap"] .title em { color: var(--c-accent); text-shadow: 0.0833em 0.0833em 0 color-mix(in srgb, var(--c-ink) 85%, transparent); }
+.poster[data-type="bitmap"] .eyebrow::before { content: "▶ "; }
+.poster[data-type="bitmap"] .main[data-mode="vertical"] .eyebrow::before { content: none; }
+.poster[data-type="bitmap"] .subtitle { color: var(--c-ink); }
+.poster[data-type="bitmap"] .meta dt[data-script="ko"], .poster[data-type="bitmap"] .meta dd[data-script="ko"] { letter-spacing: 0; }
+.poster[data-type="bitmap"] .cta { border-radius: 0; background: var(--c-paper); color: var(--c-ink); border: 0.167em solid var(--c-ink); box-shadow: 0.25em 0.25em 0 var(--c-accent); font-weight: 700; padding: 0.7em 1.2em; }
+.poster[data-type="bitmap"] .cta::after { content: "▶"; font-weight: 400; }
+.poster[data-type="bitmap"] .badge { border-radius: 0; font-weight: 700; letter-spacing: 0.04em; }
+.poster[data-type="bitmap"] .bottom.ruled { border-top: calc(var(--u) * 0.24) dotted color-mix(in srgb, var(--c-ink) 70%, transparent); }

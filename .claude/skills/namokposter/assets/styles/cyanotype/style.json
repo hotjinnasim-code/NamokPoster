@@ -1,0 +1,187 @@
+{
+  "id": "cyanotype",
+  "label": "Cyanotype Sun Print",
+  "engine": "three",
+  "kind": "picture",
+  "mood": "a sun print on watercolour paper — pressed ferns and leaves, glass, lace or cut paper laid on a brush-coated sheet and left in the sun, printing white on Prussian blue with soft penumbras, pale translucent veins, a ragged brushed edge and uneven washy blue. Calm, botanical, a little scientific. Good for nature and garden events, science and education programmes, exhibitions and photography, summer festivals, wellness and craft brands.",
+  "tone": "dark",
+  "type": "editorial",
+  "types": [
+    "myeongjo",
+    "story",
+    "maru",
+    "elegant",
+    "swiss",
+    "techno",
+    "hand"
+  ],
+  "defaultPalette": "prussian",
+  "palettes": {
+    "prussian": {
+      "bg": "#1c4787",
+      "ink": "#f5f2ea",
+      "accent": "#ffe08a",
+      "colors": [
+        "#f3f0e6",
+        "#0f2c62",
+        "#4f7cba"
+      ]
+    },
+    "midnight": {
+      "bg": "#142a52",
+      "ink": "#f1ede2",
+      "accent": "#a9cbff",
+      "colors": [
+        "#efeadb",
+        "#0a1834",
+        "#35598f"
+      ]
+    },
+    "vandyke": {
+      "bg": "#4a2e1c",
+      "ink": "#f4ead6",
+      "accent": "#e9b977",
+      "colors": [
+        "#f1e6d0",
+        "#2c190d",
+        "#7d5638"
+      ]
+    },
+    "verdant": {
+      "bg": "#1f4a3e",
+      "ink": "#f0f2e8",
+      "accent": "#e8d47c",
+      "colors": [
+        "#eef0e4",
+        "#0f2d25",
+        "#4f7f6c"
+      ]
+    },
+    "violet": {
+      "bg": "#3b2c6a",
+      "ink": "#f4f0f6",
+      "accent": "#f4bccd",
+      "colors": [
+        "#f1ecf2",
+        "#211743",
+        "#6c5ca1"
+      ]
+    }
+  },
+  "params": {
+    "motif": {
+      "default": "botanical",
+      "note": "botanical | objects | shapes | algae"
+    },
+    "lift": {
+      "default": 1,
+      "note": "how far things lifted off the paper: 0 = crisp contact print … 2 = soft penumbras"
+    },
+    "wash": {
+      "default": 1,
+      "note": "unevenness of the developed blue — pooling, pale patches, tide marks, brush strokes (0–2)"
+    },
+    "border": {
+      "default": 1,
+      "note": "width of the bare paper round the brushed coating (0–2)"
+    },
+    "grain": {
+      "default": 1,
+      "note": "watercolour-paper tooth (0–2)"
+    },
+    "density": {
+      "default": 1,
+      "note": "how many pinnae, florets, grasses (0.5–1.6)"
+    }
+  },
+  "layouts": {
+    "landscape": {
+      "layout": "left",
+      "also": [
+        "right",
+        "top",
+        "bottom",
+        "corners",
+        "headline",
+        "baseline",
+        "vertical",
+        "axis",
+        "band",
+        "strip"
+      ]
+    },
+    "portrait": {
+      "layout": "top",
+      "also": [
+        "bottom",
+        "corners",
+        "baseline",
+        "vertical",
+        "axis",
+        "side"
+      ]
+    },
+    "square": {
+      "layout": "top",
+      "also": [
+        "bottom",
+        "corners",
+        "baseline",
+        "vertical",
+        "axis",
+        "left",
+        "right"
+      ]
+    }
+  },
+  "motifs": {
+    "botanical": {
+      "note": "a pressed fern frond with leaves, a lace-flower umbel, a daisy and grasses",
+      "topics": [
+        "nature",
+        "spring",
+        "summer",
+        "wellness",
+        "outdoor"
+      ]
+    },
+    "objects": {
+      "note": "a photogram of everyday things: a glass bottle, scissors, a key, a feather on a lace doily",
+      "topics": [
+        "craft",
+        "market",
+        "design",
+        "literature",
+        "retro"
+      ]
+    },
+    "shapes": {
+      "note": "abstract: cut and tracing-paper shapes, a punched strip and a loop of string, Bauhaus photogram",
+      "topics": [
+        "design",
+        "art",
+        "education",
+        "architecture",
+        "tech"
+      ]
+    },
+    "algae": {
+      "note": "branching seaweed specimens in the manner of Anna Atkins' British Algae",
+      "topics": [
+        "science",
+        "nature",
+        "summer",
+        "travel",
+        "education"
+      ]
+    }
+  },
+  "topics": [
+    "science",
+    "nature",
+    "art",
+    "craft",
+    "education",
+    "design"
+  ]
+}

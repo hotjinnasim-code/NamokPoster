@@ -1,0 +1,23 @@
+/* luxe — hairline-thin display with wide-set capitals; fashion, beauty, galas, hotels, weddings. */
+.poster[data-type="luxe"] {
+  --font-title: "Playfair Display", "Nanum Myeongjo", "Hahmlet", serif; --font-subtitle: "Playfair Display", "Nanum Myeongjo", "Hahmlet", serif;
+  --font-title-ko: "Playfair Display KR", "Nanum Myeongjo", "Hahmlet", serif; --font-subtitle-ko: "Playfair Display KR", "Nanum Myeongjo", "Hahmlet", serif;
+  --title-size: 11.4; --title-weight: 400; --title-leading: 1.04; --title-tracking: -0.02em;
+  --title-leading-ko: 1.24; --title-tracking-ko: -0.03em; --title-wordspace-ko: 0.04em;
+  --eyebrow-size: 1.25; --eyebrow-weight: 500; --eyebrow-tracking: 0.44em; --eyebrow-tracking-ko: 0.24em;
+  --subtitle-size: 2.76; --subtitle-weight: 400; --subtitle-leading: 1.4; --subtitle-leading-ko: 1.5;
+  --body-size: 1.72; --body-weight: 300; --body-leading: 1.78; --body-weight-ko: 350; --body-measure: 27;
+  --footer-size: 1.32; --footer-weight: 400; --footer-tracking: 0.2em; --footer-tracking-ko: 0.08em; --footer-rule: 1; --grain: 0.22;
+  --meta-weight: 400; --meta-label-weight: 600;
+  --gap-eyebrow: 3.6; --gap-subtitle: 3.2; --margin: 9;
+}
+.poster[data-type="luxe"] .title em { font-style: italic; color: var(--c-accent); }
+.poster[data-type="luxe"] .title[data-script="ko"] em { font-style: normal; }
+.poster[data-type="luxe"] .subtitle { font-style: italic; color: color-mix(in srgb, var(--c-ink) 84%, transparent); }
+.poster[data-type="luxe"] .subtitle[data-script="ko"] { font-style: normal; }
+.poster[data-type="luxe"] .eyebrow { color: var(--c-accent); }
+.poster[data-type="luxe"] .body { color: color-mix(in srgb, var(--c-ink) 74%, transparent); }
+.poster[data-type="luxe"] .cta { background: transparent; color: var(--c-ink); border-radius: 0; border: var(--hair) solid color-mix(in srgb, var(--c-ink) 70%, transparent); font-weight: 400; letter-spacing: 0.24em; text-transform: uppercase; font-size: calc(var(--su) * var(--cta-size) * 0.74 * var(--k-small)); padding: 1em 2em; }
+.poster[data-type="luxe"] .cta::after { content: none; }
+.poster[data-type="luxe"] .badge { background: transparent; color: var(--c-accent); border: var(--hair) solid var(--c-accent); letter-spacing: 0.3em; border-radius: 0; }
+.poster[data-type="luxe"] .bottom.ruled { border-top-color: color-mix(in srgb, var(--c-accent) 70%, transparent); }

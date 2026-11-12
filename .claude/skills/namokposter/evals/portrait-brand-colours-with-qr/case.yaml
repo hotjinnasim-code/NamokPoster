@@ -1,0 +1,8 @@
+schema_version: "1.1"
+name: portrait-brand-colours-with-qr
+expected_outcome: |
+  Three poster drafts in 4:5 portrait (for example 2048x2560 or 1440x1800; 4K-class sizes only if the user had asked for 4K), in different styles, all coloured
+  from the brand palette (deep green, cream, burnt orange) rather than the styles' stock palettes.
+  Each shows the headline, the line under it, the top label, the date and place as labelled rows,
+  a "Reserve a seat" call to action, a scannable QR code for the sign-up link and the bottom line.
+  Text is legible and nothing collides with the QR code or the 3D subject.

@@ -1,0 +1,32 @@
+/* classic — the old Korean display face of 1970–80s shop signs, record sleeves and film titles (카페24 클래식타입; 옛 간판·옛 영화 제목의 굵은 복고 글씨): a heavy gothic with wedged, serif-like ends and strong contrast, set large over a quiet 명조. Faces: Cafe24 ClassicType, with its own serifed Latin and figures, over Gowun Batang; Hahmlet for the information. */
+.poster[data-type="classic"] {
+  --font-title: "Cafe24 ClassicType", "Black Han Sans", "Pretendard", sans-serif;   /* one face: its own Latin and figures */
+  --font-eyebrow: "Cafe24 ClassicType", "Pretendard", sans-serif; --font-eyebrow-ko: "Cafe24 ClassicType", "Pretendard", sans-serif;
+  --font-subtitle: "Gowun Batang", "Hahmlet", "Noto Serif KR", serif; --font-subtitle-ko: "Gowun Batang", "Hahmlet", "Noto Serif KR", serif;
+  --font-body: "Gowun Batang", "Hahmlet", "Noto Serif KR", serif;
+  --font-label-ko: "Hahmlet", "Pretendard", serif;
+  --title-size: 10.2; --title-weight: 400; --title-leading: 1.1; --title-tracking: -0.01em;
+  --title-leading-ko: 1.24; --title-tracking-ko: -0.04em; --title-wordspace-ko: 0.04em;
+  --eyebrow-size: 1.9; --eyebrow-weight: 400; --eyebrow-tracking: 0.12em; --eyebrow-tracking-ko: 0.06em; --eyebrow-case: none;
+  --subtitle-size: 2.84; --subtitle-weight: 700; --subtitle-leading: 1.36; --subtitle-tracking: -0.01em; --subtitle-weight-ko: 700;
+  --body-size: 1.84; --body-weight: 400; --body-weight-ko: 400;
+  --meta-size: 2.66; --meta-weight: 500; --meta-label-weight: 700;
+  --footer-size: 1.5; --footer-weight: 500; --footer-tracking: 0.04em; --footer-rule: 1; --grain: 0.28;
+  --gap-eyebrow: 2.6; --gap-subtitle: 2.6;
+}
+/* printed in two plates: the headline over a slipped shadow of the accent colour */
+.poster[data-type="classic"] .title { text-shadow: 0.035em 0.035em 0 color-mix(in srgb, var(--c-accent) 80%, transparent); }
+.poster[data-type="classic"] .title em { color: var(--c-accent); text-shadow: 0.035em 0.035em 0 color-mix(in srgb, var(--c-ink) 70%, transparent); }
+/* the label between two short double rules, as on an old ticket or a theatre bill */
+.poster[data-type="classic"] .eyebrow { display: flex; align-items: center; gap: 0.7em; color: var(--c-ink); }
+.poster[data-type="classic"] .eyebrow::before, .poster[data-type="classic"] .eyebrow::after { content: ""; width: 1.6em; height: 0.36em; border-top: 0.1em solid currentColor; border-bottom: 0.1em solid currentColor; flex: none; }
+.poster[data-type="classic"] [data-halign="center"] > .eyebrow { justify-content: center; }
+.poster[data-type="classic"] .eyebrow::after { display: none; }   /* the second rule only when the label is centred */
+.poster[data-type="classic"] [data-halign="center"] > .eyebrow::after { display: block; }
+.poster[data-type="classic"] .main[data-mode="vertical"] .eyebrow::before, .poster[data-type="classic"] .main[data-mode="vertical"] .eyebrow::after { display: none; }
+.poster[data-type="classic"] .subtitle { color: var(--c-ink); }
+.poster[data-type="classic"] .body { color: color-mix(in srgb, var(--c-ink) 84%, transparent); }
+.poster[data-type="classic"] .meta dt { font-family: var(--font-eyebrow-ko); font-weight: 400; color: color-mix(in srgb, var(--c-accent) 66%, var(--c-ink)); }
+.poster[data-type="classic"] .cta { border-radius: 0; background: var(--c-ink); color: var(--c-paper); font-family: var(--font-eyebrow-ko); font-weight: 400; box-shadow: 0.2em 0.2em 0 var(--c-accent); }
+.poster[data-type="classic"] .badge { border-radius: 0; font-family: var(--font-eyebrow-ko); font-weight: 400; letter-spacing: 0.04em; }
+.poster[data-type="classic"] .bottom.ruled { border-top: calc(var(--u) * 0.36) double var(--c-ink); padding-top: calc(var(--u) * 1.6); }

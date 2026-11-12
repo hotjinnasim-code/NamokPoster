@@ -1,0 +1,25 @@
+/* esamanru — the stadium lettering of a baseball game (이사만루; 야구 게임의 굵고 시원한 제목 글씨): wide, bold, a little forward-leaning, made for scoreboards, banners and match-day bills. Face: esamanru Bold, with its own Latin and figures; Pretendard for the details. */
+.poster[data-type="esamanru"] {
+  --font-title: "esamanru", "Black Han Sans", "Pretendard", sans-serif;   /* one face: its own Latin and figures */
+  --font-eyebrow: "esamanru", "Pretendard", sans-serif; --font-eyebrow-ko: "esamanru", "Pretendard", sans-serif;
+  --font-subtitle: "Pretendard", sans-serif; --font-subtitle-ko: "Pretendard", sans-serif;
+  --title-size: 10.6; --title-weight: 700; --title-leading: 1.06; --title-tracking: -0.02em;
+  --title-leading-ko: 1.2; --title-tracking-ko: -0.04em; --title-wordspace-ko: 0.04em;
+  --eyebrow-size: 1.7; --eyebrow-weight: 700; --eyebrow-tracking: 0.08em; --eyebrow-tracking-ko: 0.02em; --eyebrow-case: uppercase;
+  --subtitle-size: 2.86; --subtitle-weight: 700; --subtitle-leading: 1.34; --subtitle-weight-ko: 700;
+  --body-size: 1.82; --body-weight: 500; --body-weight-ko: 500;
+  --meta-weight: 500; --meta-label-weight: 700;
+  --footer-size: 1.52; --footer-weight: 700; --footer-tracking: 0.04em; --footer-rule: 1; --grain: 0.12;
+  --gap-eyebrow: 2.2; --gap-subtitle: 2.5;
+}
+.poster[data-type="esamanru"] .title em { color: var(--c-accent); }
+/* the label is a team's pennant stripe: ink block with an accent edge */
+.poster[data-type="esamanru"] .eyebrow { color: var(--c-paper); background: var(--c-ink); padding: 0.36em 0.9em 0.3em; line-height: 1.16; box-shadow: -0.32em 0 0 var(--c-accent); margin-left: 0.32em; }
+.poster[data-type="esamanru"] [data-halign="center"] > .eyebrow { box-shadow: -0.32em 0 0 var(--c-accent), 0.32em 0 0 var(--c-accent); margin-left: 0; }
+.poster[data-type="esamanru"] .main[data-mode="vertical"] .eyebrow { box-shadow: none; margin-left: 0; padding: 0.9em 0.36em; }
+.poster[data-type="esamanru"] .subtitle { color: var(--c-ink); }
+.poster[data-type="esamanru"] .body { color: color-mix(in srgb, var(--c-ink) 84%, transparent); }
+.poster[data-type="esamanru"] .meta dt { font-family: var(--font-eyebrow-ko); }   /* the label in the stadium face, the value plain */
+.poster[data-type="esamanru"] .cta { border-radius: 0.2em; background: var(--c-accent); color: var(--c-on-accent, var(--c-paper)); font-family: var(--font-eyebrow-ko); font-weight: 700; }
+.poster[data-type="esamanru"] .badge { border-radius: 50%; font-family: var(--font-eyebrow-ko); font-weight: 700; letter-spacing: 0; }
+.poster[data-type="esamanru"] .bottom.ruled { border-top: calc(var(--u) * 0.32) solid var(--c-ink); padding-top: calc(var(--u) * 1.6); }

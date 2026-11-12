@@ -1,0 +1,230 @@
+{
+  "id": "numerals",
+  "label": "Giant Numerals",
+  "engine": "html",
+  "kind": "object",
+  "mood": "the date as the image — the month and the day of the event set enormous, together, in the poster's own display face, captioned with the year, the weekday and the time on hairline rows, in the manner of Swiss and contemporary editorial posters. Vector, so it is razor-sharp at any size, and it changes character with the type theme (a heavy grotesque, a high-contrast serif, a brush). Reads the date from the event information; the day is never shown large on its own. Good for anything with one date to remember: concerts, openings, launches, deadlines, church and school events, sales.",
+  "tone": "light",
+  "type": "grotesk",
+  "types": ["brutal", "fatface", "esamanru", "square", "dream", "condensed", "didone", "editorial", "impact", "swiss", "wide", "slab", "bold"],
+  "requires": [
+    "date"
+  ],
+  "defaultPalette": "poster",
+  "palettes": {
+    "poster": {
+      "bg": "#f2eee6",
+      "ink": "#161616",
+      "accent": "#e3412a",
+      "colors": [
+        "#e3412a",
+        "#161616",
+        "#2a49c8"
+      ]
+    },
+    "cobalt": {
+      "bg": "#1f3fd0",
+      "ink": "#ffffff",
+      "accent": "#ffd84a",
+      "colors": [
+        "#ffd84a",
+        "#ffffff",
+        "#0c1a66"
+      ]
+    },
+    "ink": {
+      "bg": "#141414",
+      "ink": "#f3efe6",
+      "accent": "#ff5a36",
+      "colors": [
+        "#f3efe6",
+        "#ff5a36",
+        "#8d8a84"
+      ]
+    },
+    "meadow": {
+      "bg": "#e6ecd9",
+      "ink": "#1c2a20",
+      "accent": "#d95a2b",
+      "colors": [
+        "#1f5a3c",
+        "#d95a2b",
+        "#e8b23a"
+      ]
+    },
+    "blush": {
+      "bg": "#f6e3dc",
+      "ink": "#3a1620",
+      "accent": "#c2264b",
+      "colors": [
+        "#c2264b",
+        "#3a1620",
+        "#f0a04a"
+      ]
+    }
+  },
+  "params": {
+    "motif": {
+      "default": "date",
+      "note": "date | stack | words — month and day are always shown together"
+    },
+    "treatment": {
+      "default": "solid",
+      "note": "solid | offset (second ink out of register behind an outline) | outline | echo (stepped outlines behind) | slice (three bands in three inks)"
+    }
+  },
+  "motifs": {
+    "date": {
+      "note": "month.day on one line (11.15), as large as the space allows; year and weekday above, time below — a wide image",
+      "topics": [
+        "music",
+        "culture",
+        "community",
+        "celebration",
+        "education",
+        "tech",
+        "business",
+        "sale",
+        "sports"
+      ],
+      "layouts": {
+        "landscape": {
+          "layout": "band",
+          "also": [
+            "top",
+            "left",
+            "right",
+            "strip",
+            "axis",
+            "corners"
+          ]
+        },
+        "portrait": {
+          "layout": "top",
+          "also": [
+            "bottom",
+            "axis",
+            "corners"
+          ]
+        },
+        "square": {
+          "layout": "top"
+        }
+      }
+    },
+    "stack": {
+      "note": "month over day (11 above 15), each line fitted to the same width and printed in its own ink — or the first and last day of a run",
+      "params": {
+        "treatment": "solid"
+      },
+      "topics": [
+        "design",
+        "art",
+        "fashion",
+        "film",
+        "culture"
+      ],
+      "layouts": {
+        "landscape": {
+          "layout": "left",
+          "also": [
+            "right",
+            "corners"
+          ]
+        },
+        "portrait": {
+          "layout": "top",
+          "also": [
+            "bottom",
+            "side",
+            "axis"
+          ]
+        },
+        "square": {
+          "layout": "left"
+        }
+      }
+    },
+    "words": {
+      "note": "month and day spelled as a date: 11월 over 15일 (NOV over 15 in English), each line fitted to the same width",
+      "params": {
+        "treatment": "solid"
+      },
+      "topics": [
+        "community",
+        "family",
+        "education",
+        "tradition",
+        "celebration",
+        "market"
+      ],
+      "layouts": {
+        "landscape": {
+          "layout": "left",
+          "also": [
+            "right",
+            "corners"
+          ]
+        },
+        "portrait": {
+          "layout": "top",
+          "also": [
+            "bottom",
+            "side",
+            "axis"
+          ]
+        },
+        "square": {
+          "layout": "left"
+        }
+      }
+    }
+  },
+  "topics": [
+    "music",
+    "culture",
+    "community",
+    "celebration",
+    "design",
+    "art",
+    "business",
+    "education"
+  ],
+  "layouts": {
+    "landscape": {
+      "layout": "band",
+      "also": [
+        "top",
+        "left",
+        "right",
+        "strip",
+        "axis",
+        "corners"
+      ]
+    },
+    "portrait": {
+      "layout": "top",
+      "also": [
+        "bottom",
+        "axis",
+        "corners"
+      ]
+    },
+    "square": {
+      "layout": "top"
+    }
+  },
+  "grounds": [
+    "haze",
+    "halftone",
+    "bokeh",
+    "liquid",
+    "turing",
+    "contour",
+    "pattern/dots",
+    "pattern/grid",
+    "pattern/checker",
+    "fluted",
+    "flowfield/threads"
+  ]
+}

@@ -1,0 +1,133 @@
+{
+  "id": "chrome",
+  "label": "Liquid Chrome",
+  "engine": "blender",
+  "mood": "Y2K, futuristic, glossy — blobby mirror-chrome forms and droplets floating in front of a plain wall, mirroring big gradient light cards in the palette colours. Good for music and club nights, fashion drops, tech and gaming launches, festivals, anything that should feel like liquid metal.",
+  "tone": "dark",
+  "type": "techno",
+  "types": ["impact", "elegant", "brutal", "swiss", "esamanru"],
+  "matchBackground": true,
+  "fallback": "aurora",
+  "defaultPalette": "hologram",
+  "palettes": {
+    "hologram": {
+      "bg": "#07070d",
+      "ink": "#f4f3fa",
+      "accent": "#b9a8ff",
+      "colors": [
+        "#7b5cff",
+        "#ff4fa3",
+        "#22d3ee",
+        "#ffffff"
+      ]
+    },
+    "acid": {
+      "bg": "#070b08",
+      "ink": "#f1ffe8",
+      "accent": "#b6ff3c",
+      "colors": [
+        "#b6ff3c",
+        "#00d6c4",
+        "#2447ff",
+        "#f6ffe0"
+      ]
+    },
+    "molten": {
+      "bg": "#0d0806",
+      "ink": "#fff4e8",
+      "accent": "#ff9d4d",
+      "colors": [
+        "#ff5a1f",
+        "#ffc24a",
+        "#d81e5b",
+        "#fff1dd"
+      ]
+    },
+    "pearl": {
+      "bg": "#efeaf6",
+      "ink": "#19142c",
+      "accent": "#6a3df0",
+      "colors": [
+        "#6a3df0",
+        "#ff6fb5",
+        "#3ccfff",
+        "#ffffff"
+      ]
+    },
+    "cobalt": {
+      "bg": "#f2f0ea",
+      "ink": "#121316",
+      "accent": "#f0441a",
+      "colors": [
+        "#16224f",
+        "#2f55ff",
+        "#ff4b1f"
+      ]
+    }
+  },
+  "params": {
+    "forms": {
+      "default": 4,
+      "note": "3–5 chrome forms: a big amoeba plus ring / drip / peanut / teardrop (seed picks which)"
+    },
+    "droplets": {
+      "default": 7,
+      "note": "number of small chrome droplets around the forms (0 = none)"
+    },
+    "roughness": {
+      "default": 0.035,
+      "note": "0 = perfect mirror … 0.25 = brushed / satin metal"
+    },
+    "shadow": {
+      "default": 14,
+      "note": "softness of the shadows on the wall in degrees: 3 = crisp … 25 = very soft"
+    }
+  },
+  "layouts": {
+    "landscape": {
+      "layout": "left",
+      "also": [
+        "right",
+        "top",
+        "bottom",
+        "corners",
+        "headline",
+        "baseline",
+        "vertical",
+        "axis",
+        "band",
+        "strip"
+      ]
+    },
+    "portrait": {
+      "layout": "top",
+      "also": [
+        "bottom",
+        "corners",
+        "baseline",
+        "vertical",
+        "axis",
+        "side"
+      ]
+    },
+    "square": {
+      "layout": "top",
+      "also": [
+        "bottom",
+        "corners",
+        "baseline",
+        "vertical",
+        "axis",
+        "left",
+        "right"
+      ]
+    }
+  },
+  "cutout": true,
+  "grounds": [
+    "haze",
+    "halftone",
+    "pattern/grid",
+    "pattern/dots"
+  ]
+}

@@ -1,0 +1,24 @@
+/* ssurround — the bold, round-ended headline of video thumbnails and card news (카페24 써라운드; 획 끝이 둥근 굵은 썸네일 제목체): heavy and friendly, outlined like a caption on a moving picture. Face: Cafe24 Ssurround, with its own Latin and figures; Pretendard for the details. */
+.poster[data-type="ssurround"] {
+  --font-title: "Cafe24 Ssurround", "NanumSquareRound", "Pretendard", sans-serif;   /* one face: its own Latin and figures */
+  --font-eyebrow: "Cafe24 Ssurround", "Pretendard", sans-serif; --font-eyebrow-ko: "Cafe24 Ssurround", "Pretendard", sans-serif;
+  --font-subtitle: "Pretendard", sans-serif; --font-subtitle-ko: "Pretendard", sans-serif;
+  --title-size: 10.6; --title-weight: 400; --title-leading: 1.08; --title-tracking: -0.02em;
+  --title-leading-ko: 1.22; --title-tracking-ko: -0.05em; --title-wordspace-ko: 0.04em;
+  --eyebrow-size: 1.78; --eyebrow-weight: 400; --eyebrow-tracking: 0.04em; --eyebrow-tracking-ko: 0em; --eyebrow-case: none;
+  --subtitle-size: 2.9; --subtitle-weight: 700; --subtitle-leading: 1.34; --subtitle-weight-ko: 700;
+  --body-size: 1.84; --body-weight: 500; --body-weight-ko: 500;
+  --meta-weight: 500; --meta-label-weight: 400;
+  --footer-size: 1.54; --footer-weight: 700; --footer-rule: 1; --grain: 0.1;
+  --gap-eyebrow: 2.3; --gap-subtitle: 2.5;
+}
+/* a caption's outline: the paper colour drawn round the letters, under them */
+.poster[data-type="ssurround"] .title { -webkit-text-stroke: 0.09em var(--c-paper); paint-order: stroke fill; }
+.poster[data-type="ssurround"] .title em { color: var(--c-accent); }
+.poster[data-type="ssurround"] .eyebrow { color: var(--c-accent); }
+.poster[data-type="ssurround"] .subtitle { color: var(--c-ink); }
+.poster[data-type="ssurround"] .body { color: color-mix(in srgb, var(--c-ink) 84%, transparent); }
+.poster[data-type="ssurround"] .meta dt { font-family: var(--font-eyebrow-ko); }   /* the label in the round face, the value plain */
+.poster[data-type="ssurround"] .cta { border-radius: 99em; background: var(--c-accent); color: var(--c-on-accent, var(--c-paper)); font-family: var(--font-eyebrow-ko); font-weight: 400; }
+.poster[data-type="ssurround"] .badge { border-radius: 99em; font-family: var(--font-eyebrow-ko); font-weight: 400; letter-spacing: 0; }
+.poster[data-type="ssurround"] .bottom.ruled { border-top: calc(var(--u) * 0.28) solid var(--c-ink); padding-top: calc(var(--u) * 1.6); }

@@ -1,0 +1,22 @@
+/* elegant — light weights set large and quiet, gradient emphasis. */
+.poster[data-type="elegant"] {
+  --font-title: "Space Grotesk", "Pretendard", sans-serif;
+  --font-title-ko: "Space Grotesk KR", "Pretendard", sans-serif;
+  --title-size: 10.4; --title-weight: 400; --title-leading: 1.06; --title-tracking: -0.04em;
+  --title-leading-ko: 1.2; --title-tracking-ko: -0.035em; --title-wordspace-ko: 0.06em; --title-weight-ko: 500;
+  --eyebrow-size: 1.38; --eyebrow-weight: 500; --eyebrow-tracking: 0.3em; --eyebrow-tracking-ko: 0.14em;
+  --subtitle-size: 2.65; --subtitle-weight: 300; --subtitle-leading: 1.4; --subtitle-tracking: -0.01em; --subtitle-weight-ko: 400;
+  --body-size: 1.76; --body-weight: 300; --body-leading: 1.7; --body-weight-ko: 400;
+  --footer-size: 1.41; --footer-weight: 400; --footer-tracking: 0.08em; --footer-rule: 1; --grain: 0.2;
+  --meta-weight: 400; --meta-label-weight: 600;
+}
+.poster[data-type="elegant"] .title em {
+  background: linear-gradient(95deg, var(--em-1), var(--em-2) 60%, var(--em-3)); -webkit-background-clip: text; background-clip: text; color: transparent; text-shadow: none;
+  padding: 0.1em 0.05em; margin: -0.1em -0.05em;
+}
+.poster[data-type="elegant"][data-tone="light"] .title em { background: none; color: var(--c-accent); }
+.poster[data-type="elegant"] .eyebrow { color: var(--c-accent); }
+.poster[data-type="elegant"] .subtitle { color: color-mix(in srgb, var(--c-ink) 88%, transparent); }
+.poster[data-type="elegant"] .cta { background: transparent; color: var(--c-ink); border: calc(var(--u) * 0.12) solid color-mix(in srgb, var(--c-ink) 60%, transparent); font-weight: 500; letter-spacing: 0.04em; }
+.poster[data-type="elegant"] .badge { background: transparent; color: var(--c-accent); border: calc(var(--u) * 0.12) solid var(--c-accent); letter-spacing: 0.2em; }
+.poster[data-type="elegant"] .bottom.ruled { border-top-color: color-mix(in srgb, var(--c-ink) 20%, transparent); }

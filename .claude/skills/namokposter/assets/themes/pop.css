@@ -1,0 +1,20 @@
+/* pop — chubby letters with a sticker outline; kitsch, kids, sales, festivals. */
+.poster[data-type="pop"] {
+  --font-title: "Unbounded", "Bagel Fat One", "Black Han Sans", sans-serif;
+  --font-title-ko: "Unbounded KR", "Bagel Fat One", "Black Han Sans", sans-serif;
+  --font-eyebrow: "Unbounded", "Pretendard", sans-serif;
+  --title-size: 11.4; --title-weight: 800; --title-leading: 1.04; --title-tracking: -0.03em;
+  --title-leading-ko: 1.16; --title-tracking-ko: -0.01em; --title-wordspace-ko: 0.02em; --title-weight-ko: 400;
+  --eyebrow-size: 1.36; --eyebrow-weight: 700; --eyebrow-tracking: 0.04em; --eyebrow-tracking-ko: 0.02em;
+  --subtitle-size: 2.86; --subtitle-weight: 700; --subtitle-leading: 1.32; --subtitle-weight-ko: 700;
+  --body-size: 1.84; --body-weight: 500; --body-weight-ko: 500;
+  --footer-size: 1.57; --footer-weight: 700; --footer-rule: 0; --grain: 0.14;
+}
+.poster[data-type="pop"] .title { -webkit-text-stroke: 0.035em var(--c-ink); paint-order: stroke fill; text-shadow: 0.06em 0.07em 0 var(--c-ink); color: var(--c-paper); }
+.poster[data-type="pop"][data-tone="dark"] .title { color: var(--c-ink); -webkit-text-stroke-color: var(--c-paper); text-shadow: 0.06em 0.07em 0 var(--c-accent); }
+.poster[data-type="pop"] .title em { color: var(--c-accent); }
+.poster[data-type="pop"] .eyebrow { color: var(--c-paper); background: var(--c-accent); padding: 0.6em 1.1em; border-radius: 99em; border: calc(var(--u) * 0.2) solid var(--c-ink); }
+.poster[data-type="pop"] .subtitle, .poster[data-type="pop"] .footer { color: var(--c-ink); }
+.poster[data-type="pop"] .body { color: color-mix(in srgb, var(--c-ink) 84%, transparent); }
+.poster[data-type="pop"] .cta { background: var(--c-accent); color: var(--c-paper); border: calc(var(--u) * 0.24) solid var(--c-ink); box-shadow: 0.2em 0.24em 0 var(--c-ink); }
+.poster[data-type="pop"] .badge { background: var(--c-2); color: var(--c-ink); border: calc(var(--u) * 0.24) solid var(--c-ink); transform: rotate(6deg); font-size: calc(var(--fu) * 1.7 * var(--k-small)); box-shadow: 0.16em 0.2em 0 var(--c-ink); }

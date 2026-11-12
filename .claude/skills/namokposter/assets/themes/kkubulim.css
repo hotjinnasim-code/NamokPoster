@@ -1,0 +1,23 @@
+/* kkubulim — a wobbly, curling hand with a sense of fun (배달의민족 꾸불림체; 꼬불꼬불한 장식 손글씨): flea markets, craft fairs, a neighbourhood party, a play for children. Every stroke bends a little. Face: BM Kkubulim, with its own Latin and figures; Pretendard for the details. */
+.poster[data-type="kkubulim"] {
+  --font-title: "BM Kkubulim", "Gamja Flower", "Pretendard", sans-serif;   /* one face: its own Latin and figures */
+  --font-eyebrow: "BM Kkubulim", "Pretendard", sans-serif; --font-eyebrow-ko: "BM Kkubulim", "Pretendard", sans-serif;
+  --font-subtitle: "BM Kkubulim", "Pretendard", sans-serif; --font-subtitle-ko: "BM Kkubulim", "Pretendard", sans-serif;
+  --title-size: 12.2; --title-weight: 400; --title-leading: 1.06; --title-tracking: 0em;
+  --title-leading-ko: 1.18; --title-tracking-ko: -0.01em; --title-wordspace-ko: 0.1em;
+  --eyebrow-size: 2.1; --eyebrow-weight: 400; --eyebrow-tracking: 0.04em; --eyebrow-tracking-ko: 0.02em; --eyebrow-case: none;
+  --subtitle-size: 3.0; --subtitle-weight: 400; --subtitle-leading: 1.32; --subtitle-tracking: 0em; --subtitle-leading-ko: 1.36; --subtitle-tracking-ko: 0em;
+  --body-size: 1.84; --body-weight: 500; --body-weight-ko: 500;
+  --meta-weight: 500; --meta-label-weight: 400;
+  --footer-size: 1.54; --footer-weight: 600; --footer-rule: 1; --grain: 0.16;
+  --gap-eyebrow: 2.0; --gap-subtitle: 2.3;
+}
+/* emphasis gets a wavy underline, drawn with the same bending pen */
+.poster[data-type="kkubulim"] .title em { color: var(--c-accent); text-decoration: underline wavy; text-decoration-thickness: 0.04em; text-underline-offset: 0.18em; text-decoration-skip-ink: none; }
+.poster[data-type="kkubulim"] .eyebrow { color: var(--c-paper); background: var(--c-accent); padding: 0.36em 1em 0.32em; border-radius: 99em; line-height: 1.2; }
+.poster[data-type="kkubulim"] .subtitle { color: var(--c-ink); }
+.poster[data-type="kkubulim"] .body { color: color-mix(in srgb, var(--c-ink) 84%, transparent); }
+.poster[data-type="kkubulim"] .meta dt { font-family: var(--font-eyebrow-ko); font-size: 1.06em; color: color-mix(in srgb, var(--c-accent) 62%, var(--c-ink)); }
+.poster[data-type="kkubulim"] .cta { border-radius: 99em; background: var(--c-ink); color: var(--c-paper); font-family: var(--font-eyebrow-ko); font-weight: 400; font-size: calc(var(--su) * var(--cta-size) * 1.2 * var(--k-small)); }
+.poster[data-type="kkubulim"] .badge { border-radius: 99em; transform: rotate(5deg); font-family: var(--font-eyebrow-ko); font-weight: 400; }
+.poster[data-type="kkubulim"] .bottom.ruled { border-top: calc(var(--u) * 0.2) dotted color-mix(in srgb, var(--c-ink) 70%, transparent); padding-top: calc(var(--u) * 1.6); }

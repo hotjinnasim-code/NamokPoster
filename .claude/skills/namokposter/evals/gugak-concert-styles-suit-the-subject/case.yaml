@@ -1,0 +1,11 @@
+schema_version: "1.1"
+name: gugak-concert-styles-suit-the-subject
+expected_outcome: |
+  Three finished poster drafts at 3508x4961 (A3 portrait, the default, since no size was named) for a Korean
+  traditional music concert, where the user left the choice of style to the skill. All three
+  styles suit the subject — ink, paper, textile, lacquer, quiet material or light, set in a
+  typographic voice that fits (명조, brush, calm sans) — and still differ clearly from one another;
+  none of them looks like a tech conference, a children's event or a club night. The date, venue,
+  price and booking number are set as a labelled information block with label and value at a
+  matching, readable size, above the footer; the organiser and sponsor stay in the footer. The copy
+  is verbatim, nothing sits tight against the edge, and the reply says why each style was chosen.

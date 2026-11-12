@@ -1,0 +1,216 @@
+{
+  "id": "marquee",
+  "label": "Marquee Type",
+  "engine": "html",
+  "kind": "picture",
+  "ground": true,
+  "mood": "type as texture — the poster's own headline repeated end to end in rows that fill the free part of the page and run off its edge, set in the poster's display face, alternately solid and outlined, with the date or the eyebrow and a small drawn star between the repeats; or turned on a slant, carried on crossing ribbons of barrier tape, or growing row by row into a crescendo. Loud, rhythmic and contemporary, and it changes voice with the type theme. Reads the headline, the date and the eyebrow from the copy. Good for festivals, concerts, parties, sales, fashion and sports events, launches and youth and church events.",
+  "tone": "light",
+  "type": "bold",
+  "types": ["grotesk", "classic", "comic", "jalnan", "fatface", "yeonsung", "brutal", "condensed", "impact", "swiss", "pop", "jua", "editorial", "gmarket"],
+  "defaultPalette": "poster",
+  "palettes": {
+    "poster": {
+      "bg": "#f1ede4",
+      "ink": "#151515",
+      "accent": "#e2412b",
+      "colors": [
+        "#151515",
+        "#e2412b",
+        "#2747c9",
+        "#f2b51d"
+      ]
+    },
+    "acid": {
+      "bg": "#d8ef4a",
+      "ink": "#121212",
+      "accent": "#5a2bd6",
+      "colors": [
+        "#121212",
+        "#5a2bd6",
+        "#ff5a36",
+        "#f6f3ea"
+      ]
+    },
+    "night": {
+      "bg": "#121212",
+      "ink": "#f2eee5",
+      "accent": "#ff5233",
+      "colors": [
+        "#f2eee5",
+        "#ff5233",
+        "#ffd23f",
+        "#4f6bff"
+      ]
+    },
+    "cobalt": {
+      "bg": "#1d3bc9",
+      "ink": "#ffffff",
+      "accent": "#ffe14d",
+      "colors": [
+        "#ffffff",
+        "#ffe14d",
+        "#ff6b5b",
+        "#0b1557"
+      ]
+    },
+    "rose": {
+      "bg": "#f6dfe0",
+      "ink": "#2b1220",
+      "accent": "#d1295a",
+      "colors": [
+        "#2b1220",
+        "#d1295a",
+        "#f0913a",
+        "#ffffff"
+      ]
+    }
+  },
+  "params": {
+    "motif": {
+      "default": "rows",
+      "note": "rows | tilt | tape | steps"
+    },
+    "treatment": {
+      "default": "outline",
+      "note": "outline (every other row outlined in the second ink) | duo (rows alternate the first two inks) | solid (one ink, marks in the second)"
+    },
+    "with": {
+      "default": "auto",
+      "note": "what alternates with the headline: auto (the date if the copy has one, else a short eyebrow) | date | eyebrow | none"
+    },
+    "mark": {
+      "default": "star",
+      "note": "the drawn separator between repeats: star (four-point) | dot | dash"
+    },
+    "caps": {
+      "default": true,
+      "note": "set Latin in capitals (Hangul is unaffected)"
+    },
+    "rows": {
+      "default": 0,
+      "note": "number of rows; 0 = automatic (5–9 for rows/tilt, up to 6 for steps)"
+    },
+    "angle": {
+      "default": -12,
+      "note": "tilt motif: the angle of the rows in degrees"
+    },
+    "ribbons": {
+      "default": 0,
+      "note": "tape motif: 2 or 3 ribbons; 0 = 3, or 2 when the field is small"
+    },
+    "phrase": {
+      "default": "auto",
+      "note": "auto (a long headline is cut to its first line or clause, else to whole words) | full (the whole headline, however long)"
+    }
+  },
+  "motifs": {
+    "rows": {
+      "note": "horizontal rows of the headline (and date), alternately solid and outlined, each shifted so the repeats do not line up",
+      "topics": [
+        "music",
+        "fashion",
+        "celebration",
+        "market",
+        "sports",
+        "nightlife",
+        "community"
+      ]
+    },
+    "tilt": {
+      "note": "the same field of rows turned about −12°, cropped by the field's straight edges",
+      "params": {
+        "treatment": "duo",
+        "mark": "dot"
+      },
+      "topics": [
+        "sports",
+        "nightlife",
+        "music",
+        "gaming",
+        "celebration"
+      ]
+    },
+    "tape": {
+      "note": "two or three broad ribbons of flat colour crossing the field like barrier tape, each carrying the phrase",
+      "params": {
+        "mark": "dash"
+      },
+      "topics": [
+        "market",
+        "celebration",
+        "tech",
+        "city",
+        "sports",
+        "kids"
+      ],
+      "layouts": {
+        "landscape": {
+          "layout": "corners"
+        },
+        "portrait": {
+          "layout": "top"
+        },
+        "square": {
+          "layout": "top"
+        }
+      }
+    },
+    "steps": {
+      "note": "rows growing from small beside the copy to very large at the page edge — a crescendo, the largest row cropped",
+      "params": {
+        "treatment": "solid"
+      },
+      "topics": [
+        "music",
+        "film",
+        "culture",
+        "design",
+        "art",
+        "literature"
+      ]
+    }
+  },
+  "topics": [
+    "music",
+    "celebration",
+    "fashion",
+    "market",
+    "sports",
+    "nightlife",
+    "community",
+    "design",
+    "culture"
+  ],
+  "layouts": {
+    "landscape": {
+      "layout": "left",
+      "also": [
+        "right",
+        "top",
+        "bottom",
+        "band",
+        "strip",
+        "corners",
+        "axis",
+        "baseline",
+        "headline",
+        "vertical"
+      ]
+    },
+    "portrait": {
+      "layout": "top",
+      "also": [
+        "bottom",
+        "side",
+        "corners",
+        "axis",
+        "baseline",
+        "vertical"
+      ]
+    },
+    "square": {
+      "layout": "top"
+    }
+  }
+}

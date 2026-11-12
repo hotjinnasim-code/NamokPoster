@@ -1,0 +1,10 @@
+schema_version: "1.1"
+name: korean-conference-default-drafts
+expected_outcome: |
+  Three finished poster drafts as PNG files at 3508x4961 (A3 portrait, 300 dpi, the default since the
+  user named no size and did not mention a screen), each in a clearly different visual style, all carrying the five pieces of
+  copy the user supplied without rewriting them. The user did not ask for Blender, so the set is
+  drawn with three.js and HTML styles only (one of them alone, or the two layered) and no draft is
+  a Blender render. The copy is legible in every draft, nothing overflows, and the final reply
+  tells the user where the three files are, how the three concepts differ, and that a set of
+  Blender (3D material) drafts can be had by asking for it.

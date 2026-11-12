@@ -1,0 +1,134 @@
+{
+  "id": "pixel",
+  "label": "Dithered Retro",
+  "engine": "three",
+  "mood": "retro computing — a lit still life of chunky primitives on a checkerboard slab in front of a pin-striped desktop window, printed in three to five colours with an ordered Bayer dither and chunky pixels; the backdrop stays one flat colour. Good for hackathons, game jams, developer events, zines, indie music, anything lo-fi.",
+  "tone": "light",
+  "type": "techno",
+  "types": ["retro", "dunggeunmo", "cute", "comic", "brutal", "impact", "swiss"],
+  "defaultPalette": "pocket",
+  "palettes": {
+    "pocket": {
+      "bg": "#c9d8a2",
+      "ink": "#0f380f",
+      "accent": "#2d5e2e",
+      "colors": [
+        "#0f380f",
+        "#306230",
+        "#8bac0f"
+      ],
+      "muted": "#17431a"
+    },
+    "paper": {
+      "bg": "#f1eee4",
+      "ink": "#16161a",
+      "accent": "#2a46d6",
+      "colors": [
+        "#16161a",
+        "#77756d",
+        "#bdb9ab"
+      ]
+    },
+    "zine": {
+      "bg": "#f5ead6",
+      "ink": "#1d2a5b",
+      "accent": "#2a56c6",
+      "colors": [
+        "#1d2a5b",
+        "#2f6fbf",
+        "#f2b632"
+      ]
+    },
+    "amber": {
+      "bg": "#140c04",
+      "ink": "#ffe7b8",
+      "accent": "#ffb000",
+      "colors": [
+        "#5a2f00",
+        "#c46a00",
+        "#ffb000",
+        "#ffe7b8"
+      ]
+    },
+    "arcade": {
+      "bg": "#170f33",
+      "ink": "#f6efff",
+      "accent": "#5fe6ff",
+      "colors": [
+        "#4a2a8a",
+        "#b23ad0",
+        "#ff7ad9",
+        "#ffe6fb"
+      ]
+    }
+  },
+  "params": {
+    "pixel": {
+      "default": 1.0,
+      "note": "pixel size: 0.5 = fine … 2 = very chunky (always a divisor of the output width)"
+    },
+    "bayer": {
+      "default": 4,
+      "note": "dither matrix: 2 = coarse checker, 4 = classic, 8 = smoothest ramps"
+    },
+    "window": {
+      "default": true,
+      "note": "the desktop window (rectangle with a striped title bar and a gradient) behind the still life"
+    },
+    "dust": {
+      "default": 1.0,
+      "note": "0 = none … 3 = many small dashes and boxes of pixels around the subject"
+    },
+    "contrast": {
+      "default": 1.0,
+      "note": "0.5 = flat … 1.6 = deep shadows"
+    },
+    "outline": {
+      "default": "auto",
+      "note": "one-pixel outline: auto (on light backdrops), true, false"
+    }
+  },
+  "vars": {
+    "--scrim-center": 0
+  },
+  "layouts": {
+    "landscape": {
+      "layout": "left",
+      "also": [
+        "right",
+        "top",
+        "bottom",
+        "corners",
+        "headline",
+        "baseline",
+        "vertical",
+        "axis",
+        "band",
+        "strip"
+      ]
+    },
+    "portrait": {
+      "layout": "top",
+      "also": [
+        "bottom",
+        "corners",
+        "baseline",
+        "vertical",
+        "axis",
+        "side"
+      ]
+    },
+    "square": {
+      "layout": "top",
+      "also": [
+        "bottom",
+        "corners",
+        "baseline",
+        "vertical",
+        "axis",
+        "left",
+        "right"
+      ]
+    }
+  }
+}

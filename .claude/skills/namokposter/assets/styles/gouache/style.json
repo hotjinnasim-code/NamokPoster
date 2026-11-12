@@ -1,0 +1,185 @@
+{
+  "id": "gouache",
+  "label": "Gouache Cut-outs",
+  "engine": "three",
+  "kind": "object",
+  "mood": "paper painted flat with gouache, cut freehand with scissors and pinned up — three to six panels of saturated matte colour with hairlines of page between them, on each one bold form cut from another colour (a frond with rounded lobes, a coral branch, a vase, a plain disc), one cut from the page colour itself and one or two crossing onto the next panel, with faint brush streaks and the small shadow of paper on paper. Joyful and bold, but grown-up. Good for exhibitions and museum programmes, art and craft fairs, spring and summer festivals, food and farmers' markets, family and wellness events, travel and seaside posters.",
+  "tone": "light",
+  "type": "editorial",
+  "types": ["grotesk", "story", "maru", "kkubulim", "singleday", "garamond", "didone", "hand", "geometric", "goun"],
+  "defaultPalette": "riviera",
+  "palettes": {
+    "riviera": {
+      "bg": "#f3eddd",
+      "ink": "#1a2145",
+      "accent": "#c4356f",
+      "colors": [
+        "#2a45a6",
+        "#ee7f30",
+        "#1f8c64",
+        "#f2d250",
+        "#cc4480"
+      ]
+    },
+    "garden": {
+      "bg": "#f2eee0",
+      "ink": "#1c2b22",
+      "accent": "#2f7c43",
+      "colors": [
+        "#3f8f4e",
+        "#e88fa8",
+        "#dba032",
+        "#86b9dd",
+        "#1f4a36"
+      ]
+    },
+    "noon": {
+      "bg": "#f6f4ee",
+      "ink": "#151517",
+      "accent": "#d43d25",
+      "colors": [
+        "#2251b3",
+        "#e2472d",
+        "#18181b",
+        "#f5cf3d"
+      ]
+    },
+    "citrus": {
+      "bg": "#f7efc6",
+      "ink": "#1b2552",
+      "accent": "#c84d14",
+      "colors": [
+        "#f08c28",
+        "#253c92",
+        "#4f9e3e",
+        "#ee93b2"
+      ]
+    },
+    "dusk": {
+      "bg": "#2d1c35",
+      "ink": "#f4ecdc",
+      "accent": "#e9b94c",
+      "colors": [
+        "#ee7c64",
+        "#e2b23e",
+        "#2f9b94",
+        "#f1e7d0"
+      ]
+    }
+  },
+  "params": {
+    "motif": {
+      "default": "fronds",
+      "note": "fronds | still | shore"
+    },
+    "panels": {
+      "default": 0,
+      "note": "number of colour panels, 3–6 (0 = chosen to suit the space the copy leaves)"
+    },
+    "cut": {
+      "default": 1,
+      "note": "freehand scissor work — panel corners off square, slight flats on the curves (0 = ruler-true … 2)"
+    },
+    "gap": {
+      "default": 1,
+      "note": "width of the hairline of page between panels (0.4–3)"
+    },
+    "streak": {
+      "default": 1,
+      "note": "how visible the brush streaks in the gouache are (0–2.5)"
+    },
+    "shadow": {
+      "default": 1,
+      "note": "the small shadow of paper lying on paper (0–2.5)"
+    },
+    "grain": {
+      "default": 1,
+      "note": "tooth of the paper (0–2)"
+    }
+  },
+  "layouts": {
+    "landscape": {
+      "layout": "left",
+      "also": [
+        "right",
+        "top",
+        "bottom",
+        "band",
+        "corners",
+        "headline",
+        "baseline",
+        "strip",
+        "axis",
+        "vertical"
+      ]
+    },
+    "portrait": {
+      "layout": "top",
+      "also": [
+        "bottom",
+        "corners",
+        "baseline",
+        "axis",
+        "side",
+        "vertical"
+      ]
+    },
+    "square": {
+      "layout": "top",
+      "also": [
+        "bottom",
+        "left",
+        "right",
+        "corners",
+        "baseline",
+        "axis",
+        "vertical"
+      ]
+    }
+  },
+  "motifs": {
+    "fronds": {
+      "note": "algae and leaf forms: a long seaweed frond on the largest panel, a squat lobed leaf, a coral branch and one plain disc for rest",
+      "topics": [
+        "art",
+        "culture",
+        "spring",
+        "wellness",
+        "craft"
+      ]
+    },
+    "still": {
+      "note": "a table still life in silhouette: a vase with a frond in it, a bowl of fruit, a pear and its neighbour, a slice, a lemon",
+      "topics": [
+        "food",
+        "market",
+        "family",
+        "craft"
+      ],
+      "palette": "citrus"
+    },
+    "shore": {
+      "note": "the seaside: bands of sea with scalloped crests, a plain disc of sun or moon, two or three birds, pebbles",
+      "topics": [
+        "travel",
+        "summer",
+        "family",
+        "wellness"
+      ]
+    }
+  },
+  "topics": [
+    "art",
+    "culture",
+    "craft",
+    "spring",
+    "summer",
+    "food",
+    "travel"
+  ],
+  "cutout": true,
+  "grounds": [
+    "pattern/checker",
+    "haze"
+  ]
+}

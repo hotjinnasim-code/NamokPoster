@@ -1,0 +1,10 @@
+이사만루 (esamanru) — GONGGAMES (공게임즈) with Fontrix
+Publisher's page: https://www.gonggames.com/
+Licence kind: publisher-redistributable
+Fetched: 2026-11-12
+
+esamanru OTF Bold.otf (weight 700)
+  published as: esamanru OTF Bold.otf in https://www.gonggames.com/assets/fonts/esamanru_OTF(Mac).zip
+  sha256 of the published file: c9e2496b16b6d4ce2bb6308c74243f0e69967de3b0b3a0155e5f5479da6c0c53 (1622528 bytes)
+  in this folder as published, unchanged
+

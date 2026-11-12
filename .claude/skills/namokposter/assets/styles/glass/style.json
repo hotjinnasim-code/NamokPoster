@@ -1,0 +1,181 @@
+{
+  "id": "glass",
+  "label": "Frosted Glass",
+  "engine": "blender",
+  "kind": "object",
+  "mood": "glassmorphism made of real glass — thin bevelled slabs of frosted glass with bright rims, blurring the saturated orbs and lights behind them. Clean, premium, contemporary; good for tech and product launches, design and architecture events, finance, science, beauty.",
+  "tone": "light",
+  "type": "swiss",
+  "types": [
+    "elegant",
+    "slim",
+    "square",
+    "bold",
+    "techno",
+    "friendly"
+  ],
+  "matchBackground": true,
+  "fallback": "haze",
+  "defaultPalette": "sorbet",
+  "palettes": {
+    "sorbet": {
+      "bg": "#eceef7",
+      "ink": "#171a2b",
+      "accent": "#4f46e5",
+      "colors": [
+        "#5b6cff",
+        "#ff6fae",
+        "#ffb93f",
+        "#2fd0c4"
+      ]
+    },
+    "peach": {
+      "bg": "#fbece3",
+      "ink": "#2b1a17",
+      "accent": "#e2502a",
+      "colors": [
+        "#ff7a4d",
+        "#ffb347",
+        "#ff5c8a",
+        "#8f7bff"
+      ]
+    },
+    "mint": {
+      "bg": "#e3f3ed",
+      "ink": "#0e2a24",
+      "accent": "#0b8f6e",
+      "colors": [
+        "#1ecf9c",
+        "#2a9dff",
+        "#b9ea3c",
+        "#7a6cff"
+      ]
+    },
+    "aurora": {
+      "bg": "#0b1024",
+      "ink": "#f3f5ff",
+      "accent": "#8fb4ff",
+      "colors": [
+        "#6a5cff",
+        "#ff5fa8",
+        "#29d3ff",
+        "#ffb86b"
+      ]
+    },
+    "ember": {
+      "bg": "#140c12",
+      "ink": "#fff3ea",
+      "accent": "#ff9d5c",
+      "colors": [
+        "#ff6a3d",
+        "#ff3d81",
+        "#ffc857",
+        "#9b5cff"
+      ]
+    }
+  },
+  "params": {
+    "motif": {
+      "default": "cards",
+      "note": "cards (overlapping rounded cards) | discs (round lenses and a ring) | arch (arch slabs on glass steps with a glowing disc)"
+    },
+    "frost": {
+      "default": 0.24,
+      "note": "0.1 = lightly etched, shapes behind stay readable … 0.4 = heavy frost, pure colour haze"
+    },
+    "glow": {
+      "default": 1.0,
+      "note": "self-light of the orbs and the lamp behind the glass (0.5 = calm … 1.6 = luminous)"
+    },
+    "shadow": {
+      "default": 12,
+      "note": "shadow softness in degrees: 4 = crisp … 25 = very soft"
+    }
+  },
+  "motifs": {
+    "cards": {
+      "note": "two overlapping frosted cards with orbs behind — interface, product, membership",
+      "topics": [
+        "tech",
+        "business",
+        "finance",
+        "design"
+      ]
+    },
+    "discs": {
+      "note": "round lenses and a ring over orbs and a light bar — abstract, sound, optics",
+      "topics": [
+        "science",
+        "music",
+        "beauty",
+        "wellness"
+      ]
+    },
+    "arch": {
+      "note": "arch slabs standing on glass steps, a glowing disc behind — space, exhibition, opening",
+      "topics": [
+        "architecture",
+        "art",
+        "luxury",
+        "fashion"
+      ]
+    }
+  },
+  "topics": [
+    "tech",
+    "design",
+    "business",
+    "finance",
+    "science",
+    "architecture",
+    "luxury",
+    "beauty"
+  ],
+  "layouts": {
+    "landscape": {
+      "layout": "left",
+      "also": [
+        "right",
+        "top",
+        "bottom",
+        "corners",
+        "headline",
+        "baseline",
+        "vertical",
+        "axis",
+        "band",
+        "strip"
+      ]
+    },
+    "portrait": {
+      "layout": "top",
+      "also": [
+        "bottom",
+        "corners",
+        "baseline",
+        "vertical",
+        "axis",
+        "side"
+      ]
+    },
+    "square": {
+      "layout": "top",
+      "also": [
+        "bottom",
+        "corners",
+        "baseline",
+        "vertical",
+        "axis",
+        "left",
+        "right"
+      ]
+    }
+  },
+  "cutout": true,
+  "grounds": [
+    "haze",
+    "halftone",
+    "pattern/grid",
+    "pattern/dots"
+  ]
+}

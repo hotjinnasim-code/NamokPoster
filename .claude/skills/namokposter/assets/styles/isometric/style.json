@@ -1,0 +1,176 @@
+{
+  "id": "isometric",
+  "label": "Isometric Miniature",
+  "engine": "blender",
+  "kind": "object",
+  "mood": "isometric miniature — a tiny diorama on a rounded slab seen from the classic three-quarter angle: matte pastel boxes with one small bevel everywhere, light tops, a shaded side and little props for scale. Warm and tidy: interiors and cafés, openings, festivals and concerts, workshops, product and service explainers.",
+  "tone": "light",
+  "type": "bold",
+  "types": ["swiss", "round", "singleday", "dongle", "editorial", "pop", "hand", "paperlogy"],
+  "matchBackground": true,
+  "fallback": "bauhaus",
+  "defaultPalette": "peach",
+  "palettes": {
+    "peach": {
+      "bg": "#f7e3d3",
+      "ink": "#33211c",
+      "accent": "#e8553a",
+      "colors": [
+        "#f4b9a2",
+        "#f1dcc0",
+        "#c98d5e",
+        "#8fb8c9",
+        "#6fae7f"
+      ]
+    },
+    "mint": {
+      "bg": "#dcefe4",
+      "ink": "#17332b",
+      "accent": "#f0704a",
+      "colors": [
+        "#a9d8c2",
+        "#f3ead7",
+        "#c79a6b",
+        "#7fa8d8",
+        "#4f9f76"
+      ]
+    },
+    "lilac": {
+      "bg": "#e7e0f6",
+      "ink": "#2a2148",
+      "accent": "#f2617a",
+      "colors": [
+        "#c5b6ec",
+        "#f4ecdf",
+        "#b98b6e",
+        "#8fc7d6",
+        "#6fb08a"
+      ]
+    },
+    "sand": {
+      "bg": "#efe6d2",
+      "ink": "#2e2a20",
+      "accent": "#d9603a",
+      "colors": [
+        "#e3cfa6",
+        "#f6eede",
+        "#a8794f",
+        "#7fa3a8",
+        "#7c9a5a"
+      ]
+    },
+    "night": {
+      "bg": "#1e2238",
+      "ink": "#f4ecdc",
+      "accent": "#ffb454",
+      "colors": [
+        "#5a6aa8",
+        "#3a4166",
+        "#a9754f",
+        "#4f8fb0",
+        "#4f9a78"
+      ]
+    }
+  },
+  "params": {
+    "motif": {
+      "default": "room",
+      "note": "room (a cosy studio: sofa, desk, bookcase, plants, a cat) | shop (a café front with awning, terrace and street tree) | stage (a festival stage with truss, screen, speakers, a band and a crowd)"
+    },
+    "shadow": {
+      "default": 6.0,
+      "note": "sun size in degrees: 2 = crisp shadows, 12 = very soft"
+    }
+  },
+  "layouts": {
+    "landscape": {
+      "layout": "left",
+      "also": [
+        "right",
+        "top",
+        "bottom",
+        "corners",
+        "headline",
+        "baseline",
+        "vertical",
+        "axis",
+        "band",
+        "strip"
+      ]
+    },
+    "portrait": {
+      "layout": "top",
+      "also": [
+        "bottom",
+        "corners",
+        "baseline",
+        "vertical",
+        "axis",
+        "side"
+      ]
+    },
+    "square": {
+      "layout": "top",
+      "also": [
+        "bottom",
+        "corners",
+        "baseline",
+        "vertical",
+        "axis",
+        "left",
+        "right"
+      ]
+    }
+  },
+  "motifs": {
+    "room": {
+      "note": "a cosy studio room: sofa, desk and window, bookcase, plants, a cat on the rug",
+      "topics": [
+        "design",
+        "education",
+        "literature",
+        "wellness",
+        "craft"
+      ]
+    },
+    "shop": {
+      "note": "a café front: striped awning, shop window, terrace tables, a street tree and lamp",
+      "topics": [
+        "food",
+        "market",
+        "community",
+        "city",
+        "business"
+      ]
+    },
+    "stage": {
+      "note": "a festival stage: truss and canopy, screen, speaker stacks, a band and a small crowd",
+      "topics": [
+        "music",
+        "nightlife",
+        "celebration",
+        "culture",
+        "film"
+      ]
+    }
+  },
+  "topics": [
+    "design",
+    "architecture",
+    "food",
+    "music",
+    "community",
+    "business"
+  ],
+  "cutout": true,
+  "grounds": [
+    "pattern/checker",
+    "pattern/stripes",
+    "pattern/dots",
+    "pattern/terrazzo",
+    "pattern/arches",
+    "pattern/grid",
+    "haze",
+    "halftone"
+  ]
+}

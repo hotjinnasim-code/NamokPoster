@@ -1,0 +1,181 @@
+{
+  "id": "felt",
+  "label": "Needle Felt",
+  "engine": "blender",
+  "kind": "object",
+  "mood": "needle-felted wool — soft, slightly lumpy forms with a halo of loose fibres, standing on a sheet of felt in the poster's colour under a big soft light and a warm rim; hand-made, warm and gentle. Good for children's and family events, craft fairs and workshops, seasonal greetings, wellness and community programmes.",
+  "tone": "light",
+  "type": "friendly",
+  "types": ["hand", "gamja", "starlight", "dongle", "melody", "round", "editorial", "bold", "pop", "kkubulim"],
+  "matchBackground": true,
+  "fallback": "aurora",
+  "defaultPalette": "meadow",
+  "palettes": {
+    "meadow": {
+      "bg": "#f1e9da",
+      "ink": "#2b2a22",
+      "accent": "#d9603a",
+      "colors": [
+        "#7fa35b",
+        "#3f7d6e",
+        "#e9b949",
+        "#d9604a",
+        "#f6f1e6"
+      ]
+    },
+    "berry": {
+      "bg": "#f6dfe0",
+      "ink": "#3d1d2c",
+      "accent": "#c2335b",
+      "colors": [
+        "#c2335b",
+        "#f08a6c",
+        "#7a4b8c",
+        "#f3c85a",
+        "#fbf3ea"
+      ]
+    },
+    "nordic": {
+      "bg": "#dfe7ea",
+      "ink": "#1d2b38",
+      "accent": "#d9523c",
+      "colors": [
+        "#3d6f8e",
+        "#9bb8c4",
+        "#d9523c",
+        "#e8c268",
+        "#f5f2ea"
+      ]
+    },
+    "ember": {
+      "bg": "#2a2422",
+      "ink": "#f3e9dc",
+      "accent": "#f0a04b",
+      "colors": [
+        "#d9603b",
+        "#f0a04b",
+        "#8a9a5b",
+        "#b4486a",
+        "#efe2c8"
+      ]
+    },
+    "midnight": {
+      "bg": "#1c2440",
+      "ink": "#eef0f7",
+      "accent": "#f2c14e",
+      "colors": [
+        "#5b7fd1",
+        "#f2c14e",
+        "#e86f6f",
+        "#9fd0c2",
+        "#f1ede4"
+      ]
+    }
+  },
+  "params": {
+    "motif": {
+      "default": "hills",
+      "note": "hills (felt landscape: hills, trees, clouds, a sun ball) | fruit (still life of felt fruit) | pebbles (abstract stack of felted stones, a ring and balls)"
+    },
+    "fuzz": {
+      "default": 1.0,
+      "note": "amount of loose fibre: 0 = none (fastest) … 1.6 = very woolly"
+    },
+    "rim": {
+      "default": 1.0,
+      "note": "strength of the warm back light that catches the fibres (0 = off)"
+    }
+  },
+  "motifs": {
+    "hills": {
+      "note": "a little felt landscape: three soft hills, cone and ball trees, clouds and a plain sun ball",
+      "topics": [
+        "nature",
+        "outdoor",
+        "travel",
+        "kids",
+        "spring"
+      ]
+    },
+    "fruit": {
+      "note": "still life of felt fruit: pear, apple, orange, lemon and cherries",
+      "topics": [
+        "food",
+        "market",
+        "autumn",
+        "family",
+        "craft"
+      ]
+    },
+    "pebbles": {
+      "note": "abstract: a balanced stack of felted pebbles, a ring and scattered balls",
+      "topics": [
+        "wellness",
+        "design",
+        "art",
+        "community",
+        "education"
+      ]
+    }
+  },
+  "topics": [
+    "craft",
+    "kids",
+    "family",
+    "community",
+    "wellness",
+    "winter",
+    "autumn"
+  ],
+  "layouts": {
+    "landscape": {
+      "layout": "left",
+      "also": [
+        "right",
+        "top",
+        "bottom",
+        "corners",
+        "headline",
+        "baseline",
+        "vertical",
+        "axis",
+        "band",
+        "strip"
+      ]
+    },
+    "portrait": {
+      "layout": "top",
+      "also": [
+        "bottom",
+        "corners",
+        "baseline",
+        "vertical",
+        "axis",
+        "side"
+      ]
+    },
+    "square": {
+      "layout": "top",
+      "also": [
+        "bottom",
+        "corners",
+        "baseline",
+        "vertical",
+        "axis",
+        "left",
+        "right"
+      ]
+    }
+  },
+  "cutout": true,
+  "grounds": [
+    "pattern/checker",
+    "pattern/stripes",
+    "pattern/dots",
+    "pattern/terrazzo",
+    "pattern/arches",
+    "pattern/grid",
+    "haze",
+    "halftone"
+  ]
+}

@@ -1,0 +1,24 @@
+/* jua — round-brush shop-sign lettering as revived by the Baemin faces of Woowa Brothers (주아체; 1960–70s 붓글씨 간판): plump, friendly, loud in a kind way. Stand-ins: Jua + Fredoka. */
+.poster[data-type="jua"] {
+  --font-title: "Fredoka KR", "Jua", "Pretendard", sans-serif;   /* Korean-led: the size-matched Latin in every headline */
+  --font-title-ko: "Fredoka KR", "Jua", "Pretendard", sans-serif;
+  --font-subtitle: var(--font-title); --font-subtitle-ko: var(--font-title-ko);
+  --font-eyebrow: var(--font-title); --font-eyebrow-ko: var(--font-title-ko);
+  --font-body: "Fredoka KR", "Pretendard", sans-serif;
+  --title-size: 12; --title-weight: 600; --title-leading: 1.0; --title-tracking: -0.015em;   /* Fredoka SemiBold has the stem of Jua's one weight */
+  --title-leading-ko: 1.18; --title-tracking-ko: -0.01em; --title-wordspace-ko: 0.04em; --title-weight-ko: 600;
+  --eyebrow-size: 1.9; --eyebrow-weight: 600; --eyebrow-tracking: 0.08em; --eyebrow-tracking-ko: 0.02em;
+  --subtitle-size: 3.1; --subtitle-weight: 500; --subtitle-leading: 1.3; --subtitle-tracking: 0em; --subtitle-leading-ko: 1.36; --subtitle-tracking-ko: -0.01em; --subtitle-weight-ko: 500;
+  --body-size: 1.84; --body-weight: 400; --body-weight-ko: 500;
+  --meta-weight: 420; --meta-label-weight: 600;
+  --footer-size: 1.55; --footer-weight: 600; --footer-rule: 1; --grain: 0.14;
+  --gap-eyebrow: 2; --gap-subtitle: 2.2;
+}
+.poster[data-type="jua"] .title em { color: var(--c-accent); }
+.poster[data-type="jua"] .eyebrow { color: var(--c-paper); background: var(--c-ink); padding: 0.42em 1.05em 0.4em; border-radius: 99em; line-height: 1.2; }
+.poster[data-type="jua"] .subtitle { color: var(--c-ink); }
+.poster[data-type="jua"] .body { color: color-mix(in srgb, var(--c-ink) 84%, transparent); }
+.poster[data-type="jua"] .meta dt { font-family: var(--font-title-ko); }   /* the label is the sign face, the value plain */
+.poster[data-type="jua"] .cta { background: var(--c-accent); color: var(--c-on-accent, var(--c-paper)); font-family: var(--font-title-ko); font-weight: 600; font-size: calc(var(--su) * var(--cta-size) * 1.12 * var(--k-small)); }
+.poster[data-type="jua"] .badge { transform: rotate(-6deg); font-size: calc(var(--fu) * 1.9 * var(--k-small)); letter-spacing: 0.02em; }
+.poster[data-type="jua"] .bottom.ruled { border-top: calc(var(--u) * 0.24) solid var(--c-ink); padding-top: calc(var(--u) * 1.6); }

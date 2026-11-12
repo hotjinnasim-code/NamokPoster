@@ -1,0 +1,179 @@
+{
+  "id": "guilloche",
+  "label": "Guilloche Engraving",
+  "engine": "three",
+  "kind": "picture",
+  "mood": "banknote and certificate engraving — hundreds of even hairlines in one or two inks braided into rope-like ribbons, interlaced rosette rings round a medallion and lattice borders, over a pale wave underprint on rag paper, with the copy in a blank cartouche. Precise, trustworthy, quietly luxurious. Good for finance and business events, awards and ceremonies, anniversaries, premium launches, heritage and culture, invitations.",
+  "tone": "light",
+  "type": "didone",
+  "types": [
+    "elegant",
+    "fatface",
+    "garamond",
+    "roman",
+    "myeongjo",
+    "deco"
+  ],
+  "defaultPalette": "banknote",
+  "palettes": {
+    "banknote": {
+      "bg": "#eef0e3",
+      "ink": "#16352a",
+      "accent": "#9b3b25",
+      "colors": [
+        "#1e4d3a",
+        "#a8553a",
+        "#9dbca9"
+      ]
+    },
+    "bond": {
+      "bg": "#f5eddc",
+      "ink": "#262040",
+      "accent": "#8c2c3c",
+      "colors": [
+        "#363170",
+        "#a3443a",
+        "#cdb98d"
+      ]
+    },
+    "sterling": {
+      "bg": "#e9edf2",
+      "ink": "#13223a",
+      "accent": "#a8432c",
+      "colors": [
+        "#1c3557",
+        "#6d5a9a",
+        "#b3c2d4"
+      ]
+    },
+    "treasury": {
+      "bg": "#0f2a22",
+      "ink": "#f2ebd3",
+      "accent": "#e2be6a",
+      "colors": [
+        "#d6b25e",
+        "#8fbfa6",
+        "#2f5c4a"
+      ]
+    },
+    "midnight": {
+      "bg": "#111a33",
+      "ink": "#eef0f6",
+      "accent": "#e3bb63",
+      "colors": [
+        "#c9d1e8",
+        "#d9b260",
+        "#2b3b68"
+      ]
+    }
+  },
+  "params": {
+    "motif": {
+      "default": "ribbon",
+      "note": "ribbon | medallion | frame"
+    },
+    "density": {
+      "default": 1,
+      "note": "how many hairlines per band, 0.5–2"
+    },
+    "weight": {
+      "default": 1,
+      "note": "pen width multiplier, 0.5–2.5"
+    },
+    "inks": {
+      "default": 2,
+      "note": "1 = everything in the first ink, 2 = two inks"
+    },
+    "underprint": {
+      "default": 1,
+      "note": "pale security waves over the sheet, 0–2"
+    },
+    "cartouche": {
+      "default": true,
+      "note": "double rule round the cleared copy panel (ribbon, medallion)"
+    }
+  },
+  "motifs": {
+    "ribbon": {
+      "note": "three braided wave ribbons sweeping across the sheet, the copy in a cleared cartouche",
+      "topics": [
+        "finance",
+        "business",
+        "music",
+        "celebration"
+      ]
+    },
+    "medallion": {
+      "note": "a seal of concentric interlaced rosette rings on a ribbon — the watermark of a note",
+      "topics": [
+        "luxury",
+        "tradition",
+        "culture",
+        "celebration"
+      ]
+    },
+    "frame": {
+      "note": "a certificate: a lattice border band with rosette knots round the whole sheet and the copy, a small seal on a ribbon",
+      "topics": [
+        "education",
+        "business",
+        "tradition",
+        "literature"
+      ],
+      "vars": {
+        "--margin": 12.5
+      }
+    }
+  },
+  "topics": [
+    "finance",
+    "business",
+    "luxury",
+    "tradition",
+    "celebration",
+    "culture"
+  ],
+  "vars": {
+    "--halo": 0.35
+  },
+  "layouts": {
+    "landscape": {
+      "layout": "left",
+      "also": [
+        "right",
+        "top",
+        "bottom",
+        "corners",
+        "headline",
+        "baseline",
+        "vertical",
+        "axis",
+        "band",
+        "strip"
+      ]
+    },
+    "portrait": {
+      "layout": "top",
+      "also": [
+        "bottom",
+        "corners",
+        "baseline",
+        "vertical",
+        "axis",
+        "side"
+      ]
+    },
+    "square": {
+      "layout": "top",
+      "also": [
+        "bottom",
+        "corners",
+        "baseline",
+        "vertical",
+        "axis",
+        "left",
+        "right"
+      ]
+    }
+  }
+}

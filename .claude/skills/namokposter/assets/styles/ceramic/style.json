@@ -1,0 +1,182 @@
+{
+  "id": "ceramic",
+  "label": "Glazed Ceramic",
+  "engine": "blender",
+  "kind": "object",
+  "mood": "hand-thrown stoneware — lathe-turned pots, bowls and tiles with a glossy glaze over a matte clay body: dip lines, iron speckle, bare foot rings and window highlights. Warm, tactile, quiet; good for craft fairs and markets, cafés and tea, food, exhibitions, homeware, slow-living brands.",
+  "tone": "light",
+  "type": "editorial",
+  "types": [
+    "myeongjo",
+    "story",
+    "maru",
+    "calli",
+    "swiss",
+    "hand",
+    "luxe"
+  ],
+  "matchBackground": true,
+  "fallback": "haze",
+  "defaultPalette": "celadon",
+  "palettes": {
+    "celadon": {
+      "bg": "#e8ebe1",
+      "ink": "#1f2a24",
+      "accent": "#2c6f62",
+      "colors": [
+        "#9cc4ae",
+        "#2d6a6e",
+        "#f0e8d6",
+        "#c56f4a"
+      ]
+    },
+    "cobalt": {
+      "bg": "#f0ece2",
+      "ink": "#14213d",
+      "accent": "#1f3fae",
+      "colors": [
+        "#1f3fae",
+        "#f4efe3",
+        "#86a8d9",
+        "#d7a23f"
+      ]
+    },
+    "oat": {
+      "bg": "#eee4d4",
+      "ink": "#2c241d",
+      "accent": "#a94a24",
+      "colors": [
+        "#e6d9c0",
+        "#b4532a",
+        "#8a9a7b",
+        "#3d3b37"
+      ]
+    },
+    "blush": {
+      "bg": "#f5e2da",
+      "ink": "#3a1f24",
+      "accent": "#c0392f",
+      "colors": [
+        "#f0b3a2",
+        "#c8463c",
+        "#fff3e6",
+        "#6f8f8a"
+      ]
+    },
+    "kiln": {
+      "bg": "#1f1c1a",
+      "ink": "#f3ece2",
+      "accent": "#e8a15a",
+      "colors": [
+        "#e9dfcf",
+        "#c8663c",
+        "#3f6f6a",
+        "#e8b04a"
+      ]
+    }
+  },
+  "params": {
+    "motif": {
+      "default": "vases",
+      "note": "vases (still life of vases on plinth blocks) | table (stacked bowls, cups and a carafe on a round slab) | tiles (panel of patterned wall tiles)"
+    },
+    "speckle": {
+      "default": 0.6,
+      "note": "iron speckle in the glaze: 0 = clean porcelain … 1 = heavily flecked stoneware"
+    },
+    "shadow": {
+      "default": 10,
+      "note": "shadow softness in degrees: 4 = crisp … 25 = very soft"
+    }
+  },
+  "motifs": {
+    "vases": {
+      "note": "a bottle, a moon jar and small pots on plinth blocks — exhibition, interior, craft",
+      "topics": [
+        "craft",
+        "art",
+        "design",
+        "culture"
+      ]
+    },
+    "table": {
+      "note": "nested bowls, stacked cups, a carafe and a mug on a round slab — tea, coffee, dining",
+      "topics": [
+        "food",
+        "market",
+        "family",
+        "wellness"
+      ]
+    },
+    "tiles": {
+      "note": "a panel of hand-glazed wall tiles with two-tone arcs and dots — pattern, space, workshop",
+      "topics": [
+        "architecture",
+        "design",
+        "education",
+        "tradition"
+      ]
+    }
+  },
+  "topics": [
+    "craft",
+    "food",
+    "market",
+    "art",
+    "design",
+    "culture",
+    "tradition",
+    "wellness"
+  ],
+  "layouts": {
+    "landscape": {
+      "layout": "left",
+      "also": [
+        "right",
+        "top",
+        "bottom",
+        "corners",
+        "headline",
+        "baseline",
+        "vertical",
+        "axis",
+        "band",
+        "strip"
+      ]
+    },
+    "portrait": {
+      "layout": "top",
+      "also": [
+        "bottom",
+        "corners",
+        "baseline",
+        "vertical",
+        "axis",
+        "side"
+      ]
+    },
+    "square": {
+      "layout": "top",
+      "also": [
+        "bottom",
+        "corners",
+        "baseline",
+        "vertical",
+        "axis",
+        "left",
+        "right"
+      ]
+    }
+  },
+  "cutout": true,
+  "grounds": [
+    "pattern/checker",
+    "pattern/stripes",
+    "pattern/dots",
+    "pattern/terrazzo",
+    "pattern/arches",
+    "pattern/grid",
+    "haze",
+    "halftone"
+  ]
+}

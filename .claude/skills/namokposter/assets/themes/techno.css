@@ -1,0 +1,25 @@
+/* techno — monospaced, bracketed, tick-marked; hackathons, games, sci-fi, labs. Faces: JetBrains Mono for Latin, Nanum Gothic Coding Bold — a fixed-width gothic, two Latin cells to a syllable — for Hangul. */
+.poster[data-type="techno"] {
+  --font-title: "JetBrains Mono", "Nanum Gothic Coding", "Pretendard", monospace; --font-title-ko: "Nanum Gothic Coding", "JetBrains Mono", "Pretendard", monospace; --font-subtitle: var(--font-mono);
+  --font-eyebrow: var(--font-mono); --font-footer: var(--font-mono); --font-label-ko: "Nanum Gothic Coding", "Pretendard", sans-serif;
+  --title-size: 10.4; --title-weight: 700; --title-leading: 1.08; --title-tracking: -0.04em; --title-case: uppercase;
+  --title-leading-ko: 1.2; --title-tracking-ko: -0.06em; --title-wordspace-ko: -0.14em; --title-weight-ko: 700;
+  --eyebrow-size: 1.36; --eyebrow-weight: 500; --eyebrow-tracking: 0.1em; --eyebrow-tracking-ko: 0em;
+  --subtitle-size: 2.33; --subtitle-weight: 400; --subtitle-leading: 1.44; --subtitle-tracking: -0.02em; --subtitle-tracking-ko: -0.03em;
+  --body-size: 1.7; --body-weight: 400; --body-leading: 1.68;
+  --footer-size: 1.34; --footer-weight: 500; --footer-tracking: 0.04em; --footer-rule: 1; --grain: 0.18;
+}
+.poster[data-type="techno"] .subtitle[data-script="ko"] { font-family: "Pretendard", sans-serif; }
+.poster[data-type="techno"] .title em { color: var(--c-accent); }
+.poster[data-type="techno"] .eyebrow { color: var(--c-accent); }
+.poster[data-type="techno"] .eyebrow::before { content: "[ "; } .poster[data-type="techno"] .eyebrow::after { content: " ]"; }
+.poster[data-type="techno"] .subtitle { color: color-mix(in srgb, var(--c-ink) 88%, transparent); }
+.poster[data-type="techno"] .cta { border-radius: 0; background: var(--c-accent); color: var(--c-paper); font-family: var(--font-mono); text-transform: uppercase; letter-spacing: 0.06em; font-weight: 600; font-size: calc(var(--su) * var(--cta-size) * 0.84 * var(--k-small)); }
+.poster[data-type="techno"] .cta::after { content: ">>"; letter-spacing: -0.1em; }
+.poster[data-type="techno"] .badge { border-radius: 0; background: transparent; color: var(--c-accent); border: calc(var(--u) * 0.14) solid var(--c-accent); }
+.poster[data-type="techno"] .bottom.ruled { border-top: var(--hair) dashed color-mix(in srgb, var(--c-ink) 50%, transparent); }
+.poster[data-type="techno"] .frame::before, .poster[data-type="techno"] .frame::after {
+  content: "+"; position: absolute; font: 400 calc(var(--u) * 2.2)/1 var(--font-mono); color: color-mix(in srgb, var(--c-ink) 60%, transparent);
+}
+.poster[data-type="techno"] .frame::before { top: calc(var(--u) * -3.4); left: calc(var(--u) * -2.8); }
+.poster[data-type="techno"] .frame::after { bottom: calc(var(--u) * -3.4); right: calc(var(--u) * -2.8); }

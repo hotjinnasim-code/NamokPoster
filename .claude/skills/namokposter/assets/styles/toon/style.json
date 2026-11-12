@@ -1,0 +1,180 @@
+{
+  "id": "toon",
+  "label": "Toon Cel",
+  "engine": "blender",
+  "kind": "object",
+  "mood": "cel-shaded 3D with ink outlines — flat tone bands, flat cast shadows and a coloured contour line on a flat backdrop, like a frame of animation. Friendly and graphic: education, kids and family, community events, cafés, design talks.",
+  "tone": "light",
+  "type": "pop",
+  "types": ["friendly", "maple", "dongle", "ssurround", "comic", "gamja", "round", "singleday", "bold", "hand", "retro"],
+  "fallback": "bauhaus",
+  "defaultPalette": "candy",
+  "palettes": {
+    "candy": {
+      "bg": "#fbefd9",
+      "ink": "#2b2a5c",
+      "accent": "#f0503f",
+      "colors": [
+        "#ff8a5c",
+        "#ffc94d",
+        "#4fb5a0",
+        "#5b7fe0",
+        "#f7a8c4"
+      ]
+    },
+    "mint": {
+      "bg": "#d6efe2",
+      "ink": "#1d4a45",
+      "accent": "#f2603f",
+      "colors": [
+        "#ff9a76",
+        "#f6c453",
+        "#3fa98c",
+        "#2f6fb0",
+        "#fff3d6"
+      ]
+    },
+    "sorbet": {
+      "bg": "#ffdfe3",
+      "ink": "#5a2548",
+      "accent": "#e8386a",
+      "colors": [
+        "#ff7fa0",
+        "#ffb86b",
+        "#7fcfc0",
+        "#9b8cf0",
+        "#fff5e1"
+      ]
+    },
+    "sky": {
+      "bg": "#cde4ff",
+      "ink": "#1c2f6b",
+      "accent": "#f2603a",
+      "colors": [
+        "#ff8f6b",
+        "#ffd166",
+        "#57c7a8",
+        "#4c8dff",
+        "#ffffff"
+      ]
+    },
+    "night": {
+      "bg": "#1f1d42",
+      "ink": "#f6ead6",
+      "accent": "#ffc857",
+      "colors": [
+        "#ff6f91",
+        "#ffc75f",
+        "#4fd1c5",
+        "#7a7cff",
+        "#f9f1e0"
+      ]
+    }
+  },
+  "params": {
+    "motif": {
+      "default": "desk",
+      "note": "desk (still life: books, mug, lamp, plant) | hills (small landscape with trees, a house and clouds) | blocks (abstract stacked solids)"
+    },
+    "bands": {
+      "default": 3,
+      "note": "tone bands per colour: 2 (shadow + base) or 3 (adds a highlight band)"
+    },
+    "outline": {
+      "default": 1.0,
+      "note": "contour line weight: 0 = no lines, 1 = standard, 1.6 = heavy marker"
+    }
+  },
+  "layouts": {
+    "landscape": {
+      "layout": "left",
+      "also": [
+        "right",
+        "top",
+        "bottom",
+        "corners",
+        "headline",
+        "baseline",
+        "vertical",
+        "axis",
+        "band",
+        "strip"
+      ]
+    },
+    "portrait": {
+      "layout": "top",
+      "also": [
+        "bottom",
+        "corners",
+        "baseline",
+        "vertical",
+        "axis",
+        "side"
+      ]
+    },
+    "square": {
+      "layout": "top",
+      "also": [
+        "bottom",
+        "corners",
+        "baseline",
+        "vertical",
+        "axis",
+        "left",
+        "right"
+      ]
+    }
+  },
+  "motifs": {
+    "desk": {
+      "note": "still life: stacked books, a steaming mug, a desk lamp, a potted plant, an apple and a pencil",
+      "topics": [
+        "education",
+        "literature",
+        "design",
+        "craft",
+        "food"
+      ]
+    },
+    "hills": {
+      "note": "a small landscape: round hills, lollipop trees and pines, a house, clouds and a pale sun",
+      "topics": [
+        "nature",
+        "outdoor",
+        "travel",
+        "kids",
+        "family",
+        "spring"
+      ]
+    },
+    "blocks": {
+      "note": "abstract stacked solids: arch, column, cone, steps, ring and balls",
+      "topics": [
+        "design",
+        "art",
+        "tech",
+        "business",
+        "architecture"
+      ]
+    }
+  },
+  "topics": [
+    "kids",
+    "family",
+    "education",
+    "community",
+    "design",
+    "gaming"
+  ],
+  "cutout": true,
+  "grounds": [
+    "pattern/checker",
+    "pattern/stripes",
+    "pattern/dots",
+    "pattern/terrazzo",
+    "pattern/arches",
+    "pattern/grid",
+    "haze",
+    "halftone"
+  ]
+}

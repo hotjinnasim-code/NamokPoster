@@ -1,0 +1,24 @@
+/* signage — geometric 도안 lettering of 1970–80s Korean shop signs, record sleeves and electronics logos (레터링 도안집; abroad Eurostile / Microgramma): cut-acrylic gothic by day, a lit sign by night. Stand-ins: Do Hyeon (도현체, drawn after signs cut from acrylic sheet) + Oxanium. */
+.poster[data-type="signage"] {
+  --font-title: "Oxanium KR", "Do Hyeon", "Black Han Sans", "Pretendard", sans-serif;   /* Korean-led: the size-matched Latin in every headline */
+  --font-title-ko: "Oxanium KR", "Do Hyeon", "Black Han Sans", "Pretendard", sans-serif;
+  --font-body: "Oxanium KR", "Pretendard", sans-serif;
+  --font-eyebrow-ko: "Oxanium KR", "Do Hyeon", "Pretendard", sans-serif; --font-footer-ko: "Oxanium KR", "Pretendard", sans-serif;
+  --title-size: 11.8; --title-weight: 600; --title-leading: 1.0; --title-tracking: 0.005em; --title-case: uppercase;   /* Oxanium at 600 has the stem of Do Hyeon's one weight */
+  --title-leading-ko: 1.16; --title-tracking-ko: 0em; --title-wordspace-ko: 0.06em; --title-weight-ko: 600;
+  --eyebrow-size: 1.5; --eyebrow-weight: 700; --eyebrow-tracking: 0.2em; --eyebrow-tracking-ko: 0.1em;
+  --subtitle-size: 2.8; --subtitle-weight: 500; --subtitle-leading: 1.34; --subtitle-tracking: 0em; --subtitle-weight-ko: 600;
+  --body-size: 1.8; --body-weight: 500; --body-weight-ko: 500;
+  --meta-weight: 500; --meta-label-weight: 700;
+  --footer-size: 1.46; --footer-weight: 600; --footer-tracking: 0.1em; --footer-tracking-ko: 0.02em; --footer-case: uppercase; --footer-rule: 1;
+  --gap-eyebrow: 2.6; --grain: 0.2;
+}
+.poster[data-type="signage"] .title em { color: var(--c-accent); }
+/* on a dark sheet the headline is a lit tube; on a light one it stays cut acrylic */
+.poster[data-type="signage"][data-tone="dark"] .title { text-shadow: 0 0 0.07em color-mix(in srgb, var(--c-accent) 80%, transparent), 0 0 0.42em color-mix(in srgb, var(--c-accent) 46%, transparent); }
+.poster[data-type="signage"] .eyebrow { color: var(--c-ink); border: calc(var(--u) * 0.2) solid currentColor; padding: 0.5em 0.9em 0.44em; line-height: 1.1; }
+.poster[data-type="signage"] .subtitle { color: var(--c-ink); }
+.poster[data-type="signage"] .body { color: color-mix(in srgb, var(--c-ink) 84%, transparent); }
+.poster[data-type="signage"] .cta { border-radius: calc(var(--u) * 0.5); background: var(--c-accent); color: var(--c-on-accent, var(--c-paper)); font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; }
+.poster[data-type="signage"] .badge { border-radius: calc(var(--u) * 0.5); background: transparent; color: var(--c-accent); border: calc(var(--u) * 0.2) solid var(--c-accent); }
+.poster[data-type="signage"] .bottom.ruled { border-top: calc(var(--u) * 0.2) solid var(--c-ink); padding-top: calc(var(--u) * 1.6); }

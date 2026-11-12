@@ -1,0 +1,27 @@
+/* comic — comic-book cover lettering and the caption of a variety show (만화 표지·예능 자막): heavy letters in colour, an ink outline, a hard shadow, the label in a caption box. Faces: Bangers — the leaning capitals of American comics — for a Latin headline; Black Han Sans, heavy and blunt, for Hangul. */
+.poster[data-type="comic"] {
+  --font-title: "Bangers", "Black Han Sans", "Pretendard", sans-serif;                   /* a Latin headline */
+  --font-title-ko: "Black Han Sans", "Pretendard", sans-serif;                           /* a Hangul headline keeps the face's own figures */
+  --font-eyebrow: "Bangers", "Black Han Sans", "Pretendard", sans-serif; --font-eyebrow-ko: "Black Han Sans", "Pretendard", sans-serif;
+  --title-size: 13.6; --title-weight: 400; --title-leading: 1.0; --title-tracking: 0.02em; --title-case: uppercase;
+  --title-leading-ko: 1.14; --title-tracking-ko: 0em; --title-wordspace-ko: 0.02em; --title-weight-ko: 400;
+  --eyebrow-size: 2.1; --eyebrow-weight: 400; --eyebrow-tracking: 0.08em; --eyebrow-tracking-ko: 0.03em;
+  --subtitle-size: 2.9; --subtitle-weight: 800; --subtitle-leading: 1.3; --subtitle-weight-ko: 800;
+  --body-size: 1.84; --body-weight: 500; --body-weight-ko: 500;
+  --meta-weight: 600; --meta-label-weight: 800;
+  --footer-size: 1.55; --footer-weight: 700; --footer-rule: 1; --grain: 0.18;
+  --gap-eyebrow: 2.6; --gap-subtitle: 2.4;
+}
+.poster[data-type="comic"]:lang(ko) { --title-size: 12.2; }   /* a syllable is broader than Bangers' capitals */
+.poster[data-type="comic"] .eyebrow[data-script="ko"] { --eyebrow-size: 1.8; }
+/* the headline is printed in the accent colour inside an ink outline, with the outline's shadow dropped behind it */
+.poster[data-type="comic"] .title { color: var(--c-accent); -webkit-text-stroke: 0.022em var(--c-ink); paint-order: stroke fill; text-shadow: 0.042em 0.046em 0 var(--c-ink); }
+.poster[data-type="comic"] .title em { color: var(--c-paper); }
+.poster[data-type="comic"][data-tone="dark"] .title em { color: var(--c-ink); -webkit-text-stroke-color: var(--c-accent); text-shadow: 0.042em 0.046em 0 var(--c-accent); }
+/* the label is a narrator's caption box */
+.poster[data-type="comic"] .eyebrow { color: var(--c-ink); background: var(--c-paper); border: calc(var(--u) * 0.26) solid var(--c-ink); padding: 0.3em 0.8em 0.22em; line-height: 1.15; box-shadow: 0.22em 0.22em 0 var(--c-ink); }
+.poster[data-type="comic"] .subtitle, .poster[data-type="comic"] .footer { color: var(--c-ink); }
+.poster[data-type="comic"] .body { color: color-mix(in srgb, var(--c-ink) 86%, transparent); }
+.poster[data-type="comic"] .cta { border-radius: 0; background: var(--c-accent); color: var(--c-on-accent, var(--c-paper)); border: calc(var(--u) * 0.26) solid var(--c-ink); box-shadow: 0.22em 0.22em 0 var(--c-ink); font-weight: 800; }
+.poster[data-type="comic"] .badge { border-radius: 0; transform: rotate(-6deg); border: calc(var(--u) * 0.24) solid var(--c-ink); box-shadow: 0.2em 0.2em 0 var(--c-ink); font-size: calc(var(--fu) * 2 * var(--k-small)); font-weight: 400; }
+.poster[data-type="comic"] .bottom.ruled { border-top: calc(var(--u) * 0.4) solid var(--c-ink); padding-top: calc(var(--u) * 1.6); }

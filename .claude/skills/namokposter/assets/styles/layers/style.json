@@ -1,0 +1,489 @@
+{
+  "id": "layers",
+  "label": "Layered Silhouettes",
+  "engine": "three",
+  "kind": "picture",
+  "mood": "flat layered illustration — receding silhouettes cut from flat colour and softened by haze, in the manner of a screen-printed travel poster; the technique fills the whole sheet and the sky carries the copy. Good for travel, outdoor and city events, festivals, seasonal greetings, covers.",
+  "tone": "light",
+  "type": "editorial",
+  "types": [
+    "myeongjo",
+    "maru",
+    "elegant",
+    "bold"
+  ],
+  "defaultPalette": "dawn",
+  "palettes": {
+    "dawn": {
+      "bg": "#f4e6da",
+      "ink": "#2a2140",
+      "accent": "#e2553a",
+      "colors": [
+        "#2c3157",
+        "#8f7fa9",
+        "#ffc7a0",
+        "#f6d2c4"
+      ]
+    },
+    "dusk": {
+      "bg": "#221a3c",
+      "ink": "#fbefe3",
+      "accent": "#ffb45a",
+      "colors": [
+        "#120d24",
+        "#5b3a70",
+        "#f06a58",
+        "#6a3b78"
+      ]
+    },
+    "night": {
+      "bg": "#0b1430",
+      "ink": "#eef2ff",
+      "accent": "#f6efd2",
+      "colors": [
+        "#050916",
+        "#1e3162",
+        "#4166ad",
+        "#152552"
+      ]
+    },
+    "snowy": {
+      "bg": "#e3ebf2",
+      "ink": "#1a2940",
+      "accent": "#d9573a",
+      "colors": [
+        "#2b4360",
+        "#9bb3cb",
+        "#fdf1e6",
+        "#eef1f2"
+      ],
+      "snow": 0.8
+    },
+    "autumn": {
+      "bg": "#f5e8d0",
+      "ink": "#3a1e14",
+      "accent": "#c9421f",
+      "colors": [
+        "#4b1f1c",
+        "#c66a2e",
+        "#f8c66a",
+        "#f7dba6"
+      ]
+    },
+    "sunrise": {
+      "bg": "#fbeadb",
+      "ink": "#2a2240",
+      "accent": "#e8573f",
+      "colors": [
+        "#e9a7a0",
+        "#8c7fb0",
+        "#ffd0a3",
+        "#fbdcc8"
+      ]
+    },
+    "midday": {
+      "bg": "#dfeef8",
+      "ink": "#0f2a4a",
+      "accent": "#e8631f",
+      "colors": [
+        "#2f86c9",
+        "#1d5c96",
+        "#fff1cf",
+        "#bfe0f3"
+      ]
+    },
+    "sunset": {
+      "bg": "#1c1f4a",
+      "ink": "#fdf0e2",
+      "accent": "#ffb454",
+      "colors": [
+        "#232a66",
+        "#3a2a6e",
+        "#f2684f",
+        "#7a3a7a"
+      ]
+    },
+    "moonlit": {
+      "bg": "#0a1630",
+      "ink": "#eef3ff",
+      "accent": "#f4efd6",
+      "colors": [
+        "#0f2450",
+        "#1b3a78",
+        "#3f6bb5",
+        "#132a5c"
+      ]
+    },
+    "stormy": {
+      "bg": "#27313c",
+      "ink": "#eef1f1",
+      "accent": "#ffe3a8",
+      "colors": [
+        "#2f4250",
+        "#18222c",
+        "#b9c2bf",
+        "#4f5f6b"
+      ],
+      "waves": 1.5,
+      "clouds": 2,
+      "stars": false
+    },
+    "bluehour": {
+      "bg": "#101b3d",
+      "ink": "#eef2ff",
+      "accent": "#ffc56e",
+      "colors": [
+        "#060a1a",
+        "#22376e",
+        "#b9697f",
+        "#a8d8ff"
+      ]
+    },
+    "neon": {
+      "bg": "#170a2e",
+      "ink": "#f7ecff",
+      "accent": "#ff58b6",
+      "colors": [
+        "#07040f",
+        "#3b1c6b",
+        "#c22f92",
+        "#4fe3ff"
+      ]
+    },
+    "amberdusk": {
+      "bg": "#2c1a36",
+      "ink": "#fff1dc",
+      "accent": "#ffb24d",
+      "colors": [
+        "#140b1a",
+        "#5c3352",
+        "#f07c3e",
+        "#ffe2ad"
+      ]
+    },
+    "fog": {
+      "bg": "#4d5661",
+      "ink": "#f5f7f9",
+      "accent": "#ffdca6",
+      "colors": [
+        "#1f252c",
+        "#6a747f",
+        "#a9b2ba",
+        "#e3ebf2"
+      ]
+    },
+    "daybreak": {
+      "bg": "#f3e5db",
+      "ink": "#2a2440",
+      "accent": "#c4421d",
+      "colors": [
+        "#3b3a5c",
+        "#9291b3",
+        "#ffc9a3",
+        "#fff0b8"
+      ]
+    }
+  },
+  "params": {
+    "motif": {
+      "default": "mountains",
+      "note": "mountains | sea | city — what the picture shows; each motif has its own palettes and parameters"
+    }
+  },
+  "motifs": {
+    "mountains": {
+      "note": "mountain ridgelines fading into haze, firs and a still lake, a pale sun or moon",
+      "topics": [
+        "travel",
+        "outdoor",
+        "nature",
+        "wellness",
+        "autumn",
+        "winter"
+      ],
+      "palette": "dawn",
+      "palettes": [
+        "dawn",
+        "dusk",
+        "night",
+        "snowy",
+        "autumn"
+      ],
+      "tone": "light",
+      "type": "editorial",
+      "types": [
+        "myeongjo",
+        "maru",
+        "calli",
+        "elegant",
+        "bold"
+      ],
+      "layouts": {
+        "landscape": {
+          "layout": "top"
+        },
+        "portrait": {
+          "layout": "top"
+        },
+        "square": {
+          "layout": "top"
+        }
+      },
+      "params": {
+        "layers": {
+          "default": 7,
+          "note": "number of ridgelines, 5–8"
+        },
+        "peaks": {
+          "default": 1.0,
+          "note": "0.4 = rolling hills … 1.5 = jagged alpine peaks"
+        },
+        "lake": {
+          "default": true,
+          "note": "still lake mirroring the range along the bottom; false = the slopes run off the frame"
+        },
+        "trees": {
+          "default": 1.0,
+          "note": "firs on the near crests: 0 = none … 2 = dense"
+        },
+        "snow": {
+          "default": "auto",
+          "note": "snow caps: 0 = none … 1 = down to the middle slopes (auto: on for the snowy palette)"
+        },
+        "birds": {
+          "default": 5,
+          "note": "birds beside the sun (daylight palettes), 0–8"
+        },
+        "clouds": {
+          "default": 1.0,
+          "note": "thin cloud streaks beside the hero, 0 = clear sky"
+        },
+        "body": {
+          "default": "auto",
+          "note": "auto · sun · moon (auto: a pale accent on a dark sky becomes a moon)"
+        },
+        "stars": {
+          "default": "auto",
+          "note": "auto (dark skies only) · true · false"
+        },
+        "sun": {
+          "default": 1.0,
+          "note": "size of the sun / moon disc"
+        }
+      },
+      "vars": {
+        "--scrim-center": 0.2,
+        "--grain": 0.08
+      }
+    },
+    "sea": {
+      "note": "open sea to a low horizon, a low sun or moon and its glitter path, far islands and a sail",
+      "topics": [
+        "summer",
+        "travel",
+        "music",
+        "wellness",
+        "outdoor"
+      ],
+      "palette": "sunset",
+      "palettes": [
+        "sunrise",
+        "midday",
+        "sunset",
+        "moonlit",
+        "stormy"
+      ],
+      "tone": "dark",
+      "type": "bold",
+      "types": [
+        "editorial",
+        "humanist",
+        "round",
+        "elegant",
+        "retro"
+      ],
+      "layouts": {
+        "landscape": {
+          "layout": "top"
+        },
+        "portrait": {
+          "layout": "top"
+        },
+        "square": {
+          "layout": "top"
+        }
+      },
+      "params": {
+        "waves": {
+          "default": "auto",
+          "note": "0.4 = glassy water … 1.6 = lively crests (auto: 1, the stormy palette 1.5)"
+        },
+        "glitter": {
+          "default": 1.0,
+          "note": "strength of the light path under the sun or moon"
+        },
+        "dip": {
+          "default": 0.2,
+          "note": "0 = disc clear of the horizon … 1 = more than half set"
+        },
+        "clouds": {
+          "default": "auto",
+          "note": "thin cloud streaks: 0 = clear … 2 = many (auto: 1, the stormy palette 2)"
+        },
+        "islands": {
+          "default": 2,
+          "note": "far islands on the horizon, 0–4"
+        },
+        "boat": {
+          "default": true,
+          "note": "a small sail near the horizon"
+        },
+        "birds": {
+          "default": 4,
+          "note": "gulls beside the sun (daylight palettes), 0–8"
+        },
+        "body": {
+          "default": "auto",
+          "note": "auto · sun · moon (auto: a pale accent on a dark sky becomes a moon)"
+        },
+        "stars": {
+          "default": "auto",
+          "note": "auto (dark skies, not the stormy one) · true · false"
+        },
+        "sun": {
+          "default": 1.0,
+          "note": "size of the sun / moon disc"
+        }
+      },
+      "vars": {
+        "--scrim-center": 0.2,
+        "--grain": 0.08
+      }
+    },
+    "city": {
+      "note": "a city at dusk: layers of towers with lit windows, a moon, a harbour mirroring the lights",
+      "topics": [
+        "city",
+        "nightlife",
+        "business",
+        "music",
+        "film",
+        "celebration"
+      ],
+      "palette": "bluehour",
+      "palettes": [
+        "bluehour",
+        "neon",
+        "amberdusk",
+        "fog",
+        "daybreak"
+      ],
+      "tone": "dark",
+      "type": "editorial",
+      "types": [
+        "bold",
+        "square",
+        "swiss",
+        "luxe",
+        "myeongjo"
+      ],
+      "layouts": {
+        "landscape": {
+          "layout": "top"
+        },
+        "portrait": {
+          "layout": "top"
+        },
+        "square": {
+          "layout": "top"
+        }
+      },
+      "params": {
+        "height": {
+          "default": 1.0,
+          "note": "0.4 = low waterfront … 1.6 = towers high above the moon"
+        },
+        "lights": {
+          "default": 1.0,
+          "note": "0 = dark city … 2 = every floor lit"
+        },
+        "water": {
+          "default": true,
+          "note": "harbour with reflections in the foreground (false = the city runs to the bottom edge)"
+        },
+        "haze": {
+          "default": 1.0,
+          "note": "0 = crisp night … 2 = thick glowing mist between the layers"
+        },
+        "bloom": {
+          "default": 1.0,
+          "note": "glow around the lights"
+        },
+        "moon": {
+          "default": 1.0,
+          "note": "size of the moon / sun (0.5–1.8)"
+        },
+        "body": {
+          "default": "auto",
+          "note": "auto | moon | sun"
+        },
+        "stars": {
+          "default": "auto",
+          "note": "auto (on dark, moonlit palettes) | true | false"
+        },
+        "towers": {
+          "default": true,
+          "note": "landmark towers framing the moon"
+        }
+      }
+    }
+  },
+  "topics": [
+    "travel",
+    "outdoor",
+    "nature",
+    "city",
+    "summer",
+    "retro"
+  ],
+  "layouts": {
+    "landscape": {
+      "layout": "top",
+      "also": [
+        "left",
+        "right",
+        "bottom",
+        "corners",
+        "headline",
+        "baseline",
+        "vertical",
+        "axis",
+        "band",
+        "strip"
+      ]
+    },
+    "portrait": {
+      "layout": "top",
+      "also": [
+        "bottom",
+        "corners",
+        "baseline",
+        "vertical",
+        "axis",
+        "side"
+      ]
+    },
+    "square": {
+      "layout": "top",
+      "also": [
+        "bottom",
+        "corners",
+        "baseline",
+        "vertical",
+        "axis",
+        "left",
+        "right"
+      ]
+    }
+  }
+}

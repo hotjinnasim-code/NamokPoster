@@ -1,0 +1,155 @@
+{
+  "id": "flowfield",
+  "label": "Flow Field",
+  "engine": "three",
+  "kind": "picture",
+  "mood": "generative plotter print — flat matte bands of two or three inks that follow an invisible flow field, each curving beside its neighbours without touching, from hairlines to very wide, parting round the copy like water round a stone inside a clean paper border. Good for art and design events, music programmes, science and tech talks, culture festivals, anything that should look composed and contemporary.",
+  "tone": "light",
+  "type": "grotesk",
+  "types": [
+    "swiss",
+    "slim",
+    "editorial",
+    "geometric",
+    "plex",
+    "elegant"
+  ],
+  "defaultPalette": "primary",
+  "palettes": {
+    "primary": {
+      "bg": "#f2eee3",
+      "ink": "#16181d",
+      "accent": "#d03a25",
+      "colors": [
+        "#22459a",
+        "#d9412b",
+        "#efb42a",
+        "#16181d"
+      ]
+    },
+    "clay": {
+      "bg": "#f0e7d5",
+      "ink": "#2a2623",
+      "accent": "#b0472a",
+      "colors": [
+        "#b9552f",
+        "#d8a03c",
+        "#7f9273",
+        "#2f2a27"
+      ]
+    },
+    "ocean": {
+      "bg": "#e4eaec",
+      "ink": "#0f1f3a",
+      "accent": "#c9462f",
+      "colors": [
+        "#16305e",
+        "#2c8a92",
+        "#e2644a",
+        "#9cc7de"
+      ]
+    },
+    "rose": {
+      "bg": "#f3e2db",
+      "ink": "#35101d",
+      "accent": "#8c1f3e",
+      "colors": [
+        "#7c1b39",
+        "#de7b92",
+        "#c88a1a"
+      ]
+    },
+    "night": {
+      "bg": "#111316",
+      "ink": "#f2ebdc",
+      "accent": "#e8a23b",
+      "colors": [
+        "#efe6d3",
+        "#e59a35",
+        "#2f9f9a",
+        "#5c6066"
+      ]
+    }
+  },
+  "params": {
+    "motif": {
+      "default": "bands",
+      "note": "bands | threads | eddy"
+    }
+  },
+  "motifs": {
+    "bands": {
+      "note": "ribbons from hairline to very wide, cut into colour segments",
+      "topics": [
+        "art",
+        "design",
+        "music",
+        "culture"
+      ]
+    },
+    "threads": {
+      "note": "hundreds of fine even lines, combed like a wind map",
+      "topics": [
+        "science",
+        "tech",
+        "nature",
+        "wellness"
+      ]
+    },
+    "eddy": {
+      "note": "bands wrapping round one or two still centres",
+      "topics": [
+        "music",
+        "science",
+        "art"
+      ]
+    }
+  },
+  "topics": [
+    "art",
+    "design",
+    "music",
+    "science",
+    "tech",
+    "culture",
+    "nature",
+    "wellness"
+  ],
+  "layouts": {
+    "landscape": {
+      "layout": "left",
+      "also": [
+        "right",
+        "top",
+        "bottom",
+        "band",
+        "strip",
+        "corners",
+        "headline",
+        "baseline",
+        "axis",
+        "vertical"
+      ]
+    },
+    "portrait": {
+      "layout": "top",
+      "also": [
+        "bottom",
+        "corners",
+        "baseline",
+        "axis",
+        "side",
+        "vertical"
+      ]
+    },
+    "square": {
+      "layout": "top",
+      "also": [
+        "left",
+        "right",
+        "vertical"
+      ]
+    }
+  },
+  "ground": true
+}

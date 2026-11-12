@@ -1,0 +1,229 @@
+{
+  "id": "papercut",
+  "label": "Paper Relief",
+  "engine": "three",
+  "kind": "picture",
+  "mood": "a full picture — stacked sheets of heavy coloured paper, each cut with a knife and laid over the next under one soft lamp from the upper left: every cut throws a tight contact shadow and a wider soft one on the sheet beneath, its lit edge shows a hairline of paper thickness, and the colour steps down a tonal ramp to a single disc; the top sheet is the page and carries the copy uncut. Calm, tactile, quietly deep. Good for exhibitions and craft fairs, nature, travel and outdoor programmes, wellness and retreat events, seasonal festivals and family days, book and culture posters.",
+  "tone": "light",
+  "type": "editorial",
+  "types": [
+    "myeongjo",
+    "maru",
+    "story",
+    "calli",
+    "garamond",
+    "elegant",
+    "swiss",
+    "batang"
+  ],
+  "defaultPalette": "terracotta",
+  "palettes": {
+    "terracotta": {
+      "bg": "#f3eadc",
+      "ink": "#2a1712",
+      "accent": "#b8431f",
+      "colors": [
+        "#ecd2b8",
+        "#e0aa86",
+        "#cb7550",
+        "#a2432e",
+        "#5f201c"
+      ]
+    },
+    "fern": {
+      "bg": "#f1efe1",
+      "ink": "#16261b",
+      "accent": "#9a6417",
+      "colors": [
+        "#dfe3c8",
+        "#b7c79c",
+        "#7f9f72",
+        "#4a7552",
+        "#1f4634"
+      ]
+    },
+    "tidewater": {
+      "bg": "#e9eef0",
+      "ink": "#0f2233",
+      "accent": "#c2502a",
+      "colors": [
+        "#cfdfe2",
+        "#9cc3c8",
+        "#5b9aa6",
+        "#2c6a80",
+        "#133a57"
+      ]
+    },
+    "blossom": {
+      "bg": "#f7e9e6",
+      "ink": "#3a1522",
+      "accent": "#b3264f",
+      "colors": [
+        "#f1cfd0",
+        "#e5a5b0",
+        "#cf7189",
+        "#a43f61",
+        "#5e1c3a"
+      ]
+    },
+    "midnight": {
+      "bg": "#141a33",
+      "ink": "#eef0fa",
+      "accent": "#f1e2b6",
+      "colors": [
+        "#232d5a",
+        "#2a3870",
+        "#334688",
+        "#40579f",
+        "#526bb4"
+      ]
+    }
+  },
+  "params": {
+    "motif": {
+      "default": "strata",
+      "note": "strata | tide | canopy — what is cut into the paper"
+    },
+    "layers": {
+      "default": "auto",
+      "note": "sheets under the page, 3–9 (auto: strata 7, tide 6, canopy 5)"
+    },
+    "depth": {
+      "default": 1.0,
+      "note": "gap between the sheets, which sets how far the shadows reach: 0.5 = nearly flat … 1.6 = a deep box"
+    },
+    "scale": {
+      "default": 1.0,
+      "note": "size of the opening (strata, canopy), 0.6–1.4; it never grows into the copy"
+    },
+    "disc": {
+      "default": true,
+      "note": "the one disc: a punched hole that shows the accent paper (strata), a sun or moon slipped between two sheets (tide) or in the clearing (canopy); false = none"
+    }
+  },
+  "motifs": {
+    "strata": {
+      "note": "nested contour openings round the focus, like a canyon or a geode cut in paper: shelves wide on the lamp's side, a tight flight of lit edges opposite, one punched accent disc in the deepest well",
+      "topics": [
+        "culture",
+        "craft",
+        "travel",
+        "autumn"
+      ],
+      "palette": "terracotta",
+      "palettes": [
+        "terracotta",
+        "tidewater",
+        "fern",
+        "midnight"
+      ]
+    },
+    "tide": {
+      "note": "wave bands rising from the edge of the sheet farthest from the copy, each sheet ending in one long hand-cut wavy line — a paper sea, with a plain sun or moon slipped between two sheets",
+      "topics": [
+        "travel",
+        "outdoor",
+        "wellness",
+        "nature"
+      ],
+      "palette": "tidewater",
+      "palettes": [
+        "tidewater",
+        "terracotta",
+        "midnight",
+        "blossom",
+        "fern"
+      ],
+      "layouts": {
+        "landscape": {
+          "layout": "left",
+          "also": [
+            "right",
+            "top",
+            "bottom",
+            "headline",
+            "band"
+          ]
+        },
+        "portrait": {
+          "layout": "top",
+          "also": [
+            "bottom",
+            "vertical",
+            "side"
+          ]
+        },
+        "square": {
+          "layout": "bottom",
+          "also": [
+            "top",
+            "left",
+            "right",
+            "vertical"
+          ]
+        }
+      }
+    },
+    "canopy": {
+      "note": "branches of rounded leaves cut from the rim of a window in every sheet — looking through a paper forest into a clearing with a moon",
+      "topics": [
+        "nature",
+        "spring",
+        "family",
+        "wellness",
+        "outdoor"
+      ],
+      "palette": "fern",
+      "palettes": [
+        "fern",
+        "blossom",
+        "midnight",
+        "terracotta",
+        "tidewater"
+      ]
+    }
+  },
+  "topics": [
+    "craft",
+    "nature",
+    "culture"
+  ],
+  "vars": {
+    "--grain": 0.08
+  },
+  "layouts": {
+    "landscape": {
+      "layout": "left",
+      "also": [
+        "right",
+        "top",
+        "bottom",
+        "corners",
+        "headline",
+        "vertical",
+        "strip",
+        "band",
+        "baseline"
+      ]
+    },
+    "portrait": {
+      "layout": "top",
+      "also": [
+        "bottom",
+        "corners",
+        "vertical",
+        "axis",
+        "baseline",
+        "side"
+      ]
+    },
+    "square": {
+      "layout": "bottom",
+      "also": [
+        "left",
+        "right",
+        "vertical"
+      ]
+    }
+  }
+}

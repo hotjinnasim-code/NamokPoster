@@ -1,0 +1,36 @@
+/* arcade — the 8-bit title screen and the 오락실 sign above it (Namco and Nintendo bitmap lettering, scoreboard numerals, coin-op marquees). Pixelify Sans for Latin, Do Hyeon — narrow, square-cut sign lettering — for Hangul; a stepped drop shadow, HUD labels. */
+.poster[data-type="arcade"] {
+  --font-title: "Pixelify Sans KR", "Do Hyeon", "Black Han Sans", sans-serif; --font-title-ko: "Pixelify Sans KR", "Do Hyeon", "Black Han Sans", sans-serif;   /* the size-matched bitmap face in every headline, so Hangul beside it keeps level */
+  --font-subtitle: "Pixelify Sans", "Do Hyeon", "Pretendard", sans-serif; --font-subtitle-ko: "Do Hyeon", "Pretendard", sans-serif;
+  --font-eyebrow: "Pixelify Sans", "Do Hyeon", sans-serif; --font-footer: "Pixelify Sans", "Do Hyeon", sans-serif; --font-label-ko: "Do Hyeon", "Pretendard", sans-serif;
+  --title-size: 11.8; --title-weight: 700; --title-leading: 1.02; --title-tracking: 0em;   /* mixed case: the bitmap capitals Z and S are too close to 8 and 5 to shout in */
+  --title-leading-ko: 1.14; --title-tracking-ko: 0em; --title-wordspace-ko: 0.04em; --title-weight-ko: 400;
+  --eyebrow-size: 1.6; --eyebrow-weight: 700; --eyebrow-tracking: 0.06em; --eyebrow-case: none; --eyebrow-tracking-ko: 0.06em;
+  --subtitle-size: 2.9; --subtitle-weight: 700; --subtitle-leading: 1.24; --subtitle-tracking: 0em; --subtitle-weight-ko: 400; --subtitle-leading-ko: 1.34; --subtitle-tracking-ko: -0.01em;
+  --body-size: 1.82; --body-weight: 500; --body-leading: 1.56; --body-weight-ko: 500;
+  --meta-size: 2.6; --meta-weight: 500; --meta-label-weight: 800;
+  --footer-size: 1.5; --footer-weight: 700; --footer-tracking: 0.06em; --footer-tracking-ko: 0.02em; --footer-rule: 1;
+  --gap-eyebrow: 1.8; --gap-subtitle: 2.2; --grain: 0.12;
+}
+.poster[data-type="arcade"]:lang(ko) { --title-size: 12.4; --title-weight: 400; }
+.poster[data-type="arcade"] .subtitle[data-script="ko"] { --subtitle-size: 3.2; font-weight: 400; }
+.poster[data-type="arcade"] .eyebrow[data-script="ko"] { --eyebrow-size: 1.7; font-weight: 400; }
+.poster[data-type="arcade"] .footer span[data-script="ko"] { font-weight: 400; }
+/* two hard steps of shadow, as a sprite is extruded */
+.poster[data-type="arcade"] .title { text-shadow: 0.04em 0.04em 0 var(--c-accent), 0.08em 0.08em 0 color-mix(in srgb, var(--c-accent) 45%, var(--c-paper)); }
+.poster[data-type="arcade"] .title em { color: var(--c-accent); text-shadow: 0.04em 0.04em 0 var(--c-ink), 0.08em 0.08em 0 color-mix(in srgb, var(--c-ink) 40%, var(--c-paper)); }
+.poster[data-type="arcade"][data-tone="dark"] .title { text-shadow: 0.04em 0.04em 0 color-mix(in srgb, var(--c-accent) 62%, var(--c-paper)), 0.08em 0.08em 0 color-mix(in srgb, var(--c-accent) 30%, var(--c-paper)); }
+.poster[data-type="arcade"][data-tone="dark"] .title em { text-shadow: 0.04em 0.04em 0 color-mix(in srgb, var(--c-ink) 55%, var(--c-paper)), 0.08em 0.08em 0 color-mix(in srgb, var(--c-ink) 26%, var(--c-paper)); }
+/* a block cursor ahead of the label */
+.poster[data-type="arcade"] .eyebrow { display: flex; align-items: center; gap: 0.6em; color: var(--c-accent); line-height: 1; }
+.poster[data-type="arcade"] .eyebrow::before { content: ""; width: 0.46em; height: 0.62em; background: currentColor; flex: none; }
+.poster[data-type="arcade"] .eyebrow[data-script="ko"]::before { width: 0.6em; height: 0.8em; }
+.poster[data-type="arcade"] [data-halign="center"] > .eyebrow { justify-content: center; }
+.poster[data-type="arcade"] .subtitle, .poster[data-type="arcade"] .footer { color: var(--c-ink); }
+.poster[data-type="arcade"] .meta dt { color: var(--c-accent); }      /* one weight only: the label is told apart by colour */
+.poster[data-type="arcade"] .body { color: color-mix(in srgb, var(--c-ink) 86%, transparent); }
+.poster[data-type="arcade"] .cta { border-radius: 0; background: var(--c-accent); color: var(--c-on-accent, var(--c-paper)); font-weight: 800; box-shadow: 0.22em 0.22em 0 var(--c-ink); }
+.poster[data-type="arcade"] .cta::after { content: ">>"; letter-spacing: -0.06em; }
+.poster[data-type="arcade"] .badge { border-radius: 0; box-shadow: 0.2em 0.2em 0 var(--c-ink); font-size: calc(var(--fu) * 1.7 * var(--k-small)); line-height: 1; }
+.poster[data-type="arcade"] .badge[data-script="ko"] { font-size: calc(var(--fu) * 1.7 * var(--k-small)); line-height: 1; }
+.poster[data-type="arcade"] .bottom.ruled { border-top: calc(var(--u) * 0.3) dashed var(--c-ink); padding-top: calc(var(--u) * 1.4); }

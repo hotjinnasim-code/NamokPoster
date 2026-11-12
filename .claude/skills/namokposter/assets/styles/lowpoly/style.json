@@ -1,0 +1,200 @@
+{
+  "id": "lowpoly",
+  "label": "Low-Poly",
+  "engine": "blender",
+  "kind": "object",
+  "mood": "faceted low-poly — models cut from a few flat triangles in big, medium and small sizes, each facet its own slightly shifted colour under one hard sun, standing or floating over the plain poster colour. Crisp and optimistic: outdoor and travel, games, science and climate, start-ups, seasonal campaigns.",
+  "tone": "light",
+  "type": "bold",
+  "types": ["swiss", "round", "comic", "friendly", "techno", "impact", "maple"],
+  "matchBackground": true,
+  "fallback": "bauhaus",
+  "defaultPalette": "meadow",
+  "palettes": {
+    "meadow": {
+      "bg": "#dcecee",
+      "ink": "#16303a",
+      "accent": "#ee5d3a",
+      "colors": [
+        "#86c56c",
+        "#8c705c",
+        "#2f9070",
+        "#f8f4ea",
+        "#48a6c8"
+      ]
+    },
+    "autumn": {
+      "bg": "#f6e6cf",
+      "ink": "#3a2217",
+      "accent": "#c53f2a",
+      "colors": [
+        "#e0aa45",
+        "#80594a",
+        "#d8602a",
+        "#fbf2e0",
+        "#5a9aa8"
+      ]
+    },
+    "frost": {
+      "bg": "#e4edf7",
+      "ink": "#1a2944",
+      "accent": "#e8553d",
+      "colors": [
+        "#b7cadc",
+        "#5a6d8c",
+        "#2e6079",
+        "#ffffff",
+        "#62aee0"
+      ]
+    },
+    "coral": {
+      "bg": "#ffe2d6",
+      "ink": "#4a1f3a",
+      "accent": "#f2495e",
+      "colors": [
+        "#f6a070",
+        "#8a5878",
+        "#c2477a",
+        "#fff1e4",
+        "#7a70d0"
+      ]
+    },
+    "night": {
+      "bg": "#141f3c",
+      "ink": "#f1ead9",
+      "accent": "#ffb347",
+      "colors": [
+        "#2f8375",
+        "#474a7c",
+        "#1f6470",
+        "#d2e2f6",
+        "#3c72dc"
+      ]
+    }
+  },
+  "params": {
+    "motif": {
+      "default": "island",
+      "note": "island (floating island with trees and a hut) | peaks (snowy mountain range with pines) | berg (iceberg in a disc of sea, a small boat) | rocket (a rocket lifting off a mound of smoke) | forms (abstract faceted solids)"
+    },
+    "jitter": {
+      "default": 1.0,
+      "note": "per-facet colour variation: 0 = uniform colour fields, 1 = standard, 2 = lively mosaic"
+    },
+    "shadow": {
+      "default": 2.5,
+      "note": "sun size in degrees: 1 = razor shadows, 8 = soft"
+    }
+  },
+  "layouts": {
+    "landscape": {
+      "layout": "left",
+      "also": [
+        "right",
+        "top",
+        "bottom",
+        "corners",
+        "headline",
+        "baseline",
+        "vertical",
+        "axis",
+        "band",
+        "strip"
+      ]
+    },
+    "portrait": {
+      "layout": "top",
+      "also": [
+        "bottom",
+        "corners",
+        "baseline",
+        "vertical",
+        "axis",
+        "side"
+      ]
+    },
+    "square": {
+      "layout": "top",
+      "also": [
+        "bottom",
+        "corners",
+        "baseline",
+        "vertical",
+        "axis",
+        "left",
+        "right"
+      ]
+    }
+  },
+  "motifs": {
+    "island": {
+      "note": "a floating island: grass top, hanging rock, pines, a hut, clouds",
+      "topics": [
+        "nature",
+        "travel",
+        "gaming",
+        "kids",
+        "community"
+      ]
+    },
+    "peaks": {
+      "note": "a snowy mountain range with pine forest, a summit flag and a cabin",
+      "topics": [
+        "outdoor",
+        "sports",
+        "travel",
+        "winter",
+        "business"
+      ]
+    },
+    "berg": {
+      "note": "an iceberg in a disc of sea with floes and a small boat",
+      "topics": [
+        "science",
+        "winter",
+        "nature",
+        "finance",
+        "summer"
+      ]
+    },
+    "rocket": {
+      "note": "a rocket lifting off a mound of faceted smoke",
+      "topics": [
+        "tech",
+        "science",
+        "education",
+        "business",
+        "kids"
+      ]
+    },
+    "forms": {
+      "note": "abstract faceted solids: geodesic ball, spires, boulder",
+      "topics": [
+        "design",
+        "art",
+        "architecture",
+        "tech",
+        "education"
+      ]
+    }
+  },
+  "topics": [
+    "outdoor",
+    "nature",
+    "travel",
+    "gaming",
+    "tech",
+    "science"
+  ],
+  "cutout": true,
+  "grounds": [
+    "pattern/checker",
+    "pattern/stripes",
+    "pattern/dots",
+    "pattern/terrazzo",
+    "pattern/arches",
+    "pattern/grid",
+    "haze",
+    "halftone"
+  ]
+}

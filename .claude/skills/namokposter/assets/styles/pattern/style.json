@@ -1,0 +1,212 @@
+{
+  "id": "pattern",
+  "label": "Flat Pattern",
+  "engine": "html",
+  "kind": "picture",
+  "ground": true,
+  "mood": "a flat vector repeat pattern — a checkerboard (straight or gently warped), wavy stripes of even width, a dot grid that thins out towards the copy, terrazzo chips, rows of arches or fine graph paper with a few cells filled — printed in two to four flat inks over the free part of the page and running off its edge, with one clean straight edge towards the copy, in the manner of contemporary Korean event and pop-up posters. Calm enough to sit behind a 3D cut-out as its ground. Reads nothing from the copy; it frames it. Good for markets, festivals, kids' and family days, food and café events, fashion and beauty pop-ups, spring and summer events, church and community gatherings.",
+  "tone": "light",
+  "type": "grotesk",
+  "types": ["bold", "round", "dongle", "singleday", "comic", "pop", "jua", "swiss", "retro", "condensed", "editorial", "anemone", "gmarket"],
+  "defaultPalette": "mint",
+  "palettes": {
+    "mint": {
+      "bg": "#f4f1e8",
+      "ink": "#16241c",
+      "accent": "#e2452b",
+      "colors": [
+        "#1f8a5b",
+        "#d6ecd9",
+        "#f2b33a",
+        "#e2452b"
+      ]
+    },
+    "cherry": {
+      "bg": "#fff4ef",
+      "ink": "#2b1418",
+      "accent": "#d92d3c",
+      "colors": [
+        "#e23a46",
+        "#ffd9d2",
+        "#2b1418",
+        "#ffb53b"
+      ]
+    },
+    "butter": {
+      "bg": "#f6e49c",
+      "ink": "#1c1a14",
+      "accent": "#d93f22",
+      "colors": [
+        "#ff6a3d",
+        "#fff5d2",
+        "#2a62d9",
+        "#1c1a14"
+      ]
+    },
+    "cobalt": {
+      "bg": "#2443d0",
+      "ink": "#ffffff",
+      "accent": "#ffe04a",
+      "colors": [
+        "#ffffff",
+        "#1a33a8",
+        "#ffe04a",
+        "#ff7a5c"
+      ]
+    },
+    "night": {
+      "bg": "#14161b",
+      "ink": "#f1ede4",
+      "accent": "#ffcf3f",
+      "colors": [
+        "#f1ede4",
+        "#262a36",
+        "#ffcf3f",
+        "#ff5a3c"
+      ]
+    }
+  },
+  "params": {
+    "motif": {
+      "default": "checker",
+      "note": "checker | stripes | dots | terrazzo | arches | grid"
+    },
+    "scale": {
+      "default": 0,
+      "note": "size of one repeat as a fraction of the page's short side (0 = the motif's own default: checker 0.075, stripes 0.06, dots 0.045, terrazzo 0.06, arches 0.09, grid 0.03)"
+    },
+    "cover": {
+      "default": "field",
+      "note": "field (the whole free field, out to the page edge) | band (only a band along the far edge of the field, away from the copy)"
+    },
+    "tilt": {
+      "default": 0,
+      "note": "turn the pattern by this many degrees inside its straight-edged field (e.g. 45 for a diamond checker, 90 for upright stripes)"
+    },
+    "wave": {
+      "default": 0,
+      "note": "checker: 0 = straight; 0.3–1 warps the board into a gentle wave. stripes: the wave's amplitude (default 0.5; 0 = straight stripes)"
+    },
+    "inks": {
+      "default": 2,
+      "note": "stripes, dots, arches: 2 or 3 inks (the third from colors[2]: a third stripe, alternate dot rows, a small solid arch inside each open one)"
+    }
+  },
+  "motifs": {
+    "checker": {
+      "note": "a checkerboard in two inks, whole squares along the edge towards the copy; wave > 0 warps it into a gentle wave",
+      "topics": [
+        "kids",
+        "family",
+        "market",
+        "food",
+        "retro",
+        "celebration",
+        "spring",
+        "summer"
+      ]
+    },
+    "stripes": {
+      "note": "wavy stripes of even width in two or three inks",
+      "params": {
+        "wave": 0.5
+      },
+      "topics": [
+        "summer",
+        "outdoor",
+        "travel",
+        "food",
+        "kids",
+        "celebration"
+      ]
+    },
+    "dots": {
+      "note": "a staggered dot grid on the page colour, dots large at the far edge and shrinking to nothing towards the copy",
+      "topics": [
+        "design",
+        "art",
+        "music",
+        "fashion",
+        "beauty",
+        "tech",
+        "general"
+      ]
+    },
+    "terrazzo": {
+      "note": "angular chips of three or four inks scattered evenly on a pale ground, none cut by the edge towards the copy",
+      "topics": [
+        "design",
+        "architecture",
+        "craft",
+        "food",
+        "market",
+        "fashion"
+      ]
+    },
+    "arches": {
+      "note": "rows of round-topped arches, alternately solid and outlined",
+      "topics": [
+        "architecture",
+        "design",
+        "wellness",
+        "beauty",
+        "culture",
+        "luxury"
+      ]
+    },
+    "grid": {
+      "note": "fine graph-paper rules, heavier every fifth line, with a few cells filled in flat colour",
+      "topics": [
+        "education",
+        "tech",
+        "science",
+        "business",
+        "design",
+        "general"
+      ]
+    }
+  },
+  "topics": [
+    "market",
+    "kids",
+    "family",
+    "food",
+    "celebration",
+    "design",
+    "fashion",
+    "summer",
+    "spring",
+    "community"
+  ],
+  "layouts": {
+    "landscape": {
+      "layout": "left",
+      "also": [
+        "right",
+        "top",
+        "bottom",
+        "band",
+        "strip",
+        "corners",
+        "axis",
+        "baseline",
+        "headline",
+        "vertical"
+      ]
+    },
+    "portrait": {
+      "layout": "top",
+      "also": [
+        "bottom",
+        "side",
+        "corners",
+        "axis",
+        "baseline",
+        "vertical"
+      ]
+    },
+    "square": {
+      "layout": "top"
+    }
+  }
+}

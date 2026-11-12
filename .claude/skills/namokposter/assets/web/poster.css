@@ -1,0 +1,267 @@
+/* Base poster layout. Every length is a multiple of --u (1% of the poster's short side), so the
+   same rules hold at any resolution and aspect ratio. Type themes (assets/themes/<id>.css) set
+   variables and add decoration; they do not re-do layout.
+
+   Structure:  .poster > .art · .fx-* · .frame( header.top · main.main · aside.aside · footer.bottom ) · .free
+   Copy lives in one block (.main) or two (.main = headline group, .aside = details), depending on
+   the layout. compose.js positions the blocks and fits the type; this file only describes how
+   things look once they are placed. */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { width: 100%; height: 100%; overflow: hidden; background: #000; }
+
+.poster {
+  /* --u is set from JS. --s is the copy scale the fitter lowers when text is long; --ts is the
+     user's typeScale; --k-* enlarge small type for posters that are viewed on phones. */
+  --s: 1; --ts: 1; --k-small: 1; --k-mid: 1; --k-info: 1;
+  /* Size steps. A theme gives each line a size; these factors set the steps between the lines, so
+     the whole scale can be balanced in one place: headline ≈ 12–13 % of the short side (two lines),
+     sub-headline ≈ 3.7 %, information ≈ 3.1–3.5 %, eyebrow ≈ 2.6 %, paragraph ≈ 2 %, footer ≈ 2 %.
+     Headline to information is about 4 : 1 — on posters by studios and venues it runs from 3 : 1
+     to 5 : 1; at 5.5 : 1 three rows of information read as a caption under the title. The eyebrow
+     and the footer, the two smallest lines, are never under their floors (in % of the short side):
+     they have to be read on a sheet seen from across a room. The footer stays no larger than body
+     copy. Phone-viewed formats enlarge small type by their own factors (--k-small, --k-mid), so
+     the step factors are 1 there. */
+  --k-eyebrow: 1.35; --eyebrow-floor: 2.6; --k-footer: 1.3; --footer-floor: 2;
+  --k-subtitle: 1.3; --k-meta: 1.14; --k-body: 1.12;
+  --su: calc(var(--u) * var(--s) * var(--ts));
+  --fu: calc(var(--u) * var(--ts));               /* footer/header: never shrunk by the fitter */
+  --margin: 7.5;                                  /* outer margin, % of the short side: generous, as on a printed poster */
+  --m: calc(var(--u) * var(--margin));
+  --mx: var(--m); --my: var(--m);                 /* side and top/bottom margins; wide sheets take a little more at the sides */
+  --hair: calc(var(--u) * 0.1);
+
+  /* ---- fonts (themes override) ---- */
+  --font-sans: "Pretendard", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", system-ui, sans-serif;
+  --font-serif: "Fraunces", "Hahmlet", "Noto Serif KR", "Nanum Myeongjo", serif;
+  --font-mono: "JetBrains Mono", "Pretendard", ui-monospace, monospace;
+  --font-title: var(--font-sans);
+  --font-subtitle: var(--font-body);
+  --font-body: var(--font-sans);
+  --font-eyebrow: var(--font-body);
+  --font-footer: var(--font-body);
+  --font-label-ko: var(--font-sans);             /* Hangul labels when the Latin label face has no Hangul (mono, caps faces) */
+
+  /* ---- type scale, in % of the short side ---- */
+  --title-size: 10.5;   --title-weight: 800;   --title-leading: 1.04; --title-tracking: -0.03em; --title-case: none;
+  --eyebrow-size: 1.56; --eyebrow-weight: 600; --eyebrow-tracking: 0.14em; --eyebrow-case: uppercase;
+  --subtitle-size: 2.9; --subtitle-weight: 500; --subtitle-leading: 1.34; --subtitle-tracking: -0.01em;
+  --body-size: 1.82;    --body-weight: 400;    --body-leading: 1.6; --body-measure: 31;
+  --meta-size: 2.7;     --meta-weight: 500;    --meta-label-weight: 700;   --cta-size: 1.76;
+  --footer-size: 1.52;  --footer-weight: 500;  --footer-tracking: 0.02em; --footer-case: none;
+
+  /* ---- Hangul: fuller glyphs need more leading, slightly tighter letters, wider word gaps ---- */
+  --title-leading-ko: calc(var(--title-leading) + 0.12);
+  --title-tracking-ko: -0.03em; --title-wordspace-ko: 0.06em; --title-weight-ko: var(--title-weight);
+  --subtitle-leading-ko: 1.42;  --subtitle-tracking-ko: -0.02em; --subtitle-weight-ko: var(--subtitle-weight);
+  --body-leading-ko: 1.72;      --body-tracking-ko: -0.012em;    --body-weight-ko: var(--body-weight);
+  --eyebrow-tracking-ko: 0.06em; --footer-tracking-ko: 0em;
+
+  /* ---- vertical rhythm: related lines sit close, groups sit apart. The gaps round the headline are
+     measured from its ink, not from its line box (compose.js, opticalGaps): headline → information
+     nearly two rows of information. ---- */
+  --gap-eyebrow: 2.2; --gap-subtitle: 2.6; --gap-body: 2.6; --gap-meta: 5.4; --gap-cta: 3.4;
+  /* The eyebrow stands clear of the headline: from where it ends (the foot of its letters, or of its
+     own chip, box or rule) to the top of the headline's letters there is --eyebrow-clear of the
+     height of those letters, so a larger headline gets more air — never under --eyebrow-clear-min
+     and never over --eyebrow-clear-max (% of the short side), which keeps the label nearer to the
+     headline than the information is. --gap-eyebrow, the theme's margin under the eyebrow's box,
+     holds wherever it comes out wider. */
+  --eyebrow-clear: 0.42; --eyebrow-clear-min: 4; --eyebrow-clear-max: 5.2;
+
+  --scrim: 0;      /* 0..1 strength of the legibility gradient behind the copy */
+  --halo: 0;       /* 0..1 soft glow of the background colour around type that sits on a picture */
+  --grain: 0;      /* 0..1 film grain */
+  --qr-size: 10.5;
+
+  position: relative; width: 100vw; height: 100vh; overflow: hidden;
+  background: var(--c-bg); color: var(--c-ink);
+  font-family: var(--font-body); font-weight: var(--body-weight);
+  word-break: keep-all; overflow-wrap: break-word; line-break: strict;
+  -webkit-font-smoothing: antialiased; text-rendering: geometricPrecision;
+  font-kerning: normal; font-synthesis: none; font-optical-sizing: auto;
+  font-variant-numeric: lining-nums;
+}
+/* Posts read on a phone: the page is shown a few centimetres wide, so supporting text must be larger. */
+.poster[data-viewing="mobile"] { --k-small: 1.42; --k-mid: 1.16; --k-eyebrow: 1.08; --k-footer: 1.06; --eyebrow-floor: 1.5; --footer-floor: 1.45; --k-subtitle: 1; --k-meta: 1; --k-body: 1; --qr-size: 14; }
+/* Print: A3 at arm's length, details at about 12–14 pt. A wider margin keeps type clear of the trim
+   and of the unprintable edge of office printers (8.5% of A3's short side is 25 mm). */
+.poster[data-viewing="print"]  { --k-small: 1; --margin: 8.5; }
+.poster[data-orient="landscape"] { --mx: calc(var(--m) * 1.2); }
+/* Little copy, larger information: with a headline and one or two rows the rows are set a size up;
+   with three or four rows and nothing else under the headline, half a size up. (Cells of an
+   information bar are two lines tall already and stay at the standard size.) */
+.poster[data-sparse="1"] { --k-info: 1.3; }
+.poster[data-sparse="2"] { --k-info: 1.12; }
+/* …but not beside the headline. In `band` the rows stand next to the headline on its base line, under
+   a subject that runs the width of the sheet: there they keep the standard size and are set closer,
+   so the block is no taller than the headline's own line and stays clear of the subject above it. */
+.poster[data-layout^="band"][data-sparse="2"] .aside .meta { --k-info: 1; }
+.poster[data-layout^="band"] .aside .meta { line-height: 1.26; row-gap: 0.28em; }
+
+/* ---------- layers ---------- */
+.art, .fx { position: absolute; inset: 0; pointer-events: none; }
+.art > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; }
+/* an HTML scene: art drawn with DOM and SVG in this page (vector; made from the copy) */
+.art-html { position: absolute; inset: 0; overflow: hidden; color: var(--c-ink); font-family: var(--font-title); line-height: 1; font-kerning: normal; }
+.art-html svg { position: absolute; overflow: visible; display: block; }
+.fx-scrim { opacity: var(--scrim); }
+.poster[data-scrim="right"] .fx-scrim { background: linear-gradient(to right,  var(--c-bg) 0%, color-mix(in srgb, var(--c-bg) 88%, transparent) 22%, color-mix(in srgb, var(--c-bg) 55%, transparent) 40%, color-mix(in srgb, var(--c-bg) 18%, transparent) 54%, transparent 68%); }
+.poster[data-scrim="left"]  .fx-scrim { background: linear-gradient(to left,   var(--c-bg) 0%, color-mix(in srgb, var(--c-bg) 88%, transparent) 22%, color-mix(in srgb, var(--c-bg) 55%, transparent) 40%, color-mix(in srgb, var(--c-bg) 18%, transparent) 54%, transparent 68%); }
+.poster[data-scrim="down"]  .fx-scrim { background: linear-gradient(to bottom, var(--c-bg) 0%, color-mix(in srgb, var(--c-bg) 88%, transparent) 22%, color-mix(in srgb, var(--c-bg) 55%, transparent) 40%, color-mix(in srgb, var(--c-bg) 18%, transparent) 54%, transparent 68%); }
+.poster[data-scrim="up"]    .fx-scrim { background: linear-gradient(to top,    var(--c-bg) 0%, color-mix(in srgb, var(--c-bg) 88%, transparent) 22%, color-mix(in srgb, var(--c-bg) 55%, transparent) 40%, color-mix(in srgb, var(--c-bg) 18%, transparent) 54%, transparent 68%); }
+/* copy sitting on top of the subject always needs help, whatever the theme's usual scrim is */
+.poster[data-scrim="center"] .fx-scrim { opacity: max(var(--scrim), var(--scrim-center, 0.74)); background: radial-gradient(ellipse 66% 62% at 50% 50%, var(--c-bg) 0%, color-mix(in srgb, var(--c-bg) 92%, transparent) 38%, color-mix(in srgb, var(--c-bg) 55%, transparent) 66%, transparent 100%); }
+.fx-grain { opacity: var(--grain); mix-blend-mode: overlay; background-repeat: repeat; }
+.fx-frame { inset: calc(var(--m) * 0.5 + var(--bleed, 0px)); border: calc(var(--u) * 0.14) solid color-mix(in srgb, var(--c-ink) 72%, transparent); display: none; }
+.poster[data-framed="1"] .fx-frame { display: block; }
+.poster[data-framed="1"] { --margin: 9.5; }
+
+/* ---------- frame: header / copy blocks / footer ---------- */
+.frame { position: absolute; inset: calc(var(--my) + var(--bleed, 0px)) calc(var(--mx) + var(--bleed, 0px)); }   /* the art runs into the bleed; type never does */
+.top, .bottom { position: absolute; left: 0; right: 0; display: flex; justify-content: space-between; gap: calc(var(--u) * 4); }
+.top { top: 0; align-items: flex-start; }
+.bottom { bottom: 0; align-items: flex-end; }
+.top:empty, .bottom:empty { display: none; }
+.slot { display: flex; align-items: inherit; gap: calc(var(--u) * 2.4); min-width: 0; }
+.slot:empty { display: none; }
+.top .slot-right, .bottom .slot-right { margin-left: auto; justify-content: flex-end; flex-shrink: 0; }
+
+.main, .aside { position: absolute; display: flex; flex-direction: column; align-items: flex-start; text-align: left; }
+.main[data-halign="center"], .aside[data-halign="center"] { align-items: center; text-align: center; }
+.main[data-halign="right"],  .aside[data-halign="right"]  { align-items: flex-end; text-align: right; }
+.main > *, .aside > * { max-width: 100%; }
+.main, .aside, .top, .bottom { text-shadow: 0 0 calc(var(--u) * 1.6) color-mix(in srgb, var(--c-paper) calc(var(--halo) * 100%), transparent), 0 0 calc(var(--u) * 0.5) color-mix(in srgb, var(--c-paper) calc(var(--halo) * 70%), transparent); }
+.cta, .badge { text-shadow: none; }
+.aside { --s: var(--s2, 1); }
+.aside:empty { display: none; }
+.main > :first-child, .aside > :first-child { margin-top: 0; }
+
+.poster { --c-paper: var(--c-bg); }   /* the surface text sits on */
+
+/* ---------- copy ---------- */
+.eyebrow {
+  font-family: var(--font-eyebrow); font-size: calc(var(--su) * max(var(--eyebrow-size) * var(--k-eyebrow), var(--eyebrow-floor)) * var(--k-small)); font-weight: var(--eyebrow-weight);
+  letter-spacing: var(--eyebrow-tracking); text-transform: var(--eyebrow-case); line-height: 1.3;
+  color: var(--c-accent); margin-bottom: calc(var(--su) * var(--gap-eyebrow));
+}
+.eyebrow[data-script="ko"] { letter-spacing: var(--eyebrow-tracking-ko); font-family: var(--font-eyebrow-ko, var(--font-label-ko)); }
+[data-halign="center"] > .eyebrow { padding-left: var(--eyebrow-tracking); }
+[data-halign="center"] > .eyebrow[data-script="ko"] { padding-left: var(--eyebrow-tracking-ko); }
+.title {
+  font-family: var(--font-title); font-weight: var(--title-weight);
+  font-size: var(--title-px, calc(var(--su) * var(--title-size)));
+  line-height: var(--title-leading); letter-spacing: var(--title-tracking); text-transform: var(--title-case);
+  color: var(--c-ink); width: 100%; white-space: nowrap;      /* line breaks are chosen by the composer */
+}
+.title[data-script="ko"] { font-family: var(--font-title-ko, var(--font-title)); line-height: var(--title-leading-ko); letter-spacing: var(--title-tracking-ko); word-spacing: var(--title-wordspace-ko); font-weight: var(--title-weight-ko); }
+.title em, .subtitle em { font-style: normal; color: var(--c-accent); }
+.title strong { font-weight: inherit; }
+.subtitle {
+  font-family: var(--font-subtitle); font-size: calc(var(--su) * var(--subtitle-size) * var(--k-subtitle) * var(--k-mid)); font-weight: var(--subtitle-weight);
+  line-height: var(--subtitle-leading); letter-spacing: var(--subtitle-tracking); text-wrap: balance;
+  margin-top: calc(var(--su) * (var(--gap-subtitle) + 0.6)); color: var(--c-ink);
+}
+.subtitle[data-script="ko"] { font-family: var(--font-subtitle-ko, var(--font-subtitle)); line-height: var(--subtitle-leading-ko); letter-spacing: var(--subtitle-tracking-ko); font-weight: var(--subtitle-weight-ko); }
+.body {
+  font-size: calc(var(--su) * var(--body-size) * var(--k-body) * var(--k-small)); line-height: var(--body-leading); font-weight: var(--body-weight);
+  margin-top: calc(var(--su) * var(--gap-body)); color: var(--c-muted);
+  max-width: min(100%, calc(var(--su) * var(--body-size) * var(--k-body) * var(--k-small) * var(--body-measure))); text-wrap: pretty;
+}
+.body[data-script="ko"] { line-height: var(--body-leading-ko); letter-spacing: var(--body-tracking-ko); font-weight: var(--body-weight-ko); }
+.body p + p, .body p + ul, .body ul + p { margin-top: 0.7em; }
+.body ul { list-style: none; }
+.body li { position: relative; padding-left: 1.15em; }
+.body li + li { margin-top: 0.3em; }
+.body li::before { content: ""; position: absolute; left: 0.1em; top: 0.62em; width: 0.36em; height: 0.36em; border-radius: 50%; background: var(--c-accent); }
+[data-halign="center"] > .body li { padding-left: 0; }
+[data-halign="center"] > .body li::before { position: static; display: inline-block; margin-right: 0.6em; vertical-align: 0.14em; }
+.body strong, .subtitle strong, .footer strong, .meta strong { font-weight: 700; color: var(--c-ink); }
+
+/* event information — when, where, who for, what it costs, how to sign up. On an event poster this
+   is the body: label and value are set at one size (the label heavier), large enough to be taken in
+   at a glance, and never as small print. It takes one of these forms, chosen by the composer:
+     rows     label beside value, a table on the block's left edge (the default)
+     lines    under a centred headline, up to three rows: each row a centred line, label then value
+     centred  under a centred headline, four rows or more: the table keeps its columns and is centred whole
+     cells    an information bar — label over value, cell beside cell, one line each. A bar is used
+              only where every value fits its cell on one line; otherwise the rows take its place.
+     two      in a wide band with more rows than a bar holds: two tables side by side */
+.meta {
+  display: grid; grid-template-columns: auto 1fr; column-gap: 1.1em; row-gap: 0.5em; align-items: baseline;
+  margin-top: calc(var(--su) * var(--gap-meta)); font-size: calc(var(--su) * var(--meta-size) * var(--k-meta) * var(--k-mid) * var(--k-info) * var(--k-row, 1)); line-height: 1.34; text-align: left;
+  font-variant-numeric: tabular-nums lining-nums;
+}
+.meta dt { font-weight: var(--meta-label-weight); color: var(--meta-label-color, var(--c-ink)); white-space: nowrap; }
+.meta dd { font-weight: var(--meta-weight); color: var(--c-ink); text-wrap: balance; }
+.meta dt[data-script="ko"], .meta dd[data-script="ko"] { letter-spacing: -0.02em; }
+.meta.no-labels { grid-template-columns: 1fr; }
+.meta + .body { margin-top: calc(var(--su) * var(--gap-body) * 1.5); }
+.meta.lines { display: flex; flex-direction: column; align-items: center; text-align: center; }
+.meta.lines .row { display: flex; flex-wrap: wrap; justify-content: center; align-items: baseline; column-gap: 0.7em; max-width: 100%; }
+.meta.centred { grid-template-columns: auto auto; width: fit-content; max-width: 100%; }
+.meta.two { grid-template-columns: auto max-content auto max-content; width: fit-content; max-width: 100%; }
+.meta.two > dd { white-space: nowrap; }
+.meta.two > dt:nth-of-type(even) { padding-left: 2.8em; }
+.meta.two.no-labels { grid-template-columns: max-content max-content; column-gap: 2.8em; }
+/* cells: every column is as wide as its content at least, and what is left of the measure is shared
+   out, so three short cells stand on thirds and a long value takes the room a short one leaves */
+.meta.cells { --k-info: 1; grid-template-columns: repeat(var(--cells, 3), minmax(max-content, 1fr)); column-gap: 1.3em; row-gap: 0; align-items: start; }
+.meta.cells .cell { min-width: 0; }
+.meta.cells .cell + .cell { border-left: var(--hair) solid color-mix(in srgb, var(--c-ink) 26%, transparent); padding-left: 1.3em; }
+.meta.cells dt { display: block; margin-bottom: 0.3em; }
+.meta.cells dd { display: block; white-space: nowrap; }
+.meta.bar { width: 100%; border-top: var(--hair) solid color-mix(in srgb, var(--c-ink) 55%, transparent); padding-top: 0.85em; }
+/* …and under a centred headline the cells are centred, each as wide as its content */
+.meta.bar.mid { grid-template-columns: repeat(var(--cells, 3), max-content); justify-content: center; width: fit-content; max-width: 100%; margin-left: auto; margin-right: auto; padding-left: 1.3em; padding-right: 1.3em; }
+.meta.bar.mid .cell { text-align: center; }
+
+.cta {
+  display: inline-flex; align-items: center; gap: 0.7em; margin-top: calc(var(--su) * var(--gap-cta));
+  font-size: calc(var(--su) * var(--cta-size) * var(--k-small)); font-weight: 700; letter-spacing: 0;
+  padding: 0.78em 1.5em; border-radius: 99em; background: var(--c-ink); color: var(--c-paper); white-space: nowrap;
+}
+.cta::after { content: "→"; font-weight: 500; }
+
+/* vertical headline (세로쓰기): columns run right to left, the title is the first column */
+.main[data-mode="vertical"] { flex-direction: row-reverse; align-items: flex-start; gap: calc(var(--su) * 2.6); }
+.main[data-mode="vertical"] > * { writing-mode: vertical-rl; text-orientation: mixed; width: auto; max-width: none; margin: 0; text-align: start; }   /* every column hangs from the top */
+.main[data-mode="vertical"] .title { letter-spacing: 0.02em; }
+.main[data-mode="vertical"] .title[data-script="ko"] { letter-spacing: 0.04em; word-spacing: 0.1em; line-height: 1.16; }
+.main[data-mode="vertical"] .subtitle { text-wrap: wrap; white-space: nowrap; letter-spacing: 0.06em; line-height: 1.5; }
+.main[data-mode="vertical"] .eyebrow { margin: 0; letter-spacing: 0.3em; }
+.main[data-mode="vertical"] .tcy { text-combine-upright: all; }
+
+/* ---------- header / footer pieces ---------- */
+.brand { font-family: var(--font-title); font-weight: 700; font-size: calc(var(--fu) * 1.9 * var(--k-mid)); letter-spacing: -0.01em; line-height: 1; color: var(--c-ink); }
+.logo img { display: block; height: calc(var(--u) * 4.2); width: auto; max-width: calc(var(--u) * 26); object-fit: contain; }
+.badge {
+  font-family: var(--font-eyebrow); font-size: calc(var(--fu) * 1.5 * var(--k-small)); font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase;
+  padding: 0.62em 1.15em; border-radius: 99em; background: var(--c-accent); color: var(--c-on-accent, var(--c-paper)); line-height: 1; white-space: nowrap;
+}
+.badge[data-script="ko"] { font-family: var(--font-eyebrow-ko, var(--font-label-ko)); letter-spacing: 0.02em; }
+.footer {
+  display: flex; flex-wrap: wrap; align-items: baseline; column-gap: calc(var(--u) * 3.6); row-gap: calc(var(--u) * 0.6);
+  font-family: var(--font-footer); font-size: calc(var(--fu) * max(var(--footer-size) * var(--k-footer), var(--footer-floor)) * var(--k-small)); font-weight: var(--footer-weight);
+  letter-spacing: var(--footer-tracking); text-transform: var(--footer-case); line-height: 1.45; color: color-mix(in srgb, var(--c-ink) 86%, var(--c-paper));
+  font-variant-numeric: tabular-nums lining-nums;
+}
+.footer span[data-script="ko"] { font-family: var(--font-footer-ko, var(--font-label-ko)); letter-spacing: var(--footer-tracking-ko); }
+.bottom.ruled { border-top: var(--hair) solid color-mix(in srgb, var(--c-ink) 28%, transparent); padding-top: calc(var(--u) * 1.8); }
+/* a centred sheet keeps one axis down to its last line */
+.bottom[data-halign="center"] { justify-content: center; }
+.bottom[data-halign="center"] .footer { justify-content: center; }
+.logos { display: flex; align-items: center; gap: calc(var(--u) * 2.6); }
+.logos img { display: block; height: calc(var(--u) * 3.2); width: auto; max-width: calc(var(--u) * 18); object-fit: contain; }
+.qr { display: flex; flex-direction: column; align-items: center; gap: calc(var(--u) * 0.7); }
+.qr svg, .qr img { display: block; width: calc(var(--u) * var(--qr-size)); height: calc(var(--u) * var(--qr-size)); background: var(--qr-bg, #fff); border-radius: calc(var(--u) * 0.6); }
+.qr svg path { fill: var(--qr-ink, #111); }
+.qr span { font-size: calc(var(--fu) * 1.05 * var(--k-small)); font-weight: 600; letter-spacing: 0.06em; color: var(--c-muted); text-transform: uppercase; }
+.free { position: absolute; inset: 0; pointer-events: none; }
+
+/* ---------- shape tweaks ---------- */
+.poster[data-shape="banner"] .body, .poster[data-shape="banner"] .meta { display: none; }   /* very wide strips: keep it to a headline */
+.poster[data-shape="banner"] { --margin: 10; --mx: var(--m); }
+.poster[data-shape="tower"] { --margin: 10; }
+
+.hide-copy .frame, .hide-copy .free { visibility: hidden; }

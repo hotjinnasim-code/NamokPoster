@@ -1,0 +1,26 @@
+/* gmarket — the full-square geometric gothic of Korean online shopping (G마켓 산스; 꽉 찬 네모 틀의 기하 고딕): sale banners, event banners, card news and campus notices, the most-viewed free headline face on noonnu. Round ㅇ, geometric Latin; one family in three weights: Bold headline, Medium label and sub-headline, Light details. Face: Gmarket Sans, with its own Latin and figures. */
+.poster[data-type="gmarket"] {
+  --font-title: "Gmarket Sans", "Pretendard", sans-serif;   /* one family: its own Latin and figures */
+  --font-subtitle: "Gmarket Sans", "Pretendard", sans-serif; --font-subtitle-ko: "Gmarket Sans", "Pretendard", sans-serif;
+  --font-eyebrow: "Gmarket Sans", "Pretendard", sans-serif; --font-eyebrow-ko: "Gmarket Sans", "Pretendard", sans-serif;
+  --font-body: "Gmarket Sans", "Pretendard", sans-serif;
+  --font-label-ko: "Gmarket Sans", "Pretendard", sans-serif;
+  --title-size: 10.2; --title-weight: 700; --title-leading: 1.08; --title-tracking: -0.02em;
+  --title-leading-ko: 1.24; --title-tracking-ko: -0.05em; --title-wordspace-ko: 0.02em;   /* wide square syllables: set close */
+  --eyebrow-size: 1.62; --eyebrow-weight: 500; --eyebrow-tracking: 0.08em; --eyebrow-tracking-ko: 0em; --eyebrow-case: none;
+  --subtitle-size: 2.8; --subtitle-weight: 500; --subtitle-leading: 1.38; --subtitle-tracking: -0.01em; --subtitle-tracking-ko: -0.04em; --subtitle-weight-ko: 500;
+  --body-size: 1.76; --body-weight: 300; --body-weight-ko: 300; --body-leading: 1.66; --body-tracking-ko: -0.03em;
+  --meta-size: 2.56; --meta-weight: 300; --meta-label-weight: 700;
+  --footer-size: 1.46; --footer-weight: 500; --footer-tracking: 0.01em; --footer-rule: 1; --grain: 0.08;
+  --gap-eyebrow: 2.4; --gap-subtitle: 2.6;
+}
+.poster[data-type="gmarket"] .title em { color: var(--c-accent); }
+/* the label is a price tag: a solid block of the accent colour */
+.poster[data-type="gmarket"] .eyebrow { color: var(--c-on-accent, var(--c-paper)); background: var(--c-accent); padding: 0.46em 0.9em 0.36em; line-height: 1.15; }
+.poster[data-type="gmarket"] .main[data-mode="vertical"] .eyebrow { padding: 0.9em 0.4em; }
+.poster[data-type="gmarket"] .subtitle { color: var(--c-ink); }
+.poster[data-type="gmarket"] .body { color: color-mix(in srgb, var(--c-ink) 86%, transparent); }
+.poster[data-type="gmarket"] .meta dt[data-script="ko"], .poster[data-type="gmarket"] .meta dd[data-script="ko"] { letter-spacing: -0.03em; }
+.poster[data-type="gmarket"] .cta { border-radius: 99em; background: var(--c-accent); color: var(--c-on-accent, var(--c-paper)); font-family: var(--font-eyebrow-ko); font-weight: 700; }
+.poster[data-type="gmarket"] .badge { border-radius: 99em; font-weight: 700; letter-spacing: 0; }
+.poster[data-type="gmarket"] .bottom.ruled { border-top: calc(var(--u) * 0.26) solid var(--c-ink); padding-top: calc(var(--u) * 1.6); }

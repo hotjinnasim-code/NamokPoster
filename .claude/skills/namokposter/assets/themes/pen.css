@@ -1,0 +1,22 @@
+/* pen — the felt-tip note: café chalkboards, zines, letters and open-studio notices written by hand (handwriting faces such as 나눔손글씨 펜, the Korean cousin of Caveat). Faces: Nanum Pen Script (its Latin is the same pen) over Pretendard. */
+.poster[data-type="pen"] {
+  --font-title: "Nanum Pen Script", "Gaegu", "Pretendard", sans-serif;
+  --font-subtitle: var(--font-title); --font-eyebrow: var(--font-title); --font-eyebrow-ko: var(--font-title);
+  --title-size: 12.6; --title-weight: 400; --title-leading: 0.96; --title-tracking: 0em; --title-fit-max: 1.25;
+  --title-leading-ko: 1.12; --title-tracking-ko: -0.01em; --title-wordspace-ko: 0.06em;
+  --eyebrow-size: 2.3; --eyebrow-weight: 400; --eyebrow-tracking: 0.03em; --eyebrow-tracking-ko: 0em; --eyebrow-case: none;
+  --subtitle-size: 3.6; --subtitle-weight: 400; --subtitle-leading: 1.2; --subtitle-tracking: 0em; --subtitle-leading-ko: 1.3; --subtitle-tracking-ko: -0.01em;
+  --body-size: 1.84; --body-weight: 400; --body-weight-ko: 450;
+  --footer-size: 1.52; --footer-weight: 500; --footer-rule: 1; --grain: 0.2;
+  --gap-eyebrow: 1; --gap-subtitle: 2.2;
+}
+.poster[data-type="pen"] .title[data-script="latin"] { font-size: calc(var(--title-px, calc(var(--su) * var(--title-size))) * 1.22); }
+.poster[data-type="pen"] .subtitle[data-script="latin"] { font-size: calc(var(--su) * var(--subtitle-size) * var(--k-mid) * 1.18); }
+.poster[data-type="pen"] .eyebrow[data-script="latin"] { font-size: calc(var(--su) * max(var(--eyebrow-size) * var(--k-eyebrow), var(--eyebrow-floor)) * var(--k-small) * 1.18); }
+/* emphasis is a stroke of highlighter behind the word, not a change of colour */
+.poster[data-type="pen"] .title em, .poster[data-type="pen"] .subtitle em { color: inherit; background: linear-gradient(transparent 40%, color-mix(in srgb, var(--c-accent) 40%, transparent) 40%, color-mix(in srgb, var(--c-accent) 40%, transparent) 80%, transparent 80%); padding: 0 0.08em; margin: 0 -0.08em; }
+.poster[data-type="pen"] .subtitle { color: var(--c-ink); }
+.poster[data-type="pen"] .body { color: color-mix(in srgb, var(--c-ink) 82%, transparent); }
+.poster[data-type="pen"] .cta { background: transparent; color: var(--c-ink); border: calc(var(--u) * 0.18) solid var(--c-ink); border-radius: 1.3em 0.6em 1.2em 0.5em; font-family: var(--font-title); font-weight: 400; font-size: calc(var(--su) * var(--cta-size) * 1.5 * var(--k-small)); padding: 0.4em 1.1em; }
+.poster[data-type="pen"] .badge { transform: rotate(-4deg); background: transparent; color: var(--c-accent); border: calc(var(--u) * 0.18) solid var(--c-accent); border-radius: 1.3em 0.6em 1.2em 0.5em; font-family: var(--font-title); font-weight: 400; font-size: calc(var(--fu) * 2.4 * var(--k-small)); letter-spacing: 0; padding: 0.3em 0.8em; }
+.poster[data-type="pen"] .bottom.ruled { border-top: calc(var(--u) * 0.16) dashed color-mix(in srgb, var(--c-ink) 50%, transparent); }

@@ -1,0 +1,190 @@
+{
+  "id": "stainedglass",
+  "label": "Leaded Stained Glass",
+  "engine": "three",
+  "kind": "object",
+  "mood": "a leaded stained-glass window glowing in a plain wall — hand-cut pieces of streaky coloured glass, dark lead cames meeting in T-joints, a border fillet, light blooming through. Rich, ceremonial, warm. Good for concerts and choirs, year-end and seasonal events, exhibitions, heritage and architecture, book and film nights, markets.",
+  "tone": "dark",
+  "type": "editorial",
+  "types": [
+    "luxe",
+    "maru",
+    "calli",
+    "myeongjo",
+    "elegant",
+    "bold"
+  ],
+  "defaultPalette": "cathedral",
+  "palettes": {
+    "cathedral": {
+      "bg": "#0e1220",
+      "ink": "#f4ecda",
+      "accent": "#f2b441",
+      "colors": [
+        "#1f3f9a",
+        "#5aa7dc",
+        "#f2b441",
+        "#2f9468",
+        "#7a3f9c"
+      ]
+    },
+    "ember": {
+      "bg": "#17100c",
+      "ink": "#f6ead6",
+      "accent": "#f0a23a",
+      "colors": [
+        "#5a2a1a",
+        "#f3d08a",
+        "#f0a23a",
+        "#6f8f3a",
+        "#c2472c"
+      ]
+    },
+    "rosewood": {
+      "bg": "#1a0d15",
+      "ink": "#f7e9e6",
+      "accent": "#f2c46a",
+      "colors": [
+        "#6a1f48",
+        "#f0a9c0",
+        "#f2c46a",
+        "#3f8f86",
+        "#b7409a"
+      ]
+    },
+    "daylight": {
+      "bg": "#f1ece2",
+      "ink": "#1d2230",
+      "accent": "#b8432f",
+      "colors": [
+        "#2f5fae",
+        "#a9d0e6",
+        "#f0b545",
+        "#4f9a6a",
+        "#d0553a"
+      ]
+    },
+    "prairie": {
+      "bg": "#ece4d2",
+      "ink": "#2a2218",
+      "accent": "#a8501f",
+      "colors": [
+        "#3a2a1c",
+        "#ead9a6",
+        "#e09a2b",
+        "#667f3c",
+        "#a8501f"
+      ]
+    }
+  },
+  "params": {
+    "motif": {
+      "default": "landscape",
+      "note": "landscape = hills, cypresses and a disc of sun or moon under banded sky · flowers = tulips on diamond quarries · geometric = prairie-style screen of panes, ladders, chevrons and discs"
+    },
+    "frame": {
+      "default": "auto",
+      "note": "auto | arch | rect — shape of the window (auto: arched, rectangular for geometric)"
+    },
+    "border": {
+      "default": true,
+      "note": "a border fillet of short pieces round the window"
+    },
+    "lead": {
+      "default": 1.0,
+      "note": "width of the lead cames, 0.6–1.8"
+    },
+    "glow": {
+      "default": 1.0,
+      "note": "bloom over the leads and light on the wall, 0–2"
+    },
+    "texture": {
+      "default": 1.0,
+      "note": "streaks, seeds and ripple in the glass, 0–2"
+    }
+  },
+  "motifs": {
+    "landscape": {
+      "note": "rolling hills, two cypresses and a sun or moon disc under a banded sky",
+      "topics": [
+        "travel",
+        "nature",
+        "music",
+        "celebration",
+        "winter",
+        "summer"
+      ]
+    },
+    "flowers": {
+      "note": "tulips with long leaves on a ground of diamond quarries",
+      "topics": [
+        "spring",
+        "wellness",
+        "beauty",
+        "market",
+        "family"
+      ]
+    },
+    "geometric": {
+      "note": "prairie-style light screen: clear panes, ladders of small squares, chevrons and discs",
+      "topics": [
+        "architecture",
+        "design",
+        "business",
+        "education",
+        "city"
+      ]
+    }
+  },
+  "topics": [
+    "art",
+    "culture",
+    "music",
+    "celebration",
+    "architecture",
+    "tradition",
+    "literature",
+    "winter",
+    "craft"
+  ],
+  "layouts": {
+    "landscape": {
+      "layout": "left",
+      "also": [
+        "right",
+        "top",
+        "bottom",
+        "corners",
+        "headline",
+        "baseline",
+        "vertical",
+        "axis",
+        "band",
+        "strip"
+      ]
+    },
+    "portrait": {
+      "layout": "top",
+      "also": [
+        "bottom",
+        "corners",
+        "baseline",
+        "vertical",
+        "axis",
+        "side"
+      ]
+    },
+    "square": {
+      "layout": "top",
+      "also": [
+        "bottom",
+        "corners",
+        "baseline",
+        "vertical",
+        "axis",
+        "left",
+        "right"
+      ]
+    }
+  }
+}

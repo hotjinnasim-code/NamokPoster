@@ -1,0 +1,19 @@
+/* swiss — grotesk headline, mono labels, solid hairline, lots of air. */
+.poster[data-type="swiss"] {
+  --font-title: "Space Grotesk", "Pretendard", sans-serif;
+  --font-title-ko: "Space Grotesk KR", "Pretendard", sans-serif;
+  --font-eyebrow: var(--font-mono); --font-footer: var(--font-mono);
+  --title-size: 10.6; --title-weight: 600; --title-leading: 1.04; --title-tracking: -0.045em;
+  --title-leading-ko: 1.17; --title-tracking-ko: -0.035em; --title-wordspace-ko: 0.05em; --title-weight-ko: 700;
+  --eyebrow-size: 1.36; --eyebrow-weight: 500; --eyebrow-tracking: 0.12em; --eyebrow-tracking-ko: 0.04em;
+  --subtitle-size: 2.76; --subtitle-weight: 400; --subtitle-leading: 1.38; --subtitle-tracking: -0.015em; --subtitle-weight-ko: 500;
+  --body-size: 1.76; --body-leading: 1.64; --footer-size: 1.34; --footer-tracking: 0.05em; --footer-weight: 500;
+  --gap-eyebrow: 3; --footer-rule: 1; --grain: 0.1;
+}
+.poster[data-type="swiss"] .eyebrow { color: var(--c-ink); display: flex; align-items: center; gap: 1.1em; }
+.poster[data-type="swiss"] .eyebrow::before { content: ""; width: 0.72em; height: 0.72em; background: var(--c-accent); flex: none; }
+.poster[data-type="swiss"] .title em { color: var(--c-accent); }
+.poster[data-type="swiss"] .subtitle { color: var(--c-ink); }
+.poster[data-type="swiss"] .cta { border-radius: 0; font-family: var(--font-mono); font-weight: 500; text-transform: uppercase; letter-spacing: 0.06em; font-size: calc(var(--su) * var(--cta-size) * 0.82 * var(--k-small)); }
+.poster[data-type="swiss"] .badge { border-radius: 0; }
+.poster[data-type="swiss"] .bottom.ruled { border-top-color: var(--c-ink); border-top-width: calc(var(--u) * 0.14); }

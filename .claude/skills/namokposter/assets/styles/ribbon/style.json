@@ -1,0 +1,143 @@
+{
+  "id": "ribbon",
+  "label": "Silk Ribbon",
+  "engine": "three",
+  "mood": "elegant, glossy, premium — one continuous band of satin colour twisting through space like a sculpture, with a soft pool of light behind it. Good for product and brand launches, premium tech, keynotes, awards, fashion and beauty.",
+  "tone": "light",
+  "type": "elegant",
+  "types": [
+    "luxe",
+    "melody",
+    "slim",
+    "friendly",
+    "bold",
+    "swiss"
+  ],
+  "defaultPalette": "silk",
+  "palettes": {
+    "silk": {
+      "bg": "#f3efe9",
+      "ink": "#16131f",
+      "accent": "#5b3df5",
+      "colors": [
+        "#5b3df5",
+        "#ff4f8b",
+        "#ffb347",
+        "#22c7e8"
+      ]
+    },
+    "glacier": {
+      "bg": "#edf2f7",
+      "ink": "#0c1a2e",
+      "accent": "#1a55f0",
+      "colors": [
+        "#1f5eff",
+        "#19c3e6",
+        "#7d6bff",
+        "#b8f0ff"
+      ]
+    },
+    "nebula": {
+      "bg": "#07070d",
+      "ink": "#f4f3fa",
+      "accent": "#b9a8ff",
+      "colors": [
+        "#7b5cff",
+        "#ff4fa3",
+        "#22d3ee",
+        "#ffb86b"
+      ]
+    },
+    "ember": {
+      "bg": "#0d0806",
+      "ink": "#fff5ea",
+      "accent": "#ffb36b",
+      "colors": [
+        "#ff5a1f",
+        "#ffb300",
+        "#ff2d6f",
+        "#7a3cff"
+      ]
+    },
+    "champagne": {
+      "bg": "#0d0b08",
+      "ink": "#fbf5ea",
+      "accent": "#e8c98f",
+      "colors": [
+        "#e8c98f",
+        "#fff3d6",
+        "#c98b5e",
+        "#7d5a3c"
+      ]
+    }
+  },
+  "params": {
+    "form": {
+      "default": "eight",
+      "note": "eight (one crossing, reads most like a ribbon) | ring (open loop — leaves a clear middle) | knot (trefoil, three crossings)"
+    },
+    "twist": {
+      "default": 1,
+      "note": "full turns of the band per lap, in steps of 0.5 (0.5 = Möbius, calm … 2 = lively)"
+    },
+    "width": {
+      "default": 1,
+      "note": "band width multiplier (0.6 = slender … 1.4 = broad)"
+    },
+    "thickness": {
+      "default": 0.2,
+      "note": "cross-section depth ÷ width: 0.08 = flat ribbon … 0.2 = soft lens … 1 = round tube"
+    },
+    "gloss": {
+      "default": 1,
+      "note": "0.6 = satin … 1.6 = lacquer"
+    },
+    "glow": {
+      "default": 1,
+      "note": "strength of the colour pool behind the sculpture (0 = flat backdrop)"
+    }
+  },
+  "vars": {
+    "--scrim-center": 0.35
+  },
+  "layouts": {
+    "landscape": {
+      "layout": "left",
+      "also": [
+        "right",
+        "top",
+        "bottom",
+        "corners",
+        "headline",
+        "baseline",
+        "vertical",
+        "axis",
+        "band",
+        "strip"
+      ]
+    },
+    "portrait": {
+      "layout": "top",
+      "also": [
+        "bottom",
+        "corners",
+        "baseline",
+        "vertical",
+        "axis",
+        "side"
+      ]
+    },
+    "square": {
+      "layout": "top",
+      "also": [
+        "bottom",
+        "corners",
+        "baseline",
+        "vertical",
+        "axis",
+        "left",
+        "right"
+      ]
+    }
+  }
+}

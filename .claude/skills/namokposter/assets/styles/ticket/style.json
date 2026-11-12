@@ -1,0 +1,176 @@
+{
+  "id": "ticket",
+  "label": "Ticket",
+  "engine": "html",
+  "kind": "object",
+  "mood": "printed ephemera carrying the event's information — an admission ticket with notched ends, a perforated stub printed in a second ink, the headline in the display face and the date, time and place as captioned fields; a boarding-pass-like pass with a header band and two large codes; or a long paper receipt in the mono face with zigzag ends, the information rows as line items and the fee as its total. Flat inks on card and paper with a soft shadow, a seeded serial number and a barcode of plain bars; the words are the copy's own, verbatim. Good for concerts, screenings, festivals, parties, fairs, markets, workshops and any event with an entry, a fee or a free pass.",
+  "tone": "light",
+  "type": "grotesk",
+  "types": ["condensed", "classic", "fatface", "euljiro", "yeonsung", "comic", "bold", "slab", "retro", "typewriter", "techno", "editorial", "pop", "dream"],
+  "defaultPalette": "stub",
+  "palettes": {
+    "stub": {
+      "bg": "#ebe5d9",
+      "ink": "#1b1b1b",
+      "accent": "#d23f2a",
+      "colors": [
+        "#f6cf4a",
+        "#d23f2a",
+        "#fbf8f1"
+      ]
+    },
+    "forest": {
+      "bg": "#1f4a40",
+      "ink": "#f4efe4",
+      "accent": "#f2b54a",
+      "colors": [
+        "#f4efe4",
+        "#1f4a40",
+        "#fbf8f1"
+      ]
+    },
+    "night": {
+      "bg": "#141418",
+      "ink": "#f1ece2",
+      "accent": "#ff6a55",
+      "colors": [
+        "#ff6a55",
+        "#141418",
+        "#f4f0e6"
+      ]
+    },
+    "blush": {
+      "bg": "#f2c4bc",
+      "ink": "#2a1418",
+      "accent": "#a8142c",
+      "colors": [
+        "#fff8ee",
+        "#a8142c",
+        "#fff8ee"
+      ]
+    },
+    "cobalt": {
+      "bg": "#2a46d6",
+      "ink": "#ffffff",
+      "accent": "#ffd34d",
+      "colors": [
+        "#ffd34d",
+        "#2a46d6",
+        "#f6f2e8"
+      ]
+    }
+  },
+  "params": {
+    "motif": {
+      "default": "admit",
+      "note": "admit | pass | receipt"
+    },
+    "orient": {
+      "default": "auto",
+      "note": "admit and pass: auto (horizontal in a wide room, a vertical ticket in a tall one) | horizontal | vertical"
+    },
+    "tilt": {
+      "default": "",
+      "note": "degrees the ticket is turned (the direction is seeded); empty = a few degrees, 0 = square to the page"
+    }
+  },
+  "motifs": {
+    "admit": {
+      "note": "an admission ticket: notched ends, a perforated stub in the second ink, the headline, date / time / place as captioned fields, 입장권 · ADMIT ONE, a serial number and a barcode, tilted",
+      "topics": [
+        "music",
+        "film",
+        "culture",
+        "celebration",
+        "nightlife",
+        "art"
+      ]
+    },
+    "pass": {
+      "note": "a boarding-pass-like pass: a header band with the headline, two large codes (the date and the time), captioned fields for place and price, a barcode on the stub",
+      "topics": [
+        "travel",
+        "tech",
+        "business",
+        "sports",
+        "education",
+        "gaming"
+      ]
+    },
+    "receipt": {
+      "note": "a long paper receipt in the mono face with zigzag ends: header, dashed rules, the information rows as line items, the fee (or 무료 / FREE) as the total, a barcode",
+      "topics": [
+        "market",
+        "food",
+        "community",
+        "retro",
+        "craft",
+        "kids"
+      ],
+      "layouts": {
+        "landscape": {
+          "layout": "left",
+          "also": [
+            "right"
+          ]
+        },
+        "portrait": {
+          "layout": "side",
+          "also": [
+            "top",
+            "corners"
+          ]
+        },
+        "square": {
+          "layout": "left"
+        }
+      }
+    }
+  },
+  "topics": [
+    "music",
+    "film",
+    "culture",
+    "celebration",
+    "nightlife",
+    "market",
+    "food",
+    "community",
+    "travel",
+    "general"
+  ],
+  "layouts": {
+    "landscape": {
+      "layout": "left",
+      "also": [
+        "right",
+        "top",
+        "corners",
+        "band",
+        "axis"
+      ]
+    },
+    "portrait": {
+      "layout": "top",
+      "also": [
+        "bottom",
+        "side",
+        "corners",
+        "axis"
+      ]
+    },
+    "square": {
+      "layout": "top"
+    }
+  },
+  "grounds": [
+    "pattern/checker",
+    "pattern/stripes",
+    "pattern/dots",
+    "pattern/grid",
+    "haze",
+    "halftone",
+    "fluted",
+    "flowfield/threads"
+  ]
+}

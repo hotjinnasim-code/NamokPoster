@@ -1,0 +1,26 @@
+/* flora — hairline display serifs of beauty and fashion editorial (Canela Thin, Didot Light; 산돌 정체 030, 윤명조 110): one fragile line weight and a lot of white. Stand-ins: Hahmlet Thin + Fraunces Thin, text in Gowun Batang. */
+.poster[data-type="flora"] {
+  --font-title: "Fraunces KR", "Hahmlet", "Gowun Batang", serif;   /* Korean-led: the size-matched Latin in every headline */
+  --font-title-ko: "Fraunces KR", "Hahmlet", "Gowun Batang", serif;
+  --font-body: "Fraunces KR", "Gowun Batang", "Hahmlet", "Noto Serif KR", serif;   /* a hairline cannot carry small sizes: details go to a light 명조 */
+  --font-label-ko: "Gowun Batang", "Hahmlet", "Noto Serif KR", serif;
+  --title-size: 12.4; --title-weight: 150; --title-leading: 1.03; --title-tracking: -0.02em;
+  --title-leading-ko: 1.22; --title-tracking-ko: -0.04em; --title-wordspace-ko: 0.04em; --title-weight-ko: 150;
+  --eyebrow-size: 1.32; --eyebrow-weight: 400; --eyebrow-tracking: 0.42em; --eyebrow-tracking-ko: 0.25em;
+  --subtitle-size: 2.8; --subtitle-weight: 300; --subtitle-leading: 1.4; --subtitle-tracking: 0em; --subtitle-leading-ko: 1.5; --subtitle-tracking-ko: -0.02em;
+  --body-size: 1.8; --body-weight: 300; --body-leading: 1.7; --body-leading-ko: 1.8; --body-measure: 27;
+  --meta-size: 2.6; --meta-weight: 300; --meta-label-weight: 300;
+  --footer-size: 1.36; --footer-weight: 400; --footer-tracking: 0.18em; --footer-tracking-ko: 0.06em; --footer-rule: 1;
+  --gap-eyebrow: 3.6; --gap-subtitle: 3.2; --gap-meta: 4; --margin: 9; --grain: 0.2;
+}
+.poster[data-type="flora"]:lang(ko) { --font-body: "Gowun Batang", "Fraunces KR", "Hahmlet", "Noto Serif KR", serif; }   /* Korean details: the 명조's own figures, drawn level with its Hangul */
+.poster[data-type="flora"] .title em { font-style: italic; color: var(--c-accent); }
+.poster[data-type="flora"] .title[data-script="ko"] em { font-style: normal; }
+.poster[data-type="flora"] .subtitle { color: color-mix(in srgb, var(--c-ink) 90%, transparent); }
+.poster[data-type="flora"] .body { color: color-mix(in srgb, var(--c-ink) 82%, transparent); }
+.poster[data-type="flora"] .meta { border-top: var(--hair) solid color-mix(in srgb, var(--c-ink) 46%, transparent); padding-top: 1em; }
+.poster[data-type="flora"] .cta { background: transparent; color: var(--c-ink); border-radius: 0; border: var(--hair) solid color-mix(in srgb, var(--c-ink) 72%, transparent); font-weight: 400; letter-spacing: 0.22em; text-transform: uppercase; font-size: calc(var(--su) * var(--cta-size) * 0.78 * var(--k-small)); padding: 1em 2em; }
+.poster[data-type="flora"] .cta::after { content: none; }
+.poster[data-type="flora"] .badge { background: transparent; color: var(--c-accent); border: var(--hair) solid var(--c-accent); font-weight: 400; letter-spacing: 0.28em; }
+.poster[data-type="flora"] .bottom.ruled { border-top-color: color-mix(in srgb, var(--c-ink) 34%, transparent); }
+.poster[data-type="flora"] .meta dt { color: color-mix(in srgb, var(--c-accent) 55%, var(--c-ink)); }

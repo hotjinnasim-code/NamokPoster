@@ -1,0 +1,186 @@
+{
+  "id": "foil",
+  "label": "Holographic Foil",
+  "engine": "blender",
+  "kind": "object",
+  "mood": "holographic foil — mirror-bright metallised film whose reflections break into rainbow interference colours: inflated mylar balloons with crinkled seams, a crumpled sheet, curled ribbons. Festive, glossy, a little Y2K; good for parties and openings, launches and sales, music, fashion and beauty, year-end events.",
+  "tone": "light",
+  "type": "pop",
+  "types": ["bold", "jalnan", "comic", "ssurround", "dongle", "yeonsung", "friendly", "impact", "techno"],
+  "matchBackground": true,
+  "fallback": "ribbon",
+  "defaultPalette": "holo",
+  "palettes": {
+    "holo": {
+      "bg": "#ebe7f5",
+      "ink": "#1b1630",
+      "accent": "#6d35e8",
+      "colors": [
+        "#ff7ad1",
+        "#7aeaff",
+        "#b59bff",
+        "#fff3a0"
+      ]
+    },
+    "rosegold": {
+      "bg": "#f6e6df",
+      "ink": "#3a1c22",
+      "accent": "#b83a62",
+      "colors": [
+        "#ffb09c",
+        "#ff86b7",
+        "#ffd9a0",
+        "#c9a6ff"
+      ]
+    },
+    "mint": {
+      "bg": "#e0f2ec",
+      "ink": "#0f2a2a",
+      "accent": "#0b7f70",
+      "colors": [
+        "#7dffd4",
+        "#7ac8ff",
+        "#d6ff8a",
+        "#ff9fe0"
+      ]
+    },
+    "midnight": {
+      "bg": "#0b0a18",
+      "ink": "#f2efff",
+      "accent": "#b9a8ff",
+      "colors": [
+        "#7b5cff",
+        "#ff4fa3",
+        "#22d3ee",
+        "#ffe27a"
+      ]
+    },
+    "blackgold": {
+      "bg": "#0e0c0a",
+      "ink": "#fbf3e4",
+      "accent": "#f0c06a",
+      "colors": [
+        "#f6c667",
+        "#ff8a5c",
+        "#fff1c9",
+        "#b98cff"
+      ]
+    }
+  },
+  "params": {
+    "motif": {
+      "default": "balloons",
+      "note": "balloons (cluster of foil balloons: stars, rounds, a heart) | sheet (crumpled foil disc behind a mirror-smooth sphere) | ribbons (curled ribbons and confetti)"
+    },
+    "count": {
+      "default": 6,
+      "note": "balloons motif: number of balloons, 3–6"
+    },
+    "crumple": {
+      "default": 1.0,
+      "note": "sheet motif: 0.5 = lightly creased … 1.5 = heavily crumpled"
+    },
+    "confetti": {
+      "default": 44,
+      "note": "ribbons motif: number of confetti pieces (0 = none)"
+    },
+    "film": {
+      "default": 1.0,
+      "note": "strength of the thin-film interference on top of the palette shimmer (0 = off)"
+    },
+    "shadow": {
+      "default": 12,
+      "note": "shadow softness in degrees: 4 = crisp … 25 = very soft"
+    }
+  },
+  "motifs": {
+    "balloons": {
+      "note": "a cluster of mylar balloons — stars, rounds and a heart",
+      "topics": [
+        "celebration",
+        "kids",
+        "family",
+        "community"
+      ]
+    },
+    "sheet": {
+      "note": "a crumpled disc of foil behind a mirror-smooth sphere — product, fashion, beauty",
+      "topics": [
+        "fashion",
+        "beauty",
+        "luxury",
+        "tech"
+      ]
+    },
+    "ribbons": {
+      "note": "curled gift ribbons and a burst of confetti — sale, festival, awards",
+      "topics": [
+        "market",
+        "music",
+        "nightlife",
+        "winter"
+      ]
+    }
+  },
+  "topics": [
+    "celebration",
+    "fashion",
+    "beauty",
+    "music",
+    "nightlife",
+    "kids",
+    "market",
+    "retro"
+  ],
+  "layouts": {
+    "landscape": {
+      "layout": "left",
+      "also": [
+        "right",
+        "top",
+        "bottom",
+        "corners",
+        "headline",
+        "baseline",
+        "vertical",
+        "axis",
+        "band",
+        "strip"
+      ]
+    },
+    "portrait": {
+      "layout": "top",
+      "also": [
+        "bottom",
+        "corners",
+        "baseline",
+        "vertical",
+        "axis",
+        "side"
+      ]
+    },
+    "square": {
+      "layout": "top",
+      "also": [
+        "bottom",
+        "corners",
+        "baseline",
+        "vertical",
+        "axis",
+        "left",
+        "right"
+      ]
+    }
+  },
+  "cutout": true,
+  "grounds": [
+    "pattern/checker",
+    "pattern/stripes",
+    "pattern/dots",
+    "pattern/terrazzo",
+    "pattern/arches",
+    "pattern/grid",
+    "haze",
+    "halftone"
+  ]
+}

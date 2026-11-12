@@ -1,0 +1,27 @@
+/* dunggeunmo — the screen type of 1990s Korean PC networks and station departure boards (둥근모꼴 + Fixedsys; PC통신 시절의 비트맵 글꼴, 코레일 전광판): one fixed-width grid for Hangul and Latin, a menu arrow before the label, the information in brackets. Face: DungGeunMo (public domain), with its own Latin and figures; Pretendard where a line has to be small. */
+.poster[data-type="dunggeunmo"] {
+  --font-title: "DungGeunMo", "Galmuri11", "Pretendard", monospace;
+  --font-body: "DungGeunMo", "Galmuri11", "Pretendard", monospace;
+  --font-label-ko: "DungGeunMo", "Pretendard", monospace;
+  --title-size: 9.4; --title-weight: 400; --title-leading: 1.14; --title-tracking: 0em;   /* a bitmap face is never tracked: the grid is the spacing */
+  --title-leading-ko: 1.26; --title-tracking-ko: 0em; --title-wordspace-ko: -0.1em;
+  --eyebrow-size: 1.6; --eyebrow-weight: 400; --eyebrow-tracking: 0em; --eyebrow-tracking-ko: 0em; --eyebrow-case: none;
+  --subtitle-size: 2.6; --subtitle-weight: 400; --subtitle-leading: 1.4; --subtitle-tracking: 0em; --subtitle-leading-ko: 1.5; --subtitle-tracking-ko: 0em;
+  --body-size: 1.74; --body-weight: 400; --body-leading: 1.6; --body-leading-ko: 1.75; --body-tracking-ko: 0em; --body-measure: 30;
+  --meta-size: 2.44; --meta-weight: 400; --meta-label-weight: 400;
+  --footer-size: 1.44; --footer-weight: 400; --footer-tracking: 0em; --footer-tracking-ko: 0em; --footer-rule: 1;
+  --gap-eyebrow: 2.4; --gap-subtitle: 2.8; --grain: 0.08;
+}
+/* a shadow of one pixel of the face (DungGeunMo is drawn on a 16-pixel em) */
+.poster[data-type="dunggeunmo"] .title { text-shadow: 0.0625em 0.0625em 0 color-mix(in srgb, var(--c-accent) 85%, transparent); }
+.poster[data-type="dunggeunmo"] .title em { color: var(--c-accent); text-shadow: 0.0625em 0.0625em 0 color-mix(in srgb, var(--c-ink) 85%, transparent); }
+.poster[data-type="dunggeunmo"] .eyebrow { color: var(--c-paper); background: var(--c-ink); padding: 0.3em 0.6em 0.2em; line-height: 1.2; }
+.poster[data-type="dunggeunmo"] .eyebrow::before { content: "> "; color: var(--c-accent); }
+.poster[data-type="dunggeunmo"] .main[data-mode="vertical"] .eyebrow::before { content: none; }
+.poster[data-type="dunggeunmo"] .subtitle { color: var(--c-ink); }
+.poster[data-type="dunggeunmo"] .meta dt::before { content: "["; } .poster[data-type="dunggeunmo"] .meta dt::after { content: "]"; }
+.poster[data-type="dunggeunmo"] .meta dt[data-script="ko"], .poster[data-type="dunggeunmo"] .meta dd[data-script="ko"] { letter-spacing: 0; }
+.poster[data-type="dunggeunmo"] .cta { border-radius: 0; background: var(--c-accent); color: var(--c-on-accent, var(--c-paper)); border: 0.125em solid var(--c-ink); font-weight: 400; }
+.poster[data-type="dunggeunmo"] .cta::after { content: " _"; }
+.poster[data-type="dunggeunmo"] .badge { border-radius: 0; font-weight: 400; letter-spacing: 0; }
+.poster[data-type="dunggeunmo"] .bottom.ruled { border-top: calc(var(--u) * 0.24) dashed color-mix(in srgb, var(--c-ink) 70%, transparent); }

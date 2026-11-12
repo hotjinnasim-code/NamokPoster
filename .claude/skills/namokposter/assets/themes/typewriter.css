@@ -1,0 +1,32 @@
+/* typewriter — the typescript page: screenplays, case files, Fluxus scores, zines, 원고 (Courier, Pica, Olivetti's Lettera). Courier Prime for Latin, Hahmlet — an even, slab-footed 명조 — for Hangul; one voice at two sizes, underlining for emphasis, form rules under the facts. */
+.poster[data-type="typewriter"] {
+  --font-title: "Courier Prime", "Hahmlet", "Noto Serif KR", monospace; --font-title-ko: "Courier Prime KR", "Hahmlet", "Noto Serif KR", monospace;
+  --font-subtitle: "Courier Prime", "Hahmlet", "Noto Serif KR", monospace; --font-subtitle-ko: "Courier Prime KR", "Hahmlet", "Noto Serif KR", monospace;
+  --font-body: "Courier Prime", "Hahmlet", "Noto Serif KR", monospace; --font-label-ko: "Hahmlet", "Noto Serif KR", serif;
+  --title-size: 9.6; --title-weight: 700; --title-leading: 1.06; --title-tracking: -0.03em;
+  --title-leading-ko: 1.24; --title-tracking-ko: -0.03em; --title-wordspace-ko: -0.3em; --title-weight-ko: 600;
+  --eyebrow-size: 1.6; --eyebrow-weight: 400; --eyebrow-tracking: 0.1em; --eyebrow-tracking-ko: 0.08em;
+  --subtitle-size: 2.6; --subtitle-weight: 400; --subtitle-leading: 1.36; --subtitle-tracking: -0.02em; --subtitle-weight-ko: 400; --subtitle-leading-ko: 1.5; --subtitle-tracking-ko: -0.02em;
+  --body-size: 1.76; --body-weight: 400; --body-leading: 1.56; --body-leading-ko: 1.76; --body-tracking-ko: -0.02em; --body-weight-ko: 400; --body-measure: 32;
+  --meta-size: 2.4; --meta-weight: 400; --meta-label-weight: 700;
+  --footer-size: 1.5; --footer-weight: 400; --footer-tracking: 0em; --footer-rule: 1;
+  --gap-eyebrow: 2.6; --gap-subtitle: 2.8; --grain: 0.3;
+}
+.poster[data-type="typewriter"]:lang(ko) { --title-size: 10.8; }
+.poster[data-type="typewriter"] .subtitle[data-script="ko"] { --subtitle-size: 2.7; }
+/* the fixed-width space is a full letter wide — right between Latin words, too open between Korean ones */
+.poster[data-type="typewriter"] .subtitle[data-script="ko"], .poster[data-type="typewriter"] .body[data-script="ko"], .poster[data-type="typewriter"] .meta [data-script="ko"] { word-spacing: -0.26em; }
+.poster[data-type="typewriter"] .eyebrow[data-script="ko"] { --eyebrow-size: 1.46; font-weight: 500; }
+/* a typewriter has no bold or italic: emphasis is an underline */
+.poster[data-type="typewriter"] .title em { color: var(--c-accent); text-decoration: underline; text-decoration-thickness: 0.055em; text-underline-offset: 0.14em; text-decoration-skip-ink: none; }
+.poster[data-type="typewriter"] .eyebrow { color: var(--c-accent); }
+.poster[data-type="typewriter"] .subtitle { color: var(--c-ink); }
+.poster[data-type="typewriter"] .body { color: color-mix(in srgb, var(--c-ink) 86%, transparent); }
+.poster[data-type="typewriter"] .footer { color: color-mix(in srgb, var(--c-ink) 90%, transparent); }
+.poster[data-type="typewriter"] .meta:not(.cells):not(.lines) { min-width: min(100%, 19em); column-gap: 0; row-gap: 0; align-items: stretch; }
+.poster[data-type="typewriter"] .meta:not(.cells):not(.lines) > dt, .poster[data-type="typewriter"] .meta:not(.cells):not(.lines) > dd { padding: 0.38em 0 0.3em; border-bottom: var(--hair) dashed color-mix(in srgb, var(--c-ink) 60%, transparent); }
+.poster[data-type="typewriter"] .meta:not(.cells):not(.lines) > dt { padding-right: 1.4em; }
+.poster[data-type="typewriter"] .cta { background: transparent; color: var(--c-ink); border-radius: 0; border: calc(var(--u) * 0.16) solid var(--c-ink); font-weight: 700; padding: 0.7em 1.3em; }
+.poster[data-type="typewriter"] .cta::after { content: "->"; font-weight: 700; }
+.poster[data-type="typewriter"] .badge { border-radius: 0; background: transparent; color: var(--c-accent); border: calc(var(--u) * 0.2) solid var(--c-accent); transform: rotate(-4deg); letter-spacing: 0.1em; }
+.poster[data-type="typewriter"] .bottom.ruled { border-top: var(--hair) dashed color-mix(in srgb, var(--c-ink) 70%, transparent); }

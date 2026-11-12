@@ -1,0 +1,186 @@
+{
+  "id": "jelly",
+  "label": "Jelly & Wax",
+  "engine": "blender",
+  "kind": "object",
+  "mood": "translucent gummy, jelly and wax — saturated subsurface solids that glow where the form is thin, glossy skins with window highlights, lit from behind so every rim shines like a sweet held up to the light. Sweet, playful, tactile; good for food and dessert, kids and family events, festivals and celebrations, pop-ups, candle-lit and seasonal evenings.",
+  "tone": "light",
+  "type": "friendly",
+  "types": ["pop", "dongle", "maple", "gamja", "round", "melody", "bold", "jua", "hand", "editorial", "ssurround"],
+  "matchBackground": true,
+  "fallback": "liquid",
+  "defaultPalette": "berry",
+  "palettes": {
+    "berry": {
+      "bg": "#f7e4e7",
+      "ink": "#3b1426",
+      "accent": "#d81b54",
+      "colors": [
+        "#ff3b6b",
+        "#ff9f1c",
+        "#6fcf6a",
+        "#a83ee8"
+      ]
+    },
+    "citrus": {
+      "bg": "#fbf0d6",
+      "ink": "#2b2412",
+      "accent": "#d9480f",
+      "colors": [
+        "#ffb000",
+        "#fb5607",
+        "#8ac926",
+        "#ff2e7e"
+      ]
+    },
+    "mint": {
+      "bg": "#ddf0ea",
+      "ink": "#0f3530",
+      "accent": "#0d8a6c",
+      "colors": [
+        "#22c3b0",
+        "#ff5f6d",
+        "#ffcc33",
+        "#4d8dff"
+      ]
+    },
+    "night": {
+      "bg": "#161220",
+      "ink": "#f6efff",
+      "accent": "#ff5d8f",
+      "colors": [
+        "#ff3d68",
+        "#ffbe0b",
+        "#3a86ff",
+        "#9b4dff"
+      ]
+    },
+    "ember": {
+      "bg": "#1e1511",
+      "ink": "#f7e8d6",
+      "accent": "#ffb44c",
+      "colors": [
+        "#ff9a3c",
+        "#e63946",
+        "#f5d68a",
+        "#c41e5a"
+      ]
+    }
+  },
+  "params": {
+    "motif": {
+      "default": "dessert",
+      "note": "dessert (moulded jellies: fluted dome, cube stack, striped slab) | gummies (gummy bears, rings, a worm, gumdrops) | candles (pillar candles of glowing wax) | hills (a jelly landscape: island, domed hills, cone trees, jelly sun)"
+    },
+    "glow": {
+      "default": 1,
+      "note": "strength of the back and side light that makes thin parts glow: 0.5 = subtle … 1.6 = lantern-bright"
+    },
+    "key": {
+      "default": 1300,
+      "note": "front key light (W); the backdrop is calibrated to it"
+    }
+  },
+  "motifs": {
+    "dessert": {
+      "note": "moulded jellies: a fluted two-layer dome, a stack of jelly cubes, a striped slab and small sweets",
+      "topics": [
+        "food",
+        "celebration",
+        "market",
+        "design"
+      ]
+    },
+    "gummies": {
+      "note": "a heap of gummy bears with gummy rings, a two-tone worm and gumdrops",
+      "topics": [
+        "kids",
+        "family",
+        "food",
+        "celebration",
+        "gaming"
+      ]
+    },
+    "candles": {
+      "note": "pillar candles of soft coloured wax glowing round their flames, drips on the sides",
+      "topics": [
+        "wellness",
+        "winter",
+        "tradition",
+        "celebration",
+        "culture"
+      ],
+      "palette": "ember"
+    },
+    "hills": {
+      "note": "a little landscape of jelly: a layered island, domed hills, cone trees and a backlit jelly sun",
+      "topics": [
+        "nature",
+        "travel",
+        "outdoor",
+        "spring",
+        "kids"
+      ]
+    }
+  },
+  "topics": [
+    "food",
+    "kids",
+    "family",
+    "celebration",
+    "market",
+    "design",
+    "summer"
+  ],
+  "layouts": {
+    "landscape": {
+      "layout": "left",
+      "also": [
+        "right",
+        "top",
+        "bottom",
+        "corners",
+        "headline",
+        "baseline",
+        "vertical",
+        "axis",
+        "band",
+        "strip"
+      ]
+    },
+    "portrait": {
+      "layout": "top",
+      "also": [
+        "bottom",
+        "corners",
+        "baseline",
+        "vertical",
+        "axis",
+        "side"
+      ]
+    },
+    "square": {
+      "layout": "top",
+      "also": [
+        "bottom",
+        "corners",
+        "baseline",
+        "vertical",
+        "axis",
+        "left",
+        "right"
+      ]
+    }
+  },
+  "cutout": true,
+  "grounds": [
+    "pattern/checker",
+    "pattern/stripes",
+    "pattern/dots",
+    "pattern/terrazzo",
+    "pattern/arches",
+    "pattern/grid",
+    "haze",
+    "halftone"
+  ]
+}

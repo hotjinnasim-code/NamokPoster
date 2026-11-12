@@ -1,0 +1,188 @@
+{
+  "id": "stickers",
+  "label": "Die-cut Stickers",
+  "engine": "html",
+  "kind": "object",
+  "mood": "die-cut vinyl stickers stuck on a laptop lid or a notebook cover — flat colour shapes with a thick die-cut border in the page's lightest colour and a thin soft shadow, each turned a few degrees and overlapping a little, one or two large and several small in a composed cluster: scalloped seals, rounded stars, flowers, hearts, speech bubbles, hang tags, tape and chunky letters. The date, the weekday and short words from the copy are printed on them in the poster's display face. Cheerful, young and hand-made; good for kids and family days, youth and church events, school festivals, markets and pop-ups, cafés, parties and community gatherings.",
+  "tone": "light",
+  "type": "pop",
+  "types": ["jua", "maple", "dongle", "anemone", "comic", "gamja", "singleday", "cute", "round", "bold", "friendly", "grotesk", "retro", "geometric", "brutal", "marker", "kkubulim"],
+  "defaultPalette": "notebook",
+  "palettes": {
+    "notebook": {
+      "bg": "#efe9dd",
+      "ink": "#1d1b22",
+      "accent": "#e8442f",
+      "colors": [
+        "#ef4b37",
+        "#2f5cf0",
+        "#ffc531",
+        "#1fa37a",
+        "#ff9cc0"
+      ]
+    },
+    "laptop": {
+      "bg": "#26282e",
+      "ink": "#f5f2ea",
+      "accent": "#ffcf3a",
+      "colors": [
+        "#ffcf3a",
+        "#ff5d8f",
+        "#4fb3ff",
+        "#7be07b",
+        "#ff7a3d"
+      ]
+    },
+    "cobalt": {
+      "bg": "#2445d6",
+      "ink": "#ffffff",
+      "accent": "#ffe14a",
+      "colors": [
+        "#ffe14a",
+        "#ff6f91",
+        "#121a4f",
+        "#6ee7b7",
+        "#ff8a3d"
+      ]
+    },
+    "candy": {
+      "bg": "#fbe4ea",
+      "ink": "#3a1230",
+      "accent": "#d92a63",
+      "colors": [
+        "#e8336d",
+        "#7a4cff",
+        "#ffb321",
+        "#22b2a2",
+        "#ff8a5b"
+      ]
+    },
+    "kraft": {
+      "bg": "#c99c66",
+      "ink": "#22180f",
+      "accent": "#7d150b",
+      "colors": [
+        "#e8412f",
+        "#1f4fd1",
+        "#f6c23e",
+        "#2a7a4b",
+        "#1c1c1c"
+      ]
+    }
+  },
+  "params": {
+    "motif": {
+      "default": "badges",
+      "note": "badges | labels | letters"
+    },
+    "count": {
+      "default": 0,
+      "note": "badges and labels: the number of stickers; 0 = automatic (7–11, more when the room is wide)"
+    },
+    "tilt": {
+      "default": 1,
+      "note": "how far the stickers are turned: 0 = straight … 1 = a few degrees … 2 = tossed"
+    },
+    "letterform": {
+      "default": "shape",
+      "note": "letters motif: shape (each letter on a die-cut disc, square or seal) | cut (the die-cut follows the letter itself)"
+    },
+    "word": {
+      "default": "",
+      "note": "letters motif: the word to spell (≤ 6 characters). Left empty, the emphasised word of the headline (*…*) is used, else its first word"
+    }
+  },
+  "motifs": {
+    "badges": {
+      "note": "a cluster of scalloped seals, rounded stars, flowers, hearts, speech bubbles, pills, an arrow, a smiling face and sparkles; the date, the weekday and keywords from the copy printed on some",
+      "topics": [
+        "kids",
+        "family",
+        "community",
+        "celebration",
+        "education",
+        "market",
+        "food"
+      ]
+    },
+    "labels": {
+      "note": "a hang tag on its string with the headline's key word, strips of tape carrying the place, a name-tag label, round fruit stickers with the date as their number",
+      "topics": [
+        "market",
+        "craft",
+        "food",
+        "fashion",
+        "community",
+        "design"
+      ]
+    },
+    "letters": {
+      "note": "chunky letter stickers spelling the emphasised word of the headline, one letter per die-cut shape in alternating colours, bouncing along a line, with two or three small shape stickers",
+      "topics": [
+        "kids",
+        "celebration",
+        "music",
+        "education",
+        "community",
+        "sports"
+      ],
+      "layouts": {
+        "landscape": {
+          "layout": "band"
+        },
+        "portrait": {
+          "layout": "top"
+        },
+        "square": {
+          "layout": "top"
+        }
+      }
+    }
+  },
+  "topics": [
+    "kids",
+    "family",
+    "community",
+    "celebration",
+    "education",
+    "market",
+    "food",
+    "craft",
+    "general"
+  ],
+  "layouts": {
+    "landscape": {
+      "layout": "left",
+      "also": [
+        "right",
+        "band",
+        "top",
+        "corners",
+        "axis"
+      ]
+    },
+    "portrait": {
+      "layout": "top",
+      "also": [
+        "bottom",
+        "side",
+        "corners",
+        "axis"
+      ]
+    },
+    "square": {
+      "layout": "left",
+      "also": [
+        "top"
+      ]
+    }
+  },
+  "grounds": [
+    "pattern/checker",
+    "pattern/stripes",
+    "pattern/dots",
+    "pattern/grid",
+    "haze",
+    "halftone"
+  ]
+}

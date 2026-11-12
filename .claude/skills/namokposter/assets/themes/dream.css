@@ -1,0 +1,27 @@
+/* dream — the tall rectangular title gothic of S-Core (에스코어 드림; 꽉 찬 직사각형 구조의 제목 글꼴, 복고적인 형태에 현대적인 감성): company events, seminars, festivals and ads that want structure and a little retro edge. One family in three weights: Black headline, Bold sub-headline and labels, Regular details. Face: S-Core Dream, with its own Latin and figures. */
+.poster[data-type="dream"] {
+  --font-title: "S-Core Dream", "Pretendard", sans-serif;   /* one family: its own Latin and figures */
+  --font-subtitle: "S-Core Dream", "Pretendard", sans-serif; --font-subtitle-ko: "S-Core Dream", "Pretendard", sans-serif;
+  --font-eyebrow: "S-Core Dream", "Pretendard", sans-serif; --font-eyebrow-ko: "S-Core Dream", "Pretendard", sans-serif;
+  --font-body: "S-Core Dream", "Pretendard", sans-serif;
+  --font-label-ko: "S-Core Dream", "Pretendard", sans-serif;
+  --title-size: 10.6; --title-weight: 900; --title-leading: 1.06; --title-tracking: -0.03em;
+  --title-leading-ko: 1.2; --title-tracking-ko: -0.05em; --title-wordspace-ko: 0.02em;
+  --eyebrow-size: 1.56; --eyebrow-weight: 700; --eyebrow-tracking: 0.16em; --eyebrow-tracking-ko: 0.08em;
+  --subtitle-size: 2.84; --subtitle-weight: 700; --subtitle-leading: 1.36; --subtitle-tracking: -0.01em; --subtitle-tracking-ko: -0.04em; --subtitle-weight-ko: 700;
+  --body-size: 1.78; --body-weight: 400; --body-weight-ko: 400; --body-leading: 1.64; --body-tracking-ko: -0.03em;
+  --meta-size: 2.6; --meta-weight: 400; --meta-label-weight: 700;
+  --footer-size: 1.46; --footer-weight: 400; --footer-tracking: 0.06em; --footer-rule: 1; --grain: 0.1;
+  --gap-eyebrow: 2.4; --gap-subtitle: 2.6;
+}
+.poster[data-type="dream"] .title em { color: var(--c-accent); }
+/* the label hangs on an accent bar, as a section is marked on a programme's cover */
+.poster[data-type="dream"] .eyebrow { color: var(--c-ink); border-left: 0.16em solid var(--c-accent); padding-left: 0.7em; line-height: 1.2; }
+.poster[data-type="dream"] [data-halign="center"] > .eyebrow { border-left: 0; padding-left: 0; border-bottom: 0.16em solid var(--c-accent); padding-bottom: 0.3em; }
+.poster[data-type="dream"] .main[data-mode="vertical"] .eyebrow { border-left: 0; padding-left: 0; border-top: 0.16em solid var(--c-accent); padding-top: 0.5em; }
+.poster[data-type="dream"] .subtitle { color: var(--c-ink); }
+.poster[data-type="dream"] .body { color: color-mix(in srgb, var(--c-ink) 84%, transparent); }
+.poster[data-type="dream"] .meta dt[data-script="ko"], .poster[data-type="dream"] .meta dd[data-script="ko"] { letter-spacing: -0.03em; }
+.poster[data-type="dream"] .cta { border-radius: 0; background: var(--c-ink); color: var(--c-paper); font-family: var(--font-eyebrow-ko); font-weight: 700; letter-spacing: 0.04em; }
+.poster[data-type="dream"] .badge { border-radius: 0; font-weight: 900; letter-spacing: 0.02em; }
+.poster[data-type="dream"] .bottom.ruled { border-top: calc(var(--u) * 0.22) solid var(--c-ink); padding-top: calc(var(--u) * 1.6); }

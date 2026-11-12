@@ -1,0 +1,180 @@
+{
+  "id": "collage",
+  "label": "Paper Collage",
+  "engine": "three",
+  "kind": "picture",
+  "mood": "cut and torn paper pasted up by hand — coloured stocks, a scrap of halftone print, graph paper and newsprint layered with soft shadows, torn edges showing the white fibrous core, held down with masking tape. Playful, tactile, editorial. Good for art and design programmes, exhibitions, children's and community events, markets and zines, culture and music festivals.",
+  "tone": "light",
+  "type": "editorial",
+  "types": ["brutal", "singleday", "kkubulim", "story", "yeonsung", "swiss", "retro", "friendly", "hand", "classic"],
+  "defaultPalette": "kraft",
+  "palettes": {
+    "kraft": {
+      "bg": "#efe8da",
+      "ink": "#1d1d20",
+      "accent": "#d2452c",
+      "colors": [
+        "#2f5d8a",
+        "#e0a43a",
+        "#d2452c",
+        "#8fb39a",
+        "#1d1d20"
+      ]
+    },
+    "pastel": {
+      "bg": "#f6efe8",
+      "ink": "#2b2340",
+      "accent": "#d94f73",
+      "colors": [
+        "#8fb8e0",
+        "#f3c95f",
+        "#f29fb4",
+        "#b4a3df",
+        "#2b2340"
+      ]
+    },
+    "newsprint": {
+      "bg": "#ecebe5",
+      "ink": "#151515",
+      "accent": "#d8322a",
+      "colors": [
+        "#2a2a2a",
+        "#9a9890",
+        "#d8322a",
+        "#d6d2c4",
+        "#151515"
+      ]
+    },
+    "earth": {
+      "bg": "#e9e1cc",
+      "ink": "#2a2418",
+      "accent": "#a8502a",
+      "colors": [
+        "#6b7a3a",
+        "#c47c3c",
+        "#3f5a6a",
+        "#e3c58a",
+        "#2a2418"
+      ]
+    },
+    "night": {
+      "bg": "#1d1e25",
+      "ink": "#f2ede2",
+      "accent": "#f2b84b",
+      "colors": [
+        "#3e5c9a",
+        "#f2b84b",
+        "#e06a4e",
+        "#6fb3a0",
+        "#efe6d4"
+      ]
+    }
+  },
+  "params": {
+    "motif": {
+      "default": "abstract",
+      "note": "abstract | landscape | city"
+    },
+    "tear": {
+      "default": 1,
+      "note": "how ragged the torn edges are, 0–2"
+    },
+    "shadow": {
+      "default": 1,
+      "note": "drop shadow under each piece, 0–2"
+    },
+    "tape": {
+      "default": true,
+      "note": "strips of masking tape holding pieces down"
+    },
+    "tilt": {
+      "default": 1,
+      "note": "how crooked the pieces are pasted, 0–2.5"
+    },
+    "grain": {
+      "default": 1,
+      "note": "paper grain, 0–2"
+    }
+  },
+  "layouts": {
+    "landscape": {
+      "layout": "left",
+      "also": [
+        "right",
+        "top",
+        "bottom",
+        "corners",
+        "headline",
+        "baseline",
+        "vertical",
+        "axis",
+        "band",
+        "strip"
+      ]
+    },
+    "portrait": {
+      "layout": "top",
+      "also": [
+        "bottom",
+        "corners",
+        "baseline",
+        "vertical",
+        "axis",
+        "side"
+      ]
+    },
+    "square": {
+      "layout": "top",
+      "also": [
+        "bottom",
+        "corners",
+        "baseline",
+        "vertical",
+        "axis",
+        "left",
+        "right"
+      ]
+    }
+  },
+  "motifs": {
+    "abstract": {
+      "note": "a constructivist paste-up: torn sheets, a half disc, strips, halftone and graph-paper offcuts",
+      "topics": [
+        "art",
+        "design",
+        "education",
+        "culture",
+        "music"
+      ]
+    },
+    "landscape": {
+      "note": "torn strips of coloured and printed paper as ranges of hills under a paper sun",
+      "topics": [
+        "travel",
+        "nature",
+        "outdoor",
+        "kids",
+        "family"
+      ]
+    },
+    "city": {
+      "note": "a skyline of cut blocks — windows, stripes, graph paper and newsprint — on a torn street",
+      "topics": [
+        "city",
+        "architecture",
+        "community",
+        "business",
+        "market"
+      ]
+    }
+  },
+  "topics": [
+    "art",
+    "design",
+    "craft",
+    "culture",
+    "kids",
+    "community",
+    "market"
+  ]
+}

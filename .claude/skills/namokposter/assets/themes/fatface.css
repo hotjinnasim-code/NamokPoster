@@ -1,0 +1,26 @@
+/* fatface — the fat face of a nineteenth-century playbill and of a newspaper's 호외: hairlines against slabs of black, cut in wood or metal (옛 활자의 굵은 견출명조; Thorowgood, Elephant, 신문 제호). Faces: Abril Fatface for Latin and figures, Noto Serif KR Black for Hangul; the details in Hahmlet. */
+.poster[data-type="fatface"] {
+  --font-title: "Abril Fatface", "Noto Serif KR Black", "Hahmlet", serif; --font-title-ko: "Abril Fatface KR", "Noto Serif KR Black", "Hahmlet", serif;   /* the bundled Black cut has a name of its own, so the older serif themes that name "Noto Serif KR" as a last resort do not pick it up */
+  --font-subtitle: "Fraunces", "Hahmlet", "Noto Serif KR", serif; --font-subtitle-ko: "Fraunces KR", "Hahmlet", "Noto Serif KR", serif;
+  --font-body: "Fraunces KR", "Hahmlet", "Noto Serif KR", serif; --font-label-ko: "Hahmlet", "Noto Serif KR", serif;
+  --title-size: 11; --title-weight: 400; --title-leading: 1.04; --title-tracking: -0.015em;
+  --title-leading-ko: 1.18; --title-tracking-ko: -0.045em; --title-wordspace-ko: 0.02em; --title-weight-ko: 900;
+  --eyebrow-size: 1.5; --eyebrow-weight: 700; --eyebrow-tracking: 0.2em; --eyebrow-tracking-ko: 0.12em;
+  --subtitle-size: 2.9; --subtitle-weight: 500; --subtitle-leading: 1.3; --subtitle-tracking: -0.01em; --subtitle-weight-ko: 600; --subtitle-leading-ko: 1.42; --subtitle-tracking-ko: -0.03em;
+  --body-size: 1.8; --body-weight: 400; --body-leading: 1.58; --body-leading-ko: 1.74; --body-tracking-ko: -0.02em; --body-weight-ko: 400; --body-measure: 30;
+  --meta-size: 2.6; --meta-weight: 500; --meta-label-weight: 800;
+  --footer-size: 1.46; --footer-weight: 600; --footer-tracking: 0.06em; --footer-tracking-ko: 0.02em; --footer-rule: 1;
+  --gap-eyebrow: 2.6; --gap-subtitle: 2.6; --grain: 0.3;
+}
+.poster[data-type="fatface"] .title em { color: var(--c-accent); }
+.poster[data-type="fatface"] .subtitle { font-style: italic; color: var(--c-ink); }
+.poster[data-type="fatface"] .subtitle[data-script="ko"] { font-style: normal; }      /* no slanted Hangul */
+/* the label runs under a heavy rule and over a fine one, as the dateline of a playbill does */
+.poster[data-type="fatface"] .eyebrow { color: var(--c-ink); border-top: calc(var(--u) * 0.44) solid var(--c-ink); border-bottom: var(--hair) solid var(--c-ink); padding: 0.56em 0.1em 0.46em; line-height: 1.1; }
+.poster[data-type="fatface"] .main[data-mode="vertical"] .eyebrow { border-top: 0; border-bottom: 0; border-right: calc(var(--u) * 0.44) solid var(--c-ink); border-left: var(--hair) solid var(--c-ink); padding: 0.1em 0.5em; }
+.poster[data-type="fatface"] .footer { color: var(--c-ink); }
+.poster[data-type="fatface"] .body { color: color-mix(in srgb, var(--c-ink) 84%, transparent); }
+.poster[data-type="fatface"] .cta { border-radius: 0; background: var(--c-ink); color: var(--c-paper); font-weight: 700; letter-spacing: 0.04em; }
+.poster[data-type="fatface"] .badge { border-radius: 0; background: var(--c-accent); letter-spacing: 0.14em; }
+/* a heavy rule over a fine one */
+.poster[data-type="fatface"] .bottom.ruled { border-top: calc(var(--u) * 0.44) solid var(--c-ink); padding-top: calc(var(--u) * 1.9); background: linear-gradient(var(--c-ink), var(--c-ink)) 0 calc(var(--u) * 0.36) / 100% var(--hair) no-repeat; }

@@ -1,0 +1,11 @@
+DungGeunMo (둥근모꼴 + Fixedsys Excelsior), as published by 길형진 (orioncactus) at https://cactus.tistory.com/193,
+read on 2026-11-12.
+Licence: public domain
+
+The publisher's words (사용권): "원본과 동일한 퍼블릭 도메인으로 재배포, 수정, 영리 목적 사용 등 걱정 없이 자유롭게 쓰면 됩니다."
+(Released into the public domain, like the original: redistribute, modify and use it commercially as you like.)
+Sources named on that page: 둥근모꼴 by 김중태 (IT문화원), Fixedsys Excelsior by Darien Gavin Valentine, both public domain.
+The font's own copyright record (name ID 0) reads "Public Domain".
+
+The file in this folder is DungGeunMo.ttf of "DungGeunMo TTF.zip" attached to that page, converted to WOFF2 without
+other change (no subsetting, no renaming).

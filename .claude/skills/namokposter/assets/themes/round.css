@@ -1,0 +1,25 @@
+/* round — the rounded square gothic of school newsletters, public campaigns and children's programmes (둥근 네모 고딕; 나눔스퀘어라운드): heavy, soft-cornered, plain-spoken and kind. Face: NanumSquareRound ExtraBold, with its own Latin and figures; Pretendard for the details. */
+.poster[data-type="round"] {
+  --font-title: "NanumSquareRound", "Pretendard", sans-serif;   /* one face: its own Latin and figures */
+  --font-eyebrow: "NanumSquareRound", "Pretendard", sans-serif; --font-eyebrow-ko: "NanumSquareRound", "Pretendard", sans-serif;
+  --title-size: 11.4; --title-weight: 800; --title-leading: 1.06; --title-tracking: -0.02em;
+  --title-leading-ko: 1.2; --title-tracking-ko: -0.04em; --title-wordspace-ko: 0.04em;
+  --eyebrow-size: 1.7; --eyebrow-weight: 800; --eyebrow-tracking: 0.06em; --eyebrow-tracking-ko: 0em; --eyebrow-case: none;
+  --subtitle-size: 2.9; --subtitle-weight: 600; --subtitle-leading: 1.34; --subtitle-weight-ko: 600;
+  --body-size: 1.84; --body-weight: 450; --body-weight-ko: 450;
+  --meta-weight: 500; --meta-label-weight: 800;
+  --footer-size: 1.52; --footer-weight: 600; --footer-rule: 1; --grain: 0.12;
+  --gap-eyebrow: 2.4; --gap-subtitle: 2.4;
+}
+.poster[data-type="round"] .title em { color: var(--c-accent); }
+/* a short rounded bar stands before the label, as a tab marks a section of a newsletter */
+.poster[data-type="round"] .eyebrow { display: flex; align-items: center; gap: 0.56em; color: var(--c-ink); }
+.poster[data-type="round"] .eyebrow::before { content: ""; width: 0.34em; height: 1.02em; border-radius: 99em; background: var(--c-accent); flex: none; }
+.poster[data-type="round"] [data-halign="center"] > .eyebrow { justify-content: center; }
+.poster[data-type="round"] .main[data-mode="vertical"] .eyebrow::before { display: none; }
+.poster[data-type="round"] .subtitle { color: var(--c-ink); }
+.poster[data-type="round"] .body { color: color-mix(in srgb, var(--c-ink) 84%, transparent); }
+.poster[data-type="round"] .meta dt { font-family: var(--font-eyebrow-ko); }   /* the label in the round face, the value plain */
+.poster[data-type="round"] .cta { background: var(--c-accent); color: var(--c-on-accent, var(--c-paper)); font-family: var(--font-eyebrow-ko); font-weight: 800; border-radius: 0.7em; }
+.poster[data-type="round"] .badge { border-radius: 0.7em; font-family: var(--font-eyebrow-ko); font-weight: 800; letter-spacing: 0.02em; }
+.poster[data-type="round"] .bottom.ruled { border-top: calc(var(--u) * 0.3) solid var(--c-ink); padding-top: calc(var(--u) * 1.6); }

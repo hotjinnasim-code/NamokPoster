@@ -1,0 +1,185 @@
+{
+  "id": "crayon",
+  "label": "Crayon Drawing",
+  "engine": "three",
+  "kind": "picture",
+  "mood": "warm, naive and hand-made — wax crayon / oil pastel on toothy paper: bold shapes coloured in with back-and-forth strokes, the paper sparkling through, a dark outline here and there. Good for children's and family events, schools, markets and fairs, community programmes, picture-book and craft topics.",
+  "tone": "light",
+  "type": "hand",
+  "types": ["pop", "starlight", "gamja", "kkubulim", "dongle", "melody", "friendly", "bold", "retro"],
+  "defaultPalette": "daylight",
+  "palettes": {
+    "daylight": {
+      "bg": "#f6f1e4",
+      "ink": "#2a2933",
+      "accent": "#d5432f",
+      "colors": [
+        "#4b8fd8",
+        "#58a84a",
+        "#f4b92e",
+        "#e2523a",
+        "#8b5db4"
+      ]
+    },
+    "pastel": {
+      "bg": "#f8f3ea",
+      "ink": "#45414f",
+      "accent": "#c4517a",
+      "colors": [
+        "#86bce8",
+        "#93cf9a",
+        "#f7d466",
+        "#f1958a",
+        "#c0a2e2"
+      ]
+    },
+    "autumn": {
+      "bg": "#f3e9d6",
+      "ink": "#35261c",
+      "accent": "#b3402c",
+      "colors": [
+        "#e08a3a",
+        "#8a9440",
+        "#f0c044",
+        "#b9432f",
+        "#6f4f8f"
+      ]
+    },
+    "kraft": {
+      "bg": "#cdaa7c",
+      "ink": "#2a211a",
+      "accent": "#8f2f1f",
+      "colors": [
+        "#f4efe2",
+        "#2f7a55",
+        "#f3c62f",
+        "#d8452f",
+        "#2d68b0"
+      ]
+    },
+    "night": {
+      "bg": "#1c1c23",
+      "ink": "#f4efe4",
+      "accent": "#f6cf4c",
+      "colors": [
+        "#3e6ed6",
+        "#3fae72",
+        "#f7d34e",
+        "#f26d4b",
+        "#b88cf0"
+      ]
+    }
+  },
+  "params": {
+    "motif": {
+      "default": "landscape",
+      "note": "landscape | stilllife | city | scribble"
+    },
+    "tip": {
+      "default": 1,
+      "note": "0.5 = sharp crayon … 2 = fat pastel stick"
+    },
+    "pressure": {
+      "default": 1,
+      "note": "0.4 = light, grainy … 1.6 = pressed hard, nearly solid"
+    },
+    "tooth": {
+      "default": 1,
+      "note": "0 = smooth paper … 2 = very rough paper"
+    },
+    "wobble": {
+      "default": 1,
+      "note": "hand tremor (0–2.5)"
+    },
+    "outline": {
+      "default": true,
+      "note": "false = no dark outline crayon"
+    }
+  },
+  "layouts": {
+    "landscape": {
+      "layout": "left",
+      "also": [
+        "right",
+        "top",
+        "bottom",
+        "corners",
+        "headline",
+        "baseline",
+        "vertical",
+        "axis",
+        "band",
+        "strip"
+      ]
+    },
+    "portrait": {
+      "layout": "top",
+      "also": [
+        "bottom",
+        "corners",
+        "baseline",
+        "vertical",
+        "axis",
+        "side"
+      ]
+    },
+    "square": {
+      "layout": "top",
+      "also": [
+        "bottom",
+        "corners",
+        "baseline",
+        "vertical",
+        "axis",
+        "left",
+        "right"
+      ]
+    }
+  },
+  "motifs": {
+    "landscape": {
+      "note": "hills, a sun, a house and trees",
+      "topics": [
+        "kids",
+        "family",
+        "outdoor",
+        "spring"
+      ]
+    },
+    "stilllife": {
+      "note": "flowers in a vase and fruit on a cloth",
+      "topics": [
+        "food",
+        "market",
+        "art",
+        "education"
+      ]
+    },
+    "city": {
+      "note": "a street of houses and towers",
+      "topics": [
+        "city",
+        "community",
+        "education",
+        "celebration"
+      ]
+    },
+    "scribble": {
+      "note": "abstract fields of hatching, loops and dots",
+      "topics": [
+        "art",
+        "kids",
+        "design",
+        "music"
+      ]
+    }
+  },
+  "topics": [
+    "kids",
+    "family",
+    "education",
+    "community",
+    "craft",
+    "art"
+  ]
+}

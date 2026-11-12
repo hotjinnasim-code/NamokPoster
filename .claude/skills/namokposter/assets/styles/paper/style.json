@@ -1,0 +1,170 @@
+{
+  "id": "paper",
+  "label": "Paper Cut",
+  "engine": "blender",
+  "mood": "calm, crafted, seasonal — a layered cut-paper diorama (hills or waves, a pale sun or a moon with paper halo rings, little clouds and pines) seen through a round or arched window in a sheet of the poster's colour, each layer casting a soft shadow. Good for children's and family events, cultural programmes, seasonal greetings, markets, travel and nature themes.",
+  "tone": "light",
+  "type": "editorial",
+  "types": ["myeongjo", "story", "maru", "calli", "melody", "hand", "friendly", "luxe", "goun"],
+  "matchBackground": true,
+  "fallback": "wave",
+  "defaultPalette": "dawn",
+  "palettes": {
+    "dawn": {
+      "bg": "#f4ede4",
+      "ink": "#2a1d1a",
+      "accent": "#e4572e",
+      "colors": [
+        "#f9c784",
+        "#f08a5d",
+        "#b83b5e",
+        "#3d2c5e"
+      ]
+    },
+    "forest": {
+      "bg": "#eef0e6",
+      "ink": "#1c2a20",
+      "accent": "#d9902f",
+      "colors": [
+        "#cfe1b9",
+        "#87a878",
+        "#4a7c59",
+        "#1f3b2d"
+      ]
+    },
+    "ocean": {
+      "bg": "#e9f1f4",
+      "ink": "#10233a",
+      "accent": "#ff7a59",
+      "colors": [
+        "#bfe3ee",
+        "#5fb3ce",
+        "#2a6f97",
+        "#12355b"
+      ]
+    },
+    "blossom": {
+      "bg": "#fbeef0",
+      "ink": "#3a1f2b",
+      "accent": "#e8497a",
+      "colors": [
+        "#ffd6dd",
+        "#f7a1b5",
+        "#c06c84",
+        "#5b3758"
+      ]
+    },
+    "night": {
+      "bg": "#141a2b",
+      "ink": "#f1ecdf",
+      "accent": "#f6d27a",
+      "colors": [
+        "#1c2447",
+        "#3a4a8a",
+        "#6f86c9",
+        "#c7d3f2"
+      ]
+    }
+  },
+  "params": {
+    "layers": {
+      "default": 6,
+      "note": "5–7 paper sheets including the sky"
+    },
+    "window": {
+      "default": "circle",
+      "note": "circle | arch — shape of the opening the diorama sits in"
+    },
+    "edge": {
+      "default": "hills",
+      "note": "hills (rolling ridges, with pines) | waves (regular sea swell)"
+    },
+    "disc": {
+      "default": true,
+      "note": "plain sun / moon disc behind the far ridge (no rays). Pale soft yellow / apricot on a light sky; on a dark sky the accent colour, or pale moon-yellow if the accent is red"
+    },
+    "rings": {
+      "default": 2,
+      "note": "concentric paper halo rings around the disc (0–3)"
+    },
+    "clouds": {
+      "default": 2,
+      "note": "number of small paper clouds (0–3)"
+    },
+    "trees": {
+      "default": 5,
+      "note": "number of little pines cut into one ridge (0 = none; hills only)"
+    },
+    "depth": {
+      "default": 1.0,
+      "note": "spacing between sheets: 0.6 = shallow, subtle shadows … 1.6 = deep shadow box"
+    },
+    "shadow": {
+      "default": 14,
+      "note": "shadow softness in degrees: 4 = crisp … 25 = very soft"
+    },
+    "reverse": {
+      "default": "auto",
+      "note": "false = pale sky, deep foreground (light posters) · true = deep night sky with stars, pale hills (automatic on dark backgrounds)"
+    },
+    "grain": {
+      "default": 1.0,
+      "note": "paper fibre relief: 0 = smooth card (renders ~15% faster) … 2 = rough handmade paper"
+    },
+    "stars": {
+      "default": true,
+      "note": "punched-out stars in the night sky (only when the sky is dark)"
+    }
+  },
+  "layouts": {
+    "landscape": {
+      "layout": "left",
+      "also": [
+        "right",
+        "top",
+        "bottom",
+        "corners",
+        "headline",
+        "baseline",
+        "vertical",
+        "axis",
+        "band",
+        "strip"
+      ]
+    },
+    "portrait": {
+      "layout": "top",
+      "also": [
+        "bottom",
+        "corners",
+        "baseline",
+        "vertical",
+        "axis",
+        "side"
+      ]
+    },
+    "square": {
+      "layout": "top",
+      "also": [
+        "bottom",
+        "corners",
+        "baseline",
+        "vertical",
+        "axis",
+        "left",
+        "right"
+      ]
+    }
+  },
+  "cutout": true,
+  "grounds": [
+    "pattern/checker",
+    "pattern/stripes",
+    "pattern/dots",
+    "pattern/terrazzo",
+    "pattern/arches",
+    "pattern/grid",
+    "haze",
+    "halftone"
+  ]
+}

@@ -1,0 +1,22 @@
+/* slab — the fat-face slab of wood-type show bills and Americana letterpress (Clarendon, Rockwell Extra Bold, French Antique; Hatch Show Print). Alfa Slab One for Latin, Hahmlet Black — a blunt, bracket-serifed 명조 — for Hangul and for all the details; ruled bands, stamped and sturdy. */
+.poster[data-type="slab"] {
+  --font-title: "Alfa Slab One", "Hahmlet", "Noto Serif KR", serif; --font-title-ko: "Alfa Slab One KR", "Hahmlet", "Noto Serif KR", serif;
+  --font-subtitle: "Hahmlet", "Noto Serif KR", serif; --font-body: "Hahmlet", "Noto Serif KR", serif; --font-label-ko: "Hahmlet", "Noto Serif KR", serif;
+  --title-size: 10.6; --title-weight: 900; --title-leading: 1.08; --title-tracking: -0.012em;
+  --title-leading-ko: 1.18; --title-tracking-ko: -0.035em; --title-wordspace-ko: 0.04em; --title-weight-ko: 900;
+  --eyebrow-size: 1.5; --eyebrow-weight: 800; --eyebrow-tracking: 0.16em; --eyebrow-tracking-ko: 0.08em;
+  --subtitle-size: 2.8; --subtitle-weight: 600; --subtitle-leading: 1.3; --subtitle-tracking: -0.01em; --subtitle-weight-ko: 600; --subtitle-leading-ko: 1.42; --subtitle-tracking-ko: -0.03em;
+  --body-size: 1.76; --body-weight: 400; --body-leading: 1.56; --body-leading-ko: 1.72; --body-tracking-ko: -0.02em; --body-weight-ko: 400; --body-measure: 30;
+  --meta-size: 2.5; --meta-weight: 500; --meta-label-weight: 800;
+  --footer-size: 1.44; --footer-weight: 700; --footer-tracking: 0.04em; --footer-rule: 1;
+  --gap-eyebrow: 2.4; --gap-subtitle: 2.6; --grain: 0.28;
+}
+.poster[data-type="slab"]:lang(ko) { --title-size: 11.2; }
+.poster[data-type="slab"] .title em { color: var(--c-accent); }
+/* the label sits in a ruled band, like the date line of a show bill */
+.poster[data-type="slab"] .eyebrow { color: var(--c-ink); border-top: calc(var(--u) * 0.22) solid var(--c-ink); border-bottom: calc(var(--u) * 0.22) solid var(--c-ink); padding: 0.62em 0.1em 0.5em; line-height: 1.1; }
+.poster[data-type="slab"] .subtitle, .poster[data-type="slab"] .footer { color: var(--c-ink); }
+.poster[data-type="slab"] .body { color: color-mix(in srgb, var(--c-ink) 84%, transparent); }
+.poster[data-type="slab"] .cta { border-radius: 0; background: var(--c-accent); color: var(--c-on-accent, var(--c-paper)); font-weight: 800; letter-spacing: 0.02em; }
+.poster[data-type="slab"] .badge { border-radius: 0; background: var(--c-ink); color: var(--c-paper); letter-spacing: 0.12em; }
+.poster[data-type="slab"] .bottom.ruled { border-top: calc(var(--u) * 0.66) double var(--c-ink); padding-top: calc(var(--u) * 1.5); }

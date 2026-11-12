@@ -1,0 +1,175 @@
+{
+  "id": "mosaic",
+  "label": "Tesserae Mosaic",
+  "engine": "three",
+  "kind": "picture",
+  "mood": "a wall of small hand-cut tiles in grout — courses of tesserae that follow the forms of the design (rings round a disc, rows riding each wave, three courses round every arch) and carry on as plain field tiles behind the copy. Sunlit, durable, Mediterranean. Good for travel and summer campaigns, food and markets, city and architecture events, pools and spas, public and community programmes.",
+  "tone": "light",
+  "type": "bold",
+  "types": ["editorial", "yeonsung", "round", "humanist", "swiss", "retro", "friendly", "gmarket"],
+  "defaultPalette": "aegean",
+  "palettes": {
+    "aegean": {
+      "bg": "#ece5d6",
+      "ink": "#1c2836",
+      "accent": "#993d1c",
+      "colors": [
+        "#1f4f7c",
+        "#3f90b2",
+        "#a9d4d6",
+        "#e3a63c",
+        "#c8563c"
+      ]
+    },
+    "terracotta": {
+      "bg": "#efe2cc",
+      "ink": "#3a2418",
+      "accent": "#93381a",
+      "colors": [
+        "#74301e",
+        "#c8663c",
+        "#ecc48a",
+        "#e59a3a",
+        "#40695a"
+      ]
+    },
+    "garden": {
+      "bg": "#e8ebdc",
+      "ink": "#1f2e22",
+      "accent": "#9a4020",
+      "colors": [
+        "#2f5d46",
+        "#6fa377",
+        "#c9dcae",
+        "#e9b94a",
+        "#d9694a"
+      ]
+    },
+    "byzantine": {
+      "bg": "#17182a",
+      "ink": "#f4ead0",
+      "accent": "#e3b34c",
+      "colors": [
+        "#22357a",
+        "#3f74b8",
+        "#e9dcae",
+        "#e3b34c",
+        "#9a3144"
+      ]
+    },
+    "lagoon": {
+      "bg": "#0f2b33",
+      "ink": "#eef6f0",
+      "accent": "#f2c14e",
+      "colors": [
+        "#0f5f6c",
+        "#22a0a4",
+        "#9be3d2",
+        "#f2c14e",
+        "#f0704e"
+      ]
+    }
+  },
+  "params": {
+    "motif": {
+      "default": "waves",
+      "note": "waves = a low disc over swells whose courses ride the crests · arches = an arcade with a disc in the middle opening · bands = overlapping discs of ringed bands and one straight band"
+    },
+    "tile": {
+      "default": 1.0,
+      "note": "tessera size: 0.6 = fine … 2 = chunky"
+    },
+    "grout": {
+      "default": 1.0,
+      "note": "width of the grout joints, 0.5–2"
+    },
+    "rough": {
+      "default": 1.0,
+      "note": "how unevenly the tiles are cut, 0–2"
+    },
+    "gloss": {
+      "default": 1.0,
+      "note": "glints on tilted tiles (glass smalti), 0–2"
+    }
+  },
+  "motifs": {
+    "waves": {
+      "note": "a low sun or moon disc over layered swells with foam crests",
+      "topics": [
+        "summer",
+        "travel",
+        "outdoor",
+        "wellness",
+        "sports",
+        "nature"
+      ]
+    },
+    "arches": {
+      "note": "an arcade of arches with a disc in the middle opening and roundels above",
+      "topics": [
+        "architecture",
+        "city",
+        "culture",
+        "market",
+        "food",
+        "nightlife"
+      ]
+    },
+    "bands": {
+      "note": "abstract: overlapping discs of ringed bands crossed by a straight band",
+      "topics": [
+        "design",
+        "art",
+        "education",
+        "community",
+        "retro",
+        "kids"
+      ]
+    }
+  },
+  "topics": [
+    "travel",
+    "summer",
+    "food",
+    "market",
+    "city",
+    "architecture",
+    "community",
+    "craft",
+    "outdoor"
+  ],
+  "layouts": {
+    "landscape": {
+      "layout": "left",
+      "also": [
+        "right",
+        "top",
+        "bottom",
+        "headline",
+        "baseline",
+        "vertical",
+        "axis",
+        "strip"
+      ]
+    },
+    "portrait": {
+      "layout": "top",
+      "also": [
+        "corners",
+        "vertical",
+        "axis",
+        "side"
+      ]
+    },
+    "square": {
+      "layout": "top",
+      "also": [
+        "corners",
+        "vertical",
+        "axis",
+        "left",
+        "right"
+      ]
+    }
+  }
+}

@@ -1,0 +1,166 @@
+{
+  "id": "glitch",
+  "label": "Glitch Signal",
+  "engine": "three",
+  "kind": "object",
+  "mood": "CRT / VHS / datamosh — a simple, strong subject broken like a damaged video signal: pixel-sorted rows dragged into smears, slipped macroblocks, slices torn sideways, red and blue guns split apart, scanlines and a VHS tracking band, with the copy left on a clean screen. Electric, edgy, a little nostalgic. Good for tech and gaming events, music and club nights, film and media festivals, hackathons, youth and fashion launches.",
+  "tone": "dark",
+  "type": "techno",
+  "types": ["bitmap", "dunggeunmo", "cute", "arcade", "grotesk", "brutal", "condensed"],
+  "defaultPalette": "crt",
+  "palettes": {
+    "crt": {
+      "bg": "#0c0d12",
+      "ink": "#f1f3f7",
+      "accent": "#ff3d7f",
+      "colors": [
+        "#33d6ff",
+        "#ff3d7f",
+        "#ffe14a"
+      ]
+    },
+    "vhs": {
+      "bg": "#1b1033",
+      "ink": "#fff3f8",
+      "accent": "#ffd23d",
+      "colors": [
+        "#5ad1ff",
+        "#ff5fa2",
+        "#ffd23d"
+      ]
+    },
+    "terminal": {
+      "bg": "#06140c",
+      "ink": "#d9ffe6",
+      "accent": "#3dff8b",
+      "colors": [
+        "#2fd67a",
+        "#d9ffe6",
+        "#9dffc4"
+      ]
+    },
+    "paper": {
+      "bg": "#ecebe6",
+      "ink": "#121212",
+      "accent": "#ff2d2d",
+      "colors": [
+        "#141414",
+        "#ff2d2d",
+        "#1f49ff"
+      ]
+    },
+    "lilac": {
+      "bg": "#e7e2f3",
+      "ink": "#1a1630",
+      "accent": "#ff6a2b",
+      "colors": [
+        "#2a1f66",
+        "#7a3cff",
+        "#ff6a2b"
+      ]
+    }
+  },
+  "params": {
+    "motif": {
+      "default": "solids",
+      "note": "solids | horizon | shapes"
+    },
+    "amount": {
+      "default": 1,
+      "note": "overall damage, 0 = clean signal … 2 = wrecked"
+    },
+    "sort": {
+      "default": 1,
+      "note": "pixel-sorted rows and their smears, 0–2"
+    },
+    "split": {
+      "default": 1,
+      "note": "red/blue gun separation, 0–3"
+    },
+    "scanlines": {
+      "default": 1,
+      "note": "scanline and aperture-grille strength, 0–2"
+    },
+    "osd": {
+      "default": true,
+      "note": "horizon motif: VCR on-screen display (PLAY, counter, channel)"
+    }
+  },
+  "motifs": {
+    "solids": {
+      "note": "a stack of lit primitive solids — cube, cylinder, sphere, a cone and a ring",
+      "topics": [
+        "tech",
+        "design",
+        "education",
+        "gaming"
+      ]
+    },
+    "horizon": {
+      "note": "a landscape on a CRT screen: plain sun disc, ridges, water, VCR display",
+      "topics": [
+        "music",
+        "film",
+        "retro",
+        "nightlife"
+      ]
+    },
+    "shapes": {
+      "note": "bold flat geometry — disc, square, triangle, ruled bars",
+      "topics": [
+        "art",
+        "fashion",
+        "design",
+        "tech"
+      ]
+    }
+  },
+  "topics": [
+    "tech",
+    "gaming",
+    "music",
+    "nightlife",
+    "film",
+    "retro"
+  ],
+  "layouts": {
+    "landscape": {
+      "layout": "left",
+      "also": [
+        "right",
+        "top",
+        "bottom",
+        "corners",
+        "headline",
+        "baseline",
+        "vertical",
+        "axis",
+        "band",
+        "strip"
+      ]
+    },
+    "portrait": {
+      "layout": "top",
+      "also": [
+        "bottom",
+        "corners",
+        "baseline",
+        "vertical",
+        "axis",
+        "side"
+      ]
+    },
+    "square": {
+      "layout": "top",
+      "also": [
+        "bottom",
+        "corners",
+        "baseline",
+        "vertical",
+        "axis",
+        "left",
+        "right"
+      ]
+    }
+  }
+}

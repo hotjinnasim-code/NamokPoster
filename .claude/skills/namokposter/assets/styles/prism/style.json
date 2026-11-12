@@ -1,0 +1,137 @@
+{
+  "id": "prism",
+  "label": "Dark Prism",
+  "engine": "blender",
+  "mood": "luxurious, futuristic, cinematic — interlocking glass rings around a glowing core, lit by coloured studio lights on black. Good for premium tech, AI/science, finance, galas, awards, night events.",
+  "tone": "dark",
+  "type": "elegant",
+  "types": [
+    "luxe",
+    "swiss",
+    "techno",
+    "impact"
+  ],
+  "fallback": "flux",
+  "defaultPalette": "nebula",
+  "palettes": {
+    "nebula": {
+      "bg": "#07070d",
+      "ink": "#f4f3fa",
+      "accent": "#b9a8ff",
+      "colors": [
+        "#7b5cff",
+        "#ff4fa3",
+        "#22d3ee",
+        "#ffffff"
+      ]
+    },
+    "ember": {
+      "bg": "#0c0807",
+      "ink": "#fff6ec",
+      "accent": "#ffb36b",
+      "colors": [
+        "#ff6a2b",
+        "#ffc24a",
+        "#ff2e63",
+        "#fff1dd"
+      ]
+    },
+    "glacier": {
+      "bg": "#050b12",
+      "ink": "#eef8ff",
+      "accent": "#8fdcff",
+      "colors": [
+        "#38bdf8",
+        "#a5f3fc",
+        "#6366f1",
+        "#ffffff"
+      ]
+    },
+    "emerald": {
+      "bg": "#04100c",
+      "ink": "#effff8",
+      "accent": "#7ef0c0",
+      "colors": [
+        "#34d399",
+        "#a3e635",
+        "#22d3ee",
+        "#f0fff8"
+      ]
+    },
+    "champagne": {
+      "bg": "#0d0b08",
+      "ink": "#fbf5ea",
+      "accent": "#e8c98f",
+      "colors": [
+        "#e8c98f",
+        "#fff3d6",
+        "#c98b5e",
+        "#ffffff"
+      ]
+    }
+  },
+  "params": {
+    "rings": {
+      "default": 3,
+      "note": "2–5 interlocking rings"
+    },
+    "core": {
+      "default": "glow",
+      "note": "glow | chrome | none — what sits at the centre"
+    },
+    "frost": {
+      "default": 0.0,
+      "note": "0 = clear glass … 0.3 = frosted"
+    }
+  },
+  "vars": {
+    "--scrim": 0.35
+  },
+  "layouts": {
+    "landscape": {
+      "layout": "left",
+      "also": [
+        "right",
+        "top",
+        "bottom",
+        "corners",
+        "headline",
+        "baseline",
+        "vertical",
+        "axis",
+        "band",
+        "strip"
+      ]
+    },
+    "portrait": {
+      "layout": "top",
+      "also": [
+        "bottom",
+        "corners",
+        "baseline",
+        "vertical",
+        "axis",
+        "side"
+      ]
+    },
+    "square": {
+      "layout": "top",
+      "also": [
+        "bottom",
+        "corners",
+        "baseline",
+        "vertical",
+        "axis",
+        "left",
+        "right"
+      ]
+    }
+  },
+  "cutout": true,
+  "grounds": [
+    "haze",
+    "halftone",
+    "pattern/grid",
+    "pattern/dots"
+  ]
+}

@@ -1,0 +1,10 @@
+카페24 빛나는별 (Cafe24 Shiningstar) — Cafe24 Corp.
+Publisher's page: https://fonts.cafe24.com/
+Licence kind: OFL-1.1
+Fetched: 2026-11-12
+
+Cafe24Shiningstar-v2.0.woff2 (weight 400)
+  published as: Cafe24Shiningstar-v2.0/webfont/Cafe24Shiningstar-v2.0.woff2 in https://img.cafe24.com/csdstatic/freefonts/download/kr/Cafe24Shiningstar-v2.0.zip
+  sha256 of the published file: 73f82ba7764a67ef515f2546852787bcd02468e465e6232b7e2be58887749125 (837752 bytes)
+  in this folder as published, unchanged
+

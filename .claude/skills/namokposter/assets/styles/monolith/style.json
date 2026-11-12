@@ -1,0 +1,134 @@
+{
+  "id": "monolith",
+  "label": "Monolith Editorial",
+  "engine": "blender",
+  "mood": "quiet, cultured, architectural — plaster arches, steps and spheres in low sunlight with long shadows, set with serif type. Good for exhibitions, galleries, books, fashion, hospitality, weddings, anything editorial or artisanal.",
+  "tone": "light",
+  "type": "editorial",
+  "types": [
+    "myeongjo",
+    "maru",
+    "slim",
+    "luxe",
+    "swiss",
+    "bold"
+  ],
+  "matchBackground": true,
+  "fallback": "wave",
+  "defaultPalette": "terracotta",
+  "palettes": {
+    "terracotta": {
+      "bg": "#eadfd1",
+      "ink": "#2b1d16",
+      "accent": "#a2462d",
+      "colors": [
+        "#c4654a",
+        "#f0dcc4",
+        "#8a3f2c",
+        "#f6efe6"
+      ]
+    },
+    "sage": {
+      "bg": "#dfe4d7",
+      "ink": "#1c2a20",
+      "accent": "#46664c",
+      "colors": [
+        "#7d9471",
+        "#eef1e6",
+        "#3f5445",
+        "#c9d3bf"
+      ]
+    },
+    "stone": {
+      "bg": "#e3e1dc",
+      "ink": "#1d1c1a",
+      "accent": "#8f6718",
+      "colors": [
+        "#a9a59d",
+        "#f3f2ee",
+        "#d9a441",
+        "#77746e"
+      ]
+    },
+    "dusk": {
+      "bg": "#ddd3e2",
+      "ink": "#231a30",
+      "accent": "#69508c",
+      "colors": [
+        "#8f7aa8",
+        "#f4eef7",
+        "#e7a48c",
+        "#4b3d63"
+      ]
+    },
+    "ink": {
+      "bg": "#211f1d",
+      "ink": "#f1ece3",
+      "accent": "#c9a66b",
+      "colors": [
+        "#4a4743",
+        "#c9a66b",
+        "#75706a",
+        "#e9e3d8"
+      ]
+    }
+  },
+  "params": {
+    "sun": {
+      "default": 1.0,
+      "note": "sunlight strength multiplier"
+    },
+    "shadow": {
+      "default": 2.5,
+      "note": "sun angle in degrees: 0.5 = razor-sharp shadows … 8 = soft"
+    }
+  },
+  "layouts": {
+    "landscape": {
+      "layout": "left",
+      "also": [
+        "right",
+        "top",
+        "bottom",
+        "corners",
+        "headline",
+        "baseline",
+        "vertical",
+        "axis",
+        "band",
+        "strip"
+      ]
+    },
+    "portrait": {
+      "layout": "top",
+      "also": [
+        "bottom",
+        "corners",
+        "baseline",
+        "vertical",
+        "axis",
+        "side"
+      ]
+    },
+    "square": {
+      "layout": "top",
+      "also": [
+        "bottom",
+        "corners",
+        "baseline",
+        "vertical",
+        "axis",
+        "left",
+        "right"
+      ]
+    }
+  },
+  "cutout": true,
+  "grounds": [
+    "haze",
+    "halftone",
+    "pattern/arches",
+    "pattern/checker",
+    "pattern/dots"
+  ]
+}

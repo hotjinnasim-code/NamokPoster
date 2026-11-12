@@ -1,0 +1,11 @@
+배달의민족 꾸불림체 (BM Kkubulim) — Woowa Brothers Corp.
+Publisher's page: https://www.woowahan.com/fonts
+Licence kind: OFL-1.1
+Fetched: 2026-11-12
+
+BMKkubulim.woff2 (weight 400)
+  published as: https://woowahan-cdn.woowahan.com/static/fonts/BMKkubulim.otf
+  sha256 of the published file: 88f22402a4aef8511ead09c46547e09752eb62a5e597e68fb18ae908728e1688 (1673948 bytes)
+  converted to WOFF2 with Google's woff2 encoder (npm wawoff2 2.0.1); nothing else changed (11411 glyphs before and after)
+  sha256 in this folder: 7eb9cb31b50ed9f30e5775588df5973a5245dc0aed27b5888072fbf95e8176de (1268188 bytes)
+

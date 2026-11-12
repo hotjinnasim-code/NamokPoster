@@ -1,0 +1,24 @@
+/* euljiro — the painted lettering of Euljiro's printing alleys and old shop signs (배달의민족 을지로체; 을지로 간판 도안, 1960–80년대 페인트 간판 레터링): narrow, upright strokes with sharp little hooks, set tight like a sign board over a door. Face: BM Euljiro, with its own Latin and figures; Pretendard for the details. */
+.poster[data-type="euljiro"] {
+  --font-title: "BM Euljiro", "Do Hyeon", "Pretendard", sans-serif;   /* one face: its own Latin and figures */
+  --font-eyebrow: "BM Euljiro", "Pretendard", sans-serif; --font-eyebrow-ko: "BM Euljiro", "Pretendard", sans-serif;
+  --font-subtitle: "Pretendard", sans-serif; --font-subtitle-ko: "Pretendard", sans-serif;
+  --title-size: 11.6; --title-weight: 400; --title-leading: 1.04; --title-tracking: 0em;
+  --title-leading-ko: 1.14; --title-tracking-ko: -0.02em; --title-wordspace-ko: 0.08em;
+  --eyebrow-size: 2.0; --eyebrow-weight: 400; --eyebrow-tracking: 0.08em; --eyebrow-tracking-ko: 0.04em; --eyebrow-case: none;
+  --subtitle-size: 2.86; --subtitle-weight: 700; --subtitle-leading: 1.32; --subtitle-weight-ko: 700;
+  --body-size: 1.82; --body-weight: 500; --body-weight-ko: 500;
+  --meta-weight: 500; --meta-label-weight: 400;
+  --footer-size: 1.54; --footer-weight: 700; --footer-tracking: 0.04em; --footer-rule: 1; --grain: 0.26;
+  --gap-eyebrow: 2.4; --gap-subtitle: 2.4;
+}
+.poster[data-type="euljiro"] .title em { color: var(--c-accent); }
+/* the label is painted on a board of the accent colour, as the trade is lettered over a door */
+.poster[data-type="euljiro"] .eyebrow { color: var(--c-on-accent, var(--c-paper)); background: var(--c-accent); padding: 0.32em 0.8em 0.26em; line-height: 1.16; border-radius: 0.08em; }
+.poster[data-type="euljiro"] .main[data-mode="vertical"] .eyebrow { padding: 0.8em 0.3em; }
+.poster[data-type="euljiro"] .subtitle { color: var(--c-ink); }
+.poster[data-type="euljiro"] .body { color: color-mix(in srgb, var(--c-ink) 84%, transparent); }
+.poster[data-type="euljiro"] .meta dt { font-family: var(--font-eyebrow-ko); font-size: 1.06em; color: color-mix(in srgb, var(--c-accent) 62%, var(--c-ink)); }
+.poster[data-type="euljiro"] .cta { border-radius: 0.08em; background: var(--c-ink); color: var(--c-paper); font-family: var(--font-eyebrow-ko); font-weight: 400; font-size: calc(var(--su) * var(--cta-size) * 1.16 * var(--k-small)); }
+.poster[data-type="euljiro"] .badge { border-radius: 0.08em; font-family: var(--font-eyebrow-ko); font-weight: 400; letter-spacing: 0.04em; }
+.poster[data-type="euljiro"] .bottom.ruled { border-top: calc(var(--u) * 0.3) solid var(--c-ink); padding-top: calc(var(--u) * 1.6); }

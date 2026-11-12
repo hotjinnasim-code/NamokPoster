@@ -1,0 +1,190 @@
+{
+  "id": "calendar",
+  "label": "Calendar",
+  "engine": "html",
+  "kind": "object",
+  "mood": "the date shown on a calendar — a month sheet set in fine rules and numerals with the event day marked by a filled disc (a run of days by a capped band), a daily tear-off block (일력) with month and day set large together, or the strip of the event's week with the day picked out in a pill. Drawn in the poster's own faces in two or three flat inks, so it is vector and changes voice with the type theme, from a Swiss grotesque to a 명조. Reads the date (and a range) from the event information. Good for anything people must put in their diary: services and church events, school and community days, openings, deadlines, seasonal events, conferences.",
+  "tone": "light",
+  "type": "grotesk",
+  "types": ["swiss", "fatface", "gmarket", "humanist", "paperlogy", "square", "editorial", "bold", "condensed", "myeongjo", "slab", "didone", "retro"],
+  "requires": [
+    "date"
+  ],
+  "defaultPalette": "almanac",
+  "palettes": {
+    "almanac": {
+      "bg": "#f2eee6",
+      "ink": "#171717",
+      "accent": "#d8402a",
+      "colors": [
+        "#d8402a",
+        "#fffdf7",
+        "#262626"
+      ]
+    },
+    "cobalt": {
+      "bg": "#2443c9",
+      "ink": "#ffffff",
+      "accent": "#ffd447",
+      "colors": [
+        "#ffd447",
+        "#f7f4ec",
+        "#0f1d66"
+      ]
+    },
+    "night": {
+      "bg": "#15161a",
+      "ink": "#efeae0",
+      "accent": "#ff6b4a",
+      "colors": [
+        "#ff6b4a",
+        "#f3eee3",
+        "#3a3d45"
+      ]
+    },
+    "garden": {
+      "bg": "#dfe9e1",
+      "ink": "#183026",
+      "accent": "#d9532f",
+      "colors": [
+        "#1f6b4c",
+        "#fbfaf4",
+        "#183026"
+      ]
+    },
+    "mustard": {
+      "bg": "#f4c63d",
+      "ink": "#1a1712",
+      "accent": "#b4271a",
+      "colors": [
+        "#b4271a",
+        "#fffaf0",
+        "#1a1712"
+      ]
+    }
+  },
+  "params": {
+    "motif": {
+      "default": "month",
+      "note": "month | tearoff | week"
+    },
+    "paper": {
+      "default": "none",
+      "note": "month: none (drawn straight on the page in rules and numerals) | sheet (on a sheet of paper, slightly turned, with a soft shadow)"
+    },
+    "weekStart": {
+      "default": "sun",
+      "note": "sun | mon — the first column of the month sheet and the week strip"
+    }
+  },
+  "motifs": {
+    "month": {
+      "note": "a month sheet: month and year as the header, the weekday row and the days, the event day on a filled disc (a run of days on a band capped at both ends), Sundays in the accent",
+      "topics": [
+        "community",
+        "education",
+        "culture",
+        "business",
+        "general"
+      ]
+    },
+    "tearoff": {
+      "note": "a daily tear-off block (일력): binding strip with two rings, the month and the day set large together (11.15), the weekday below, page edges showing underneath, slightly turned",
+      "topics": [
+        "tradition",
+        "family",
+        "celebration",
+        "retro",
+        "community"
+      ],
+      "layouts": {
+        "landscape": {
+          "layout": "left"
+        },
+        "portrait": {
+          "layout": "top"
+        },
+        "square": {
+          "layout": "left"
+        }
+      },
+      "grounds": [
+        "pattern/checker",
+        "pattern/stripes",
+        "pattern/dots",
+        "pattern/grid",
+        "haze",
+        "halftone"
+      ]
+    },
+    "week": {
+      "note": "the seven days of the event's week, weekday letters over day numbers, the event day in a tall pill — a wide, low image for bands of art",
+      "topics": [
+        "business",
+        "tech",
+        "education",
+        "sports",
+        "music"
+      ],
+      "layouts": {
+        "landscape": {
+          "layout": "band",
+          "also": [
+            "top",
+            "axis"
+          ]
+        },
+        "portrait": {
+          "layout": "axis",
+          "also": [
+            "top",
+            "bottom"
+          ]
+        },
+        "square": {
+          "layout": "top"
+        }
+      }
+    }
+  },
+  "topics": [
+    "community",
+    "education",
+    "culture",
+    "celebration",
+    "business",
+    "tradition",
+    "family",
+    "general"
+  ],
+  "layouts": {
+    "landscape": {
+      "layout": "left",
+      "also": [
+        "right",
+        "top",
+        "corners",
+        "band",
+        "axis"
+      ]
+    },
+    "portrait": {
+      "layout": "top",
+      "also": [
+        "bottom",
+        "side",
+        "corners",
+        "axis"
+      ]
+    },
+    "square": {
+      "layout": "top"
+    }
+  },
+  "grounds": [
+    "haze",
+    "halftone",
+    "pattern/dots",
+    "pattern/grid"
+  ]
+}

@@ -1,0 +1,10 @@
+schema_version: "1.1"
+name: date-led-typographic-poster
+expected_outcome: |
+  Three finished poster drafts at 3508x4961 (A3 portrait, the default size) that are led by type rather than by a
+  picture: the art of each is made from the copy itself — the date set large, a calendar sheet, a
+  ticket, a stamp and postmark, stickers, the headline repeated, a strict geometric figure with
+  captions — using the skill's HTML styles, and the three differ clearly from one another (style,
+  type theme, layout, palette). No draft uses Blender. The headline is verbatim; the date line is
+  set as labelled event information (일시, 장소), readable, never in the footer. Nothing overflows
+  and the reply says how the three concepts differ.

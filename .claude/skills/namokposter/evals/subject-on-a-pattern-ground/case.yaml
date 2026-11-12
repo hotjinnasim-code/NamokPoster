@@ -1,0 +1,11 @@
+schema_version: "1.1"
+name: subject-on-a-pattern-ground
+expected_outcome: |
+  Three finished poster drafts at 3508x4961 (A3 portrait, the default size) for a neighbourhood flea market. The user asked for
+  clay or felt 3D objects, which only Blender makes, so this is a request for Blender: all three
+  drafts use a Blender style. At least one of them shows a 3D subject (clay, felt or a similar soft
+  material) standing on a flat pattern ground such as a checkerboard — made with the skill's
+  `ground` option, not by painting a pattern into a scene — and the others are different ideas,
+  each a Blender style on its own or on a ground. Date, place and fee are set as labelled
+  information rows above the footer; the organiser stays in the footer. The copy is verbatim,
+  readable against whatever is behind it, and nothing overflows.

@@ -1,0 +1,24 @@
+/* humanist — the humanist gothic of the Korean web and of every town-hall notice since 2008 (나눔고딕): strokes with the proportions of handwriting, soft at the corners, familiar and easy to trust. Faces: Nanum Gothic ExtraBold for a Korean headline, with its own figures; Nunito Sans, a humanist sans of the same open build, for an English one; Pretendard for the details. */
+.poster[data-type="humanist"] {
+  --font-title: "Nunito Sans", "Nanum Gothic", "Pretendard", sans-serif;   /* an English headline: Nanum Gothic's lowercase i hangs below the line, which shows when it is set large */
+  --font-title-ko: "Nanum Gothic", "Pretendard", sans-serif;               /* a Korean headline: one face, its own figures */
+  --font-eyebrow: "Nunito Sans", "Nanum Gothic", "Pretendard", sans-serif; --font-eyebrow-ko: "Nanum Gothic", "Pretendard", sans-serif;
+  --title-size: 11; --title-weight: 800; --title-leading: 1.06; --title-tracking: -0.025em;
+  --title-leading-ko: 1.2; --title-tracking-ko: -0.04em; --title-wordspace-ko: 0.04em;
+  --eyebrow-size: 1.56; --eyebrow-weight: 800; --eyebrow-tracking: 0.1em; --eyebrow-tracking-ko: 0.03em;
+  --subtitle-size: 2.9; --subtitle-weight: 500; --subtitle-leading: 1.36; --subtitle-weight-ko: 500;
+  --body-size: 1.84; --body-weight: 400; --body-weight-ko: 450;
+  --meta-weight: 450; --meta-label-weight: 700;
+  --footer-size: 1.5; --footer-weight: 500; --footer-rule: 1; --grain: 0.14;
+  --gap-eyebrow: 2.4; --gap-subtitle: 2.6;
+}
+.poster[data-type="humanist"] .title em { color: var(--c-accent); }
+/* the label stands over a short stroke of the accent colour */
+.poster[data-type="humanist"] .eyebrow { color: var(--c-ink); padding-bottom: 0.6em; background: linear-gradient(var(--c-accent), var(--c-accent)) 0 100% / 2.4em calc(var(--u) * 0.3) no-repeat; }
+.poster[data-type="humanist"] [data-halign="center"] > .eyebrow { background-position: 50% 100%; }
+.poster[data-type="humanist"] .main[data-mode="vertical"] .eyebrow { background: none; padding: 0; }
+.poster[data-type="humanist"] .subtitle { color: color-mix(in srgb, var(--c-ink) 92%, transparent); }
+.poster[data-type="humanist"] .body { color: color-mix(in srgb, var(--c-ink) 84%, transparent); }
+.poster[data-type="humanist"] .cta { background: var(--c-accent); color: var(--c-on-accent, var(--c-paper)); border-radius: 0.4em; }
+.poster[data-type="humanist"] .badge { border-radius: 0.4em; }
+.poster[data-type="humanist"] .bottom.ruled { border-top-color: color-mix(in srgb, var(--c-ink) 46%, transparent); }

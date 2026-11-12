@@ -1,0 +1,28 @@
+/* cute — the small pixel hand of a handheld game's dialogue box and a 2000s phone screen (도트 대화창 글씨; 귀여운 픽셀): thin and narrow, drawn on a grid but friendly. Faces: one face, Cute Font, with its own pixel Latin and figures. */
+.poster[data-type="cute"] {
+  --font-title: "Cute Font", "Galmuri11", "Pretendard", sans-serif;
+  --font-title-ko: "Cute Font", "Galmuri11", "Pretendard", sans-serif;   /* a syllable the face lacks goes to another pixel face */
+  --font-subtitle: "Cute Font", "Galmuri11", "Pretendard", sans-serif;
+  --font-eyebrow: "Cute Font", "Galmuri11", "Pretendard", sans-serif; --font-eyebrow-ko: "Cute Font", "Galmuri11", "Pretendard", sans-serif;
+  --font-footer: "Cute Font", "Galmuri11", "Pretendard", sans-serif; --font-footer-ko: "Cute Font", "Galmuri11", "Pretendard", sans-serif;
+  --title-size: 12.6; --title-weight: 400; --title-leading: 0.98; --title-tracking: 0em;   /* a pixel face is never tracked: the grid is the spacing */
+  --title-leading-ko: 1.16; --title-tracking-ko: 0em; --title-wordspace-ko: 0.1em; --title-weight-ko: 400;
+  --eyebrow-size: 2.4; --eyebrow-weight: 400; --eyebrow-tracking: 0.04em; --eyebrow-tracking-ko: 0em; --eyebrow-case: none;
+  --subtitle-size: 3.7; --subtitle-weight: 400; --subtitle-leading: 1.12; --subtitle-tracking: 0em; --subtitle-leading-ko: 1.14; --subtitle-tracking-ko: 0em;
+  --body-size: 1.82; --body-weight: 500; --body-weight-ko: 500;
+  --meta-weight: 500; --meta-label-weight: 400;
+  --footer-size: 2; --footer-weight: 400; --footer-tracking: 0.02em; --footer-rule: 1; --grain: 0.08;
+  --gap-eyebrow: 2.6; --gap-subtitle: 1.8;
+}
+.poster[data-type="cute"] .title em { color: var(--c-accent); }
+/* the label stands in a dialogue box whose corners are cut by one pixel */
+.poster[data-type="cute"] .eyebrow { --px: calc(var(--u) * 0.3); color: var(--c-ink); background: var(--c-paper); padding: 0.14em 0.7em 0.08em; line-height: 1.1; margin-left: var(--px); margin-right: var(--px);
+  box-shadow: 0 calc(var(--px) * -1) 0 0 var(--c-ink), 0 var(--px) 0 0 var(--c-ink), calc(var(--px) * -1) 0 0 0 var(--c-ink), var(--px) 0 0 0 var(--c-ink); }
+.poster[data-type="cute"] .subtitle, .poster[data-type="cute"] .footer { color: var(--c-ink); }
+.poster[data-type="cute"] .body { color: color-mix(in srgb, var(--c-ink) 84%, transparent); }
+.poster[data-type="cute"] .meta dt { font-family: var(--font-eyebrow-ko); font-size: 1.3em; line-height: 0.96; color: color-mix(in srgb, var(--c-accent) 62%, var(--c-ink)); }   /* the label in the pixel face (drawn narrow, so a size up), the value plain */
+.poster[data-type="cute"] .meta dt[data-script="ko"] { letter-spacing: 0; }
+.poster[data-type="cute"] .cta { --px: calc(var(--u) * 0.3); border-radius: 0; background: var(--c-accent); color: var(--c-on-accent, var(--c-paper)); font-family: var(--font-eyebrow-ko); font-weight: 400; font-size: calc(var(--su) * var(--cta-size) * 1.5 * var(--k-small)); padding: 0.3em 1em 0.24em; box-shadow: 0 calc(var(--px) * -1) 0 0 var(--c-accent), 0 var(--px) 0 0 var(--c-accent), calc(var(--px) * -1) 0 0 0 var(--c-accent), var(--px) 0 0 0 var(--c-accent); }
+.poster[data-type="cute"] .cta::after { content: "▶"; font-size: 0.6em; }
+.poster[data-type="cute"] .badge { border-radius: 0; font-weight: 400; font-size: calc(var(--fu) * 2.4 * var(--k-small)); letter-spacing: 0.02em; padding: 0.24em 0.8em 0.16em; }
+.poster[data-type="cute"] .bottom.ruled { border-top: calc(var(--u) * 0.3) dotted var(--c-ink); padding-top: calc(var(--u) * 1.4); }

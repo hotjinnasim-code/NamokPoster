@@ -1,0 +1,5 @@
+/* Flow Field: the bands run right up to the moat round the copy, so a rule that spans the whole text
+   column would cut across them. In the grotesk theme the label keeps its rule, no wider than itself. */
+.poster[data-type="grotesk"] .main > .eyebrow, .poster[data-type="grotesk"] .aside > .eyebrow { align-self: flex-start; }
+/* the information table of that theme is as wide as its words, for the same reason */
+.poster[data-type="grotesk"] .meta:not(.cells) { min-width: 0; }

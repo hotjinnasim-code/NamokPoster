@@ -1,0 +1,140 @@
+{
+  "id": "globe",
+  "label": "Dotted Globe",
+  "engine": "three",
+  "mood": "global, connected, precise — a globe drawn in evenly spaced dots, with glowing nodes joined by great-circle arcs, thin orbit rings and a rim of light. Good for AI and network topics, finance, summits, international events, logistics, telecom.",
+  "tone": "dark",
+  "type": "techno",
+  "types": [
+    "swiss",
+    "elegant",
+    "impact"
+  ],
+  "defaultPalette": "orbit",
+  "palettes": {
+    "orbit": {
+      "bg": "#05070f",
+      "ink": "#eef3ff",
+      "accent": "#7fb2ff",
+      "colors": [
+        "#2447ff",
+        "#5fb8ff",
+        "#ffc56e",
+        "#ffffff"
+      ]
+    },
+    "signal": {
+      "bg": "#03100e",
+      "ink": "#eafff7",
+      "accent": "#5ff0c0",
+      "colors": [
+        "#0a8f78",
+        "#5ff0c0",
+        "#ffe27a",
+        "#f4fff9"
+      ]
+    },
+    "ultra": {
+      "bg": "#090615",
+      "ink": "#f5f1ff",
+      "accent": "#c4a8ff",
+      "colors": [
+        "#5a2dff",
+        "#c56bff",
+        "#5fe3ff",
+        "#ffffff"
+      ]
+    },
+    "paper": {
+      "bg": "#f2f0ea",
+      "ink": "#121316",
+      "accent": "#c8350f",
+      "colors": [
+        "#16224f",
+        "#2f55ff",
+        "#ff4b1f",
+        "#16224f"
+      ]
+    },
+    "ledger": {
+      "bg": "#eef2ee",
+      "ink": "#0f1f19",
+      "accent": "#0b7350",
+      "colors": [
+        "#10261d",
+        "#12845c",
+        "#e8641c",
+        "#10261d"
+      ]
+    }
+  },
+  "params": {
+    "density": {
+      "default": 1,
+      "note": "number of dots: 0.5 = sparse and graphic … 2 = fine"
+    },
+    "dot": {
+      "default": 1,
+      "note": "dot size multiplier"
+    },
+    "nodes": {
+      "default": 7,
+      "note": "glowing nodes joined by arcs (0 = none … 12)"
+    },
+    "rings": {
+      "default": 2,
+      "note": "orbit rings, 0–3"
+    },
+    "land": {
+      "default": 0.6,
+      "note": "0 = perfectly even dots … 1 = strong continent-like variation in dot weight"
+    },
+    "glow": {
+      "default": 1,
+      "note": "rim light and backdrop glow (0 = flat)"
+    }
+  },
+  "vars": {
+    "--scrim-center": 0.35
+  },
+  "layouts": {
+    "landscape": {
+      "layout": "left",
+      "also": [
+        "right",
+        "top",
+        "bottom",
+        "corners",
+        "headline",
+        "baseline",
+        "vertical",
+        "axis",
+        "band",
+        "strip"
+      ]
+    },
+    "portrait": {
+      "layout": "top",
+      "also": [
+        "bottom",
+        "corners",
+        "baseline",
+        "vertical",
+        "axis",
+        "side"
+      ]
+    },
+    "square": {
+      "layout": "top",
+      "also": [
+        "bottom",
+        "corners",
+        "baseline",
+        "vertical",
+        "axis",
+        "left",
+        "right"
+      ]
+    }
+  }
+}

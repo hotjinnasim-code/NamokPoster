@@ -1,0 +1,10 @@
+카페24 써라운드 (Cafe24 Ssurround) — Cafe24 Corp.
+Publisher's page: https://fonts.cafe24.com/
+Licence kind: OFL-1.1
+Fetched: 2026-11-12
+
+Cafe24Ssurround-v2.0.woff2 (weight 400)
+  published as: Cafe24Ssurround-v2.0/webfont/Cafe24Ssurround-v2.0.woff2 in https://img.cafe24.com/csdstatic/freefonts/download/kr/Cafe24Ssurround-v2.0.zip
+  sha256 of the published file: 2d726dbf8863d66e6d5cf56e2532c5d14d8a4b514461b565c513c1da6ae2f41a (391868 bytes)
+  in this folder as published, unchanged
+

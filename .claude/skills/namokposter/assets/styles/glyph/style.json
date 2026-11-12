@@ -1,0 +1,167 @@
+{
+  "id": "glyph",
+  "label": "Glyph Typography",
+  "engine": "three",
+  "kind": "picture",
+  "mood": "typographic art — the picture is made of letterforms: a giant character cropped by its column with a second one overprinted, a type-specimen grid of repeated glyphs, or a solid letter in front of stepped outline echoes, printed in two or three flat inks with a faint letterpress mottle. Confident, graphic, editorial. Good for design and type events, exhibitions, book fairs and literature, brand launches, school and language programmes.",
+  "tone": "light",
+  "type": "swiss",
+  "types": ["grotesk", "fatface", "maru", "bold", "editorial", "brutal", "impact", "dream"],
+  "defaultPalette": "poster",
+  "palettes": {
+    "poster": {
+      "bg": "#f1ede4",
+      "ink": "#151515",
+      "accent": "#e2412b",
+      "colors": [
+        "#151515",
+        "#e2412b",
+        "#2747c9"
+      ]
+    },
+    "riso": {
+      "bg": "#f6efe1",
+      "ink": "#1e2a68",
+      "accent": "#e8466f",
+      "colors": [
+        "#1e2a68",
+        "#ff5c84",
+        "#f2a900"
+      ]
+    },
+    "sage": {
+      "bg": "#dfe4d5",
+      "ink": "#1d2620",
+      "accent": "#c9512a",
+      "colors": [
+        "#1d2620",
+        "#d65a2f",
+        "#6f8f74"
+      ]
+    },
+    "noir": {
+      "bg": "#121212",
+      "ink": "#f2eee5",
+      "accent": "#ffcf3a",
+      "colors": [
+        "#f2eee5",
+        "#ffcf3a",
+        "#ff5b37"
+      ]
+    },
+    "klein": {
+      "bg": "#1d3bc9",
+      "ink": "#ffffff",
+      "accent": "#ffe14d",
+      "colors": [
+        "#ffffff",
+        "#ffe14d",
+        "#0b1557"
+      ]
+    }
+  },
+  "params": {
+    "motif": {
+      "default": "giant",
+      "note": "giant | grid | echo"
+    },
+    "text": {
+      "default": "A가&",
+      "from": "title",
+      "note": "the characters the picture is made of, in order (first = hero). Left unset, the first letters of the headline's words are used"
+    },
+    "font": {
+      "default": "black",
+      "note": "black (Black Han Sans) | sans (Pretendard Black) | serif (Hahmlet Black) | display (Anton, Latin; Hangul falls back to Black Han Sans)"
+    },
+    "echoes": {
+      "default": 9,
+      "note": "echo motif: number of stepped copies behind the letter, 3–24"
+    },
+    "marks": {
+      "default": true,
+      "note": "small specimen marks (code point, face name) in a free corner"
+    },
+    "print": {
+      "default": 1,
+      "note": "letterpress mottle and paper tooth, 0 = clean vector … 2 = worn"
+    }
+  },
+  "motifs": {
+    "giant": {
+      "note": "one giant character cropped by the edges of its column, a second overprinted in another ink",
+      "topics": [
+        "design",
+        "art",
+        "literature",
+        "culture"
+      ]
+    },
+    "grid": {
+      "note": "a type-specimen grid: the characters repeated cell by cell in several faces, a big hero cell, cells cleared around the copy",
+      "topics": [
+        "education",
+        "design",
+        "community",
+        "kids"
+      ]
+    },
+    "echo": {
+      "note": "a solid letter in front of a run of outline echoes stepping back towards the open side",
+      "topics": [
+        "music",
+        "film",
+        "retro",
+        "fashion"
+      ]
+    }
+  },
+  "topics": [
+    "design",
+    "art",
+    "literature",
+    "culture",
+    "education",
+    "music"
+  ],
+  "layouts": {
+    "landscape": {
+      "layout": "left",
+      "also": [
+        "right",
+        "top",
+        "bottom",
+        "corners",
+        "headline",
+        "baseline",
+        "vertical",
+        "axis",
+        "band",
+        "strip"
+      ]
+    },
+    "portrait": {
+      "layout": "top",
+      "also": [
+        "bottom",
+        "corners",
+        "baseline",
+        "vertical",
+        "axis",
+        "side"
+      ]
+    },
+    "square": {
+      "layout": "top",
+      "also": [
+        "bottom",
+        "corners",
+        "baseline",
+        "vertical",
+        "axis",
+        "left",
+        "right"
+      ]
+    }
+  }
+}

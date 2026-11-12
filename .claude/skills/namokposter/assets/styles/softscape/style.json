@@ -1,0 +1,579 @@
+{
+  "id": "softscape",
+  "label": "Soft 3D Scenery",
+  "engine": "blender",
+  "kind": "picture",
+  "mood": "soft matte 3D scenery — simple rounded forms, pastel light and a calm graded backdrop, path-traced like a miniature film set; the scene fills the whole sheet and leaves open sky or wall for the copy. Good for travel and retreats, lifestyle and interiors, children and family events, calm campaigns.",
+  "tone": "light",
+  "type": "myeongjo",
+  "types": [
+    "editorial",
+    "maru",
+    "luxe",
+    "swiss"
+  ],
+  "defaultPalette": "dawn",
+  "palettes": {
+    "dawn": {
+      "bg": "#efdcd8",
+      "ink": "#2b2540",
+      "accent": "#b23c24",
+      "muted": "#373049",
+      "colors": [
+        "#fbe6cc",
+        "#5c5f85",
+        "#ffe2b0",
+        "#8f93b5"
+      ]
+    },
+    "mint": {
+      "bg": "#d3e6df",
+      "ink": "#17302e",
+      "accent": "#bf4627",
+      "muted": "#34504c",
+      "colors": [
+        "#f1ecd0",
+        "#2f5f5c",
+        "#ffe9b4",
+        "#7fa7a0"
+      ]
+    },
+    "dusk": {
+      "bg": "#232449",
+      "ink": "#f4ecf5",
+      "accent": "#ffb26b",
+      "muted": "#cfc4dc",
+      "colors": [
+        "#5d4a7c",
+        "#131432",
+        "#ff9461",
+        "#1b1c3d"
+      ]
+    },
+    "night": {
+      "bg": "#0a1730",
+      "ink": "#e8eef8",
+      "accent": "#f4f1da",
+      "muted": "#bcc8dc",
+      "colors": [
+        "#1b3558",
+        "#060e20",
+        "#5b84b4",
+        "#081326"
+      ]
+    },
+    "ember": {
+      "bg": "#3a1c38",
+      "ink": "#fbeadb",
+      "accent": "#ffc07a",
+      "muted": "#dcc3c0",
+      "colors": [
+        "#8a4458",
+        "#1d0e22",
+        "#ff9d5c",
+        "#2a1430"
+      ]
+    },
+    "golden": {
+      "bg": "#f3d7a6",
+      "ink": "#33180a",
+      "accent": "#9c3410",
+      "muted": "#4a2814",
+      "colors": [
+        "#f1c486",
+        "#9c5a3a",
+        "#fae3b4",
+        "#ffe9b2"
+      ]
+    },
+    "rose": {
+      "bg": "#f1c9cf",
+      "ink": "#3a1d38",
+      "accent": "#8a3a7a",
+      "muted": "#553556",
+      "colors": [
+        "#f3c6b2",
+        "#a37aa3",
+        "#fbdcc4",
+        "#ffe6bf"
+      ]
+    },
+    "moonlit": {
+      "bg": "#0f1a3c",
+      "ink": "#e9eefc",
+      "accent": "#ffe2a0",
+      "muted": "#c3cdea",
+      "colors": [
+        "#465a96",
+        "#111a3a",
+        "#22336a",
+        "#5f7cc0"
+      ]
+    },
+    "gypsum": {
+      "bg": "#c6dcee",
+      "ink": "#182848",
+      "accent": "#1f5c9e",
+      "muted": "#34456a",
+      "colors": [
+        "#f4f1ea",
+        "#9fb2d2",
+        "#f3e8d8",
+        "#ffeecb"
+      ]
+    },
+    "mars": {
+      "bg": "#35130f",
+      "ink": "#f7e4d3",
+      "accent": "#a9d6ff",
+      "muted": "#dcc0ac",
+      "colors": [
+        "#a2472a",
+        "#35130f",
+        "#6e2c1c",
+        "#9ec3e6"
+      ]
+    },
+    "plaster": {
+      "bg": "#e4d2bd",
+      "ink": "#2e211a",
+      "accent": "#b4492a",
+      "muted": "#55443a",
+      "colors": [
+        "#d9c4a8",
+        "#a8744a",
+        "#c9744e",
+        "#4f6b45"
+      ]
+    },
+    "sage": {
+      "bg": "#cdd6c4",
+      "ink": "#1f2b22",
+      "accent": "#b5532f",
+      "muted": "#3f4d42",
+      "colors": [
+        "#dccfb8",
+        "#9a7550",
+        "#e6dccb",
+        "#3f6248"
+      ]
+    },
+    "blush": {
+      "bg": "#e6c8c0",
+      "ink": "#35201f",
+      "accent": "#a8402f",
+      "muted": "#5c403d",
+      "colors": [
+        "#e3d3c0",
+        "#8f6247",
+        "#f0e4d6",
+        "#55704d"
+      ]
+    },
+    "sky": {
+      "bg": "#c6d5de",
+      "ink": "#182634",
+      "accent": "#b9532a",
+      "muted": "#3a4a59",
+      "colors": [
+        "#ddd2c0",
+        "#a17a55",
+        "#f1ebe0",
+        "#476a52"
+      ]
+    },
+    "evening": {
+      "bg": "#29242f",
+      "ink": "#f3eadc",
+      "accent": "#f0a659",
+      "muted": "#cdbfb2",
+      "colors": [
+        "#7d6654",
+        "#9a6a45",
+        "#c98a62",
+        "#5d7a55"
+      ]
+    },
+    "day": {
+      "bg": "#bfe0f6",
+      "ink": "#14264d",
+      "accent": "#2456c8",
+      "muted": "#2c3e66",
+      "colors": [
+        "#2f62d9",
+        "#ff8562",
+        "#c9d9ee",
+        "#ffc94d"
+      ]
+    },
+    "candy": {
+      "bg": "#f9cfe0",
+      "ink": "#3a1c4d",
+      "accent": "#7a3cc2",
+      "muted": "#553766",
+      "colors": [
+        "#8a4fd6",
+        "#ff7fb0",
+        "#e6c6ea",
+        "#5fc9c0"
+      ]
+    },
+    "pistachio": {
+      "bg": "#c9ebe0",
+      "ink": "#11332e",
+      "accent": "#0f7a6c",
+      "muted": "#2a4a44",
+      "colors": [
+        "#17907f",
+        "#ff9a5c",
+        "#c5ddd9",
+        "#ffd166"
+      ]
+    },
+    "sunset": {
+      "bg": "#2b2152",
+      "ink": "#fdeee2",
+      "accent": "#ffc58a",
+      "muted": "#dccbd6",
+      "colors": [
+        "#ff8f6b",
+        "#ffd08a",
+        "#33285c",
+        "#c86a9a"
+      ]
+    },
+    "midnight": {
+      "bg": "#0d1437",
+      "ink": "#eaf0ff",
+      "accent": "#f3ecc8",
+      "muted": "#c2cbea",
+      "colors": [
+        "#93a7e6",
+        "#f3ecc8",
+        "#141d47",
+        "#7fd1e8"
+      ]
+    }
+  },
+  "params": {
+    "motif": {
+      "default": "lake",
+      "note": "lake | dunes | room | clouds — what the picture shows; each motif has its own palettes and parameters"
+    }
+  },
+  "motifs": {
+    "lake": {
+      "note": "a mirror-calm lake, misty hills, an island with a lone tree",
+      "topics": [
+        "wellness",
+        "literature",
+        "travel",
+        "nature",
+        "music"
+      ],
+      "palette": "dawn",
+      "palettes": [
+        "dawn",
+        "mint",
+        "dusk",
+        "night",
+        "ember"
+      ],
+      "tone": "light",
+      "type": "myeongjo",
+      "types": [
+        "editorial",
+        "maru",
+        "calli",
+        "luxe",
+        "swiss"
+      ],
+      "layouts": {
+        "landscape": {
+          "layout": "top"
+        },
+        "portrait": {
+          "layout": "top"
+        },
+        "square": {
+          "layout": "top"
+        }
+      },
+      "params": {
+        "hero": {
+          "default": "island",
+          "note": "island (island with a lone tree) · tree (one tree standing in the shallows) · boat (rowing boat with a lantern)"
+        },
+        "hills": {
+          "default": 1.0,
+          "note": "hill height multiplier (0 = open water to the horizon)"
+        },
+        "mist": {
+          "default": 1.0,
+          "note": "how much the hills dissolve into the horizon: 0 = clear air, 1.6 = heavy mist"
+        },
+        "ripples": {
+          "default": 1.0,
+          "note": "ripple strength on the water: 0 = perfect mirror, 3 = breezy"
+        },
+        "sun": {
+          "default": 1.0,
+          "note": "size of the sun / moon — always a plain pale disc in a soft round glow (0 hides the disc, the glow stays)"
+        },
+        "stars": {
+          "default": 1.0,
+          "note": "star brightness on dark palettes (0 = none)"
+        }
+      },
+      "vars": {
+        "--scrim": 0.3,
+        "--scrim-center": 0.82
+      }
+    },
+    "dunes": {
+      "note": "sand dunes in very low sun under a wide sky",
+      "topics": [
+        "travel",
+        "fashion",
+        "film",
+        "outdoor",
+        "luxury"
+      ],
+      "palette": "golden",
+      "palettes": [
+        "golden",
+        "rose",
+        "moonlit",
+        "gypsum",
+        "mars"
+      ],
+      "tone": "light",
+      "type": "editorial",
+      "types": [
+        "luxe",
+        "maru",
+        "slim",
+        "myeongjo",
+        "swiss",
+        "bold"
+      ],
+      "layouts": {
+        "landscape": {
+          "layout": "top"
+        },
+        "portrait": {
+          "layout": "top"
+        },
+        "square": {
+          "layout": "top"
+        }
+      },
+      "params": {
+        "sun": {
+          "default": 1.0,
+          "note": "size of the sun / moon — always a plain pale disc in a soft round glow (0 hides the disc)"
+        },
+        "height": {
+          "default": 1.0,
+          "note": "dune height multiplier"
+        },
+        "ripples": {
+          "default": 1.0,
+          "note": "strength of the fine sand ripples (0 = smooth sand)"
+        },
+        "haze": {
+          "default": 1.0,
+          "note": "distance haze: 0.5 = clear air, 2 = dusty"
+        },
+        "elevation": {
+          "default": 10.0,
+          "note": "height of the light in degrees: lower = longer shadows"
+        },
+        "shadow": {
+          "default": 0.8,
+          "note": "sun angle in degrees: 0.3 = razor-sharp shadow edges, 4 = soft"
+        },
+        "stars": {
+          "default": 1.0,
+          "note": "star brightness on dark palettes (0 = none)"
+        }
+      },
+      "vars": {
+        "--scrim": 0.3
+      }
+    },
+    "room": {
+      "note": "a sunlit wall with window light, a potted tree, a stool and a framed print",
+      "topics": [
+        "design",
+        "architecture",
+        "food",
+        "community",
+        "beauty",
+        "spring"
+      ],
+      "palette": "plaster",
+      "palettes": [
+        "plaster",
+        "sage",
+        "blush",
+        "sky",
+        "evening"
+      ],
+      "tone": "light",
+      "type": "editorial",
+      "types": [
+        "myeongjo",
+        "story",
+        "maru",
+        "melody",
+        "hand",
+        "swiss",
+        "bold"
+      ],
+      "layouts": {
+        "landscape": {
+          "layout": "left"
+        },
+        "portrait": {
+          "layout": "top"
+        },
+        "square": {
+          "layout": "top"
+        }
+      },
+      "params": {
+        "sun": {
+          "default": 1.0,
+          "note": "strength of the window light (0 = overcast, no patch)"
+        },
+        "bars": {
+          "default": 3,
+          "note": "window panes per column: 1 = plain opening, 3 or 4 = glazing bars"
+        },
+        "arch": {
+          "default": true,
+          "note": "arched doorway on the art side (false = unbroken wall)"
+        },
+        "lamp": {
+          "default": "auto",
+          "note": "pendant lamp: auto (lit on dark palettes) · on · off"
+        },
+        "glow": {
+          "default": 1.0,
+          "note": "pendant lamp brightness"
+        }
+      },
+      "matchBackground": true
+    },
+    "clouds": {
+      "note": "a pastel cloudscape with a hot-air balloon",
+      "topics": [
+        "kids",
+        "family",
+        "travel",
+        "celebration",
+        "education",
+        "spring"
+      ],
+      "palette": "day",
+      "palettes": [
+        "day",
+        "candy",
+        "pistachio",
+        "sunset",
+        "midnight"
+      ],
+      "tone": "light",
+      "type": "bold",
+      "types": [
+        "hand",
+        "dongle",
+        "round",
+        "gamja",
+        "pop",
+        "editorial"
+      ],
+      "layouts": {
+        "landscape": {
+          "layout": "left"
+        },
+        "portrait": {
+          "layout": "top"
+        },
+        "square": {
+          "layout": "top"
+        }
+      },
+      "params": {
+        "hero": {
+          "default": "auto",
+          "note": "auto (balloon on light palettes, moon on dark) · balloon · sun · moon — sun and moon are a plain pale disc in a soft glow"
+        },
+        "clouds": {
+          "default": 1.0,
+          "note": "how many clouds: 0.5 = a few, 1.6 = crowded"
+        },
+        "soft": {
+          "default": 0.45,
+          "note": "subsurface softness of the clouds: 0 = matte clay (fastest), 1 = very soft"
+        },
+        "stars": {
+          "default": 1.0,
+          "note": "star brightness on dark palettes (0 = none)"
+        }
+      },
+      "vars": {
+        "--scrim": 0.3
+      }
+    }
+  },
+  "topics": [
+    "travel",
+    "wellness",
+    "kids",
+    "family",
+    "nature"
+  ],
+  "layouts": {
+    "landscape": {
+      "layout": "top",
+      "also": [
+        "left",
+        "right",
+        "bottom",
+        "corners",
+        "headline",
+        "baseline",
+        "vertical",
+        "axis",
+        "band",
+        "strip"
+      ]
+    },
+    "portrait": {
+      "layout": "top",
+      "also": [
+        "bottom",
+        "corners",
+        "baseline",
+        "vertical",
+        "axis",
+        "side"
+      ]
+    },
+    "square": {
+      "layout": "top",
+      "also": [
+        "bottom",
+        "corners",
+        "baseline",
+        "vertical",
+        "axis",
+        "left",
+        "right"
+      ]
+    }
+  },
+  "fallback": "layers"
+}

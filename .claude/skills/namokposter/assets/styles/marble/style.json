@@ -1,0 +1,144 @@
+{
+  "id": "marble",
+  "label": "Fluid Marbling",
+  "engine": "three",
+  "mood": "a full picture — a flow painting like paper marbling or a paint pour: rings of pigment bent into veins and pools, edged with fine gilded hairlines, dense at the focus and opening into large calm pools of the paper colour behind the copy. Elegant, tactile. Good for exhibitions, craft and design fairs, beauty and fragrance, weddings, book covers, premium invitations.",
+  "kind": "picture",
+  "tone": "light",
+  "type": "luxe",
+  "types": [
+    "editorial",
+    "calli",
+    "myeongjo",
+    "elegant"
+  ],
+  "defaultPalette": "ivory",
+  "palettes": {
+    "ivory": {
+      "bg": "#f3ede2",
+      "ink": "#1d2433",
+      "accent": "#b98a3c",
+      "colors": [
+        "#22395a",
+        "#9db1c2",
+        "#d9b99a",
+        "#7c2f3b"
+      ]
+    },
+    "blush": {
+      "bg": "#f6e9e3",
+      "ink": "#3a1f2b",
+      "accent": "#bd8748",
+      "colors": [
+        "#b3536a",
+        "#e9b6b1",
+        "#5a3955",
+        "#f1d2bb"
+      ]
+    },
+    "celadon": {
+      "bg": "#e9efe6",
+      "ink": "#16302b",
+      "accent": "#ad8a3b",
+      "colors": [
+        "#1f5e59",
+        "#8fbfae",
+        "#d8c9a2",
+        "#2b3f4f"
+      ]
+    },
+    "onyx": {
+      "bg": "#101215",
+      "ink": "#f1ede4",
+      "accent": "#d6a851",
+      "colors": [
+        "#2b3039",
+        "#5c6571",
+        "#e8e1d2",
+        "#86673a"
+      ]
+    },
+    "indigo": {
+      "bg": "#0c1230",
+      "ink": "#eef0ff",
+      "accent": "#e1b667",
+      "colors": [
+        "#1c2f7a",
+        "#3f6fc2",
+        "#b9c8ee",
+        "#5a2a6e"
+      ]
+    }
+  },
+  "params": {
+    "flow": {
+      "default": 1.0,
+      "note": "how far the flow bends the rings: 0.4 = near-concentric agate … 1.5 = long wandering veins"
+    },
+    "veins": {
+      "default": 1.0,
+      "note": "ring density at the heart: 0.6 = broad pools … 1.8 = many fine veins"
+    },
+    "strokes": {
+      "default": 1,
+      "note": "stylus strokes drawn through the rings, each dragging them into a feather: 0–2 (parallel, never crossing)"
+    },
+    "drops": {
+      "default": 2,
+      "note": "later, smaller drops that land in the outer rings and push them aside, 0–5"
+    },
+    "gilt": {
+      "default": 1.0,
+      "note": "amount of metallic hairline: 0 = none … 1 = most pool edges gilded"
+    },
+    "scale": {
+      "default": 1.0,
+      "note": "size of the main drop"
+    }
+  },
+  "vars": {
+    "--scrim-center": 0.3,
+    "--grain": 0.14
+  },
+  "layouts": {
+    "landscape": {
+      "layout": "left",
+      "also": [
+        "right",
+        "top",
+        "bottom",
+        "corners",
+        "headline",
+        "baseline",
+        "vertical",
+        "axis",
+        "band",
+        "strip"
+      ]
+    },
+    "portrait": {
+      "layout": "top",
+      "also": [
+        "bottom",
+        "corners",
+        "baseline",
+        "vertical",
+        "axis",
+        "side"
+      ]
+    },
+    "square": {
+      "layout": "top",
+      "also": [
+        "bottom",
+        "corners",
+        "baseline",
+        "vertical",
+        "axis",
+        "left",
+        "right"
+      ]
+    }
+  },
+  "ground": true
+}

@@ -1,0 +1,9 @@
+schema_version: "1.1"
+name: korean-a3-portrait-and-landscape
+expected_outcome: |
+  Three poster concepts in clearly different styles, each delivered in two sizes: A3 portrait for
+  print (3508x4961 px at 300 dpi) and 16:9 landscape for screens (2560x1440, the 2K screen size, since 4K was not asked for). The Korean copy is
+  used verbatim; the date and place appear as labelled rows. In both sizes the Korean headline is
+  set large with sensible line breaks (never inside a word), small text is readable, nothing
+  overflows or collides with the artwork. The reply
+  says where the files are and how the three concepts differ.

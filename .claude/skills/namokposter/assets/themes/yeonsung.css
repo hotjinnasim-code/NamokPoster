@@ -1,0 +1,24 @@
+/* yeonsung — the hand-painted shop sign: 연성체, after signs lettered with a flat brush for 식당, 방앗간 and market stalls (1960–80s 붓글씨 간판): upright, thick and sure of itself. Faces: Yeon Sung for Hangul, with its own figures and Latin; Lobster — the sign painter's script — sets a Latin headline. */
+.poster[data-type="yeonsung"] {
+  --font-title: "Lobster", "Yeon Sung", "Pretendard", sans-serif;                            /* a Latin headline */
+  --font-title-ko: "Yeon Sung", "Kirang Haerang", "Dongle", "Pretendard", sans-serif;        /* a Hangul headline keeps the brush's own figures; a syllable it lacks goes to the nearest brush that has it */
+  --font-eyebrow: "Yeon Sung", "Pretendard", sans-serif; --font-eyebrow-ko: "Yeon Sung", "Kirang Haerang", "Pretendard", sans-serif;
+  --title-size: 12.8; --title-weight: 400; --title-leading: 1.04; --title-tracking: 0em;
+  --title-leading-ko: 1.12; --title-tracking-ko: 0em; --title-wordspace-ko: 0.1em;   /* narrow syllables: the gap between words has to be told from the gap between letters */
+  --eyebrow-size: 2.4; --eyebrow-weight: 400; --eyebrow-tracking: 0.06em; --eyebrow-tracking-ko: 0.04em; --eyebrow-case: none;
+  --subtitle-size: 2.9; --subtitle-weight: 700; --subtitle-leading: 1.3; --subtitle-weight-ko: 700;
+  --body-size: 1.84; --body-weight: 500; --body-weight-ko: 500;
+  --meta-weight: 500; --meta-label-weight: 400;
+  --footer-size: 1.55; --footer-weight: 700; --footer-rule: 1; --grain: 0.24;
+  --gap-eyebrow: 2.6; --gap-subtitle: 2.4;
+}
+.poster[data-type="yeonsung"] .title em { color: var(--c-accent); }
+/* the label sits on a painted stroke, as the trade is written under a shop's name */
+.poster[data-type="yeonsung"] .eyebrow { color: var(--c-ink); border-bottom: calc(var(--u) * 0.36) solid var(--c-accent); padding: 0 0.1em 0.22em; line-height: 1.2; }
+.poster[data-type="yeonsung"] .main[data-mode="vertical"] .eyebrow { border-bottom: 0; border-left: calc(var(--u) * 0.36) solid var(--c-accent); padding: 0.1em 0 0.1em 0.22em; }
+.poster[data-type="yeonsung"] .subtitle, .poster[data-type="yeonsung"] .footer { color: var(--c-ink); }
+.poster[data-type="yeonsung"] .body { color: color-mix(in srgb, var(--c-ink) 84%, transparent); }
+.poster[data-type="yeonsung"] .meta dt { font-family: var(--font-eyebrow-ko); font-size: 1.08em; line-height: 1.16; color: color-mix(in srgb, var(--c-accent) 60%, var(--c-ink)); }
+.poster[data-type="yeonsung"] .cta { border-radius: 0.2em; background: var(--c-ink); color: var(--c-paper); font-family: var(--font-eyebrow-ko); font-weight: 400; font-size: calc(var(--su) * var(--cta-size) * 1.22 * var(--k-small)); }
+.poster[data-type="yeonsung"] .badge { border-radius: 0.2em; font-size: calc(var(--fu) * 2 * var(--k-small)); font-weight: 400; letter-spacing: 0.04em; }
+.poster[data-type="yeonsung"] .bottom.ruled { border-top: calc(var(--u) * 0.36) solid var(--c-ink); padding-top: calc(var(--u) * 1.6); }

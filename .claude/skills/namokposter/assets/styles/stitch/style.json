@@ -1,0 +1,185 @@
+{
+  "id": "stitch",
+  "label": "Hand Embroidery",
+  "engine": "three",
+  "kind": "picture",
+  "mood": "hand embroidery on woven cloth — satin and long-and-short stitch with a silk sheen, fishbone leaves, stem-stitch stalks, French knots and running-stitch outlines, every thread casting its small shadow on the weave; or the same design counted out in cross stitch. Warm, patient, domestic. Good for craft fairs and workshops, markets, family and community events, seasonal greetings, food and tea, folk and heritage programmes.",
+  "tone": "light",
+  "type": "editorial",
+  "types": ["hand", "story", "goun", "melody", "starlight", "gamja", "calli", "myeongjo", "friendly", "retro"],
+  "defaultPalette": "linen",
+  "palettes": {
+    "linen": {
+      "bg": "#e9e1d0",
+      "ink": "#2b2a33",
+      "accent": "#a63c2a",
+      "colors": [
+        "#c8523c",
+        "#e2a83a",
+        "#2f5f8a",
+        "#3f6f58",
+        "#8fae7c"
+      ]
+    },
+    "rosehip": {
+      "bg": "#f3e6e0",
+      "ink": "#3a2030",
+      "accent": "#a2355a",
+      "colors": [
+        "#c44a6c",
+        "#e896a6",
+        "#e0b04a",
+        "#55774f",
+        "#a6be8c"
+      ]
+    },
+    "folk": {
+      "bg": "#efe8da",
+      "ink": "#261a1a",
+      "accent": "#a8241c",
+      "colors": [
+        "#b3261e",
+        "#1d2c4a",
+        "#d99a2b",
+        "#2f5f4a",
+        "#7fa07a"
+      ]
+    },
+    "indigo": {
+      "bg": "#1c2540",
+      "ink": "#f3eee0",
+      "accent": "#f0b64a",
+      "colors": [
+        "#f3eee0",
+        "#e56b5a",
+        "#f0b64a",
+        "#5fa684",
+        "#a9d3b4"
+      ]
+    },
+    "charcoal": {
+      "bg": "#27292c",
+      "ink": "#f1ede4",
+      "accent": "#f08a5d",
+      "colors": [
+        "#f08a5d",
+        "#f6d06f",
+        "#e8e4da",
+        "#4f9f84",
+        "#9fd0b0"
+      ]
+    }
+  },
+  "params": {
+    "motif": {
+      "default": "flowers",
+      "note": "flowers = a spray of blooms, buds, fishbone leaves and berries · sampler = a little landscape (moon, peaks, hills, house, pines) in a running-stitch frame · borders = bands of counted cross stitch (zigzag, hearts, diamonds, tulips)"
+    },
+    "stitch": {
+      "default": "satin",
+      "note": "satin | cross — cross counts the same design out in cross stitches on an even-weave grid (borders are always cross stitch)"
+    },
+    "thread": {
+      "default": 1.0,
+      "note": "thickness of the floss, 0.6–1.8"
+    },
+    "count": {
+      "default": 1.0,
+      "note": "cross-stitch count: 0.6 = big crosses … 1.6 = fine"
+    },
+    "sheen": {
+      "default": 1.0,
+      "note": "silk sheen on the thread, 0–2"
+    },
+    "weave": {
+      "default": 1.0,
+      "note": "how strongly the cloth's weave shows, 0–2"
+    }
+  },
+  "motifs": {
+    "flowers": {
+      "note": "a spray of three blooms with buds, leaves and berries",
+      "topics": [
+        "spring",
+        "craft",
+        "wellness",
+        "beauty",
+        "family",
+        "celebration"
+      ]
+    },
+    "sampler": {
+      "note": "moon, two peaks, hills, a house and pines in a stitched frame",
+      "topics": [
+        "travel",
+        "outdoor",
+        "winter",
+        "community",
+        "kids",
+        "nature"
+      ]
+    },
+    "borders": {
+      "note": "geometric bands of counted cross stitch",
+      "topics": [
+        "tradition",
+        "market",
+        "design",
+        "food",
+        "retro",
+        "education"
+      ]
+    }
+  },
+  "topics": [
+    "craft",
+    "family",
+    "community",
+    "market",
+    "tradition",
+    "spring",
+    "autumn",
+    "food",
+    "kids"
+  ],
+  "layouts": {
+    "landscape": {
+      "layout": "left",
+      "also": [
+        "right",
+        "top",
+        "bottom",
+        "corners",
+        "headline",
+        "baseline",
+        "vertical",
+        "axis",
+        "band",
+        "strip"
+      ]
+    },
+    "portrait": {
+      "layout": "top",
+      "also": [
+        "bottom",
+        "corners",
+        "baseline",
+        "vertical",
+        "axis",
+        "side"
+      ]
+    },
+    "square": {
+      "layout": "top",
+      "also": [
+        "bottom",
+        "corners",
+        "baseline",
+        "vertical",
+        "axis",
+        "left",
+        "right"
+      ]
+    }
+  }
+}

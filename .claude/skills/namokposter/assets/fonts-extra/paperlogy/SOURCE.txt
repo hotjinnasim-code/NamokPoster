@@ -1,0 +1,23 @@
+페이퍼로지 (Paperlogy) — 이주임 × 김도균 (PT&)
+Publisher's page: https://freesentation.blog/paperlogyfont
+Licence kind: OFL-1.1
+Fetched: 2026-11-12
+
+Paperlogy-4Regular.woff2 (weight 400)
+  published as: Paperlogy-4Regular.ttf in https://github.com/Freesentation/paperlogy/raw/refs/heads/main/Paperlogy-1.001.zip
+  sha256 of the published file: 05e1021e3de620dddc97875342e2be1a94c5f8e9b9f792bd16c4c1d0085343b3 (1312616 bytes)
+  converted to WOFF2 with Google's woff2 encoder (npm wawoff2 2.0.1); nothing else changed (14198 glyphs before and after)
+  sha256 in this folder: 03656744aad77680a968f950329cd7b644de8136bc4a35071e40fb6dccc22a77 (432864 bytes)
+
+Paperlogy-7Bold.woff2 (weight 700)
+  published as: Paperlogy-7Bold.ttf in https://github.com/Freesentation/paperlogy/raw/refs/heads/main/Paperlogy-1.001.zip
+  sha256 of the published file: 7effb892621474e9c2a9112f482eb87dd25b65a470e5ae5971be5a68d89ad89b (1307936 bytes)
+  converted to WOFF2 with Google's woff2 encoder (npm wawoff2 2.0.1); nothing else changed (14198 glyphs before and after)
+  sha256 in this folder: 793960f27f78f8722ee594c5ee892ac6229501dbee5bb8e608f0d82b7d203814 (436612 bytes)
+
+Paperlogy-9Black.woff2 (weight 900)
+  published as: Paperlogy-9Black.ttf in https://github.com/Freesentation/paperlogy/raw/refs/heads/main/Paperlogy-1.001.zip
+  sha256 of the published file: 9a2149095d72ae268abb3acf6a3a6ab4adcae8c0ebb98999bd2d607f22149bc0 (1305192 bytes)
+  converted to WOFF2 with Google's woff2 encoder (npm wawoff2 2.0.1); nothing else changed (14198 glyphs before and after)
+  sha256 in this folder: 2cac0a505d407fa7317406272a5152ce3a642d6287ebc8ff27a214efbe64cc78 (443572 bytes)
+

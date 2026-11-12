@@ -1,0 +1,25 @@
+/* story — a neat ballpoint hand: the handwritten preface of an essay collection, a bookshop's shelf note, a letter (수필 같은 또박또박한 손글씨): thin, upright, unhurried. Faces: Nanum Barun Pen (나눔바른펜) for Hangul, with its own figures and Latin; Patrick Hand — the same even pen — sets a Latin headline. */
+.poster[data-type="story"] {
+  --font-title: "Patrick Hand", "NanumBarunPen", "Pretendard", sans-serif;      /* a Latin headline */
+  --font-title-ko: "NanumBarunPen", "Pretendard", sans-serif;                   /* a Hangul headline keeps the pen's own figures */
+  --font-subtitle: "Patrick Hand", "NanumBarunPen", "Pretendard", sans-serif; --font-subtitle-ko: "NanumBarunPen", "Pretendard", sans-serif;
+  --font-eyebrow: "Patrick Hand", "NanumBarunPen", "Pretendard", sans-serif; --font-eyebrow-ko: "NanumBarunPen", "Pretendard", sans-serif;
+  --title-size: 12.2; --title-weight: 400; --title-leading: 1.02; --title-tracking: 0em;
+  --title-leading-ko: 1.18; --title-tracking-ko: -0.03em; --title-wordspace-ko: 0.02em;
+  --eyebrow-size: 2.1; --eyebrow-weight: 400; --eyebrow-tracking: 0.03em; --eyebrow-tracking-ko: 0.01em; --eyebrow-case: none;
+  --subtitle-size: 3.1; --subtitle-weight: 400; --subtitle-leading: 1.26; --subtitle-tracking: 0em; --subtitle-leading-ko: 1.32; --subtitle-tracking-ko: -0.01em;
+  --body-size: 1.84; --body-weight: 400; --body-weight-ko: 450;
+  --meta-weight: 450; --meta-label-weight: 400;
+  --footer-size: 1.52; --footer-weight: 500; --footer-rule: 1; --grain: 0.2;
+  --gap-eyebrow: 1.6; --gap-subtitle: 2.2;
+}
+/* emphasis is a line drawn under the word with the same pen */
+.poster[data-type="story"] .title em, .poster[data-type="story"] .subtitle em { color: var(--c-accent); text-decoration: underline; text-decoration-thickness: 0.035em; text-underline-offset: 0.16em; text-decoration-skip-ink: none; }
+.poster[data-type="story"] .eyebrow { color: color-mix(in srgb, var(--c-accent) 70%, var(--c-ink)); }
+.poster[data-type="story"] .subtitle { color: var(--c-ink); }
+.poster[data-type="story"] .body { color: color-mix(in srgb, var(--c-ink) 82%, transparent); }
+.poster[data-type="story"] .footer { color: color-mix(in srgb, var(--c-ink) 90%, transparent); }
+.poster[data-type="story"] .meta dt { font-family: var(--font-eyebrow-ko); font-size: 1.04em; line-height: 1.2; color: color-mix(in srgb, var(--c-accent) 62%, var(--c-ink)); }   /* the label in the pen, the value plain */
+.poster[data-type="story"] .cta { background: transparent; color: var(--c-ink); border: 0; border-bottom: calc(var(--u) * 0.16) solid var(--c-ink); border-radius: 0; padding: 0 0.1em 0.2em; font-family: var(--font-eyebrow-ko); font-weight: 400; font-size: calc(var(--su) * var(--cta-size) * 1.3 * var(--k-small)); }
+.poster[data-type="story"] .badge { background: transparent; color: var(--c-accent); border: calc(var(--u) * 0.16) solid var(--c-accent); border-radius: 0.3em; font-weight: 400; font-size: calc(var(--fu) * 2 * var(--k-small)); letter-spacing: 0.02em; }
+.poster[data-type="story"] .bottom.ruled { border-top: calc(var(--u) * 0.14) solid color-mix(in srgb, var(--c-ink) 60%, transparent); }

@@ -1,0 +1,11 @@
+배달의민족 을지로체 (BM Euljiro) — Woowa Brothers Corp.
+Publisher's page: https://www.woowahan.com/fonts
+Licence kind: OFL-1.1
+Fetched: 2026-11-12
+
+BMEULJIRO.woff2 (weight 400)
+  published as: https://woowahan-cdn.woowahan.com/static/fonts/BMEULJIRO.otf
+  sha256 of the published file: 4b2f704ea8bb3a38bc4ea24ed5ad2695def434a3db5060df376a73762fee2d04 (997704 bytes)
+  converted to WOFF2 with Google's woff2 encoder (npm wawoff2 2.0.1); nothing else changed (18155 glyphs before and after)
+  sha256 in this folder: 23f2f278a945c757dc570eaecf3c6c9b74a517eb63cd963e85a61675291215a2 (554344 bytes)
+

@@ -1,0 +1,27 @@
+/* maru — a warm text serif set as a headline: the title of an essay collection, an interview, a neighbourhood bookshop's programme (마루 부리; 화면에서 읽히도록 새로 그린 부리 글꼴): bold but soft, with the roundness of a brush still in its strokes. One family: MaruBuri Bold over MaruBuri Regular, its own Latin and figures. */
+.poster[data-type="maru"] {
+  --font-title: "MaruBuri", "Hahmlet", "Noto Serif KR", serif;   /* one family: its own Latin and figures */
+  --font-subtitle: var(--font-title);
+  --font-body: "MaruBuri", "Hahmlet", "Noto Serif KR", serif;      /* the whole sheet in one serif, as in a book */
+  --font-label-ko: "MaruBuri", "Hahmlet", "Noto Serif KR", serif;
+  --title-size: 11; --title-weight: 700; --title-leading: 1.08; --title-tracking: -0.02em;
+  --title-leading-ko: 1.24; --title-tracking-ko: -0.035em; --title-wordspace-ko: 0.06em;
+  --eyebrow-size: 1.5; --eyebrow-weight: 700; --eyebrow-tracking: 0.2em; --eyebrow-tracking-ko: 0.12em;
+  --subtitle-size: 2.9; --subtitle-weight: 400; --subtitle-leading: 1.38; --subtitle-tracking: -0.01em; --subtitle-leading-ko: 1.5; --subtitle-tracking-ko: -0.03em;
+  --body-size: 1.84; --body-weight: 400; --body-leading: 1.62; --body-leading-ko: 1.8; --body-tracking-ko: -0.02em; --body-measure: 28;
+  --meta-size: 2.66; --meta-weight: 400; --meta-label-weight: 700;
+  --footer-size: 1.48; --footer-weight: 400; --footer-tracking: 0.04em; --footer-tracking-ko: 0.01em; --footer-rule: 1;
+  --gap-eyebrow: 2.8; --gap-subtitle: 2.8; --grain: 0.22;
+}
+.poster[data-type="maru"] .title em { color: var(--c-accent); }
+/* the label ends in a short rule, as a running head does */
+.poster[data-type="maru"] .eyebrow { display: flex; align-items: center; gap: 1em; color: color-mix(in srgb, var(--c-accent) 70%, var(--c-ink)); }
+.poster[data-type="maru"] .eyebrow::after { content: ""; width: 2.6em; height: calc(var(--u) * 0.16); background: currentColor; flex: none; margin-left: calc(var(--eyebrow-tracking) * -0.6); }
+.poster[data-type="maru"] [data-halign="center"] > .eyebrow { justify-content: center; }
+.poster[data-type="maru"] [data-halign="center"] > .eyebrow::after, .poster[data-type="maru"] .main[data-mode="vertical"] .eyebrow::after { display: none; }
+.poster[data-type="maru"] .subtitle { color: color-mix(in srgb, var(--c-ink) 90%, transparent); }
+.poster[data-type="maru"] .body { color: color-mix(in srgb, var(--c-ink) 84%, transparent); }
+.poster[data-type="maru"] .footer { color: color-mix(in srgb, var(--c-ink) 88%, transparent); }
+.poster[data-type="maru"] .cta { background: var(--c-ink); color: var(--c-paper); border-radius: 0.2em; font-weight: 700; }
+.poster[data-type="maru"] .badge { background: transparent; color: var(--c-accent); border: calc(var(--u) * 0.16) solid var(--c-accent); border-radius: 0.2em; font-weight: 700; letter-spacing: 0.1em; }
+.poster[data-type="maru"] .bottom.ruled { border-top: calc(var(--u) * 0.16) solid color-mix(in srgb, var(--c-ink) 70%, transparent); }

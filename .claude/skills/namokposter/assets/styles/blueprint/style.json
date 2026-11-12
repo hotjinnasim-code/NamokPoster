@@ -1,0 +1,182 @@
+{
+  "id": "blueprint",
+  "label": "Blueprint Drawing",
+  "engine": "three",
+  "kind": "object",
+  "mood": "technical drawing — an isometric line drawing of a solid model on blueprint paper: heavy outlines, light inner edges, dashed hidden lines, dimension arrows with figures, dash-dot centre lines, numbered balloons, a ruled grid and a border with a title block; exact, engineered, quietly nostalgic. Good for architecture and engineering events, maker fairs, product launches, hackathons, science and design education.",
+  "tone": "dark",
+  "type": "techno",
+  "types": ["swiss", "square", "bold", "impact", "brutal", "dream"],
+  "defaultPalette": "cyanotype",
+  "palettes": {
+    "cyanotype": {
+      "bg": "#1d4a9e",
+      "ink": "#f4f7ff",
+      "accent": "#ffd85e",
+      "colors": [
+        "#f4f8ff",
+        "#9fc3ff",
+        "#ffd85e"
+      ]
+    },
+    "navy": {
+      "bg": "#0c1f3f",
+      "ink": "#eaf6ff",
+      "accent": "#5fe0ff",
+      "colors": [
+        "#dff3ff",
+        "#57b8e8",
+        "#5fe0ff"
+      ]
+    },
+    "vellum": {
+      "bg": "#efe8d6",
+      "ink": "#1b1b1e",
+      "accent": "#c8321e",
+      "colors": [
+        "#1d1d21",
+        "#8a8474",
+        "#c8321e"
+      ]
+    },
+    "graphite": {
+      "bg": "#1b1c1f",
+      "ink": "#f1efe9",
+      "accent": "#ffb347",
+      "colors": [
+        "#efede6",
+        "#8d8f96",
+        "#ffb347"
+      ]
+    },
+    "cuttingmat": {
+      "bg": "#1f5b46",
+      "ink": "#f1fbf2",
+      "accent": "#ffe36b",
+      "colors": [
+        "#eefaf0",
+        "#9fd9b8",
+        "#ffe36b"
+      ]
+    }
+  },
+  "params": {
+    "motif": {
+      "default": "tower",
+      "note": "what is drawn: tower | gear | rocket | chair"
+    },
+    "hidden": {
+      "default": 1,
+      "note": "dashed hidden lines: 0 = none … 1 = normal … 2 = long dashes"
+    },
+    "dims": {
+      "default": true,
+      "note": "dimension lines, centre lines and balloons (false = the bare drawing)"
+    },
+    "grid": {
+      "default": 1,
+      "note": "strength of the ruled grid on the sheet, 0–2"
+    },
+    "hatch": {
+      "default": 1,
+      "note": "hatching on the shaded flank of the model, 0–2"
+    },
+    "line": {
+      "default": 1,
+      "note": "pen weight multiplier, 0.5–2"
+    },
+    "titleBlock": {
+      "default": true,
+      "note": "title block in a free corner of the border"
+    }
+  },
+  "motifs": {
+    "tower": {
+      "note": "a high-rise with podium, setbacks and mast, floors ruled on the curtain wall",
+      "topics": [
+        "architecture",
+        "city",
+        "business",
+        "finance"
+      ]
+    },
+    "gear": {
+      "note": "two meshing spur gears on a base plate, with centre lines",
+      "topics": [
+        "tech",
+        "science",
+        "craft",
+        "education"
+      ]
+    },
+    "rocket": {
+      "note": "a rocket in exploded view: nose cone lifted off the body along its axis",
+      "topics": [
+        "science",
+        "tech",
+        "kids",
+        "education"
+      ]
+    },
+    "chair": {
+      "note": "a wooden side chair with seat and back dimensions — a product sheet",
+      "topics": [
+        "design",
+        "craft",
+        "market",
+        "art"
+      ]
+    }
+  },
+  "topics": [
+    "architecture",
+    "tech",
+    "science",
+    "design",
+    "education",
+    "craft"
+  ],
+  "vars": {
+    "--scrim-center": 0.5
+  },
+  "layouts": {
+    "landscape": {
+      "layout": "left",
+      "also": [
+        "right",
+        "top",
+        "bottom",
+        "corners",
+        "headline",
+        "baseline",
+        "vertical",
+        "axis",
+        "band",
+        "strip"
+      ]
+    },
+    "portrait": {
+      "layout": "top",
+      "also": [
+        "bottom",
+        "corners",
+        "baseline",
+        "vertical",
+        "axis",
+        "side"
+      ]
+    },
+    "square": {
+      "layout": "top",
+      "also": [
+        "bottom",
+        "corners",
+        "baseline",
+        "vertical",
+        "axis",
+        "left",
+        "right"
+      ]
+    }
+  }
+}

@@ -1,0 +1,180 @@
+{
+  "id": "voxel",
+  "label": "Voxel Blocks",
+  "engine": "blender",
+  "kind": "object",
+  "mood": "voxel art — a scene built cube by cube, each block with a tiny chamfer and a short quantised palette, lit like a miniature. Playful and precise: games and hackathons, kids and family, city and community events, maker fairs.",
+  "tone": "light",
+  "type": "techno",
+  "types": ["bold", "cute", "comic", "round", "pop", "retro", "impact", "dunggeunmo", "maple"],
+  "matchBackground": true,
+  "fallback": "pixel",
+  "defaultPalette": "garden",
+  "palettes": {
+    "garden": {
+      "bg": "#f1ead8",
+      "ink": "#2a2a33",
+      "accent": "#ef5350",
+      "colors": [
+        "#7cc46a",
+        "#a9744f",
+        "#8f98a8",
+        "#4fb3e8",
+        "#f6e7b8"
+      ]
+    },
+    "candy": {
+      "bg": "#ffe4ec",
+      "ink": "#47223d",
+      "accent": "#ff4d8d",
+      "colors": [
+        "#8fd9a8",
+        "#c98b6b",
+        "#b9a7d9",
+        "#7cc6f2",
+        "#fff3c4"
+      ]
+    },
+    "desert": {
+      "bg": "#f5dfc0",
+      "ink": "#3c2415",
+      "accent": "#d9482b",
+      "colors": [
+        "#c9b25a",
+        "#b0693f",
+        "#8c7868",
+        "#3fa7a0",
+        "#fbeccb"
+      ]
+    },
+    "snow": {
+      "bg": "#e3eef8",
+      "ink": "#1d2c45",
+      "accent": "#e8503a",
+      "colors": [
+        "#f4f8fb",
+        "#8a735f",
+        "#6d7f99",
+        "#5aa9e6",
+        "#ffffff"
+      ]
+    },
+    "arcade": {
+      "bg": "#1b1b2f",
+      "ink": "#f3f0e6",
+      "accent": "#ff4f7b",
+      "colors": [
+        "#3ddc97",
+        "#7b5cd6",
+        "#4a4f7d",
+        "#38b6ff",
+        "#ffe66d"
+      ]
+    }
+  },
+  "params": {
+    "motif": {
+      "default": "island",
+      "note": "island (terrain block with trees, a house, water and clouds) | city (a city block with towers, a park and cars) | heart (one big voxel heart with loose cubes)"
+    },
+    "bevel": {
+      "default": 1.0,
+      "note": "chamfer on every cube: 0 = razor cubes, 1 = standard, 2 = soft bricks"
+    },
+    "shadow": {
+      "default": 4.0,
+      "note": "sun size in degrees: 1 = crisp shadows, 10 = soft"
+    }
+  },
+  "layouts": {
+    "landscape": {
+      "layout": "left",
+      "also": [
+        "right",
+        "top",
+        "bottom",
+        "corners",
+        "headline",
+        "baseline",
+        "vertical",
+        "axis",
+        "band",
+        "strip"
+      ]
+    },
+    "portrait": {
+      "layout": "top",
+      "also": [
+        "bottom",
+        "corners",
+        "baseline",
+        "vertical",
+        "axis",
+        "side"
+      ]
+    },
+    "square": {
+      "layout": "top",
+      "also": [
+        "bottom",
+        "corners",
+        "baseline",
+        "vertical",
+        "axis",
+        "left",
+        "right"
+      ]
+    }
+  },
+  "motifs": {
+    "island": {
+      "note": "a terrain block: grass, earth and stone strata, trees, a house, water, clouds",
+      "topics": [
+        "nature",
+        "gaming",
+        "kids",
+        "outdoor",
+        "education"
+      ]
+    },
+    "city": {
+      "note": "a city block: towers with windows, a shop, a pocket park, cars",
+      "topics": [
+        "city",
+        "business",
+        "architecture",
+        "community",
+        "tech"
+      ]
+    },
+    "heart": {
+      "note": "one big voxel heart with a pixel shine and drifting cubes",
+      "topics": [
+        "celebration",
+        "community",
+        "wellness",
+        "family",
+        "gaming"
+      ]
+    }
+  },
+  "topics": [
+    "gaming",
+    "kids",
+    "tech",
+    "city",
+    "community",
+    "retro"
+  ],
+  "cutout": true,
+  "grounds": [
+    "pattern/checker",
+    "pattern/stripes",
+    "pattern/dots",
+    "pattern/terrazzo",
+    "pattern/arches",
+    "pattern/grid",
+    "haze",
+    "halftone"
+  ]
+}

@@ -1,0 +1,24 @@
+/* dongle — round felt-pen letters with soft ends, the hand of a kindergarten notice board and a sticker sheet (동글동글한 어린이 글씨): small plump syllables set close, like beads on a string. Faces: Dongle Bold for Hangul, with its own figures and Latin; Baloo 2 ExtraBold — as round and as heavy — sets a Latin headline. */
+.poster[data-type="dongle"] {
+  --font-title: "Baloo 2", "Dongle", "Pretendard", sans-serif;       /* a Latin headline */
+  --font-title-ko: "Dongle", "Pretendard", sans-serif;               /* a Hangul headline keeps the pen's own figures */
+  --font-eyebrow: "Dongle", "Pretendard", sans-serif; --font-eyebrow-ko: "Dongle", "Pretendard", sans-serif;
+  --font-subtitle: "Dongle", "Pretendard", sans-serif; --font-subtitle-ko: "Dongle", "Pretendard", sans-serif;
+  --title-size: 12.6; --title-weight: 800; --title-leading: 1.0; --title-tracking: -0.02em;
+  --title-leading-ko: 1.18; --title-tracking-ko: 0em; --title-wordspace-ko: 0.14em; --title-weight-ko: 700;
+  --eyebrow-size: 2.7; --eyebrow-weight: 700; --eyebrow-tracking: 0.03em; --eyebrow-tracking-ko: 0.02em; --eyebrow-case: none;
+  --subtitle-size: 4.3; --subtitle-weight: 700; --subtitle-leading: 1.12; --subtitle-tracking: 0em; --subtitle-leading-ko: 1.12; --subtitle-tracking-ko: 0em; --subtitle-weight-ko: 700;
+  --body-size: 1.84; --body-weight: 500; --body-weight-ko: 500;
+  --meta-weight: 500; --meta-label-weight: 700;
+  --footer-size: 1.55; --footer-weight: 600; --footer-rule: 1; --grain: 0.12;
+  --gap-eyebrow: 2.4; --gap-subtitle: 1.6;
+}
+.poster[data-type="dongle"] .title em { color: var(--c-accent); }
+/* the label is a speech bubble: an outline, nothing filled in */
+.poster[data-type="dongle"] .eyebrow { color: var(--c-ink); border: calc(var(--u) * 0.26) solid var(--c-ink); border-radius: 99em; padding: 0.12em 0.9em 0.06em; line-height: 1.1; }
+.poster[data-type="dongle"] .subtitle, .poster[data-type="dongle"] .footer { color: var(--c-ink); }
+.poster[data-type="dongle"] .body { color: color-mix(in srgb, var(--c-ink) 84%, transparent); }
+.poster[data-type="dongle"] .meta dt { font-family: var(--font-eyebrow-ko); font-size: 1.24em; line-height: 1; color: color-mix(in srgb, var(--c-accent) 62%, var(--c-ink)); }   /* the label in the pen (it is drawn narrow, so a size up), the value plain */
+.poster[data-type="dongle"] .cta { background: var(--c-accent); color: var(--c-on-accent, var(--c-paper)); font-family: var(--font-eyebrow-ko); font-weight: 700; font-size: calc(var(--su) * var(--cta-size) * 1.36 * var(--k-small)); padding: 0.4em 1.3em 0.3em; }
+.poster[data-type="dongle"] .badge { transform: rotate(-5deg); font-size: calc(var(--fu) * 2.3 * var(--k-small)); letter-spacing: 0.02em; padding: 0.3em 0.9em 0.2em; }
+.poster[data-type="dongle"] .bottom.ruled { border-top: calc(var(--u) * 0.5) dotted var(--c-ink); padding-top: calc(var(--u) * 1.5); }

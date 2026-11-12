@@ -1,0 +1,20 @@
+/* friendly — heavy rounded-feeling sans, pill label, gradient emphasis. */
+.poster[data-type="friendly"] {
+  --title-size: 11.4; --title-weight: 850; --title-leading: 1.02; --title-tracking: -0.04em;
+  --title-leading-ko: 1.15; --title-tracking-ko: -0.035em; --title-wordspace-ko: 0.05em;
+  --eyebrow-size: 1.53; --eyebrow-weight: 700; --eyebrow-tracking: 0.12em; --eyebrow-tracking-ko: 0.03em;
+  --subtitle-size: 2.92; --subtitle-weight: 600; --subtitle-tracking: -0.02em;
+  --body-size: 1.84; --body-weight-ko: 450; --footer-rule: 1; --grain: 0.16;
+}
+.poster[data-type="friendly"] .eyebrow {
+  display: inline-flex; align-items: center; gap: 0.75em; padding: 0.62em 1.2em 0.62em 1em; border-radius: 99em;
+  background: color-mix(in srgb, var(--c-ink) 7%, transparent); color: var(--c-ink);
+  border: var(--hair) solid color-mix(in srgb, var(--c-ink) 14%, transparent);
+}
+.poster[data-type="friendly"] .eyebrow::before { content: ""; width: 0.66em; height: 0.66em; border-radius: 50%; background: var(--c-accent); flex: none; }
+.poster[data-type="friendly"] .title em {
+  background: linear-gradient(100deg, var(--em-1), var(--em-2) 55%, var(--em-4)); -webkit-background-clip: text; background-clip: text; color: transparent; text-shadow: none;
+  padding: 0.08em 0.04em; margin: -0.08em -0.04em; /* keep glyph overshoot inside the clipped box */
+}
+.poster[data-type="friendly"] .subtitle { color: color-mix(in srgb, var(--c-ink) 86%, transparent); }
+.poster[data-type="friendly"] .badge { background: var(--c-ink); color: var(--c-paper); }

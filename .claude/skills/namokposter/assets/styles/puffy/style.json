@@ -1,0 +1,141 @@
+{
+  "id": "puffy",
+  "label": "Inflated Toys",
+  "engine": "blender",
+  "mood": "kitsch, pop, sweet — puffy inflated shapes (star, heart, flower, cloud, ring, pill, a smiling ball) in glossy vinyl candy colours, floating and overlapping in front of a pastel wall with soft shadows. Good for kids' and family events, festivals, pop-ups, sales and promotions, parties, anything that should feel fun.",
+  "tone": "light",
+  "type": "pop",
+  "types": ["friendly", "maple", "dongle", "comic", "anemone", "gamja", "round", "retro", "bold", "hand"],
+  "matchBackground": true,
+  "fallback": "aurora",
+  "defaultPalette": "bubblegum",
+  "palettes": {
+    "bubblegum": {
+      "bg": "#ffd9e6",
+      "ink": "#3a1030",
+      "accent": "#e6257a",
+      "colors": [
+        "#ff4f9a",
+        "#ffd23f",
+        "#4d7cff",
+        "#35d6a4",
+        "#ffffff"
+      ]
+    },
+    "lemonade": {
+      "bg": "#fff0b3",
+      "ink": "#2c2205",
+      "accent": "#e8431f",
+      "colors": [
+        "#ff5a36",
+        "#3aa0ff",
+        "#ff9ecb",
+        "#2fc28b",
+        "#ffffff"
+      ]
+    },
+    "mint": {
+      "bg": "#cdeee0",
+      "ink": "#0d2b22",
+      "accent": "#e2483d",
+      "colors": [
+        "#ff6b6b",
+        "#ffd43b",
+        "#7c5cff",
+        "#ffffff"
+      ]
+    },
+    "sky": {
+      "bg": "#cfe6ff",
+      "ink": "#0c1a3d",
+      "accent": "#1c50e0",
+      "colors": [
+        "#2f6bff",
+        "#ff5d8f",
+        "#ffc93c",
+        "#ffffff"
+      ]
+    },
+    "grape": {
+      "bg": "#1d1830",
+      "ink": "#fff6ff",
+      "accent": "#ff8ad1",
+      "colors": [
+        "#ff5fa8",
+        "#ffd23f",
+        "#6c7bff",
+        "#3ee0c0",
+        "#ffffff"
+      ]
+    }
+  },
+  "params": {
+    "count": {
+      "default": 6,
+      "note": "5–7 toys (the seed picks which shapes, the hero and the colours)"
+    },
+    "finish": {
+      "default": "vinyl",
+      "note": "vinyl (glossy candy) | matte (soft-touch rubber) | foil (metallic balloon)"
+    },
+    "face": {
+      "default": true,
+      "note": "allow the smiling ball; false keeps the set abstract"
+    },
+    "shadow": {
+      "default": 16,
+      "note": "softness of the shadows on the wall in degrees: 4 = crisp … 28 = very soft"
+    }
+  },
+  "layouts": {
+    "landscape": {
+      "layout": "left",
+      "also": [
+        "right",
+        "top",
+        "bottom",
+        "corners",
+        "headline",
+        "baseline",
+        "vertical",
+        "axis",
+        "band",
+        "strip"
+      ]
+    },
+    "portrait": {
+      "layout": "top",
+      "also": [
+        "bottom",
+        "corners",
+        "baseline",
+        "vertical",
+        "axis",
+        "side"
+      ]
+    },
+    "square": {
+      "layout": "top",
+      "also": [
+        "bottom",
+        "corners",
+        "baseline",
+        "vertical",
+        "axis",
+        "left",
+        "right"
+      ]
+    }
+  },
+  "cutout": true,
+  "grounds": [
+    "pattern/checker",
+    "pattern/stripes",
+    "pattern/dots",
+    "pattern/terrazzo",
+    "pattern/arches",
+    "pattern/grid",
+    "haze",
+    "halftone"
+  ]
+}

@@ -1,0 +1,177 @@
+{
+  "id": "wood",
+  "label": "Wooden Toys",
+  "engine": "blender",
+  "kind": "object",
+  "mood": "wooden toy blocks and turned wood — visible growth rings and long grain, softly rounded edges, some pieces painted in the palette colours with the grain showing through, the rest left natural under a satin oil finish, in warm side daylight. Honest, warm, hand-made; good for kids and family programmes, education, craft and design fairs, architecture and city events, eco and slow-living brands.",
+  "tone": "light",
+  "type": "friendly",
+  "types": ["hand", "euljiro", "gamja", "dongle", "round", "story", "yeonsung", "bold", "editorial", "retro", "jua", "classic"],
+  "matchBackground": true,
+  "fallback": "bauhaus",
+  "defaultPalette": "nursery",
+  "palettes": {
+    "nursery": {
+      "bg": "#f2ebdf",
+      "ink": "#2b2118",
+      "accent": "#c8402a",
+      "colors": [
+        "#d9503a",
+        "#f0b032",
+        "#2f7d6d",
+        "#3c6db3"
+      ]
+    },
+    "pastel": {
+      "bg": "#f5e9e3",
+      "ink": "#3a2a2a",
+      "accent": "#c4604f",
+      "colors": [
+        "#e89e93",
+        "#f1d088",
+        "#94c2ab",
+        "#a3b5dc"
+      ]
+    },
+    "sage": {
+      "bg": "#e3e7da",
+      "ink": "#22301f",
+      "accent": "#a8552f",
+      "colors": [
+        "#6f9160",
+        "#d9a356",
+        "#c4623f",
+        "#557e98"
+      ]
+    },
+    "nordic": {
+      "bg": "#e8ebee",
+      "ink": "#1d2733",
+      "accent": "#b8352a",
+      "colors": [
+        "#c23a2c",
+        "#6f9cc4",
+        "#1f3b60",
+        "#e6bf62"
+      ]
+    },
+    "workshop": {
+      "bg": "#211b17",
+      "ink": "#f3e9dc",
+      "accent": "#e5a54b",
+      "colors": [
+        "#d9553a",
+        "#e5a54b",
+        "#4f8f7f",
+        "#6f8fc4"
+      ]
+    }
+  },
+  "params": {
+    "motif": {
+      "default": "city",
+      "note": "city (a toy-block town on a board) | turned (a balanced still life of lathe-turned pieces) | hills (a fret-saw landscape of cut-out hills, turned trees, a house and a wooden sun)"
+    },
+    "wood": {
+      "default": "beech",
+      "note": "species of the natural pieces: beech | maple | oak | walnut"
+    },
+    "shadow": {
+      "default": 9,
+      "note": "shadow softness in degrees: 4 = crisp … 20 = very soft"
+    }
+  },
+  "motifs": {
+    "city": {
+      "note": "a toy-block town on a board: block towers, a gabled house, an arch bridge, lollipop trees",
+      "topics": [
+        "city",
+        "architecture",
+        "kids",
+        "community",
+        "business"
+      ]
+    },
+    "turned": {
+      "note": "a balanced still life of turned wood: ring stacker, spinning top, spindle, balls, a plank on a fulcrum",
+      "topics": [
+        "design",
+        "craft",
+        "education",
+        "family",
+        "finance"
+      ]
+    },
+    "hills": {
+      "note": "a fret-saw landscape: layered cut-out hills, turned trees, a little house and a wooden sun",
+      "topics": [
+        "nature",
+        "outdoor",
+        "travel",
+        "kids",
+        "spring"
+      ]
+    }
+  },
+  "topics": [
+    "kids",
+    "family",
+    "education",
+    "craft",
+    "design",
+    "architecture",
+    "community",
+    "nature"
+  ],
+  "layouts": {
+    "landscape": {
+      "layout": "left",
+      "also": [
+        "right",
+        "top",
+        "bottom",
+        "corners",
+        "headline",
+        "baseline",
+        "vertical",
+        "axis",
+        "band",
+        "strip"
+      ]
+    },
+    "portrait": {
+      "layout": "top",
+      "also": [
+        "bottom",
+        "corners",
+        "baseline",
+        "vertical",
+        "axis",
+        "side"
+      ]
+    },
+    "square": {
+      "layout": "top",
+      "also": [
+        "bottom",
+        "corners",
+        "baseline",
+        "vertical",
+        "axis",
+        "left",
+        "right"
+      ]
+    }
+  },
+  "cutout": true,
+  "grounds": [
+    "pattern/checker",
+    "pattern/stripes",
+    "pattern/dots",
+    "pattern/terrazzo",
+    "pattern/arches",
+    "pattern/grid",
+    "haze",
+    "halftone"
+  ]
+}

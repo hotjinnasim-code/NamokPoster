@@ -1,0 +1,28 @@
+/* geometric — Bauhaus and the New Typography: Herbert Bayer, Tschichold's film posters, Paul Renner (Futura, Kabel). Jost for Latin, Pretendard SemiBold for Hangul; spaced capitals built from circle and line, a dot and a bar for ornament. */
+.poster[data-type="geometric"] {
+  --font-title: "Jost", "Pretendard", sans-serif; --font-subtitle: "Jost", "Pretendard", sans-serif;
+  --font-title-ko: "Jost KR", "Pretendard", sans-serif; --font-subtitle-ko: "Jost KR", "Pretendard", sans-serif;
+  --font-body: "Jost", "Pretendard", sans-serif;
+  --title-size: 10.8; --title-weight: 600; --title-leading: 1.04; --title-tracking: 0.03em; --title-case: uppercase;
+  --title-leading-ko: 1.2; --title-tracking-ko: -0.02em; --title-wordspace-ko: 0.08em; --title-weight-ko: 700;
+  --eyebrow-size: 1.5; --eyebrow-weight: 500; --eyebrow-tracking: 0.32em; --eyebrow-tracking-ko: 0.16em;
+  --subtitle-size: 3.0; --subtitle-weight: 400; --subtitle-leading: 1.3; --subtitle-tracking: 0.005em; --subtitle-weight-ko: 500; --subtitle-leading-ko: 1.42; --subtitle-tracking-ko: -0.02em;
+  --body-size: 1.94; --body-weight: 400; --body-leading: 1.5; --body-leading-ko: 1.7; --body-weight-ko: 400; --body-measure: 30;
+  --meta-size: 2.7; --meta-weight: 400; --meta-label-weight: 600;
+  --footer-size: 1.56; --footer-weight: 500; --footer-tracking: 0.1em; --footer-tracking-ko: 0.02em; --footer-rule: 1;
+  --gap-eyebrow: 2.8; --gap-subtitle: 2.8; --grain: 0.1;
+}
+.poster[data-type="geometric"] .subtitle[data-script="ko"] { --subtitle-size: 2.8; }
+.poster[data-type="geometric"] .body[data-script="ko"] { --body-size: 1.8; }
+.poster[data-type="geometric"] .eyebrow { display: flex; align-items: center; gap: 1em; color: var(--c-ink); }
+.poster[data-type="geometric"] .eyebrow::before { content: ""; width: 0.86em; height: 0.86em; border-radius: 50%; background: var(--c-accent); flex: none; }
+.poster[data-type="geometric"] [data-halign="center"] > .eyebrow { justify-content: center; }
+.poster[data-type="geometric"] .title em { color: var(--c-accent); }
+.poster[data-type="geometric"] .subtitle { color: color-mix(in srgb, var(--c-ink) 90%, transparent); }
+.poster[data-type="geometric"] .body { color: color-mix(in srgb, var(--c-ink) 80%, transparent); }
+.poster[data-type="geometric"] .footer { color: var(--c-ink); }
+.poster[data-type="geometric"] .cta { font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; font-size: calc(var(--su) * var(--cta-size) * 0.86 * var(--k-small)); }
+.poster[data-type="geometric"] .badge { letter-spacing: 0.2em; font-weight: 600; }
+.poster[data-type="geometric"] .badge[data-script="ko"] { letter-spacing: 0.1em; }
+.poster[data-type="geometric"]:lang(ko) .cta { letter-spacing: 0.06em; }
+.poster[data-type="geometric"] .bottom.ruled { border-top: calc(var(--u) * 0.3) solid var(--c-ink); padding-top: calc(var(--u) * 1.6); }

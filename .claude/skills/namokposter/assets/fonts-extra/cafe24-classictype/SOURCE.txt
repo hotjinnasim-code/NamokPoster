@@ -1,0 +1,10 @@
+카페24 클래식타입 (Cafe24 ClassicType) — Cafe24 Corp.
+Publisher's page: https://fonts.cafe24.com/
+Licence kind: OFL-1.1
+Fetched: 2026-11-12
+
+Cafe24Classictype-v1.1.woff2 (weight 400)
+  published as: Cafe24Classictype-v1.1/webfont/Cafe24Classictype-v1.1.woff2 in https://img.cafe24.com/csdstatic/freefonts/download/kr/Cafe24Classictype-v1.1.zip
+  sha256 of the published file: fdba8d5b01315e23095ecd4de134dba8f59f7e8c5fdd67d55f6f67cf51d36695 (375276 bytes)
+  in this folder as published, unchanged
+

@@ -1,0 +1,23 @@
+G마켓 산스 (Gmarket Sans) — Gmarket (eBay Korea Co., Ltd.)
+Publisher's page: https://corp.gmarket.com/fonts/
+Licence kind: OFL-1.1
+Fetched: 2026-11-12
+
+GmarketSansTTFLight.woff2 (weight 300)
+  published as: GmarketSansTTFLight.ttf in https://corp.gmarket.com/fonts/GmarketSansTTF.zip
+  sha256 of the published file: 7e8e8c70349ed94acf3ea4c6962a56417fdfa0a8803bc6cf9dc36324d5656849 (2413604 bytes)
+  converted to WOFF2 with Google's woff2 encoder (npm wawoff2 2.0.1); nothing else changed (12262 glyphs before and after)
+  sha256 in this folder: 5a9abdc698edac5a5e53c8359797b39907a3cdbe78b3fd1c70e07f549237ebb4 (453356 bytes)
+
+GmarketSansTTFMedium.woff2 (weight 500)
+  published as: GmarketSansTTFMedium.ttf in https://corp.gmarket.com/fonts/GmarketSansTTF.zip
+  sha256 of the published file: c6b9a2c10bfdb55975948ce191f9cf638955b5cfdc99149969add5b579262fc1 (2417020 bytes)
+  converted to WOFF2 with Google's woff2 encoder (npm wawoff2 2.0.1); nothing else changed (12262 glyphs before and after)
+  sha256 in this folder: a9995108c299c073cbcd604b1a822dc40c264f58b914f78e3814257e0440b3eb (512096 bytes)
+
+GmarketSansTTFBold.woff2 (weight 700)
+  published as: GmarketSansTTFBold.ttf in https://corp.gmarket.com/fonts/GmarketSansTTF.zip
+  sha256 of the published file: ff7c354dd1a324e4cecc1223c4f71e74fa81be7027e0c7f6324c475909cacefc (2511976 bytes)
+  converted to WOFF2 with Google's woff2 encoder (npm wawoff2 2.0.1); nothing else changed (12262 glyphs before and after)
+  sha256 in this folder: 7f1e72d5240a8427e5df473b26a0f489d1897f76f961a9ef2849e3c682405b55 (591288 bytes)
+

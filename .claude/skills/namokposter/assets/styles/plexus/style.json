@@ -1,0 +1,187 @@
+{
+  "id": "plexus",
+  "label": "Plexus Network",
+  "engine": "three",
+  "kind": "object",
+  "mood": "network drawing — evenly spaced nodes joined to their neighbours by hairlines so that a form (sphere, torus, flowing sheet, constellation) reads as a fine irregular mesh, crisp in front and faint behind, with a few glowing signal paths; precise, airy and intelligent. Good for AI and data topics, science, finance, summits, research reports, education.",
+  "tone": "dark",
+  "type": "swiss",
+  "types": [
+    "techno",
+    "square",
+    "elegant",
+    "bold",
+    "luxe"
+  ],
+  "defaultPalette": "midnight",
+  "palettes": {
+    "midnight": {
+      "bg": "#060913",
+      "ink": "#eef2ff",
+      "accent": "#8fb6ff",
+      "colors": [
+        "#2b4bff",
+        "#7fd0ff",
+        "#ffbf69"
+      ]
+    },
+    "aurora": {
+      "bg": "#04110f",
+      "ink": "#eafff8",
+      "accent": "#6df2c8",
+      "colors": [
+        "#0f8f86",
+        "#7af5cf",
+        "#c9a2ff"
+      ]
+    },
+    "ember": {
+      "bg": "#0e0707",
+      "ink": "#fff3ea",
+      "accent": "#ff9d5c",
+      "colors": [
+        "#b3261e",
+        "#ff8a4c",
+        "#ffe08a"
+      ]
+    },
+    "paper": {
+      "bg": "#f3f1ea",
+      "ink": "#14161c",
+      "accent": "#d2401a",
+      "colors": [
+        "#8d97b5",
+        "#1c2a63",
+        "#e2491c"
+      ]
+    },
+    "mist": {
+      "bg": "#e9eef0",
+      "ink": "#0f1f24",
+      "accent": "#0b7285",
+      "colors": [
+        "#8fb0b8",
+        "#0f4c5c",
+        "#e0563a"
+      ]
+    }
+  },
+  "params": {
+    "motif": {
+      "default": "sphere",
+      "note": "the form the network takes: sphere | torus | wave | constellation"
+    },
+    "density": {
+      "default": 1,
+      "note": "number of nodes: 0.5 = sparse and graphic … 2 = fine mesh"
+    },
+    "scatter": {
+      "default": 1,
+      "note": "how far one flank of the form loosens into free nodes (0 = closed form … 2)"
+    },
+    "signals": {
+      "default": 5,
+      "note": "glowing signal paths ending in a ringed hub, 0–12"
+    },
+    "facets": {
+      "default": 1,
+      "note": "faintly filled triangles of the mesh (0 = lines only … 3)"
+    },
+    "line": {
+      "default": 1,
+      "note": "hairline weight multiplier"
+    },
+    "glow": {
+      "default": 1,
+      "note": "bloom and backdrop glow (0 = flat)"
+    }
+  },
+  "motifs": {
+    "sphere": {
+      "note": "a globe of nodes and links, one flank dissolving into free points",
+      "topics": [
+        "tech",
+        "science",
+        "business",
+        "finance"
+      ]
+    },
+    "torus": {
+      "note": "a ring-shaped mesh seen from above — cycles, loops, platforms",
+      "topics": [
+        "science",
+        "design",
+        "finance",
+        "tech"
+      ]
+    },
+    "wave": {
+      "note": "a flowing sheet of nodes, like a sound or data surface",
+      "topics": [
+        "music",
+        "science",
+        "wellness",
+        "tech"
+      ]
+    },
+    "constellation": {
+      "note": "a sparse cloud of large and small stars joined by a single branching line",
+      "topics": [
+        "education",
+        "community",
+        "celebration",
+        "winter"
+      ]
+    }
+  },
+  "topics": [
+    "tech",
+    "science",
+    "business",
+    "finance",
+    "education"
+  ],
+  "vars": {
+    "--scrim-center": 0.4
+  },
+  "layouts": {
+    "landscape": {
+      "layout": "left",
+      "also": [
+        "right",
+        "top",
+        "bottom",
+        "corners",
+        "headline",
+        "baseline",
+        "vertical",
+        "axis",
+        "band",
+        "strip"
+      ]
+    },
+    "portrait": {
+      "layout": "top",
+      "also": [
+        "bottom",
+        "corners",
+        "baseline",
+        "vertical",
+        "axis",
+        "side"
+      ]
+    },
+    "square": {
+      "layout": "top",
+      "also": [
+        "bottom",
+        "corners",
+        "baseline",
+        "vertical",
+        "axis",
+        "left",
+        "right"
+      ]
+    }
+  }
+}

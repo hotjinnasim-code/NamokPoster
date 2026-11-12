@@ -1,0 +1,191 @@
+{
+  "id": "sumuk",
+  "label": "Ink Wash (수묵)",
+  "engine": "three",
+  "kind": "picture",
+  "mood": "still and spacious — East Asian ink wash on hanji: wet washes thinning into mist, dry-brush strokes with the paper showing through, a vermilion seal and most of the sheet left bare for the copy. Good for traditional and cultural programmes, tea and craft, literature, classical and gugak concerts, retreats, seasonal greetings.",
+  "tone": "light",
+  "type": "myeongjo",
+  "types": [
+    "editorial",
+    "calli",
+    "maru",
+    "luxe",
+    "elegant",
+    "hand"
+  ],
+  "defaultPalette": "hanji",
+  "palettes": {
+    "hanji": {
+      "bg": "#f3eee2",
+      "ink": "#1d1c1a",
+      "accent": "#b23a2a",
+      "colors": [
+        "#191817",
+        "#47525c",
+        "#c9655c",
+        "#b93a28"
+      ]
+    },
+    "mist": {
+      "bg": "#eef0ed",
+      "ink": "#1a2027",
+      "accent": "#a63b2c",
+      "colors": [
+        "#141a21",
+        "#3c5466",
+        "#7da2b8",
+        "#b03a2a"
+      ]
+    },
+    "aged": {
+      "bg": "#e8dbbd",
+      "ink": "#2a2017",
+      "accent": "#9a3323",
+      "colors": [
+        "#241a12",
+        "#5e4a34",
+        "#b8683f",
+        "#a53423"
+      ]
+    },
+    "gamji": {
+      "bg": "#131a31",
+      "ink": "#eedcaa",
+      "accent": "#e3bd62",
+      "colors": [
+        "#e6c57e",
+        "#b3925a",
+        "#f1e7cc",
+        "#cf4a33"
+      ]
+    },
+    "meok": {
+      "bg": "#1a1a1c",
+      "ink": "#ebe7dd",
+      "accent": "#d9634b",
+      "colors": [
+        "#e8e4da",
+        "#a39f96",
+        "#d0b77c",
+        "#cf4a33"
+      ]
+    }
+  },
+  "params": {
+    "motif": {
+      "default": "mountains",
+      "note": "mountains | bamboo | plum | strokes"
+    },
+    "ink": {
+      "default": 1,
+      "note": "0.4 = pale, watery … 1.6 = heavy black"
+    },
+    "dry": {
+      "default": 1,
+      "note": "0 = wet, solid strokes … 2 = very dry brush, lots of flying white"
+    },
+    "mist": {
+      "default": 1,
+      "note": "0 = clear air … 2 = heavy banks of mist"
+    },
+    "bleed": {
+      "default": 1,
+      "note": "how far the ink creeps into the paper (0–2)"
+    },
+    "grain": {
+      "default": 1,
+      "note": "paper fibre and tooth (0–2)"
+    },
+    "seal": {
+      "default": true,
+      "note": "false = no red seal"
+    }
+  },
+  "layouts": {
+    "landscape": {
+      "layout": "left",
+      "also": [
+        "right",
+        "top",
+        "bottom",
+        "corners",
+        "headline",
+        "baseline",
+        "vertical",
+        "axis",
+        "band",
+        "strip"
+      ]
+    },
+    "portrait": {
+      "layout": "top",
+      "also": [
+        "bottom",
+        "corners",
+        "baseline",
+        "vertical",
+        "axis",
+        "side"
+      ]
+    },
+    "square": {
+      "layout": "top",
+      "also": [
+        "bottom",
+        "corners",
+        "baseline",
+        "vertical",
+        "axis",
+        "left",
+        "right"
+      ]
+    }
+  },
+  "motifs": {
+    "mountains": {
+      "note": "mountain ranges in mist, pines and a small boat",
+      "topics": [
+        "nature",
+        "travel",
+        "wellness",
+        "tradition"
+      ]
+    },
+    "bamboo": {
+      "note": "bamboo stalks and leaves",
+      "topics": [
+        "tradition",
+        "wellness",
+        "education",
+        "summer"
+      ]
+    },
+    "plum": {
+      "note": "a blossoming plum branch",
+      "topics": [
+        "spring",
+        "celebration",
+        "literature",
+        "culture"
+      ]
+    },
+    "strokes": {
+      "note": "abstract dry-brush sweeps and splashes",
+      "topics": [
+        "art",
+        "design",
+        "music",
+        "business"
+      ]
+    }
+  },
+  "topics": [
+    "tradition",
+    "culture",
+    "literature",
+    "art",
+    "wellness",
+    "nature"
+  ]
+}

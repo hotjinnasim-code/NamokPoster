@@ -1,0 +1,27 @@
+/* grotesk — Swiss International Style: Müller-Brockmann's concert posters, Hofmann, Vignelli (Akzidenz-Grotesk, Helvetica). Inter Tight for Latin, Pretendard — the same neo-grotesk skeleton — for Hangul; one family, two weights, flush left under a rule. */
+.poster[data-type="grotesk"] {
+  --font-title: "Inter Tight", "Pretendard", sans-serif; --font-subtitle: "Inter Tight", "Pretendard", sans-serif;
+  --font-title-ko: "Inter Tight KR", "Pretendard", sans-serif; --font-subtitle-ko: "Pretendard", sans-serif;
+  --font-eyebrow: "Inter Tight", "Pretendard", sans-serif; --font-footer: "Inter Tight", "Pretendard", sans-serif;
+  --title-size: 11.2; --title-weight: 700; --title-leading: 0.98; --title-tracking: -0.025em;
+  --title-leading-ko: 1.15; --title-tracking-ko: -0.035em; --title-wordspace-ko: 0.05em; --title-weight-ko: 700;
+  --eyebrow-size: 1.6; --eyebrow-weight: 700; --eyebrow-tracking: 0em; --eyebrow-tracking-ko: 0em; --eyebrow-case: none;
+  --subtitle-size: 2.9; --subtitle-weight: 500; --subtitle-leading: 1.24; --subtitle-tracking: -0.01em; --subtitle-weight-ko: 500; --subtitle-leading-ko: 1.4; --subtitle-tracking-ko: -0.025em;
+  --body-size: 1.8; --body-weight: 400; --body-leading: 1.5; --body-leading-ko: 1.68; --body-weight-ko: 400; --body-measure: 30;
+  --meta-size: 2.56; --meta-weight: 400; --meta-label-weight: 700;
+  --footer-size: 1.5; --footer-weight: 600; --footer-tracking: 0em; --footer-rule: 1;
+  --gap-eyebrow: 2.4; --gap-subtitle: 2.4; --grain: 0.08;
+}
+/* the label hangs from a rule the width of the column, as on a Swiss grid */
+.poster[data-type="grotesk"] .eyebrow { align-self: stretch; color: var(--c-ink); border-top: calc(var(--u) * 0.34) solid var(--c-ink); padding-top: 0.7em; }
+.poster[data-type="grotesk"] [data-halign="center"] > .eyebrow { align-self: center; padding-left: 0; }
+.poster[data-type="grotesk"] [data-halign="right"] > .eyebrow { text-align: right; }
+.poster[data-type="grotesk"] .title em { color: var(--c-accent); }
+.poster[data-type="grotesk"] .subtitle, .poster[data-type="grotesk"] .footer { color: var(--c-ink); }
+.poster[data-type="grotesk"] .body { color: color-mix(in srgb, var(--c-ink) 82%, transparent); }
+.poster[data-type="grotesk"] .meta:not(.cells):not(.lines) { min-width: min(100%, 19em); column-gap: 0; row-gap: 0; align-items: stretch; border-top: var(--hair) solid var(--c-ink); }
+.poster[data-type="grotesk"] .meta:not(.cells):not(.lines) > dt, .poster[data-type="grotesk"] .meta:not(.cells):not(.lines) > dd { padding: 0.36em 0 0.34em; border-bottom: var(--hair) solid var(--c-ink); }
+.poster[data-type="grotesk"] .meta:not(.cells):not(.lines) > dt { padding-right: 1.6em; }
+.poster[data-type="grotesk"] .cta { border-radius: 0; font-weight: 700; }
+.poster[data-type="grotesk"] .badge { border-radius: 0; letter-spacing: 0.02em; }
+.poster[data-type="grotesk"] .bottom.ruled { border-top: calc(var(--u) * 0.34) solid var(--c-ink); padding-top: calc(var(--u) * 1.5); }

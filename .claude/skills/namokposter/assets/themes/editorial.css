@@ -1,0 +1,24 @@
+/* editorial — high-contrast serif headline (명조 for Hangul), small sans details, generous air. */
+.poster[data-type="editorial"] {
+  --font-title: "Fraunces", "Hahmlet", "Noto Serif KR", serif;
+  --font-title-ko: "Fraunces KR", "Hahmlet", "Noto Serif KR", serif; --font-subtitle-ko: "Fraunces KR", "Hahmlet", "Noto Serif KR", serif;
+  --font-subtitle: "Fraunces", "Hahmlet", "Noto Serif KR", serif;
+  --title-size: 11; --title-weight: 380; --title-leading: 1.04; --title-tracking: -0.035em;
+  --title-leading-ko: 1.2; --title-tracking-ko: -0.035em; --title-wordspace-ko: 0.1em; --title-weight-ko: 600;
+  --eyebrow-size: 1.32; --eyebrow-weight: 600; --eyebrow-tracking: 0.3em; --eyebrow-tracking-ko: 0.16em;
+  --subtitle-size: 2.86; --subtitle-weight: 400; --subtitle-leading: 1.36; --subtitle-tracking: -0.01em; --subtitle-weight-ko: 500; --subtitle-tracking-ko: -0.03em;
+  --body-size: 1.76; --body-weight: 400; --body-leading: 1.7; --body-measure: 29;
+  --footer-size: 1.39; --footer-weight: 500; --footer-tracking: 0.1em; --footer-tracking-ko: 0.02em; --footer-rule: 1;
+  --gap-eyebrow: 3.2; --gap-subtitle: 3; --grain: 0.22;
+}
+.poster[data-type="editorial"] .title { font-variation-settings: "opsz" 144; }
+.poster[data-type="editorial"] .title em { font-style: italic; color: var(--c-accent); }
+.poster[data-type="editorial"] .title[data-script="ko"] em { font-style: normal; }      /* no slanted Hangul */
+.poster[data-type="editorial"] .subtitle { font-style: italic; color: color-mix(in srgb, var(--c-ink) 86%, transparent); }
+.poster[data-type="editorial"] .subtitle[data-script="ko"] { font-style: normal; }
+.poster[data-type="editorial"] .eyebrow { color: var(--c-accent); }
+.poster[data-type="editorial"] .body { color: color-mix(in srgb, var(--c-ink) 82%, transparent); }
+.poster[data-type="editorial"] .footer { color: color-mix(in srgb, var(--c-ink) 86%, transparent); }
+.poster[data-type="editorial"] .cta { background: transparent; color: var(--c-ink); border-radius: 0; padding: 0 0 0.4em; border-bottom: calc(var(--u) * 0.14) solid var(--c-ink); letter-spacing: 0.06em; font-weight: 600; text-transform: uppercase; font-size: calc(var(--su) * var(--cta-size) * 0.82 * var(--k-small)); }
+.poster[data-type="editorial"] .badge { border-radius: 50%; width: calc(var(--u) * 11 * var(--k-mid)); height: calc(var(--u) * 11 * var(--k-mid)); display: flex; align-items: center; justify-content: center; text-align: center; white-space: normal; padding: 0.8em; line-height: 1.2; letter-spacing: 0.1em; }
+.poster[data-type="editorial"] .bottom.ruled { border-top-color: color-mix(in srgb, var(--c-ink) 45%, transparent); }

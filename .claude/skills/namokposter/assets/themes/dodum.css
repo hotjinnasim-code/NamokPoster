@@ -1,0 +1,32 @@
+/* dodum — the warm humanist gothic of Korean lifestyle and craft publishing (Frutiger / Gill Sans Light beside 산돌고딕Neo Light, 윤고딕 320): open, light, unhurried. Stand-ins: Gowun Dodum + Nunito Sans. */
+.poster[data-type="dodum"] {
+  --font-title: "Nunito Sans", "Gowun Dodum", "Pretendard", sans-serif;
+  --font-title-ko: "Nunito Sans KR", "Gowun Dodum", "Pretendard", sans-serif;
+  --font-body: "Nunito Sans KR", "Gowun Dodum", "Pretendard", sans-serif;
+  --font-label-ko: "Gowun Dodum", "Pretendard", sans-serif;
+  --title-size: 11; --title-weight: 300; --title-leading: 1.06; --title-tracking: -0.03em;   /* Nunito Sans Light has the stem of Gowun Dodum's one weight */
+  --title-leading-ko: 1.22; --title-tracking-ko: -0.035em; --title-wordspace-ko: 0.06em; --title-weight-ko: 300;
+  --eyebrow-size: 1.48; --eyebrow-weight: 600; --eyebrow-tracking: 0.2em; --eyebrow-tracking-ko: 0.12em;
+  --subtitle-size: 2.86; --subtitle-weight: 350; --subtitle-leading: 1.4; --subtitle-tracking: -0.005em; --subtitle-leading-ko: 1.48; --subtitle-tracking-ko: -0.02em; --subtitle-weight-ko: 350;
+  --body-size: 1.84; --body-weight: 350; --body-leading: 1.62; --body-leading-ko: 1.78; --body-weight-ko: 350;
+  --meta-size: 2.7; --meta-weight: 350; --meta-label-weight: 350;
+  --footer-size: 1.5; --footer-weight: 400; --footer-tracking: 0.04em; --footer-tracking-ko: 0.01em; --footer-rule: 1;
+  --gap-eyebrow: 2.8; --gap-subtitle: 2.8; --grain: 0.18;
+}
+/* Gowun Dodum draws its Latin and figures on a raised line to sit level with Hangul, which no outside face follows:
+   on a Korean sheet it leads and sets its own figures; Nunito Sans leads when the copy is Latin. */
+.poster[data-type="dodum"]:lang(ko) {
+  --font-title: "Gowun Dodum", "Nunito Sans KR", "Pretendard", sans-serif;
+  --font-title-ko: "Gowun Dodum", "Nunito Sans KR", "Pretendard", sans-serif;
+  --font-body: "Gowun Dodum", "Nunito Sans KR", "Pretendard", sans-serif;
+}
+.poster[data-type="dodum"] .eyebrow { display: flex; align-items: center; gap: 0.9em; }
+.poster[data-type="dodum"] .eyebrow::before { content: ""; width: 0.6em; height: 0.6em; border: 0.14em solid currentColor; border-radius: 50%; flex: none; }
+.poster[data-type="dodum"] [data-halign="center"] > .eyebrow::before, .poster[data-type="dodum"] .main[data-mode="vertical"] .eyebrow::before { display: none; }
+.poster[data-type="dodum"] .title em { color: var(--c-accent); }
+.poster[data-type="dodum"] .subtitle { color: color-mix(in srgb, var(--c-ink) 90%, transparent); }
+.poster[data-type="dodum"] .body { color: color-mix(in srgb, var(--c-ink) 84%, transparent); }
+.poster[data-type="dodum"] .cta { background: transparent; color: var(--c-ink); border: calc(var(--u) * 0.13) solid color-mix(in srgb, var(--c-ink) 70%, transparent); font-weight: 400; }
+.poster[data-type="dodum"] .badge { background: transparent; color: var(--c-accent); border: calc(var(--u) * 0.13) solid var(--c-accent); font-weight: 600; }
+.poster[data-type="dodum"] .bottom.ruled { border-top-color: color-mix(in srgb, var(--c-ink) 30%, transparent); }
+.poster[data-type="dodum"] .meta dt { color: color-mix(in srgb, var(--c-accent) 55%, var(--c-ink)); }

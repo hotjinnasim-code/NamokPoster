@@ -1,0 +1,171 @@
+{
+  "id": "memphis",
+  "label": "Memphis Pattern",
+  "engine": "three",
+  "kind": "object",
+  "mood": "1980s Memphis Group graphics — candy-coloured solids filled with dots, stripes, grids and terrazzo chips, squiggles, zigzags and confetti triangles, with black outlines printed slightly out of register; loud, witty, deliberately un-serious. Good for parties and festivals, pop-ups and sales, kids and family events, design markets, retro nights.",
+  "tone": "light",
+  "type": "pop",
+  "types": ["retro", "anemone", "comic", "kkubulim", "singleday", "dongle", "bold", "friendly", "impact", "brutal"],
+  "defaultPalette": "milano",
+  "palettes": {
+    "milano": {
+      "bg": "#f6efe1",
+      "ink": "#17161a",
+      "accent": "#e3306a",
+      "colors": [
+        "#ff5d8f",
+        "#12b3ad",
+        "#ffc93c",
+        "#3d5af1"
+      ]
+    },
+    "carlton": {
+      "bg": "#f4f1e9",
+      "ink": "#141414",
+      "accent": "#d92b21",
+      "colors": [
+        "#e63329",
+        "#1f4fd8",
+        "#f9c80e",
+        "#1f9d7a"
+      ]
+    },
+    "miami": {
+      "bg": "#fde4e4",
+      "ink": "#1b1a20",
+      "accent": "#0b8f8c",
+      "colors": [
+        "#00a9a5",
+        "#ffd23f",
+        "#ee4266",
+        "#6a3fc4"
+      ]
+    },
+    "mint": {
+      "bg": "#d8f1e4",
+      "ink": "#14201c",
+      "accent": "#d83a52",
+      "colors": [
+        "#ff6b6b",
+        "#ffd93d",
+        "#4d5bd8",
+        "#ff9ecd"
+      ]
+    },
+    "noir": {
+      "bg": "#17161c",
+      "ink": "#f6efe1",
+      "accent": "#ffd23f",
+      "colors": [
+        "#ff5d8f",
+        "#2ee6d6",
+        "#ffd23f",
+        "#7a6cff"
+      ]
+    }
+  },
+  "params": {
+    "motif": {
+      "default": "confetti",
+      "note": "what is drawn: confetti (scattered field of squiggles, triangles and dotted solids) | stack (a pile of big overlapping solids) | totem (a Sottsass-style totem in a patterned frame)"
+    },
+    "density": {
+      "default": 1,
+      "note": "how much confetti: 0.4 = sparse … 1.8 = packed"
+    },
+    "scale": {
+      "default": 1,
+      "note": "size of the pieces / the subject, 0.7–1.4"
+    },
+    "outline": {
+      "default": 1,
+      "note": "outline weight multiplier, 0 = no outlines"
+    },
+    "misregister": {
+      "default": 1,
+      "note": "how far the colour sits from its outline, 0 = in register … 2"
+    }
+  },
+  "motifs": {
+    "confetti": {
+      "note": "scattered squiggles, triangles, zigzags and patterned solids",
+      "topics": [
+        "celebration",
+        "kids",
+        "market",
+        "music",
+        "summer"
+      ]
+    },
+    "stack": {
+      "note": "a pile of big dotted, striped and gridded solids",
+      "topics": [
+        "design",
+        "fashion",
+        "education",
+        "art",
+        "gaming"
+      ]
+    },
+    "totem": {
+      "note": "a totem of stacked solids standing in a patterned frame",
+      "topics": [
+        "art",
+        "culture",
+        "retro",
+        "craft",
+        "architecture"
+      ]
+    }
+  },
+  "topics": [
+    "retro",
+    "celebration",
+    "design",
+    "kids",
+    "fashion",
+    "market"
+  ],
+  "layouts": {
+    "landscape": {
+      "layout": "left",
+      "also": [
+        "right",
+        "top",
+        "bottom",
+        "corners",
+        "headline",
+        "baseline",
+        "vertical",
+        "axis",
+        "band",
+        "strip"
+      ]
+    },
+    "portrait": {
+      "layout": "top",
+      "also": [
+        "bottom",
+        "corners",
+        "baseline",
+        "vertical",
+        "axis",
+        "side"
+      ]
+    },
+    "square": {
+      "layout": "top",
+      "also": [
+        "bottom",
+        "corners",
+        "baseline",
+        "vertical",
+        "axis",
+        "left",
+        "right"
+      ]
+    }
+  },
+  "ground": true
+}

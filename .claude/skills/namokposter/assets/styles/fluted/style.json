@@ -1,0 +1,192 @@
+{
+  "id": "fluted",
+  "label": "Fluted Glass",
+  "engine": "three",
+  "kind": "picture",
+  "mood": "a pane of reeded glass standing in front of soft coloured light — every rib is a small cylindrical lens that squeezes and flips the slice of picture behind it, so a sun, a horizon or a few out-of-focus blooms break into vertical slivers with dark joints, thin specular lines and a slight colour fringe, while the same forms run on smooth and whole past the pane's one crisp edge. Calm, luminous, material. Good for design and architecture programmes, fragrance, beauty and fashion launches, album and concert artwork, exhibitions, wellness and spa, summer and late-night events.",
+  "tone": "light",
+  "type": "elegant",
+  "types": [
+    "grotesk",
+    "slim",
+    "didone",
+    "luxe",
+    "swiss",
+    "wide"
+  ],
+  "defaultPalette": "apricot",
+  "palettes": {
+    "apricot": {
+      "bg": "#f5ecdd",
+      "ink": "#241812",
+      "accent": "#c2410c",
+      "colors": [
+        "#ff8a1f",
+        "#ff4f5e",
+        "#d81e7a",
+        "#ffd9a0"
+      ]
+    },
+    "lagoon": {
+      "bg": "#e9f0ec",
+      "ink": "#0d2226",
+      "accent": "#0b6f7d",
+      "colors": [
+        "#12b5a6",
+        "#1f4fd8",
+        "#b8e62e",
+        "#bfeee4"
+      ]
+    },
+    "iris": {
+      "bg": "#edeaf2",
+      "ink": "#1d1630",
+      "accent": "#7a3cc9",
+      "colors": [
+        "#ff5fa8",
+        "#ffb020",
+        "#7b3ff2",
+        "#e3d4ff"
+      ]
+    },
+    "ember": {
+      "bg": "#0e0908",
+      "ink": "#fff1e6",
+      "accent": "#ff8a4c",
+      "colors": [
+        "#ffae2b",
+        "#ff4a1c",
+        "#d6246e",
+        "#ffd9a8"
+      ]
+    },
+    "deepsea": {
+      "bg": "#071a33",
+      "ink": "#eaf6ff",
+      "accent": "#5fd8e8",
+      "colors": [
+        "#19d3e6",
+        "#2a6bff",
+        "#27c48f",
+        "#bdf3ee"
+      ]
+    }
+  },
+  "params": {
+    "motif": {
+      "default": "orb",
+      "note": "what stands behind the glass: orb (one large gradient disc and a small one) | dusk (a low sun sinking into rolling bands of colour) | bloom (large soft overlapping blooms)"
+    },
+    "ribs": {
+      "default": 1,
+      "note": "rib width multiplier (1 = about 1.6% of the short side; 0.6 = fine reeding … 2 = broad flutes)"
+    },
+    "direction": {
+      "default": "vertical",
+      "note": "which way the ribs run: vertical | horizontal"
+    },
+    "lens": {
+      "default": 1,
+      "note": "how strongly each rib bends the picture (0.5 = gentle ripple … 1.6 = heavy slicing)"
+    },
+    "fringe": {
+      "default": 1,
+      "note": "colour fringes inside the ribs (0 = none)"
+    },
+    "sheen": {
+      "default": 1,
+      "note": "strength of the specular lines on the ribs (0–2)"
+    },
+    "grain": {
+      "default": 1,
+      "note": "fine grain (0–2)"
+    }
+  },
+  "motifs": {
+    "orb": {
+      "note": "one large disc in a gentle two-colour gradient and one small one; the pane's edge cuts through the large disc",
+      "topics": [
+        "design",
+        "music",
+        "art",
+        "architecture"
+      ]
+    },
+    "dusk": {
+      "note": "a horizon: a low sun sinking into three long, rolling bands of colour that the ribs step into slices",
+      "topics": [
+        "nightlife",
+        "music",
+        "summer",
+        "wellness"
+      ],
+      "palette": "ember",
+      "tone": "dark"
+    },
+    "bloom": {
+      "note": "three large soft overlapping blooms and a bud, like out-of-focus flowers behind bathroom glass",
+      "topics": [
+        "beauty",
+        "fashion",
+        "wellness",
+        "art"
+      ],
+      "palette": "iris"
+    }
+  },
+  "topics": [
+    "design",
+    "music",
+    "fashion",
+    "beauty",
+    "wellness",
+    "art",
+    "summer",
+    "nightlife",
+    "architecture"
+  ],
+  "vars": {
+    "--grain": 0.05
+  },
+  "layouts": {
+    "landscape": {
+      "layout": "left",
+      "also": [
+        "right",
+        "top",
+        "bottom",
+        "band",
+        "strip",
+        "corners",
+        "headline",
+        "baseline",
+        "axis",
+        "vertical"
+      ]
+    },
+    "portrait": {
+      "layout": "top",
+      "also": [
+        "bottom",
+        "corners",
+        "baseline",
+        "axis",
+        "side",
+        "vertical"
+      ]
+    },
+    "square": {
+      "layout": "top",
+      "also": [
+        "bottom",
+        "corners",
+        "baseline",
+        "axis",
+        "left",
+        "right",
+        "vertical"
+      ]
+    }
+  },
+  "ground": true
+}

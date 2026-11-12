@@ -1,0 +1,27 @@
+/* stencil — crate and container marking, workshop signage, Le Corbusier's drawings, street-wear drops (Stencil, Glaser Stencil, Octin Stencil). Black Ops One for Latin, Black Han Sans — as heavy and as blunt — for Hangul; a hazard bar, labels in the same cut capitals. */
+.poster[data-type="stencil"] {
+  --font-title: "Black Ops One", "Black Han Sans", "Pretendard", sans-serif;
+  --font-title-ko: "Black Ops One KR", "Black Han Sans", "Pretendard", sans-serif;
+  --font-eyebrow: "Black Ops One", "Pretendard", sans-serif; --font-footer: "Black Ops One", "Pretendard", sans-serif;
+  --title-size: 10; --title-weight: 800; --title-leading: 1.04; --title-tracking: 0em; --title-case: uppercase;
+  --title-leading-ko: 1.14; --title-tracking-ko: -0.01em; --title-wordspace-ko: 0.02em; --title-weight-ko: 400;
+  --eyebrow-size: 1.4; --eyebrow-weight: 400; --eyebrow-tracking: 0.12em; --eyebrow-tracking-ko: 0.06em;
+  --subtitle-size: 2.8; --subtitle-weight: 700; --subtitle-leading: 1.3; --subtitle-tracking: -0.015em; --subtitle-weight-ko: 700; --subtitle-leading-ko: 1.4;
+  --body-size: 1.8; --body-weight: 500; --body-leading: 1.54; --body-leading-ko: 1.66; --body-weight-ko: 500;
+  --meta-size: 2.6; --meta-weight: 500; --meta-label-weight: 800;
+  --footer-size: 1.32; --footer-weight: 400; --footer-tracking: 0.08em; --footer-case: uppercase; --footer-rule: 1;
+  --gap-eyebrow: 2.2; --gap-subtitle: 2.4; --grain: 0.26;
+}
+.poster[data-type="stencil"]:lang(ko) { --title-size: 11.6; }
+.poster[data-type="stencil"] .eyebrow[data-script="ko"] { font-weight: 800; }
+.poster[data-type="stencil"] .footer span[data-script="ko"] { font-weight: 700; letter-spacing: 0.01em; }
+.poster[data-type="stencil"] .title em { color: var(--c-accent); }
+/* a hazard bar ahead of the label */
+.poster[data-type="stencil"] .eyebrow { display: flex; align-items: center; gap: 0.9em; color: var(--c-ink); }
+.poster[data-type="stencil"] .eyebrow::before { content: ""; width: 4.2em; height: 0.82em; flex: none; background: repeating-linear-gradient(-45deg, var(--c-accent) 0 0.3em, transparent 0.3em 0.6em); }
+.poster[data-type="stencil"] [data-halign="center"] > .eyebrow { justify-content: center; }
+.poster[data-type="stencil"] .subtitle, .poster[data-type="stencil"] .footer { color: var(--c-ink); }
+.poster[data-type="stencil"] .body { color: color-mix(in srgb, var(--c-ink) 84%, transparent); }
+.poster[data-type="stencil"] .cta { border-radius: 0; background: var(--c-accent); color: var(--c-on-accent, var(--c-paper)); font-weight: 800; }
+.poster[data-type="stencil"] .badge { border-radius: 0; background: transparent; color: var(--c-ink); border: calc(var(--u) * 0.24) solid var(--c-ink); transform: rotate(-3deg); }
+.poster[data-type="stencil"] .bottom.ruled { border-top: calc(var(--u) * 0.3) dashed var(--c-ink); padding-top: calc(var(--u) * 1.5); }

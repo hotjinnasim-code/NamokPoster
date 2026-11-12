@@ -1,0 +1,202 @@
+{
+  "id": "bokeh",
+  "label": "Bokeh Lights",
+  "engine": "three",
+  "kind": "picture",
+  "mood": "out-of-focus photography — lights thrown into soft discs of several sizes with real lens character (brighter rims, colour fringes, cat's-eye discs towards the corners, grain) over a night or dusk ground; the subject is only hinted at by how the lights are arranged. Warm, cinematic, festive. Good for concerts and night events, year-end parties, city and film programmes, festivals, weddings and winter campaigns.",
+  "tone": "dark",
+  "type": "elegant",
+  "types": [
+    "luxe",
+    "calli",
+    "editorial",
+    "bold",
+    "impact"
+  ],
+  "defaultPalette": "midnight",
+  "palettes": {
+    "midnight": {
+      "bg": "#070a16",
+      "ink": "#f6f2ea",
+      "accent": "#ffc56e",
+      "colors": [
+        "#ffb04a",
+        "#ff4d6d",
+        "#39d6c8",
+        "#fff1d6"
+      ]
+    },
+    "dusk": {
+      "bg": "#1a1638",
+      "ink": "#fbf3ee",
+      "accent": "#ff9d7a",
+      "colors": [
+        "#ffb36b",
+        "#ff6f91",
+        "#8ea2ff",
+        "#ffe9cf"
+      ]
+    },
+    "ember": {
+      "bg": "#120806",
+      "ink": "#fff3e2",
+      "accent": "#ffb347",
+      "colors": [
+        "#ffa63d",
+        "#ff6a2f",
+        "#ffd98a",
+        "#fff0d0"
+      ]
+    },
+    "pine": {
+      "bg": "#06120f",
+      "ink": "#f3fff7",
+      "accent": "#ffd27a",
+      "colors": [
+        "#ffcf70",
+        "#ff5a4d",
+        "#57e39b",
+        "#fff4dc"
+      ]
+    },
+    "blossom": {
+      "bg": "#f7ece4",
+      "ink": "#3a2430",
+      "accent": "#d2567a",
+      "colors": [
+        "#f48fa9",
+        "#f6b765",
+        "#a596e6",
+        "#ffffff"
+      ]
+    }
+  },
+  "params": {
+    "motif": {
+      "default": "city",
+      "note": "what the lights hint at: city | string | lantern | glitter"
+    },
+    "density": {
+      "default": 1.0,
+      "note": "0.5 = few lights … 2 = crowded"
+    },
+    "size": {
+      "default": 1.0,
+      "note": "blur-disc size multiplier (how far out of focus)"
+    },
+    "rim": {
+      "default": 1.0,
+      "note": "brightness of the disc rims: 0 = flat discs … 2 = soap-bubble rings"
+    },
+    "cateye": {
+      "default": 1.0,
+      "note": "how strongly discs are squeezed into cat's eyes towards the corners (0 = all round)"
+    },
+    "blades": {
+      "default": 0,
+      "note": "0 = round aperture; 5–9 = softly polygonal discs"
+    },
+    "glow": {
+      "default": 1.0,
+      "note": "bloom around the lights"
+    },
+    "grain": {
+      "default": 1.0,
+      "note": "film grain (0–2)"
+    }
+  },
+  "motifs": {
+    "city": {
+      "note": "a street at night: rows of lamps running to a vanishing point, head- and tail-lights, signals, window grids",
+      "topics": [
+        "city",
+        "nightlife",
+        "film",
+        "business"
+      ]
+    },
+    "string": {
+      "note": "festive garlands: sagging strings of evenly spaced bulbs at several depths",
+      "topics": [
+        "celebration",
+        "market",
+        "winter",
+        "community"
+      ],
+      "palette": "pine"
+    },
+    "lantern": {
+      "note": "a stream of warm lanterns rising and shrinking into the distance",
+      "topics": [
+        "tradition",
+        "culture",
+        "celebration",
+        "wellness"
+      ],
+      "palette": "ember"
+    },
+    "glitter": {
+      "note": "abstract: a diagonal drift of mixed discs",
+      "topics": [
+        "fashion",
+        "luxury",
+        "music",
+        "beauty"
+      ],
+      "palette": "dusk"
+    }
+  },
+  "topics": [
+    "nightlife",
+    "celebration",
+    "music",
+    "film",
+    "city",
+    "winter"
+  ],
+  "vars": {
+    "--grain": 0.08,
+    "--scrim": 0.6
+  },
+  "layouts": {
+    "landscape": {
+      "layout": "left",
+      "also": [
+        "right",
+        "top",
+        "bottom",
+        "corners",
+        "headline",
+        "baseline",
+        "vertical",
+        "axis",
+        "band",
+        "strip"
+      ]
+    },
+    "portrait": {
+      "layout": "top",
+      "also": [
+        "bottom",
+        "corners",
+        "baseline",
+        "vertical",
+        "axis",
+        "side"
+      ]
+    },
+    "square": {
+      "layout": "top",
+      "also": [
+        "bottom",
+        "corners",
+        "baseline",
+        "vertical",
+        "axis",
+        "left",
+        "right"
+      ]
+    }
+  },
+  "ground": true
+}

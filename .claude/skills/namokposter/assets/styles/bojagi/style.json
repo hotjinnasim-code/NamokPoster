@@ -1,0 +1,193 @@
+{
+  "id": "bojagi",
+  "label": "Bojagi Patchwork (조각보)",
+  "engine": "three",
+  "kind": "picture",
+  "context": "korean",
+  "mood": "a Korean patchwork wrapping cloth held up to the light — irregular pieces of translucent ramie and silk gauze, every seam a darker line where the layers double, dyed pieces gathered at the focus and one large undyed panel for the copy. Quiet, hand-made, luminous. Good for traditional and cultural programmes, craft fairs, seasonal greetings, weddings, tea and food, museum and hanok events.",
+  "tone": "light",
+  "type": "myeongjo",
+  "types": [
+    "editorial",
+    "calli",
+    "maru",
+    "elegant",
+    "swiss",
+    "luxe"
+  ],
+  "defaultPalette": "ramie",
+  "palettes": {
+    "ramie": {
+      "bg": "#f3eee2",
+      "ink": "#232733",
+      "accent": "#b4452f",
+      "colors": [
+        "#2f4f86",
+        "#d9694a",
+        "#6aa58c",
+        "#e2b244",
+        "#e3a0a8"
+      ]
+    },
+    "obang": {
+      "bg": "#f5f1e6",
+      "ink": "#1c1c22",
+      "accent": "#b3261e",
+      "colors": [
+        "#c63a2c",
+        "#1f4f9e",
+        "#efb62a",
+        "#2f8a5f",
+        "#2b2a33"
+      ]
+    },
+    "indigo": {
+      "bg": "#eef1f1",
+      "ink": "#16233f",
+      "accent": "#234a8f",
+      "colors": [
+        "#1d3d7c",
+        "#3f73b8",
+        "#8fb6d9",
+        "#c9dbe6",
+        "#e0a640"
+      ]
+    },
+    "persimmon": {
+      "bg": "#f2e8d8",
+      "ink": "#33231a",
+      "accent": "#a44a1f",
+      "colors": [
+        "#b9602c",
+        "#7a4a2a",
+        "#8a8f3f",
+        "#d9a441",
+        "#5f4a6e"
+      ]
+    },
+    "night": {
+      "bg": "#141a2e",
+      "ink": "#f3eee2",
+      "accent": "#f0b94f",
+      "colors": [
+        "#e45d7a",
+        "#f0b94f",
+        "#43b79a",
+        "#6f7fe0",
+        "#b65fc9"
+      ]
+    }
+  },
+  "params": {
+    "motif": {
+      "default": "patchwork",
+      "note": "patchwork = classic field of irregular pieces · window = nested frames opening onto pale panes · landscape = mountains, moon and fields pieced from strips and triangles"
+    },
+    "scale": {
+      "default": 1.0,
+      "note": "piece size: 0.6 = many small pieces … 1.8 = few large ones"
+    },
+    "dye": {
+      "default": 1.0,
+      "note": "share of dyed pieces at the focus (patchwork): 0 = all undyed, seams only … 1.6 = nearly every piece"
+    },
+    "seam": {
+      "default": 1.0,
+      "note": "seam width, 0.5–2"
+    },
+    "weave": {
+      "default": 1.0,
+      "note": "how strongly the threads show, 0–2"
+    },
+    "triangles": {
+      "default": 1.0,
+      "note": "squares cut into two triangles (patchwork), 0–3"
+    }
+  },
+  "motifs": {
+    "patchwork": {
+      "note": "classic field of irregular rectangles and strips, dyed at the focus, undyed under the copy",
+      "topics": [
+        "tradition",
+        "craft",
+        "culture",
+        "design",
+        "market",
+        "celebration"
+      ]
+    },
+    "window": {
+      "note": "nested frames like a door or lattice window with light behind",
+      "topics": [
+        "architecture",
+        "tradition",
+        "wellness",
+        "literature",
+        "art"
+      ]
+    },
+    "landscape": {
+      "note": "pieced mountains, a moon and strips of field and sky",
+      "topics": [
+        "travel",
+        "nature",
+        "outdoor",
+        "autumn",
+        "spring",
+        "community"
+      ]
+    }
+  },
+  "topics": [
+    "tradition",
+    "craft",
+    "culture",
+    "celebration",
+    "food",
+    "family",
+    "spring",
+    "autumn",
+    "wellness",
+    "art"
+  ],
+  "layouts": {
+    "landscape": {
+      "layout": "left",
+      "also": [
+        "right",
+        "top",
+        "bottom",
+        "corners",
+        "headline",
+        "baseline",
+        "vertical",
+        "axis",
+        "band",
+        "strip"
+      ]
+    },
+    "portrait": {
+      "layout": "top",
+      "also": [
+        "bottom",
+        "corners",
+        "baseline",
+        "vertical",
+        "axis",
+        "side"
+      ]
+    },
+    "square": {
+      "layout": "top",
+      "also": [
+        "bottom",
+        "corners",
+        "baseline",
+        "vertical",
+        "axis",
+        "left",
+        "right"
+      ]
+    }
+  }
+}

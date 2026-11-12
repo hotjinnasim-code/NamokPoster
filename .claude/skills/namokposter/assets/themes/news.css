@@ -1,0 +1,30 @@
+/* news — broadsheet front page: The New York Times, The Guardian, a Korean daily's 1면 (Cheltenham, Times, Guardian Headline; 신문 견출명조). Newsreader's display cut for Latin, Nanum Myeongjo ExtraBold for Hangul; a sans kicker, an italic standfirst, a ruled fact box. */
+.poster[data-type="news"] {
+  --font-title: "Newsreader", "Nanum Myeongjo", "Hahmlet", serif; --font-subtitle: "Newsreader", "Nanum Myeongjo", "Hahmlet", serif;
+  --font-title-ko: "Newsreader KR", "Nanum Myeongjo", "Hahmlet", serif; --font-subtitle-ko: "Newsreader KR", "Nanum Myeongjo", "Hahmlet", serif;
+  --font-body: "Newsreader", "Nanum Myeongjo", "Hahmlet", serif; --font-eyebrow: var(--font-sans); --font-footer: var(--font-sans);
+  --title-size: 11.2; --title-weight: 700; --title-leading: 1.0; --title-tracking: -0.025em;
+  --title-leading-ko: 1.18; --title-tracking-ko: -0.035em; --title-wordspace-ko: 0.04em; --title-weight-ko: 800;
+  --eyebrow-size: 1.42; --eyebrow-weight: 800; --eyebrow-tracking: 0.1em; --eyebrow-tracking-ko: 0.04em;
+  --subtitle-size: 3.0; --subtitle-weight: 400; --subtitle-leading: 1.28; --subtitle-tracking: -0.005em; --subtitle-weight-ko: 400; --subtitle-leading-ko: 1.46; --subtitle-tracking-ko: -0.02em;
+  --body-size: 1.9; --body-weight: 400; --body-leading: 1.5; --body-leading-ko: 1.76; --body-tracking-ko: -0.01em; --body-weight-ko: 400; --body-measure: 29;
+  --meta-size: 2.5; --meta-weight: 500; --meta-label-weight: 800;
+  --footer-size: 1.36; --footer-weight: 600; --footer-tracking: 0.04em; --footer-rule: 1;
+  --gap-eyebrow: 2; --gap-subtitle: 2.6; --grain: 0.18;
+}
+.poster[data-type="news"] .title { font-variation-settings: "opsz" 72; }
+.poster[data-type="news"] .title em { color: var(--c-accent); }
+.poster[data-type="news"] .subtitle { font-variation-settings: "opsz" 30; font-style: italic; color: color-mix(in srgb, var(--c-ink) 90%, transparent); }
+.poster[data-type="news"] .subtitle[data-script="ko"] { --subtitle-size: 2.72; font-style: normal; }
+.poster[data-type="news"] .body { font-variation-settings: "opsz" 16; color: color-mix(in srgb, var(--c-ink) 84%, transparent); }
+.poster[data-type="news"] .body[data-script="ko"] { --body-size: 1.78; font-family: "Nanum Myeongjo", "Hahmlet", serif; }
+.poster[data-type="news"] .eyebrow { color: var(--c-accent); }
+/* the fact box: sans, ruled row by row */
+.poster[data-type="news"] .meta { font-family: var(--font-sans); }
+.poster[data-type="news"] .meta:not(.cells):not(.lines) { min-width: min(100%, 19em); column-gap: 0; row-gap: 0; align-items: stretch; border-top: calc(var(--u) * 0.24) solid var(--c-ink); }
+.poster[data-type="news"] .meta:not(.cells):not(.lines) > dt, .poster[data-type="news"] .meta:not(.cells):not(.lines) > dd { padding: 0.4em 0 0.36em; border-bottom: var(--hair) solid color-mix(in srgb, var(--c-ink) 45%, transparent); }
+.poster[data-type="news"] .meta:not(.cells):not(.lines) > dt { padding-right: 1.3em; }
+.poster[data-type="news"] .footer { color: var(--c-ink); }
+.poster[data-type="news"] .cta { border-radius: 0; font-family: var(--font-sans); font-weight: 800; text-transform: uppercase; letter-spacing: 0.06em; font-size: calc(var(--su) * var(--cta-size) * 0.84 * var(--k-small)); }
+.poster[data-type="news"] .badge { border-radius: 0; }
+.poster[data-type="news"] .bottom.ruled { border-top: calc(var(--u) * 0.5) double var(--c-ink); padding-top: calc(var(--u) * 1.5); }

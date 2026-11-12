@@ -1,0 +1,205 @@
+{
+  "id": "screen",
+  "label": "Flat Screen UI",
+  "engine": "html",
+  "kind": "object",
+  "mood": "a flat, generic user-interface mock-up as the picture — overlapping desktop windows with plain title bars, a message thread, a music-player card or a search field with its suggestion list, drawn as plain rounded rectangles in a few palette inks with a hairline outline and a hard offset shadow, like a contemporary editorial illustration of a screen. The copy itself is on the screen: the headline typed into the search field or sent as a message, the date in a dialog, the time at the end of the progress bar. Good for tech talks, launches and online events, hackathons, music nights and festivals, youth and campus programmes, webinars and sign-up calls.",
+  "tone": "light",
+  "type": "grotesk",
+  "types": ["swiss", "cute", "paperlogy", "square", "round", "techno", "bold", "geometric", "plex", "pop", "typewriter", "brutal", "gmarket", "dunggeunmo"],
+  "defaultPalette": "desk",
+  "palettes": {
+    "desk": {
+      "bg": "#e9e5db",
+      "ink": "#18181d",
+      "accent": "#3550f0",
+      "colors": [
+        "#3d5afe",
+        "#ff6a3d",
+        "#ffc93c",
+        "#fbfaf6"
+      ]
+    },
+    "midnight": {
+      "bg": "#15161c",
+      "ink": "#efebe2",
+      "accent": "#9a8cff",
+      "colors": [
+        "#8c7bff",
+        "#ff6f91",
+        "#57d6c3",
+        "#272a35"
+      ]
+    },
+    "tomato": {
+      "bg": "#ff5b3a",
+      "ink": "#1b1210",
+      "accent": "#fff4e6",
+      "colors": [
+        "#1d2bd6",
+        "#ffd23f",
+        "#1b1210",
+        "#fff4e6"
+      ]
+    },
+    "mint": {
+      "bg": "#cdeedd",
+      "ink": "#0f2a22",
+      "accent": "#d13d33",
+      "colors": [
+        "#e0483e",
+        "#2f6df0",
+        "#ffcb3d",
+        "#ffffff"
+      ]
+    },
+    "lilac": {
+      "bg": "#e2dbf6",
+      "ink": "#231a3d",
+      "accent": "#d6245a",
+      "colors": [
+        "#5b3df5",
+        "#ff4f7b",
+        "#ffc94d",
+        "#fffdf8"
+      ]
+    }
+  },
+  "params": {
+    "motif": {
+      "default": "windows",
+      "note": "windows | chat | player | search"
+    },
+    "shadow": {
+      "default": "hard",
+      "note": "hard (a flat offset shadow in the ink, printed as vector) | soft (a blurred drop shadow) | none"
+    },
+    "outline": {
+      "default": 1,
+      "note": "weight of the hairline around windows and controls: 0 = none … 1 = normal … 2 = heavy"
+    },
+    "radius": {
+      "default": 1,
+      "note": "corner rounding of windows, bubbles and buttons: 0 = square … 1 = normal … 2 = very round"
+    }
+  },
+  "motifs": {
+    "windows": {
+      "note": "two or three overlapping desktop windows with plain title bars — flat abstract shapes in one, a dialog with the event date set large and an OK button, a short list with a progress bar — and an arrow cursor on top",
+      "topics": [
+        "tech",
+        "design",
+        "business",
+        "education",
+        "art",
+        "gaming"
+      ]
+    },
+    "chat": {
+      "note": "a message thread whose bubbles are the copy, verbatim: the headline, the date, the place, then the call to action (or a typing bubble)",
+      "topics": [
+        "community",
+        "education",
+        "kids",
+        "family",
+        "celebration",
+        "tech"
+      ],
+      "layouts": {
+        "landscape": {
+          "layout": "left"
+        },
+        "portrait": {
+          "layout": "top"
+        },
+        "square": {
+          "layout": "left"
+        }
+      }
+    },
+    "player": {
+      "note": "a music-player card: a square cover of flat shapes, the headline as the track title, the eyebrow as the artist, a progress bar ending at the event time, and play controls",
+      "topics": [
+        "music",
+        "nightlife",
+        "culture",
+        "celebration",
+        "film"
+      ],
+      "layouts": {
+        "landscape": {
+          "layout": "top"
+        },
+        "portrait": {
+          "layout": "bottom"
+        },
+        "square": {
+          "layout": "top"
+        }
+      }
+    },
+    "search": {
+      "note": "a search field with the headline typed in it and a text cursor, and below it a suggestion list made from the information rows",
+      "topics": [
+        "tech",
+        "education",
+        "business",
+        "community",
+        "general"
+      ],
+      "layouts": {
+        "landscape": {
+          "layout": "left"
+        },
+        "portrait": {
+          "layout": "corners"
+        },
+        "square": {
+          "layout": "top"
+        }
+      }
+    }
+  },
+  "topics": [
+    "tech",
+    "design",
+    "business",
+    "education",
+    "music",
+    "community",
+    "gaming",
+    "general"
+  ],
+  "layouts": {
+    "landscape": {
+      "layout": "left",
+      "also": [
+        "right",
+        "band",
+        "top",
+        "corners",
+        "axis"
+      ]
+    },
+    "portrait": {
+      "layout": "top",
+      "also": [
+        "bottom",
+        "side",
+        "corners",
+        "axis"
+      ]
+    },
+    "square": {
+      "layout": "left"
+    }
+  },
+  "grounds": [
+    "pattern/checker",
+    "pattern/stripes",
+    "pattern/dots",
+    "pattern/grid",
+    "haze",
+    "halftone"
+  ]
+}

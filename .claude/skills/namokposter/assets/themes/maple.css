@@ -1,0 +1,24 @@
+/* maple — the cheerful round title lettering of a family online game (넥슨 메이플스토리; 귀엽고 발랄한 게임 제목 글씨): children's days, family festivals, game nights and character events. Plump strokes and bouncy round letters. Face: Maplestory Bold, with its own Latin and figures; Pretendard for the details. */
+.poster[data-type="maple"] {
+  --font-title: "Maplestory", "Jua", "Pretendard", sans-serif;   /* one face: its own Latin and figures */
+  --font-eyebrow: "Maplestory", "Pretendard", sans-serif; --font-eyebrow-ko: "Maplestory", "Pretendard", sans-serif;
+  --font-subtitle: "Maplestory", "Pretendard", sans-serif; --font-subtitle-ko: "Maplestory", "Pretendard", sans-serif;
+  --title-size: 11.2; --title-weight: 700; --title-leading: 1.06; --title-tracking: -0.01em;
+  --title-leading-ko: 1.18; --title-tracking-ko: -0.03em; --title-wordspace-ko: 0.06em;
+  --eyebrow-size: 1.9; --eyebrow-weight: 700; --eyebrow-tracking: 0.04em; --eyebrow-tracking-ko: 0.02em; --eyebrow-case: none;
+  --subtitle-size: 2.9; --subtitle-weight: 700; --subtitle-leading: 1.32; --subtitle-weight-ko: 700;
+  --body-size: 1.84; --body-weight: 500; --body-weight-ko: 500;
+  --meta-weight: 500; --meta-label-weight: 700;
+  --footer-size: 1.54; --footer-weight: 700; --footer-rule: 1; --grain: 0.1;
+  --gap-eyebrow: 2.1; --gap-subtitle: 2.4;
+}
+/* a game title's outline: a thick edge of the paper colour round the letters, drawn under them, so the title holds on a picture */
+.poster[data-type="maple"] .title { -webkit-text-stroke: 0.08em var(--c-paper); paint-order: stroke fill; }
+.poster[data-type="maple"] .title em { color: var(--c-accent); }
+.poster[data-type="maple"] .eyebrow { color: var(--c-paper); background: var(--c-accent); padding: 0.38em 1em 0.34em; border-radius: 99em; line-height: 1.2; box-shadow: 0 0.14em 0 color-mix(in srgb, var(--c-ink) 70%, transparent); }
+.poster[data-type="maple"] .subtitle { color: var(--c-ink); }
+.poster[data-type="maple"] .body { color: color-mix(in srgb, var(--c-ink) 84%, transparent); }
+.poster[data-type="maple"] .meta dt { font-family: var(--font-eyebrow-ko); color: color-mix(in srgb, var(--c-accent) 66%, var(--c-ink)); }
+.poster[data-type="maple"] .cta { border-radius: 99em; background: var(--c-accent); color: var(--c-on-accent, var(--c-paper)); font-family: var(--font-eyebrow-ko); font-weight: 700; box-shadow: 0 0.18em 0 color-mix(in srgb, var(--c-ink) 70%, transparent); }
+.poster[data-type="maple"] .badge { border-radius: 99em; transform: rotate(-6deg); font-family: var(--font-eyebrow-ko); font-weight: 700; }
+.poster[data-type="maple"] .bottom.ruled { border-top: calc(var(--u) * 0.26) solid var(--c-ink); padding-top: calc(var(--u) * 1.6); }

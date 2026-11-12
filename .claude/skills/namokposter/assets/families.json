@@ -1,0 +1,122 @@
+{
+  "about": "Families of technique: which art styles are the same kind of idea. The automatic choice avoids two drafts from one family, and the style tables in SKILL.md, README.md and references/styles.md are written from this file by a script kept with the development files (sync_docs.py: order, and the short name of each technique in English and Korean). A style may name its family itself with \"family\" in style.json; a style listed nowhere counts as a family of its own engine.",
+  "families": [
+    {
+      "id": "craft", "label": "Paper and craft", "labelKo": "종이와 공예",
+      "styles": [
+        {"id": "papercut", "en": "layered paper relief", "ko": "겹겹이 오린 종이 부조"},
+        {"id": "emboss", "en": "blind emboss and foil on cotton paper", "ko": "무지 엠보싱과 박"},
+        {"id": "collage", "en": "cut and torn paper collage", "ko": "찢고 오린 종이 콜라주"},
+        {"id": "bojagi", "en": "Korean patchwork cloth (조각보)", "ko": "조각보"},
+        {"id": "najeon", "en": "mother-of-pearl lacquer (자개)", "ko": "나전칠기(자개)"},
+        {"id": "stitch", "en": "embroidery", "ko": "자수"},
+        {"id": "mosaic", "en": "tile mosaic", "ko": "타일 모자이크"},
+        {"id": "stainedglass", "en": "leaded stained glass", "ko": "스테인드글라스"},
+        {"id": "paper", "en": "layered paper cut", "ko": "종이 오림"},
+        {"id": "origami", "en": "folded paper", "ko": "종이접기"}
+      ]
+    },
+    {
+      "id": "print", "label": "Print and paint", "labelKo": "인쇄와 회화",
+      "styles": [
+        {"id": "halftone", "en": "riso halftone print", "ko": "리소 망점 인쇄"},
+        {"id": "linocut", "en": "block print", "ko": "리노컷 판화"},
+        {"id": "gouache", "en": "gouache paper cut-outs", "ko": "과슈 색종이 오리기"},
+        {"id": "crayon", "en": "oil pastel and crayon", "ko": "크레용·오일파스텔"},
+        {"id": "watercolor", "en": "watercolour wash", "ko": "수채"},
+        {"id": "sumuk", "en": "ink wash (수묵)", "ko": "수묵"},
+        {"id": "cyanotype", "en": "sun-print photogram", "ko": "청사진 인화(포토그램)"},
+        {"id": "marble", "en": "paper marbling", "ko": "마블링"},
+        {"id": "layers", "en": "flat layered silhouettes", "ko": "평면 레이어 실루엣"},
+        {"id": "airbrush", "en": "retro airbrush space art", "ko": "레트로 에어브러시"}
+      ]
+    },
+    {
+      "id": "graphic", "label": "Graphic systems", "labelKo": "그래픽 시스템",
+      "styles": [
+        {"id": "bauhaus", "en": "geometric tile system", "ko": "기하 타일"},
+        {"id": "memphis", "en": "1980s Memphis pattern", "ko": "멤피스 패턴"},
+        {"id": "opart", "en": "optical art", "ko": "옵아트"},
+        {"id": "artdeco", "en": "art-deco line ornament", "ko": "아르데코 선 장식"},
+        {"id": "guilloche", "en": "banknote engraving", "ko": "기요셰(지폐 세선 문양)"},
+        {"id": "contour", "en": "topographic contour lines", "ko": "등고선"},
+        {"id": "flowfield", "en": "flow-field bands", "ko": "흐름장을 따라 흐르는 띠"},
+        {"id": "wave", "en": "dot-matrix terrain", "ko": "도트 지형"},
+        {"id": "haze", "en": "grainy gradient field", "ko": "그레인 그라디언트"},
+        {"id": "glyph", "en": "letterforms as image", "ko": "글자 조형(타이포 아트)"}
+      ]
+    },
+    {
+      "id": "digital", "label": "Digital, light and motion", "labelKo": "디지털·빛·움직임",
+      "styles": [
+        {"id": "flux", "en": "neon light trails", "ko": "네온 광선"},
+        {"id": "plexus", "en": "node-and-line network", "ko": "노드·선 네트워크"},
+        {"id": "globe", "en": "dotted globe", "ko": "도트 지구본"},
+        {"id": "pointcloud", "en": "forms drawn in dots", "ko": "점묘 입체(포인트 클라우드)"},
+        {"id": "blueprint", "en": "technical drawing", "ko": "설계 도면"},
+        {"id": "synthwave", "en": "1980s retro-futurism", "ko": "신스웨이브"},
+        {"id": "glitch", "en": "CRT and VHS glitch", "ko": "CRT·VHS 글리치"},
+        {"id": "pixel", "en": "dithered pixel art", "ko": "디더 픽셀아트"},
+        {"id": "bokeh", "en": "out-of-focus lights", "ko": "보케 조명"},
+        {"id": "caustics", "en": "sunlit water", "ko": "물빛(코스틱)"},
+        {"id": "fluted", "en": "light behind fluted glass", "ko": "리브 유리 너머의 빛"},
+        {"id": "inkdrop", "en": "ink blooming in water", "ko": "물속 잉크"},
+        {"id": "liquid", "en": "lava-lamp gradient", "ko": "리퀴드 그라디언트"},
+        {"id": "aurora", "en": "pearly gradient blob", "ko": "진주빛 그라디언트 블롭"},
+        {"id": "ribbon", "en": "satin ribbon", "ko": "새틴 리본"},
+        {"id": "turing", "en": "reaction–diffusion relief", "ko": "반응–확산 무늬"}
+      ]
+    },
+    {
+      "id": "type", "label": "Type and vector graphics (HTML)", "labelKo": "글자와 벡터 그래픽(HTML)",
+      "styles": [
+        {"id": "numerals", "en": "giant numerals — the date as the image", "ko": "큰 숫자 — 날짜를 그림으로"},
+        {"id": "calendar", "en": "calendar sheets", "ko": "달력(월력·일력·주간)"},
+        {"id": "swiss", "en": "Swiss geometric graphics", "ko": "스위스 기하 그래픽"},
+        {"id": "ticket", "en": "tickets, passes and receipts", "ko": "티켓·패스·영수증"},
+        {"id": "stamp", "en": "stamps and a postmark", "ko": "우표와 소인"},
+        {"id": "transit", "en": "the venue as a transit map", "ko": "노선도로 그린 장소"},
+        {"id": "stickers", "en": "die-cut stickers", "ko": "다이컷 스티커"},
+        {"id": "screen", "en": "flat interface mock-up", "ko": "플랫 UI 화면"},
+        {"id": "marquee", "en": "the headline repeated as texture", "ko": "제목을 반복한 글자 무늬"},
+        {"id": "pattern", "en": "flat vector patterns", "ko": "플랫 벡터 패턴"}
+      ]
+    },
+    {
+      "id": "soft3d", "label": "Soft and tactile 3D", "labelKo": "부드러운 촉감의 3D",
+      "styles": [
+        {"id": "studio", "en": "soft clay still life", "ko": "클레이 정물"},
+        {"id": "puffy", "en": "inflated glossy toys", "ko": "부풀린 유광 토이"},
+        {"id": "felt", "en": "needle-felted wool", "ko": "양모 펠트"},
+        {"id": "knit", "en": "knitted wool", "ko": "니트(뜨개)"},
+        {"id": "jelly", "en": "translucent jelly and wax", "ko": "반투명 젤리·왁스"},
+        {"id": "wood", "en": "wooden blocks and turned wood", "ko": "나무 블록·목선반"},
+        {"id": "softscape", "en": "soft pastel 3D scenery", "ko": "파스텔 3D 풍경"}
+      ]
+    },
+    {
+      "id": "material3d", "label": "Materials and light (3D)", "labelKo": "재질과 빛(3D)",
+      "styles": [
+        {"id": "prism", "en": "glass rings on black", "ko": "검은 배경의 유리 링"},
+        {"id": "chrome", "en": "liquid chrome", "ko": "액체 크롬"},
+        {"id": "glass", "en": "frosted glass panels", "ko": "반투명 유리 패널"},
+        {"id": "foil", "en": "holographic foil", "ko": "홀로그램 포일"},
+        {"id": "metal", "en": "machined, anodised metal", "ko": "가공 금속"},
+        {"id": "stone", "en": "marble and gold", "ko": "대리석과 금"},
+        {"id": "ceramic", "en": "glazed ceramics", "ko": "유약 도자"},
+        {"id": "neon", "en": "neon tube signs", "ko": "네온 사인"},
+        {"id": "monolith", "en": "plaster arches in low sun", "ko": "석고 아치"},
+        {"id": "fabric", "en": "draped cloth", "ko": "드레이프 천(실크·벨벳)"}
+      ]
+    },
+    {
+      "id": "illustrative3d", "label": "Illustrative 3D", "labelKo": "일러스트풍 3D",
+      "styles": [
+        {"id": "toon", "en": "cel-shaded 3D with ink outlines", "ko": "셀 셰이딩 툰"},
+        {"id": "lowpoly", "en": "faceted low-poly", "ko": "로우폴리"},
+        {"id": "isometric", "en": "isometric miniature", "ko": "아이소메트릭 미니어처"},
+        {"id": "voxel", "en": "voxel blocks", "ko": "복셀"}
+      ]
+    }
+  ]
+}

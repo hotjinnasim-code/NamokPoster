@@ -1,0 +1,11 @@
+schema_version: "1.1"
+name: blender-on-request
+expected_outcome: |
+  The user asked for Blender ("블렌더 사용") in the first request, so the first run already makes all
+  three finished posters at 3508x4961 (A3 portrait, the default size) with Blender: each is a Blender
+  style on its own, or a Blender subject on a ground drawn by three.js or HTML, and none is a plain
+  three.js or HTML poster. The default set is not rendered first, and the user is not asked to look
+  at a quick half-resolution version before the real one. The three still differ clearly from one
+  another in style, type theme and layout and suit a ceramics fair. The user was told beforehand
+  that the render takes minutes per poster (about ten on the default A3 sheet). Date, place and fee
+  are labelled information rows; the copy is verbatim, legible and nothing overflows.

@@ -1,0 +1,27 @@
+/* paperlogy — the slide gothic of Korean presentations and card news (페이퍼로지; G마켓 산스의 뼈대를 파워포인트에 맞게 다듬은 9굵기): a black headline that sits square on the page, a numbered section label, everything else in clean steps of the same family. Face: Paperlogy Black, Bold and Regular, with its own Latin and figures. */
+.poster[data-type="paperlogy"] {
+  --font-title: "Paperlogy", "Pretendard", sans-serif;
+  --font-subtitle: "Paperlogy", "Pretendard", sans-serif; --font-subtitle-ko: "Paperlogy", "Pretendard", sans-serif;
+  --font-eyebrow: "Paperlogy", "Pretendard", sans-serif; --font-eyebrow-ko: "Paperlogy", "Pretendard", sans-serif;
+  --font-body: "Paperlogy", "Pretendard", sans-serif;
+  --font-label-ko: "Paperlogy", "Pretendard", sans-serif;
+  --title-size: 10.6; --title-weight: 900; --title-leading: 1.06; --title-tracking: -0.03em;
+  --title-leading-ko: 1.2; --title-tracking-ko: -0.05em; --title-wordspace-ko: 0.03em;
+  --eyebrow-size: 1.6; --eyebrow-weight: 700; --eyebrow-tracking: 0.1em; --eyebrow-tracking-ko: 0.02em;
+  --subtitle-size: 2.86; --subtitle-weight: 700; --subtitle-leading: 1.36; --subtitle-tracking: -0.01em; --subtitle-tracking-ko: -0.04em; --subtitle-weight-ko: 700;
+  --body-size: 1.8; --body-weight: 400; --body-weight-ko: 400; --body-leading: 1.64; --body-tracking-ko: -0.025em;
+  --meta-size: 2.62; --meta-weight: 400; --meta-label-weight: 900;
+  --footer-size: 1.48; --footer-weight: 400; --footer-tracking: 0.02em; --footer-rule: 1; --grain: 0.08;
+  --gap-eyebrow: 2.2; --gap-subtitle: 2.4;
+}
+.poster[data-type="paperlogy"] .title em { color: var(--c-accent); }
+/* a slide's section marker: a short thick bar over the label */
+.poster[data-type="paperlogy"] .eyebrow { color: var(--c-ink); padding-top: 0.7em; background: linear-gradient(var(--c-accent), var(--c-accent)) left top / 2.2em 0.32em no-repeat; }
+.poster[data-type="paperlogy"] [data-halign="center"] > .eyebrow { background-position: center top; }
+.poster[data-type="paperlogy"] .main[data-mode="vertical"] .eyebrow { background: none; padding-top: 0; }
+.poster[data-type="paperlogy"] .subtitle { color: color-mix(in srgb, var(--c-ink) 92%, transparent); }
+.poster[data-type="paperlogy"] .body { color: color-mix(in srgb, var(--c-ink) 84%, transparent); }
+.poster[data-type="paperlogy"] .meta dt[data-script="ko"], .poster[data-type="paperlogy"] .meta dd[data-script="ko"] { letter-spacing: -0.03em; }
+.poster[data-type="paperlogy"] .cta { border-radius: 0.3em; background: var(--c-ink); color: var(--c-paper); font-family: var(--font-eyebrow-ko); font-weight: 700; }
+.poster[data-type="paperlogy"] .badge { border-radius: 0.3em; font-weight: 900; letter-spacing: 0; }
+.poster[data-type="paperlogy"] .bottom.ruled { border-top: calc(var(--u) * 0.18) solid var(--c-ink); padding-top: calc(var(--u) * 1.6); }

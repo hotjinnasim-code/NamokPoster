@@ -1,0 +1,27 @@
+/* slim — the light cut of Korean modernist 탈네모꼴 lettering (가는 탈네모꼴; 안상수체·공한체 계열의 가는 획): one thin line and round bowls, set large and left alone, for galleries, architecture talks and design fairs. Faces: Sunflower Light for Hangul; Outfit Light — the same geometry — for Latin and figures. */
+.poster[data-type="slim"] {
+  --font-title: "Outfit KR", "Sunflower Light", "Pretendard", sans-serif;   /* Korean-led: the size-matched Latin in every headline */
+  --font-title-ko: "Outfit KR", "Sunflower Light", "Pretendard", sans-serif;
+  --font-body: "Outfit KR", "Pretendard", sans-serif;
+  --font-eyebrow-ko: "Outfit KR", "Sunflower Light", "Pretendard", sans-serif;
+  --title-size: 12; --title-weight: 250; --title-leading: 1.02; --title-tracking: -0.03em;   /* Outfit at 250 has the stem of Sunflower Light */
+  --title-leading-ko: 1.2; --title-tracking-ko: -0.04em; --title-wordspace-ko: 0.02em; --title-weight-ko: 250;
+  --eyebrow-size: 1.5; --eyebrow-weight: 500; --eyebrow-tracking: 0.24em; --eyebrow-tracking-ko: 0.14em;
+  --subtitle-size: 2.9; --subtitle-weight: 300; --subtitle-leading: 1.36; --subtitle-tracking: -0.01em; --subtitle-weight-ko: 350;
+  --body-size: 1.84; --body-weight: 300; --body-leading: 1.62; --body-weight-ko: 350;
+  --meta-weight: 350; --meta-label-weight: 600;
+  --footer-size: 1.5; --footer-weight: 400; --footer-tracking: 0.06em; --footer-rule: 1;
+  --gap-eyebrow: 2.8; --gap-subtitle: 2.8; --grain: 0.1;
+}
+.poster[data-type="slim"] .eyebrow[data-script="ko"] { font-weight: 300; }
+.poster[data-type="slim"] .title em { color: var(--c-accent); }
+/* a fine line runs out from the label */
+.poster[data-type="slim"] .eyebrow { display: flex; align-items: center; gap: 1em; color: var(--c-ink); }
+.poster[data-type="slim"] .eyebrow::after { content: ""; width: 4.2em; height: var(--hair); background: currentColor; flex: none; margin-left: calc(var(--eyebrow-tracking) * -0.6); }
+.poster[data-type="slim"] [data-halign="center"] > .eyebrow { justify-content: center; }
+.poster[data-type="slim"] [data-halign="center"] > .eyebrow::after, .poster[data-type="slim"] .main[data-mode="vertical"] .eyebrow::after { display: none; }
+.poster[data-type="slim"] .subtitle { color: color-mix(in srgb, var(--c-ink) 92%, transparent); }
+.poster[data-type="slim"] .body { color: color-mix(in srgb, var(--c-ink) 84%, transparent); }
+.poster[data-type="slim"] .cta { background: transparent; color: var(--c-ink); border: var(--hair) solid var(--c-ink); font-weight: 400; }
+.poster[data-type="slim"] .badge { background: transparent; color: var(--c-accent); border: var(--hair) solid var(--c-accent); font-weight: 500; }
+.poster[data-type="slim"] .bottom.ruled { border-top-color: var(--c-ink); }

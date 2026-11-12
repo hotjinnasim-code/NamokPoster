@@ -1,0 +1,27 @@
+/* didone — fashion-magazine didone: the cover lines of Vogue and Harper's Bazaar (Didot, Bodoni; Brodovitch and Fabien Baron's pages). Bodoni Moda stands in for the Latin, Nanum Myeongjo ExtraBold — a high-contrast 명조 — for Hangul. */
+.poster[data-type="didone"] {
+  --font-title: "Bodoni Moda", "Nanum Myeongjo", "Hahmlet", serif; --font-subtitle: "Bodoni Moda", "Nanum Myeongjo", "Hahmlet", serif;
+  --font-title-ko: "Bodoni Moda KR", "Nanum Myeongjo", "Hahmlet", serif; --font-subtitle-ko: "Nanum Myeongjo", "Hahmlet", serif;   /* small Korean copy keeps the 명조's own sturdier points and figures */
+  --title-size: 11.8; --title-weight: 700; --title-leading: 1.02; --title-tracking: -0.02em;
+  --title-leading-ko: 1.2; --title-tracking-ko: -0.035em; --title-wordspace-ko: 0.04em; --title-weight-ko: 800;
+  --eyebrow-size: 1.3; --eyebrow-weight: 600; --eyebrow-tracking: 0.38em; --eyebrow-tracking-ko: 0.2em;
+  --subtitle-size: 2.9; --subtitle-weight: 500; --subtitle-leading: 1.32; --subtitle-tracking: 0em; --subtitle-weight-ko: 400; --subtitle-leading-ko: 1.46; --subtitle-tracking-ko: -0.02em;
+  --body-size: 1.74; --body-weight: 400; --body-leading: 1.68; --body-weight-ko: 400; --body-measure: 28;
+  --meta-size: 2.6; --meta-weight: 400; --meta-label-weight: 700;
+  --footer-size: 1.32; --footer-weight: 500; --footer-tracking: 0.18em; --footer-tracking-ko: 0.06em; --footer-rule: 1;
+  --gap-eyebrow: 3.2; --gap-subtitle: 3; --grain: 0.16;
+}
+.poster[data-type="didone"] .title { font-variation-settings: "opsz" 96; }               /* the display cut, whatever the output size */
+.poster[data-type="didone"] .title em { font-style: italic; color: var(--c-accent); }
+.poster[data-type="didone"] .title[data-script="ko"] em { font-style: normal; }           /* no slanted Hangul */
+.poster[data-type="didone"] .subtitle { font-variation-settings: "opsz" 14; font-style: italic; color: color-mix(in srgb, var(--c-ink) 88%, transparent); }
+.poster[data-type="didone"] .subtitle[data-script="ko"] { --subtitle-size: 2.7; font-style: normal; }
+.poster[data-type="didone"] .eyebrow { color: var(--c-ink); }
+.poster[data-type="didone"] .body { color: color-mix(in srgb, var(--c-ink) 78%, transparent); }
+.poster[data-type="didone"] .footer { color: color-mix(in srgb, var(--c-ink) 88%, transparent); }
+.poster[data-type="didone"] .cta { background: var(--c-ink); color: var(--c-paper); border-radius: 0; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase; font-size: calc(var(--su) * var(--cta-size) * 0.76 * var(--k-small)); padding: 1.05em 2em; }
+.poster[data-type="didone"] .cta::after { content: none; }
+.poster[data-type="didone"] .badge { border-radius: 0; background: var(--c-ink); color: var(--c-paper); letter-spacing: 0.3em; }
+.poster[data-type="didone"] .badge[data-script="ko"] { letter-spacing: 0.1em; }
+.poster[data-type="didone"]:lang(ko) .cta { letter-spacing: 0.06em; }
+.poster[data-type="didone"] .bottom.ruled { border-top-color: var(--c-ink); }

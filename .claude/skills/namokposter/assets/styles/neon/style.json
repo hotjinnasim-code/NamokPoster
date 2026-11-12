@@ -1,0 +1,189 @@
+{
+  "id": "neon",
+  "label": "Neon Sign",
+  "engine": "blender",
+  "kind": "picture",
+  "mood": "neon tube signage — bent glass tubes with a white-hot core, standing off the wall on little mounts, their coloured light spilling over brick, plaster or a slatted panel. Night-time, urban, a little retro; good for bars and food, music and club nights, film, games, late openings, city events.",
+  "tone": "dark",
+  "type": "retro",
+  "types": ["impact", "euljiro", "yeonsung", "comic", "bold", "techno", "brutal", "classic"],
+  "matchBackground": false,
+  "fallback": "flux",
+  "defaultPalette": "tokyo",
+  "palettes": {
+    "tokyo": {
+      "bg": "#0e0b16",
+      "ink": "#f7f2ff",
+      "accent": "#ff6fb5",
+      "colors": [
+        "#ff2e88",
+        "#22d3ee",
+        "#ffd23f",
+        "#f3ecff"
+      ]
+    },
+    "diner": {
+      "bg": "#0b1018",
+      "ink": "#f3f6fb",
+      "accent": "#ffb02e",
+      "colors": [
+        "#ff4a3d",
+        "#ffb02e",
+        "#38e1ff",
+        "#fff4e0"
+      ]
+    },
+    "lagoon": {
+      "bg": "#07110f",
+      "ink": "#effff8",
+      "accent": "#5ff5c8",
+      "colors": [
+        "#2ef2c0",
+        "#3d8bff",
+        "#c5ff4a",
+        "#f0fff8"
+      ]
+    },
+    "ember": {
+      "bg": "#150b09",
+      "ink": "#fff3e6",
+      "accent": "#ff8a4d",
+      "colors": [
+        "#ff5a2b",
+        "#ffc84a",
+        "#ff3d7a",
+        "#fff1dd"
+      ]
+    },
+    "daylight": {
+      "bg": "#efd8d1",
+      "ink": "#2a1418",
+      "accent": "#d81b5c",
+      "colors": [
+        "#ff2e7e",
+        "#ff7a1a",
+        "#7a5cff",
+        "#0aa6a0"
+      ]
+    }
+  },
+  "params": {
+    "motif": {
+      "default": "arcs",
+      "note": "arcs (abstract arches, ring, baseline and waves) | icons (a set of outline icons) | frame (a double frame of tubes round the whole sheet)"
+    },
+    "icons": {
+      "default": "heart,star,cocktail,note,arrow",
+      "note": "icons motif: comma list from heart, star, cocktail, note, arrow, bolt, moon, cup, ring — one name alone makes a single large sign"
+    },
+    "wall": {
+      "default": "auto",
+      "note": "brick | plaster | panel (slatted) — auto: plaster for arcs, brick for icons, panel for frame"
+    },
+    "glow": {
+      "default": 1.0,
+      "note": "brightness of the tubes and their halo (0.6 = dimmed … 1.5 = blazing)"
+    },
+    "spill": {
+      "default": 1.0,
+      "note": "how much coloured light lands on the wall (0.5 = tight … 1.6 = floods the wall)"
+    }
+  },
+  "motifs": {
+    "arcs": {
+      "note": "abstract arcs and lines: concentric arches, a ring, a baseline and waves",
+      "topics": [
+        "music",
+        "design",
+        "art",
+        "summer"
+      ]
+    },
+    "icons": {
+      "note": "outline icons — heart, star, cocktail glass, music note, arrow (choose with `icons`)",
+      "topics": [
+        "nightlife",
+        "food",
+        "gaming",
+        "celebration"
+      ]
+    },
+    "frame": {
+      "note": "a double frame of tubes round the sheet with the copy inside it — type-led announcements",
+      "topics": [
+        "film",
+        "retro",
+        "city",
+        "market"
+      ],
+      "layouts": {
+        "landscape": {
+          "layout": "center"
+        },
+        "portrait": {
+          "layout": "center"
+        },
+        "square": {
+          "layout": "center"
+        }
+      },
+      "vars": {
+        "--margin": 12,
+        "--c-muted": "color-mix(in srgb, var(--c-ink) 84%, var(--c-bg))"
+      }
+    }
+  },
+  "topics": [
+    "nightlife",
+    "music",
+    "food",
+    "film",
+    "city",
+    "retro",
+    "gaming",
+    "celebration"
+  ],
+  "vars": {
+    "--halo": 0.35
+  },
+  "layouts": {
+    "landscape": {
+      "layout": "left",
+      "also": [
+        "right",
+        "top",
+        "bottom",
+        "corners",
+        "headline",
+        "baseline",
+        "vertical",
+        "axis",
+        "band",
+        "strip"
+      ]
+    },
+    "portrait": {
+      "layout": "top",
+      "also": [
+        "bottom",
+        "corners",
+        "baseline",
+        "vertical",
+        "axis",
+        "side"
+      ]
+    },
+    "square": {
+      "layout": "top",
+      "also": [
+        "bottom",
+        "corners",
+        "baseline",
+        "vertical",
+        "axis",
+        "left",
+        "right"
+      ]
+    }
+  }
+}

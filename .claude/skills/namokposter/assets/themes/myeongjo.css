@@ -1,0 +1,22 @@
+/* myeongjo — brush-rooted display 명조, quiet sans details. Literary, traditional, seasonal; loves vertical titles. */
+.poster[data-type="myeongjo"] {
+  --font-title: "Song Myung", "Hahmlet", "Noto Serif KR", serif;
+  --font-subtitle: "Hahmlet", "Noto Serif KR", serif;
+  --title-size: 11.6; --title-weight: 400; --title-leading: 1.08; --title-tracking: -0.02em;
+  --title-leading-ko: 1.22; --title-tracking-ko: -0.02em; --title-wordspace-ko: 0.02em;
+  --eyebrow-size: 1.34; --eyebrow-weight: 500; --eyebrow-tracking: 0.34em; --eyebrow-tracking-ko: 0.24em;
+  --subtitle-size: 2.65; --subtitle-weight: 400; --subtitle-leading: 1.5; --subtitle-weight-ko: 400; --subtitle-tracking-ko: -0.01em;
+  --body-size: 1.74; --body-weight: 400; --body-leading: 1.8; --body-leading-ko: 1.8; --body-measure: 27;
+  --footer-size: 1.39; --footer-weight: 400; --footer-tracking: 0.1em; --footer-tracking-ko: 0.06em; --footer-rule: 1;
+  --gap-eyebrow: 3.4; --gap-subtitle: 3.2; --grain: 0.26;
+}
+.poster[data-type="myeongjo"] .title em { color: var(--c-accent); }
+.poster[data-type="myeongjo"] .eyebrow { color: var(--c-ink); display: flex; align-items: center; gap: 1.2em; }
+.poster[data-type="myeongjo"] .eyebrow::after { content: ""; width: 3.2em; height: var(--hair); background: currentColor; flex: none; }
+.poster[data-type="myeongjo"] .main[data-mode="vertical"] .eyebrow::after, .poster[data-type="myeongjo"] [data-halign="center"] > .eyebrow::after { display: none; }
+.poster[data-type="myeongjo"] .subtitle { color: color-mix(in srgb, var(--c-ink) 84%, transparent); }
+.poster[data-type="myeongjo"] .body { color: color-mix(in srgb, var(--c-ink) 78%, transparent); }
+.poster[data-type="myeongjo"] .footer { color: color-mix(in srgb, var(--c-ink) 86%, transparent); }
+.poster[data-type="myeongjo"] .cta { background: transparent; color: var(--c-ink); border-radius: 0; border: var(--hair) solid var(--c-ink); font-weight: 500; letter-spacing: 0.1em; padding: 0.8em 1.6em; }
+.poster[data-type="myeongjo"] .badge { border-radius: calc(var(--u) * 0.3); background: var(--c-accent); letter-spacing: 0.16em; writing-mode: vertical-rl; padding: 1em 0.62em; }
+.poster[data-type="myeongjo"] .bottom.ruled { border-top-color: color-mix(in srgb, var(--c-ink) 40%, transparent); }

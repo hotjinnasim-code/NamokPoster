@@ -1,0 +1,32 @@
+/* roman — inscriptional capitals: the Trajan column, museum and opera-house lettering, film-title cards (Trajan, Optima capitals). Cinzel for Latin, Song Myung — brush-written and cut, as on a 현판 or a stele — for Hangul; a Garamond italic and Nanum Myeongjo carry the details. */
+.poster[data-type="roman"] {
+  --font-title: "Cinzel", "Song Myung", "Nanum Myeongjo", serif; --font-title-ko: "Cinzel KR", "Song Myung", "Nanum Myeongjo", serif;
+  --font-subtitle: "Cormorant Garamond", "Nanum Myeongjo", "Hahmlet", serif; --font-subtitle-ko: "Cormorant Garamond KR", "Nanum Myeongjo", "Hahmlet", serif;
+  --font-body: "Cormorant Garamond", "Nanum Myeongjo", "Hahmlet", serif; --font-eyebrow: "Cinzel", "Nanum Myeongjo", serif; --font-footer: "Cinzel", "Nanum Myeongjo", serif;
+  --font-label-ko: "Nanum Myeongjo", "Hahmlet", serif;
+  --title-size: 10.2; --title-weight: 600; --title-leading: 1.12; --title-tracking: 0.045em;
+  --title-leading-ko: 1.24; --title-tracking-ko: 0em; --title-wordspace-ko: 0.06em; --title-weight-ko: 600;
+  --eyebrow-size: 1.4; --eyebrow-weight: 600; --eyebrow-tracking: 0.34em; --eyebrow-tracking-ko: 0.22em;
+  --subtitle-size: 3.4; --subtitle-weight: 500; --subtitle-leading: 1.26; --subtitle-tracking: 0.005em; --subtitle-weight-ko: 400; --subtitle-leading-ko: 1.5; --subtitle-tracking-ko: -0.01em;
+  --body-size: 2.1; --body-weight: 500; --body-leading: 1.46; --body-leading-ko: 1.78; --body-tracking-ko: -0.01em; --body-weight-ko: 400; --body-measure: 31;
+  --meta-size: 3.0; --meta-weight: 500; --meta-label-weight: 700;
+  --footer-size: 1.3; --footer-weight: 600; --footer-tracking: 0.16em; --footer-tracking-ko: 0.04em; --footer-rule: 1;
+  --gap-eyebrow: 3.2; --gap-subtitle: 3; --margin: 8.5; --grain: 0.22;
+}
+.poster[data-type="roman"]:lang(ko) { --title-size: 11.2; --meta-size: 2.64; --meta-weight: 400; }
+.poster[data-type="roman"]:lang(ko) .meta { font-family: "Nanum Myeongjo", "Hahmlet", serif; }
+.poster[data-type="roman"] .body[data-script="ko"] { --body-size: 1.78; font-family: "Nanum Myeongjo", "Hahmlet", serif; }
+.poster[data-type="roman"] .subtitle[data-script="ko"] { --subtitle-size: 2.72; font-style: normal; }
+.poster[data-type="roman"] .eyebrow[data-script="ko"] { --eyebrow-size: 1.46; font-weight: 400; }
+.poster[data-type="roman"] .footer span[data-script="ko"] { font-size: 1.08em; font-weight: 400; }
+.poster[data-type="roman"] .title em { color: var(--c-accent); }
+.poster[data-type="roman"] .subtitle { font-style: italic; color: color-mix(in srgb, var(--c-ink) 88%, transparent); }
+.poster[data-type="roman"] .eyebrow { color: var(--c-accent); }
+.poster[data-type="roman"] .body { color: color-mix(in srgb, var(--c-ink) 84%, transparent); }
+.poster[data-type="roman"] .footer { color: color-mix(in srgb, var(--c-ink) 88%, transparent); }
+.poster[data-type="roman"] .cta { background: transparent; color: var(--c-ink); border-radius: 0; border: var(--hair) solid var(--c-ink); font-family: var(--font-eyebrow); font-weight: 600; letter-spacing: 0.2em; font-size: calc(var(--su) * var(--cta-size) * 0.8 * var(--k-small)); padding: 1em 1.9em; }
+.poster[data-type="roman"] .cta::after { content: none; }
+.poster[data-type="roman"] .badge { background: transparent; color: var(--c-accent); border: var(--hair) solid var(--c-accent); border-radius: 0; letter-spacing: 0.26em; }
+.poster[data-type="roman"] .badge[data-script="ko"] { letter-spacing: 0.1em; }
+.poster[data-type="roman"]:lang(ko) .cta { letter-spacing: 0.06em; }
+.poster[data-type="roman"] .bottom.ruled { border-top-color: color-mix(in srgb, var(--c-ink) 46%, transparent); }

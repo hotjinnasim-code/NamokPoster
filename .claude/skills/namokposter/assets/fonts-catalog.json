@@ -1,0 +1,177 @@
+{
+  "about": "The font policy of the skill and the checked list of faces that are not on Fontsource. scripts/fonts.mjs reads this file: `search` and `add` let a face through only when its licence and its popularity both pass. references/fonts.md explains the policy and how to add an entry.",
+  "policy": {
+    "licences": ["OFL-1.1", "Apache-2.0", "UFL-1.0"],
+    "latin_rank_max": 500,
+    "korean_share": 0.6667,
+    "popularity_source": "https://fonts.google.com/metadata/fonts (the `popularity` rank of each family; 1 is the most used)",
+    "widely_used_ko": {
+      "Pretendard": "the default Korean UI face of the 2020s; github.com/orioncactus/pretendard, 3,600 stars (2026-11-12)",
+      "Galmuri11": "the Korean pixel face in general use; github.com/quiple/galmuri, 470 stars (2026-11-12)",
+      "Kirang Haerang": "배달의민족 기랑해랑체 (Woowa Brothers, 2017): one of the Baemin faces given away every Hangeul Day and seen on shop signs, menus and television captions; below the Google Fonts line (rank 36 of 38), kept as a Baemin face",
+      "Yeon Sung": "배달의민족 연성체 (Woowa Brothers, 2016): a Baemin face, as above; below the Google Fonts line (rank 31 of 38), kept as a Baemin face",
+      "NanumSquareRound": "NAVER 나눔스퀘어라운드 (2017), of the Nanum family that is the default free Korean type of the web and of public offices",
+      "NanumSquareNeo": "NAVER 나눔스퀘어 네오 (2022), of the Nanum family",
+      "NanumBarunPen": "NAVER 나눔바른펜 (2014), of the Nanum family",
+      "NanumBarunGothic": "NAVER 나눔바른고딕 (2013), of the Nanum family",
+      "NanumSquare": "NAVER 나눔스퀘어 (2016), of the Nanum family",
+      "MaruBuri": "NAVER 마루 부리 (2021), NAVER's serif, published with the Nanum family",
+      "Wanted Sans": "원티드 산스 (Wanted Lab, 2023), in wide use in Korean product design; github.com/wanteddev/wanted-sans, 375 stars (2026-11-12)",
+      "Spoqa Han Sans Neo": "스포카 한 산스 네오 (Spoqa, 2020), a standard of Korean product design; github.com/spoqa/spoqa-han-sans, 412 stars (2026-11-12)",
+      "SUIT": "수트 (SUNN, 2022), a Korean UI and headline sans in wide use beside Pretendard; github.com/sun-typeface/SUIT, 313 stars (2026-11-12)"
+    },
+    "kept_by_decision": {
+      "East Sea Dokdo": "the brush headline of the type theme `brush`, one place under the Korean line; the owner of the skill chose to keep it on 2026-11-12 (SIL OFL 1.1, on Google Fonts)"
+    },
+    "aliases": { "Big Shoulders Display": "Big Shoulders", "Sunflower Light": "Sunflower", "Noto Serif KR Black": "Noto Serif KR" },
+    "hosts": ["api.fontsource.org", "cdn.jsdelivr.net", "fonts.google.com", "hangeul.pstatic.net", "raw.githubusercontent.com"],
+    "max_font_bytes": 12000000,
+    "bundle_licences": {
+      "about": "What a bundled face may be under: the face is in this package, so it is redistributed with it. scripts/fonts.mjs audit applies this; the faces fetched from outside (search, check, add) keep to `licences` above.",
+      "OFL-1.1": "SIL Open Font License 1.1", "Apache-2.0": "Apache License 2.0", "UFL-1.0": "Ubuntu Font Licence 1.0",
+      "public-domain": "public domain, as the publisher says",
+      "publisher-redistributable": "the publisher's own terms, which allow commercial use, print and images, and redistributing the unmodified files (or bundling them with other software); the publisher's files are bundled as published, with the publisher's licence text"
+    },
+    "publisher_terms": {
+      "about": "Bundled faces under the publisher's own terms: where the terms were read, when, and what they allow and forbid. A face of kind publisher-redistributable passes the audit only with all of these.",
+      "Jalnan 2": { "name_ko": "여기어때 잘난체", "author": "GC Company (여기어때컴퍼니)", "licence_url": "https://gccompany.co.kr/font", "licence_doc": "여기어때_잘난체_사용가이드.pdf (2023.9.27), linked from that page; in the font folder", "checked": "2026-11-12",
+        "allows": ["commercial use: print, advertising, products, CI/BI", "redistributing or bundling the unmodified files with the copyright notice and the licence"], "forbids": ["selling the font files", "redistributing a modified or reworked font", "registering a trademark on a CI/BI set in it"] },
+      "S-Core Dream": { "name_ko": "에스코어 드림", "author": "S-Core Co., Ltd.", "licence_url": "https://s-core.co.kr/company/font2/", "licence_doc": "the licence notice of that page, and the licence picture in the publisher's package; both in the font folder", "checked": "2026-11-12",
+        "allows": ["commercial use by anyone, free", "redistributing the files freely, or bundling them with other software with the copyright notice"], "forbids": ["changing the font files", "selling the font files"] },
+      "esamanru": { "name_ko": "이사만루", "author": "GONGGAMES (공게임즈) with Fontrix", "licence_url": "https://www.gonggames.com/", "licence_doc": "the Font License of that page; in the font folder", "checked": "2026-11-12",
+        "allows": ["any use including commercial: print, web, video, packaging, embedding, BI/CI", "changing, copying and distributing the font files"], "forbids": ["selling the font files", "selling a modified version"] },
+      "Maplestory": { "name_ko": "넥슨 메이플스토리", "author": "NEXON Korea", "licence_url": "https://brand.nexon.com/ko/ci-brand-guidelines/typeface", "licence_doc": "the notice and FAQ of that page; in the font folder", "checked": "2026-11-12",
+        "allows": ["use and distribution by anyone, free, including commercial use", "bundling with other software or embedding, with the copyright notice"], "forbids": ["redistributing a modified or edited font file", "selling the font"] }
+    },
+    "noonnu": {
+      "about": "How widely a Korean face is used in Korea, by noonnu.cc, the free-font index Korean designers use most. A face passes when it is in the first `views_rank_max` of noonnu's list by views (조회순), or in the first `popularity_rank_max` of its list by popularity (인기순, its default order) with at least `min_views` views. A face new to the popularity list with fewer views is not taken until it has them. Used by the audit of the bundled faces; the figures of the faces that pass otherwise are kept beside them as further evidence.",
+      "source": "https://noonnu.cc/index?order_by=vd (조회순) and https://noonnu.cc/index?order_by=pd (인기순), the first 240 of each; each face's page https://noonnu.cc/font_page/<id> for its views",
+      "collected": "2026-11-12",
+      "views_rank_max": 100, "popularity_rank_max": 100, "min_views": 100000,
+      "fonts": {
+        "Pretendard": {"id": 694, "name_ko": "프리텐다드", "popularity_rank": 1, "views_rank": 1, "views": 5190000},
+        "Nanum Gothic": {"id": 39, "name_ko": "나눔고딕", "popularity_rank": 31, "views_rank": 27, "views": 737000},
+        "Nanum Myeongjo": {"id": 41, "name_ko": "나눔명조", "popularity_rank": 33, "views_rank": 58, "views": 510000},
+        "Noto Serif KR Black": {"id": 35, "name_ko": "본명조 (Source Han Serif)", "popularity_rank": 74, "views_rank": 93, "views": 342000},
+        "Nanum Pen Script": {"id": 44, "name_ko": "나눔손글씨펜", "popularity_rank": 94, "views_rank": 90, "views": 346000},
+        "Black Han Sans": {"id": 106, "name_ko": "검은고딕", "popularity_rank": 37, "views_rank": 12, "views": 961000},
+        "Nanum Gothic Coding": {"id": 40, "name_ko": "나눔고딕코딩", "popularity_rank": null, "views_rank": null, "views": 90500},
+        "Do Hyeon": {"id": 55, "name_ko": "도현체", "popularity_rank": 59, "views_rank": 80, "views": 368000},
+        "Gowun Batang": {"id": 733, "name_ko": "고운바탕", "popularity_rank": 39, "views_rank": 10, "views": 1180000},
+        "Jua": {"id": 53, "name_ko": "주아체", "popularity_rank": 26, "views_rank": 35, "views": 650000},
+        "IBM Plex Sans KR": {"id": 448, "name_ko": "IBM Plex Sans", "popularity_rank": 185, "views_rank": 113, "views": 300000},
+        "Dongle": {"id": 748, "name_ko": "동글", "popularity_rank": 234, "views_rank": 239, "views": 144000},
+        "Hi Melody": {"id": 1109, "name_ko": "Yoon 하이멜로디", "popularity_rank": null, "views_rank": null, "views": 29000},
+        "Bagel Fat One": {"id": 1345, "name_ko": "베이글팻", "popularity_rank": null, "views_rank": 88, "views": 348000},
+        "Gowun Dodum": {"id": 734, "name_ko": "고운돋움", "popularity_rank": 101, "views_rank": 47, "views": 553000},
+        "Nanum Brush Script": {"id": 43, "name_ko": "나눔손글씨붓", "popularity_rank": 136, "views_rank": 191, "views": 173000},
+        "Hahmlet": {"id": 757, "name_ko": "함렛", "popularity_rank": 132, "views_rank": 180, "views": 184000},
+        "Gaegu": {"id": 762, "name_ko": "J개구쟁이", "popularity_rank": null, "views_rank": null, "views": 68100},
+        "Sunflower": {"id": 765, "name_ko": "J해바라기", "popularity_rank": null, "views_rank": null, "views": 33500},
+        "Sunflower Light": {"id": 765, "name_ko": "J해바라기", "popularity_rank": null, "views_rank": null, "views": 33500},
+        "Song Myung": {"id": 766, "name_ko": "송명", "popularity_rank": null, "views_rank": 201, "views": 163000},
+        "Gamja Flower": {"id": 1110, "name_ko": "Yoon 감자꽃", "popularity_rank": null, "views_rank": null, "views": 114000},
+        "Yeon Sung": {"id": 54, "name_ko": "연성체", "popularity_rank": 213, "views_rank": null, "views": 125000},
+        "Kirang Haerang": {"id": 56, "name_ko": "기랑해랑체", "popularity_rank": 220, "views_rank": null, "views": 67200},
+        "Galmuri11": {"id": 801, "name_ko": "갈무리11", "popularity_rank": 108, "views_rank": 172, "views": 192000},
+        "MaruBuri": {"id": 487, "name_ko": "마루 부리", "popularity_rank": 21, "views_rank": 39, "views": 624000},
+        "NanumBarunPen": {"id": 42, "name_ko": "나눔바른펜", "popularity_rank": 176, "views_rank": 190, "views": 174000},
+        "NanumSquareNeo": {"id": 1053, "name_ko": "나눔스퀘어 네오", "popularity_rank": 48, "views_rank": 48, "views": 550000},
+        "NanumSquareRound": {"id": 38, "name_ko": "나눔스퀘어라운드", "popularity_rank": 54, "views_rank": 73, "views": 411000},
+        "NanumSquare": {"id": 37, "name_ko": "나눔스퀘어", "popularity_rank": 18, "views_rank": 9, "views": 1280000},
+        "NanumBarunGothic": {"id": 36, "name_ko": "나눔바른고딕", "popularity_rank": 63, "views_rank": 59, "views": 504000},
+        "Wanted Sans": {"id": 1269, "name_ko": "Wanted Sans", "popularity_rank": 51, "views_rank": 137, "views": 243000},
+        "Spoqa Han Sans Neo": {"id": 744, "name_ko": "스포카 한 산스 네오", "popularity_rank": 198, "views_rank": 153, "views": 211000},
+        "SUIT": {"id": 845, "name_ko": "수트", "popularity_rank": 15, "views_rank": 24, "views": 775000},
+        "Gmarket Sans": {"id": 366, "name_ko": "G마켓 산스", "popularity_rank": 3, "views_rank": 2, "views": 2400000},
+        "Paperlogy": {"id": 1456, "name_ko": "페이퍼로지", "popularity_rank": 2, "views_rank": 6, "views": 1400000},
+        "Cafe24 ClassicType": {"id": 1035, "name_ko": "카페24 클래식타입", "popularity_rank": 122, "views_rank": 100, "views": 324000},
+        "Cafe24 Ohsquare": {"id": 363, "name_ko": "카페24 아네모네", "popularity_rank": 96, "views_rank": 49, "views": 544000},
+        "Cafe24 Ssurround": {"id": 669, "name_ko": "카페24 써라운드", "popularity_rank": 22, "views_rank": 11, "views": 999000},
+        "Cafe24 Shiningstar": {"id": 343, "name_ko": "카페24 빛나는별", "popularity_rank": 91, "views_rank": 72, "views": 411000},
+        "Cafe24 Oneprettynight": {"id": 342, "name_ko": "카페24 고운밤", "popularity_rank": 162, "views_rank": 52, "views": 529000},
+        "BM Euljiro": {"id": 321, "name_ko": "을지로체", "popularity_rank": 99, "views_rank": 71, "views": 415000},
+        "BM Kkubulim": {"id": 1500, "name_ko": "꾸불림체", "popularity_rank": 44, "views_rank": 135, "views": 248000},
+        "DungGeunMo": {"id": 250, "name_ko": "둥근모꼴+ Fixedsys", "popularity_rank": 62, "views_rank": 54, "views": 518000},
+        "Jalnan 2": {"id": 115, "name_ko": "여기어때 잘난체", "popularity_rank": 6, "views_rank": 5, "views": 1560000},
+        "S-Core Dream": {"id": 223, "name_ko": "에스코어드림", "popularity_rank": 5, "views_rank": 3, "views": 1580000},
+        "esamanru": {"id": 463, "name_ko": "이사만루", "popularity_rank": 32, "views_rank": 16, "views": 864000},
+        "Maplestory": {"id": 427, "name_ko": "넥슨 메이플스토리", "popularity_rank": 38, "views_rank": 37, "views": 625000}
+      }
+    }
+  },
+  "fonts": [
+    {
+      "id": "nanum-square-neo", "family": "NanumSquareNeo", "name_ko": "나눔스퀘어 네오", "author": "NAVER Corp. (designed by Sandoll)", "category": "sans-serif", "hangul": true,
+      "home": "https://hangeul.naver.com/font",
+      "licence": "OFL-1.1", "licence_url": "https://help.naver.com/service/30016/contents/18088", "licence_file": "assets/fonts-extra/maru-buri/OFL.txt",
+      "allows": ["commercial use", "print", "images and video", "redistribution with the licence text", "modification"], "forbids": ["selling the font files by themselves"],
+      "files": { "300": "https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeoTTF-aLt.woff", "400": "https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeoTTF-bRg.woff", "700": "https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeoTTF-cBd.woff", "800": "https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeoTTF-dEb.woff", "900": "https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeoTTF-eHv.woff" },
+      "checked": "2026-11-12", "note": "Regular and Heavy are bundled (type theme `square`)."
+    },
+    {
+      "id": "nanum-square-round", "family": "NanumSquareRound", "name_ko": "나눔스퀘어라운드", "author": "NAVER Corp. (designed by Sandoll)", "category": "sans-serif", "hangul": true,
+      "home": "https://hangeul.naver.com/font",
+      "licence": "OFL-1.1", "licence_url": "https://help.naver.com/service/30016/contents/18088", "licence_file": "assets/fonts-extra/maru-buri/OFL.txt",
+      "allows": ["commercial use", "print", "images and video", "redistribution with the licence text", "modification"], "forbids": ["selling the font files by themselves"],
+      "files": { "300": "https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareRound/NanumSquareRoundL.woff2", "400": "https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareRound/NanumSquareRoundR.woff2", "700": "https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareRound/NanumSquareRoundB.woff2", "800": "https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareRound/NanumSquareRoundEB.woff2" },
+      "checked": "2026-11-12", "note": "ExtraBold is bundled (type theme `round`)."
+    },
+    {
+      "id": "nanum-square", "family": "NanumSquare", "name_ko": "나눔스퀘어", "author": "NAVER Corp. (designed by Sandoll)", "category": "sans-serif", "hangul": true,
+      "home": "https://hangeul.naver.com/font",
+      "licence": "OFL-1.1", "licence_url": "https://help.naver.com/service/30016/contents/18088", "licence_file": "assets/fonts-extra/maru-buri/OFL.txt",
+      "allows": ["commercial use", "print", "images and video", "redistribution with the licence text", "modification"], "forbids": ["selling the font files by themselves"],
+      "files": { "300": "https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquare/NanumSquareL.woff", "400": "https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquare/NanumSquareR.woff", "700": "https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquare/NanumSquareB.woff", "800": "https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquare/NanumSquareEB.woff" },
+      "checked": "2026-11-12"
+    },
+    {
+      "id": "nanum-barun-pen", "family": "NanumBarunPen", "name_ko": "나눔바른펜", "author": "NAVER Corp. (designed by YoonDesign)", "category": "handwriting", "hangul": true,
+      "home": "https://hangeul.naver.com/font",
+      "licence": "OFL-1.1", "licence_url": "https://help.naver.com/service/30016/contents/18088", "licence_file": "assets/fonts-extra/maru-buri/OFL.txt",
+      "allows": ["commercial use", "print", "images and video", "redistribution with the licence text", "modification"], "forbids": ["selling the font files by themselves"],
+      "files": { "400": "https://hangeul.pstatic.net/hangeul_static/webfont/NanumBarunpen/NanumBarunpenR.woff", "700": "https://hangeul.pstatic.net/hangeul_static/webfont/NanumBarunpen/NanumBarunpenB.woff" },
+      "checked": "2026-11-12", "note": "Regular is bundled (type theme `story`)."
+    },
+    {
+      "id": "nanum-barun-gothic", "family": "NanumBarunGothic", "name_ko": "나눔바른고딕", "author": "NAVER Corp.", "category": "sans-serif", "hangul": true,
+      "home": "https://hangeul.naver.com/font",
+      "licence": "OFL-1.1", "licence_url": "https://help.naver.com/service/30016/contents/18088", "licence_file": "assets/fonts-extra/maru-buri/OFL.txt",
+      "allows": ["commercial use", "print", "images and video", "redistribution with the licence text", "modification"], "forbids": ["selling the font files by themselves"],
+      "files": { "200": "https://hangeul.pstatic.net/hangeul_static/webfont/NanumBarunGothicL/NanumBarunGothicWebUltraLight.woff", "300": "https://hangeul.pstatic.net/hangeul_static/webfont/NanumBarunGothicL/NanumBarunGothicWebLight.woff", "400": "https://hangeul.pstatic.net/hangeul_static/webfont/NanumBarunGothic/NanumBarunGothicWeb.woff", "700": "https://hangeul.pstatic.net/hangeul_static/webfont/NanumBarunGothic/NanumBarunGothicWebBold.woff" },
+      "checked": "2026-11-12"
+    },
+    {
+      "id": "maru-buri", "family": "MaruBuri", "name_ko": "마루 부리", "author": "NAVER Corp. and NAVER Cultural Foundation", "category": "serif", "hangul": true,
+      "home": "https://hangeul.naver.com/font",
+      "licence": "OFL-1.1", "licence_url": "https://help.naver.com/service/30016/contents/18088", "licence_file": "assets/fonts-extra/maru-buri/OFL.txt",
+      "allows": ["commercial use", "print", "images and video", "redistribution with the licence text", "modification"], "forbids": ["selling the font files by themselves"],
+      "files": { "200": "https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-ExtraLight.woff2", "300": "https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-Light.woff2", "400": "https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-Regular.woff2", "600": "https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-SemiBold.woff2", "700": "https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-Bold.woff2" },
+      "checked": "2026-11-12", "note": "Regular and Bold are bundled (type theme `maru`)."
+    },
+    {
+      "id": "wanted-sans", "family": "Wanted Sans", "name_ko": "원티드 산스", "author": "The Wanted Sans Project Authors (Wanted Lab)", "category": "sans-serif", "hangul": true,
+      "home": "https://github.com/wanteddev/wanted-sans",
+      "licence": "OFL-1.1", "licence_url": "https://raw.githubusercontent.com/wanteddev/wanted-sans/main/OFL.txt",
+      "allows": ["commercial use", "print", "images and video", "redistribution with the licence text", "modification"], "forbids": ["selling the font files by themselves"],
+      "files": { "400": "https://raw.githubusercontent.com/wanteddev/wanted-sans/main/packages/wanted-sans/fonts/webfonts/static/complete/woff2/WantedSans-Regular.woff2", "600": "https://raw.githubusercontent.com/wanteddev/wanted-sans/main/packages/wanted-sans/fonts/webfonts/static/complete/woff2/WantedSans-SemiBold.woff2", "700": "https://raw.githubusercontent.com/wanteddev/wanted-sans/main/packages/wanted-sans/fonts/webfonts/static/complete/woff2/WantedSans-Bold.woff2", "800": "https://raw.githubusercontent.com/wanteddev/wanted-sans/main/packages/wanted-sans/fonts/webfonts/static/complete/woff2/WantedSans-ExtraBold.woff2" },
+      "checked": "2026-11-12"
+    },
+    {
+      "id": "spoqa-han-sans-neo", "family": "Spoqa Han Sans Neo", "name_ko": "스포카 한 산스 네오", "author": "Spoqa", "category": "sans-serif", "hangul": true,
+      "home": "https://github.com/spoqa/spoqa-han-sans",
+      "licence": "OFL-1.1", "licence_url": "https://raw.githubusercontent.com/spoqa/spoqa-han-sans/master/Original/SpoqaHanSansNeo/LICENSE",
+      "allows": ["commercial use", "print", "images and video", "redistribution with the licence text", "modification"], "forbids": ["selling the font files by themselves"],
+      "files": { "400": "https://raw.githubusercontent.com/spoqa/spoqa-han-sans/master/Original/SpoqaHanSansNeo/SpoqaHanSansNeo-Regular.ttf", "700": "https://raw.githubusercontent.com/spoqa/spoqa-han-sans/master/Original/SpoqaHanSansNeo/SpoqaHanSansNeo-Bold.ttf" },
+      "checked": "2026-11-12"
+    },
+    {
+      "id": "suit", "family": "SUIT", "name_ko": "수트", "author": "SUNN (sun-typeface)", "category": "sans-serif", "hangul": true,
+      "home": "https://github.com/sun-typeface/SUIT",
+      "licence": "OFL-1.1", "licence_url": "https://raw.githubusercontent.com/sun-typeface/SUIT/main/LICENSE",
+      "allows": ["commercial use", "print", "images and video", "redistribution with the licence text", "modification"], "forbids": ["selling the font files by themselves", "the Reserved Font Name SUIT on a modified version"],
+      "files": { "400": "https://raw.githubusercontent.com/sun-typeface/SUIT/main/fonts/static/woff2/SUIT-Regular.woff2", "700": "https://raw.githubusercontent.com/sun-typeface/SUIT/main/fonts/static/woff2/SUIT-Bold.woff2", "800": "https://raw.githubusercontent.com/sun-typeface/SUIT/main/fonts/static/woff2/SUIT-ExtraBold.woff2", "900": "https://raw.githubusercontent.com/sun-typeface/SUIT/main/fonts/static/woff2/SUIT-Heavy.woff2" },
+      "checked": "2026-11-12"
+    }
+  ]
+}

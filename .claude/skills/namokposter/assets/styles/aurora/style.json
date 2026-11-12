@@ -1,0 +1,122 @@
+{
+  "id": "aurora",
+  "label": "Aurora Gradient",
+  "engine": "three",
+  "mood": "bright, friendly, modern — a pearly liquid blob floating on a soft colour-mesh gradient. Good for product launches, community events, education, lifestyle.",
+  "tone": "light",
+  "type": "friendly",
+  "types": ["bold", "round", "dongle", "pop", "swiss", "ssurround"],
+  "fallback": null,
+  "defaultPalette": "sunset",
+  "palettes": {
+    "sunset": {
+      "bg": "#fff3ea",
+      "ink": "#1c1322",
+      "accent": "#f0356b",
+      "colors": [
+        "#ff6a3d",
+        "#ff3d81",
+        "#ffb347",
+        "#7a5cff"
+      ]
+    },
+    "ocean": {
+      "bg": "#edf5ff",
+      "ink": "#0b1633",
+      "accent": "#1f5eff",
+      "colors": [
+        "#2f6bff",
+        "#00c2ff",
+        "#7a5cff",
+        "#00dcb4"
+      ]
+    },
+    "mint": {
+      "bg": "#effaf4",
+      "ink": "#0c2a22",
+      "accent": "#009e72",
+      "colors": [
+        "#00c389",
+        "#b6f36a",
+        "#00a3ff",
+        "#ffd166"
+      ]
+    },
+    "candy": {
+      "bg": "#fff0f7",
+      "ink": "#2a1030",
+      "accent": "#d92d86",
+      "colors": [
+        "#ff5fa2",
+        "#a66bff",
+        "#ffd23f",
+        "#3ec9ff"
+      ]
+    },
+    "night": {
+      "bg": "#0b0b1c",
+      "ink": "#f6f3ff",
+      "accent": "#ff7ab8",
+      "colors": [
+        "#6a4cff",
+        "#ff3d9a",
+        "#00d4ff",
+        "#ffb347"
+      ]
+    }
+  },
+  "params": {
+    "blob": {
+      "default": 0.24,
+      "note": "0 = perfect sphere … 0.4 = very wobbly"
+    },
+    "satellites": {
+      "default": 5,
+      "note": "number of small companion spheres"
+    },
+    "glow": {
+      "default": 1.0,
+      "note": "strength of the colour field behind the subject"
+    }
+  },
+  "layouts": {
+    "landscape": {
+      "layout": "left",
+      "also": [
+        "right",
+        "top",
+        "bottom",
+        "corners",
+        "headline",
+        "baseline",
+        "vertical",
+        "axis",
+        "band",
+        "strip"
+      ]
+    },
+    "portrait": {
+      "layout": "top",
+      "also": [
+        "bottom",
+        "corners",
+        "baseline",
+        "vertical",
+        "axis",
+        "side"
+      ]
+    },
+    "square": {
+      "layout": "top",
+      "also": [
+        "bottom",
+        "corners",
+        "baseline",
+        "vertical",
+        "axis",
+        "left",
+        "right"
+      ]
+    }
+  }
+}

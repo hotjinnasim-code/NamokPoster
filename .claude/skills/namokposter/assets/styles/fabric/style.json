@@ -1,0 +1,198 @@
+{
+  "id": "fabric",
+  "label": "Draped Fabric",
+  "engine": "blender",
+  "kind": "object",
+  "mood": "draped cloth — silk satin or velvet falling in large folds with a clear hierarchy of big swags, medium folds and small wrinkles, hemmed edges and soft gradient light running along the folds as sheen. Sensual, theatrical, premium; good for fashion and beauty, theatre, film and concerts, exhibition openings and unveilings, luxury launches, weddings and galas.",
+  "tone": "light",
+  "type": "elegant",
+  "types": [
+    "luxe",
+    "didone",
+    "editorial",
+    "myeongjo",
+    "garamond"
+  ],
+  "matchBackground": true,
+  "fallback": "ribbon",
+  "defaultPalette": "rose",
+  "palettes": {
+    "rose": {
+      "bg": "#f3e6e1",
+      "ink": "#3b1f22",
+      "accent": "#a8323f",
+      "colors": [
+        "#c2414f",
+        "#d9a75b",
+        "#7a2833",
+        "#f0d2c8"
+      ]
+    },
+    "champagne": {
+      "bg": "#f2ece2",
+      "ink": "#2d2620",
+      "accent": "#8a6a3f",
+      "colors": [
+        "#dcc6a0",
+        "#8a6a3f",
+        "#b9a27a",
+        "#5c4a3a"
+      ]
+    },
+    "sky": {
+      "bg": "#e6edf3",
+      "ink": "#1b2a3a",
+      "accent": "#2f5fa8",
+      "colors": [
+        "#3d6fc4",
+        "#e0b04a",
+        "#9cb8dc",
+        "#1f3a66"
+      ]
+    },
+    "theatre": {
+      "bg": "#1a1013",
+      "ink": "#f6e9e4",
+      "accent": "#e2b25a",
+      "colors": [
+        "#b0182e",
+        "#e2b25a",
+        "#5e0c19",
+        "#f0c987"
+      ]
+    },
+    "emerald": {
+      "bg": "#0f1d1a",
+      "ink": "#eef3ee",
+      "accent": "#d9b56c",
+      "colors": [
+        "#1f7f60",
+        "#d9b56c",
+        "#0f4a3a",
+        "#9fd1bd"
+      ]
+    }
+  },
+  "params": {
+    "motif": {
+      "default": "drape",
+      "note": "drape (a cloth thrown over a hidden form, pooling on the floor) | curtain (a stage curtain on a rod, pleated, tied back, pooling) | flow (a silk sheet hung by two corners, falling into swags, stirred by the wind)"
+    },
+    "cloth": {
+      "default": "satin",
+      "note": "satin (silk satin, long anisotropic highlights) | velvet (deep pile, bright rims, dark cores); curtain defaults to velvet"
+    },
+    "colorIndex": {
+      "default": 0,
+      "note": "which palette colour the cloth is dyed"
+    },
+    "key": {
+      "default": 1500,
+      "note": "key light (W); the backdrop is calibrated to it"
+    },
+    "rim": {
+      "default": 1,
+      "note": "back light on the cloth only: 0 = none … 2 = strong glowing edges"
+    },
+    "wind": {
+      "default": 1,
+      "note": "flow only: wind on the hanging sheet, 0 = still … 2 = gusty"
+    }
+  },
+  "motifs": {
+    "drape": {
+      "note": "a cloth thrown over a hidden form on the floor, taut on top and pooling in folds — an unveiling",
+      "topics": [
+        "art",
+        "luxury",
+        "design",
+        "fashion",
+        "business"
+      ]
+    },
+    "curtain": {
+      "note": "a stage curtain on a brass rod, pinch-pleated, tied back with a cord and pooling on the floor",
+      "topics": [
+        "film",
+        "music",
+        "culture",
+        "celebration",
+        "literature"
+      ],
+      "palette": "theatre",
+      "params": {
+        "cloth": {
+          "default": "velvet",
+          "note": "satin | velvet"
+        }
+      }
+    },
+    "flow": {
+      "note": "a broad silk sheet hung by its two top corners, falling into deep swags and stirred by the wind",
+      "topics": [
+        "fashion",
+        "beauty",
+        "wellness",
+        "luxury",
+        "spring"
+      ]
+    }
+  },
+  "topics": [
+    "fashion",
+    "beauty",
+    "luxury",
+    "art",
+    "film",
+    "music",
+    "culture",
+    "celebration"
+  ],
+  "layouts": {
+    "landscape": {
+      "layout": "left",
+      "also": [
+        "right",
+        "top",
+        "bottom",
+        "corners",
+        "headline",
+        "baseline",
+        "vertical",
+        "axis",
+        "band",
+        "strip"
+      ]
+    },
+    "portrait": {
+      "layout": "top",
+      "also": [
+        "bottom",
+        "corners",
+        "baseline",
+        "vertical",
+        "axis",
+        "side"
+      ]
+    },
+    "square": {
+      "layout": "top",
+      "also": [
+        "bottom",
+        "corners",
+        "baseline",
+        "vertical",
+        "axis",
+        "left",
+        "right"
+      ]
+    }
+  },
+  "cutout": true,
+  "grounds": [
+    "haze",
+    "halftone",
+    "pattern/dots",
+    "pattern/stripes"
+  ]
+}

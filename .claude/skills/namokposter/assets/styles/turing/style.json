@@ -1,0 +1,140 @@
+{
+  "id": "turing",
+  "label": "Reaction–Diffusion Relief",
+  "engine": "three",
+  "mood": "an organic print — a Gray–Scott reaction–diffusion pattern embossed like letterpress: an irregular drift of combed stripes (wood grain, fingerprint) breaking into packed dots, then a calm flat field for the copy. Good for biotech and science, craft and textile, wellness, organic brands, research reports.",
+  "kind": "picture",
+  "tone": "light",
+  "type": "swiss",
+  "types": [
+    "editorial",
+    "slim",
+    "maru",
+    "bold",
+    "techno"
+  ],
+  "defaultPalette": "indigo",
+  "palettes": {
+    "indigo": {
+      "bg": "#f1ece1",
+      "ink": "#1c2340",
+      "accent": "#2f55b8",
+      "colors": [
+        "#27336e",
+        "#3f6fb5",
+        "#e9b44c"
+      ]
+    },
+    "moss": {
+      "bg": "#eef0e2",
+      "ink": "#1f2a1e",
+      "accent": "#3f7a3a",
+      "colors": [
+        "#2f5d46",
+        "#7da04a",
+        "#e9b44c"
+      ]
+    },
+    "ochre": {
+      "bg": "#f5ecdc",
+      "ink": "#33261a",
+      "accent": "#8a5a16",
+      "colors": [
+        "#8a5a2b",
+        "#d49a35",
+        "#33261a"
+      ]
+    },
+    "midnight": {
+      "bg": "#0e1424",
+      "ink": "#f2efe6",
+      "accent": "#f2b84b",
+      "colors": [
+        "#ece2c8",
+        "#86bccb",
+        "#f2b84b"
+      ]
+    },
+    "berry": {
+      "bg": "#2a1030",
+      "ink": "#fbeef2",
+      "accent": "#ff8fa3",
+      "colors": [
+        "#ff6f91",
+        "#ffb199",
+        "#5b1f5e"
+      ]
+    }
+  },
+  "params": {
+    "pattern": {
+      "default": "coral",
+      "note": "core of the drift: coral = long combed stripes … worms = shorter broken stripes … spots = packed dots (the rim is always dots)"
+    },
+    "flow": {
+      "default": 1.0,
+      "note": "0.7 = loosely combed … 1.5 = very straight grain (stripes always share one direction)"
+    },
+    "scale": {
+      "default": 1.0,
+      "note": "0.6 = fine pattern … 1.8 = large"
+    },
+    "relief": {
+      "default": 1.0,
+      "note": "0 = flat print … 2 = deep emboss"
+    },
+    "buds": {
+      "default": 1.0,
+      "note": "0–1 strength of the third-colour buds at stripe tips and inside dots"
+    },
+    "spread": {
+      "default": 1.0,
+      "note": "0.5 = a narrow drift at the focus … 2 = fills more of the sheet"
+    },
+    "steps": {
+      "default": 2600,
+      "note": "simulation steps (fewer = younger, blobbier pattern)"
+    }
+  },
+  "layouts": {
+    "landscape": {
+      "layout": "left",
+      "also": [
+        "right",
+        "top",
+        "bottom",
+        "corners",
+        "headline",
+        "baseline",
+        "vertical",
+        "axis",
+        "band",
+        "strip"
+      ]
+    },
+    "portrait": {
+      "layout": "top",
+      "also": [
+        "bottom",
+        "corners",
+        "baseline",
+        "vertical",
+        "axis",
+        "side"
+      ]
+    },
+    "square": {
+      "layout": "top",
+      "also": [
+        "bottom",
+        "corners",
+        "baseline",
+        "vertical",
+        "axis",
+        "left",
+        "right"
+      ]
+    }
+  },
+  "ground": true
+}

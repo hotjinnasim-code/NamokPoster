@@ -1,0 +1,25 @@
+/* plex — the engineered corporate voice of IBM's design language (Helvetica's heir IBM Plex on the Carbon grid; in Korea beside 산돌고딕Neo): semibold headline, mono labels, a ruled information table. Faces: IBM Plex Sans KR (its Latin is IBM Plex Sans) + IBM Plex Mono. */
+.poster[data-type="plex"] {
+  --font-title: "IBM Plex Sans KR", "IBM Plex Sans", "Pretendard", sans-serif;   /* one family: its own Latin and figures */
+  --font-body: "IBM Plex Sans", "Pretendard", sans-serif;
+  --font-eyebrow: "IBM Plex Mono", "JetBrains Mono", "Pretendard", monospace; --font-footer: "IBM Plex Mono", "JetBrains Mono", "Pretendard", monospace;
+  --font-label-ko: "IBM Plex Sans KR", "Pretendard", sans-serif;
+  --title-size: 10.6; --title-weight: 600; --title-leading: 1.06; --title-tracking: -0.03em;
+  --title-leading-ko: 1.2; --title-tracking-ko: -0.03em; --title-wordspace-ko: 0.04em;
+  --eyebrow-size: 1.38; --eyebrow-weight: 500; --eyebrow-tracking: 0.1em; --eyebrow-tracking-ko: 0.04em;
+  --subtitle-size: 2.8; --subtitle-weight: 400; --subtitle-leading: 1.38; --subtitle-tracking: -0.01em; --subtitle-weight-ko: 450;
+  --body-size: 1.8; --body-weight: 400; --body-leading: 1.6; --body-weight-ko: 400;
+  --meta-size: 2.6; --meta-weight: 400; --meta-label-weight: 600;
+  --footer-size: 1.34; --footer-weight: 500; --footer-tracking: 0.04em; --footer-tracking-ko: 0em; --footer-rule: 1;
+  --gap-eyebrow: 2.8; --gap-subtitle: 2.6; --grain: 0.08;
+}
+.poster[data-type="plex"] .title em { color: var(--c-accent); }
+.poster[data-type="plex"] .subtitle { color: color-mix(in srgb, var(--c-ink) 92%, transparent); }
+/* the information table is ruled like a data table: a hairline over every row and one to close it */
+.poster[data-type="plex"] .meta dt { font-family: var(--font-title); }
+.poster[data-type="plex"] .meta:not(.cells):not(.lines) { column-gap: 0; row-gap: 0; border-bottom: var(--hair) solid color-mix(in srgb, var(--c-ink) 34%, transparent); }
+.poster[data-type="plex"] .meta:not(.cells):not(.lines) dt, .poster[data-type="plex"] .meta:not(.cells):not(.lines) dd { border-top: var(--hair) solid color-mix(in srgb, var(--c-ink) 34%, transparent); padding: 0.34em 0 0.38em; }
+.poster[data-type="plex"] .meta:not(.cells):not(.lines) dt { padding-right: 1.5em; }
+.poster[data-type="plex"] .cta { border-radius: 0; background: var(--c-accent); color: var(--c-on-accent, var(--c-paper)); font-weight: 600; gap: 2.2em; padding: 0.86em 1.1em 0.86em 1.2em; }
+.poster[data-type="plex"] .badge { border-radius: 0; font-weight: 500; letter-spacing: 0.06em; }
+.poster[data-type="plex"] .bottom.ruled { border-top-color: var(--c-ink); border-top-width: calc(var(--u) * 0.12); }

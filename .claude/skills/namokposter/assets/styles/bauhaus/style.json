@@ -1,0 +1,137 @@
+{
+  "id": "bauhaus",
+  "label": "Geometric Mosaic",
+  "engine": "three",
+  "mood": "flat, crisp, playful-but-ordered — a tidy grid of square tiles filled with circles, quarter-circles, arches, stripes and dots in a few flat colours, like a design-studio identity. Good for design weeks, studios and agencies, architecture, education, cultural programmes, brand systems.",
+  "tone": "light",
+  "type": "swiss",
+  "types": [
+    "bold",
+    "slim",
+    "brutal",
+    "editorial",
+    "impact"
+  ],
+  "defaultPalette": "primary",
+  "palettes": {
+    "primary": {
+      "bg": "#f1ece1",
+      "ink": "#17171b",
+      "accent": "#d23417",
+      "colors": [
+        "#e2401c",
+        "#1f47c8",
+        "#f4b81f"
+      ]
+    },
+    "terrazzo": {
+      "bg": "#efe8dc",
+      "ink": "#16181c",
+      "accent": "#b8452f",
+      "colors": [
+        "#c8553d",
+        "#28536b",
+        "#e9b44c",
+        "#9db8a6"
+      ]
+    },
+    "pool": {
+      "bg": "#e8f1ec",
+      "ink": "#071f1a",
+      "accent": "#087a5d",
+      "colors": [
+        "#0c8a6a",
+        "#ff7a59",
+        "#f6c445",
+        "#2b4bd6"
+      ]
+    },
+    "noir": {
+      "bg": "#151517",
+      "ink": "#f2ede2",
+      "accent": "#f4b81f",
+      "colors": [
+        "#e8452c",
+        "#f4b81f",
+        "#3b62e0"
+      ]
+    },
+    "midnight": {
+      "bg": "#0f1730",
+      "ink": "#f3efe6",
+      "accent": "#ff7a59",
+      "colors": [
+        "#ff7a59",
+        "#f6c445",
+        "#7fb6ff",
+        "#2f4fd8"
+      ]
+    }
+  },
+  "params": {
+    "grid": {
+      "default": 5,
+      "note": "tiles per side, 3–8 (4 = bold, 6 = intricate)"
+    },
+    "merge": {
+      "default": 2,
+      "note": "number of 2×2 tiles (0 = none)"
+    },
+    "empty": {
+      "default": 0.12,
+      "note": "share of cells left blank, 0–0.5"
+    },
+    "air": {
+      "default": 0.42,
+      "note": "how much paper shows inside the block (paper grounds and cut-outs): 0 = solid colour everywhere … 0.9 = mostly shapes on paper"
+    },
+    "gap": {
+      "default": 0,
+      "note": "gutter between tiles as a fraction of a tile, 0 = flush … 0.3"
+    }
+  },
+  "vars": {
+    "--scrim-center": 0
+  },
+  "layouts": {
+    "landscape": {
+      "layout": "left",
+      "also": [
+        "right",
+        "top",
+        "bottom",
+        "corners",
+        "headline",
+        "baseline",
+        "vertical",
+        "axis",
+        "band",
+        "strip"
+      ]
+    },
+    "portrait": {
+      "layout": "top",
+      "also": [
+        "bottom",
+        "corners",
+        "baseline",
+        "vertical",
+        "axis",
+        "side"
+      ]
+    },
+    "square": {
+      "layout": "top",
+      "also": [
+        "bottom",
+        "corners",
+        "baseline",
+        "vertical",
+        "axis",
+        "left",
+        "right"
+      ]
+    }
+  },
+  "ground": true
+}

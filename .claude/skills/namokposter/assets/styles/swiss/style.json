@@ -1,0 +1,263 @@
+{
+  "id": "swiss",
+  "label": "Swiss Graphic",
+  "engine": "html",
+  "kind": "object",
+  "mood": "one abstract geometric figure built by a single stated rule, in black and one signal colour on a plain sheet, in the manner of the Swiss concert and exhibition posters of the 1950s and 60s — concentric arc bands whose thickness grows by a fixed ratio while their cuts turn in steps of 22.5°, a row of bars widening from hairline to slab on one baseline, a grid of discs shrinking along its diagonal from touching to pin-point, or 45° bands that double step by step — set large, its fine end beside the copy and its heavy end running off the free edge of the sheet, with two to four tiny captions (the date, the time, the weekday, the year, read from the event information) hung on its cuts, ticks and corners. No illustration, no texture: exact vector geometry in two inks, sharp at any size. Good for concerts and recitals, design and architecture talks, exhibitions, lecture series, conferences, science and technology events — anything that should look precise and confident.",
+  "tone": "light",
+  "type": "swiss",
+  "types": [
+    "grotesk",
+    "slim",
+    "square",
+    "geometric",
+    "plex",
+    "wide",
+    "condensed"
+  ],
+  "defaultPalette": "paper",
+  "palettes": {
+    "paper": {
+      "bg": "#f1eee6",
+      "ink": "#121212",
+      "accent": "#e0261a",
+      "colors": [
+        "#121212",
+        "#e0261a"
+      ]
+    },
+    "signal": {
+      "bg": "#ff6341",
+      "ink": "#000000",
+      "accent": "#6e1200",
+      "colors": [
+        "#000000",
+        "#ffffff"
+      ]
+    },
+    "cobalt": {
+      "bg": "#1b3bc4",
+      "ink": "#ffffff",
+      "accent": "#ffd400",
+      "colors": [
+        "#ffffff",
+        "#ffd400"
+      ]
+    },
+    "concrete": {
+      "bg": "#d8d4cb",
+      "ink": "#111111",
+      "accent": "#c43c08",
+      "colors": [
+        "#111111",
+        "#c43c08"
+      ]
+    },
+    "ink": {
+      "bg": "#101010",
+      "ink": "#f2efe8",
+      "accent": "#ffd400",
+      "colors": [
+        "#f2efe8",
+        "#ffd400"
+      ]
+    }
+  },
+  "params": {
+    "motif": {
+      "default": "arcs",
+      "note": "arcs | bars | dots | diagonal"
+    },
+    "ratio": {
+      "default": 0,
+      "note": "how much each step grows over the last (0 = the motif's own: arcs 1.5, bars 1.5, diagonal 2); 1.3 is gentle, 1.8 steep. Arcs and bars take 1.3–1.8, diagonal 1.5–2.2; dots do not use it"
+    },
+    "rule": {
+      "default": "auto",
+      "note": "bars only — how the heights step: wave (one slow wave over eight bars) | ramp (each bar one step taller or shorter than the last) | auto (the seed chooses)"
+    },
+    "captions": {
+      "default": true,
+      "note": "true | false — the small labels read from the copy (date, time, weekday, year)"
+    },
+    "crop": {
+      "default": true,
+      "note": "true | false — whether the heavy end of the figure may run off a page edge that the copy leaves free; false keeps the whole figure inside the margins"
+    }
+  },
+  "motifs": {
+    "arcs": {
+      "note": "seven concentric arc bands around one centre marked by a hairline cross: each band 1.5 times as thick as the one inside it, the gaps constant, each cut turned by a fixed number of 22.5° steps so the whole turns like a spiral stair seen from above; one band in the accent; captions at the ends of arcs",
+      "topics": [
+        "music",
+        "culture",
+        "art",
+        "design"
+      ]
+    },
+    "bars": {
+      "note": "nine to fourteen bars on one hairline baseline, each 1.5 times as wide as the last, from a hairline to a slab, their heights stepping in a slow wave or a ramp; one bar in the accent; tick captions under the baseline",
+      "palette": "signal",
+      "topics": [
+        "music",
+        "business",
+        "tech",
+        "education"
+      ],
+      "layouts": {
+        "landscape": {
+          "layout": "left",
+          "also": [
+            "right",
+            "top",
+            "bottom",
+            "band",
+            "strip",
+            "corners",
+            "baseline",
+            "headline"
+          ]
+        },
+        "portrait": {
+          "layout": "top",
+          "also": [
+            "bottom",
+            "side",
+            "corners"
+          ]
+        },
+        "square": {
+          "layout": "left",
+          "also": [
+            "right",
+            "bottom"
+          ]
+        }
+      }
+    },
+    "dots": {
+      "note": "a square grid of discs (7, 8 or 9 a side) whose diameter falls by one equal step per diagonal, from touching in one corner to a pin-point in the opposite one; one disc in the accent; captions at the corners of the grid, joined by hairlines. The quiet one: it stays whole inside the margins",
+      "palette": "cobalt",
+      "tone": "dark",
+      "topics": [
+        "design",
+        "art",
+        "science",
+        "tech"
+      ],
+      "layouts": {
+        "landscape": {
+          "layout": "left",
+          "also": [
+            "right",
+            "top",
+            "bottom",
+            "strip",
+            "baseline"
+          ]
+        },
+        "portrait": {
+          "layout": "top",
+          "also": [
+            "bottom",
+            "axis",
+            "corners"
+          ]
+        },
+        "square": {
+          "layout": "left",
+          "also": [
+            "right",
+            "bottom"
+          ]
+        }
+      }
+    },
+    "diagonal": {
+      "note": "six or seven 45° bands across a plain rectangle that runs out to the free page edges: each band twice as wide as the last, and so is the space after it, from hairlines in the corner nearest the copy to a slab cut by the far corner; one band in the accent; tick captions under the lower edge",
+      "palette": "concrete",
+      "topics": [
+        "architecture",
+        "design",
+        "business",
+        "education"
+      ],
+      "layouts": {
+        "landscape": {
+          "layout": "left",
+          "also": [
+            "right",
+            "top",
+            "bottom",
+            "band",
+            "strip",
+            "corners",
+            "baseline"
+          ]
+        },
+        "portrait": {
+          "layout": "top",
+          "also": [
+            "bottom",
+            "side",
+            "axis",
+            "corners"
+          ]
+        },
+        "square": {
+          "layout": "left",
+          "also": [
+            "right",
+            "bottom",
+            "top"
+          ]
+        }
+      }
+    }
+  },
+  "topics": [
+    "design",
+    "music",
+    "architecture",
+    "culture",
+    "art",
+    "education",
+    "business",
+    "tech",
+    "science"
+  ],
+  "layouts": {
+    "landscape": {
+      "layout": "left",
+      "also": [
+        "right",
+        "top",
+        "bottom",
+        "band",
+        "strip",
+        "corners",
+        "baseline"
+      ]
+    },
+    "portrait": {
+      "layout": "top",
+      "also": [
+        "bottom",
+        "side",
+        "axis",
+        "corners"
+      ]
+    },
+    "square": {
+      "layout": "left",
+      "also": [
+        "right",
+        "bottom"
+      ]
+    }
+  },
+  "grounds": [
+    "haze",
+    "fluted"
+  ]
+}

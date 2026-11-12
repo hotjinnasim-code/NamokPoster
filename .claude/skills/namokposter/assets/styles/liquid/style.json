@@ -1,0 +1,180 @@
+{
+  "id": "liquid",
+  "label": "Liquid Gradient",
+  "engine": "three",
+  "kind": "object",
+  "mood": "liquid-gradient 3D — lava-lamp metaballs that melt into one another, a colour gradient flowing through the form, a luminous rim, satin or glossy finish and fine film grain, as in contemporary brand visuals. Fluid, warm, current. Good for brand and product launches, beauty and fashion, music and nightlife, design talks, tech and wellness campaigns.",
+  "tone": "light",
+  "type": "bold",
+  "types": ["grotesk", "round", "slim", "friendly", "swiss", "wide", "paperlogy"],
+  "defaultPalette": "peach",
+  "palettes": {
+    "peach": {
+      "bg": "#f6efe9",
+      "ink": "#1b1420",
+      "accent": "#ff4f6d",
+      "colors": [
+        "#ff8a5c",
+        "#ff4f8b",
+        "#7a5cff",
+        "#ffd3b0"
+      ]
+    },
+    "lagoon": {
+      "bg": "#eaf1f6",
+      "ink": "#0c1c2e",
+      "accent": "#1e5bff",
+      "colors": [
+        "#1e5bff",
+        "#13c0d8",
+        "#a68bff",
+        "#e6fbff"
+      ]
+    },
+    "acid": {
+      "bg": "#f0f1e8",
+      "ink": "#151a12",
+      "accent": "#5a37ff",
+      "colors": [
+        "#b8f53a",
+        "#22c79a",
+        "#5a37ff",
+        "#ff9ad9"
+      ]
+    },
+    "noir": {
+      "bg": "#0c0a12",
+      "ink": "#f5f1ff",
+      "accent": "#ffb36b",
+      "colors": [
+        "#3a1ed0",
+        "#ff3d8b",
+        "#ff9a3d",
+        "#ffe2c4"
+      ]
+    },
+    "ultraviolet": {
+      "bg": "#090e1d",
+      "ink": "#eef4ff",
+      "accent": "#7cf2ff",
+      "colors": [
+        "#1a2db5",
+        "#7a3cff",
+        "#00c2ff",
+        "#d8f6ff"
+      ]
+    }
+  },
+  "params": {
+    "motif": {
+      "default": "mass",
+      "note": "mass | rise | wave | drip — what the liquid does"
+    },
+    "finish": {
+      "default": "satin",
+      "note": "matte | satin | gloss — how much the surface reflects"
+    },
+    "grain": {
+      "default": 1.0,
+      "note": "film grain over the picture, 0 = clean"
+    },
+    "glow": {
+      "default": 1.0,
+      "note": "soft coloured glow on the ground behind the liquid, 0 = plain ground"
+    },
+    "wobble": {
+      "default": 1.0,
+      "note": "small irregularity of the surface, 0 = perfectly smooth"
+    },
+    "detail": {
+      "default": 1.0,
+      "note": "mesh resolution multiplier (0.5–1.6)"
+    }
+  },
+  "layouts": {
+    "landscape": {
+      "layout": "left",
+      "also": [
+        "right",
+        "top",
+        "bottom",
+        "corners",
+        "headline",
+        "baseline",
+        "vertical",
+        "axis",
+        "band",
+        "strip"
+      ]
+    },
+    "portrait": {
+      "layout": "top",
+      "also": [
+        "bottom",
+        "corners",
+        "baseline",
+        "vertical",
+        "axis",
+        "side"
+      ]
+    },
+    "square": {
+      "layout": "top",
+      "also": [
+        "bottom",
+        "corners",
+        "baseline",
+        "vertical",
+        "axis",
+        "left",
+        "right"
+      ]
+    }
+  },
+  "motifs": {
+    "mass": {
+      "note": "one large merging mass of liquid, a drop joining it and two free droplets",
+      "topics": [
+        "design",
+        "beauty",
+        "tech",
+        "fashion"
+      ]
+    },
+    "rise": {
+      "note": "lava lamp: a heavy blob below, a second pinching off, drops rising away",
+      "topics": [
+        "music",
+        "nightlife",
+        "retro",
+        "wellness"
+      ]
+    },
+    "wave": {
+      "note": "a thick liquid sheet swelling and curling sideways, its lip breaking into drops",
+      "topics": [
+        "summer",
+        "travel",
+        "beauty",
+        "finance"
+      ]
+    },
+    "drip": {
+      "note": "a drop stretching from a heavy mass, about to fall",
+      "topics": [
+        "food",
+        "beauty",
+        "art",
+        "luxury"
+      ]
+    }
+  },
+  "topics": [
+    "design",
+    "beauty",
+    "fashion",
+    "music",
+    "tech"
+  ],
+  "ground": true
+}

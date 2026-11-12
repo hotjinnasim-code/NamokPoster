@@ -1,0 +1,135 @@
+{
+  "id": "watercolor",
+  "label": "Watercolour Wash",
+  "engine": "three",
+  "mood": "hand-made and quiet — translucent, overlapping watercolour washes on paper with pooled edges, a few fine parallel pen lines and plenty of bare sheet for the copy. Good for book talks, exhibitions, weddings and invitations, seasonal greetings, craft and culture programmes.",
+  "kind": "picture",
+  "tone": "light",
+  "type": "editorial",
+  "types": ["myeongjo", "story", "melody", "calli", "maru", "luxe", "hand", "swiss", "goun"],
+  "defaultPalette": "rose",
+  "palettes": {
+    "rose": {
+      "bg": "#faf6ef",
+      "ink": "#33283a",
+      "accent": "#b0457c",
+      "colors": [
+        "#e89ab8",
+        "#f2a65a",
+        "#7d6bb0",
+        "#5aa9a3"
+      ]
+    },
+    "indigo": {
+      "bg": "#f7f4ec",
+      "ink": "#1e2a44",
+      "accent": "#2c58a0",
+      "colors": [
+        "#3b6fb6",
+        "#1f3e7a",
+        "#e0a43c",
+        "#7fb7c9"
+      ]
+    },
+    "sage": {
+      "bg": "#f6f5ea",
+      "ink": "#2c3a2c",
+      "accent": "#4f7433",
+      "colors": [
+        "#86b36f",
+        "#4f9484",
+        "#e0b84c",
+        "#d98a6a"
+      ]
+    },
+    "autumn": {
+      "bg": "#faf3e6",
+      "ink": "#3b2a18",
+      "accent": "#96601a",
+      "colors": [
+        "#e8a53a",
+        "#d08a3e",
+        "#8a8f3c",
+        "#7a5a86"
+      ]
+    },
+    "night": {
+      "bg": "#121318",
+      "ink": "#f3efe6",
+      "accent": "#e9c46a",
+      "colors": [
+        "#e9c46a",
+        "#7fd3d8",
+        "#e58fb0",
+        "#f3efe6"
+      ]
+    }
+  },
+  "params": {
+    "size": {
+      "default": 1.0,
+      "note": "0.5 = small blooms … 1.8 = large washes"
+    },
+    "depth": {
+      "default": 1.0,
+      "note": "0.4 = pale, few layers … 1.8 = saturated"
+    },
+    "wet": {
+      "default": 1.0,
+      "note": "0 = flat colour … 2 = strong pooling at the wash edges"
+    },
+    "grain": {
+      "default": 1.0,
+      "note": "paper tooth and granulation (0–2)"
+    },
+    "ink": {
+      "default": 1.0,
+      "note": "0 = no pen work … 3 = many parallel pen lines and dotted trails"
+    },
+    "splatter": {
+      "default": 1.0,
+      "note": "0 = none … 3 = many droplets around the washes"
+    }
+  },
+  "layouts": {
+    "landscape": {
+      "layout": "left",
+      "also": [
+        "right",
+        "top",
+        "bottom",
+        "corners",
+        "headline",
+        "baseline",
+        "vertical",
+        "axis",
+        "band",
+        "strip"
+      ]
+    },
+    "portrait": {
+      "layout": "top",
+      "also": [
+        "bottom",
+        "corners",
+        "baseline",
+        "vertical",
+        "axis",
+        "side"
+      ]
+    },
+    "square": {
+      "layout": "top",
+      "also": [
+        "bottom",
+        "corners",
+        "baseline",
+        "vertical",
+        "axis",
+        "left",
+        "right"
+      ]
+    }
+  },
+  "ground": true
+}

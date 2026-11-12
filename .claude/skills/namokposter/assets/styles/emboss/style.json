@@ -1,0 +1,248 @@
+{
+  "id": "emboss",
+  "label": "Blind Emboss",
+  "engine": "three",
+  "kind": "object",
+  "mood": "blind embossing on heavyweight cotton paper — no ink in the picture, only the sheet raised or sunk by a die and read by one raking light from the upper left: a monogram of the headline's first letters raised in a sunk plate, an all-over repeat of fish scales, fine waves or diamond quilting that dissolves into flat paper before the copy, or a round seal with beads and a laurel wreath, inside a faint plate mark and with one small element stamped in gold, copper or silver foil. Quiet, tactile, expensive. Good for galas and award nights, weddings and invitations, annual reports and finance, fashion and beauty launches, book and literature events, private views.",
+  "tone": "light",
+  "type": "luxe",
+  "types": [
+    "didone",
+    "fatface",
+    "garamond",
+    "elegant",
+    "myeongjo",
+    "roman"
+  ],
+  "defaultPalette": "cotton",
+  "palettes": {
+    "cotton": {
+      "bg": "#f0ede6",
+      "ink": "#1c1a17",
+      "accent": "#8a6516",
+      "colors": [
+        "#c2a05c",
+        "#1c1a17",
+        "#d9d3c6"
+      ]
+    },
+    "ivory": {
+      "bg": "#eee5d1",
+      "ink": "#1d3a2c",
+      "accent": "#7c5c17",
+      "colors": [
+        "#b08f4a",
+        "#1d3a2c",
+        "#d6cab0"
+      ]
+    },
+    "blush": {
+      "bg": "#f0dcd7",
+      "ink": "#4d1526",
+      "accent": "#9a4a3c",
+      "colors": [
+        "#cf9682",
+        "#4d1526",
+        "#dcc0ba"
+      ]
+    },
+    "noir": {
+      "bg": "#262729",
+      "ink": "#efe8da",
+      "accent": "#d59468",
+      "colors": [
+        "#c58156",
+        "#efe8da",
+        "#3a3b3e"
+      ]
+    },
+    "navy": {
+      "bg": "#182645",
+      "ink": "#e9edf4",
+      "accent": "#c5ccd8",
+      "colors": [
+        "#b7bec9",
+        "#e9edf4",
+        "#2a3a5e"
+      ]
+    }
+  },
+  "params": {
+    "motif": {
+      "default": "monogram",
+      "note": "monogram | pattern | crest"
+    },
+    "text": {
+      "default": "A",
+      "from": "title",
+      "note": "monogram: the characters to emboss (the first one or two are used). Left unset, the first letters of the headline's words are used"
+    },
+    "letters": {
+      "default": "auto",
+      "note": "monogram: 1 | 2 characters; auto = one Hangul syllable, two Latin letters"
+    },
+    "plate": {
+      "default": "auto",
+      "note": "monogram: circle | rect (rounded rectangle); auto = chosen by the seed"
+    },
+    "font": {
+      "default": "serif",
+      "note": "monogram: serif (Fraunces, Hangul in Hahmlet) | sans (Pretendard)"
+    },
+    "repeat": {
+      "default": "auto",
+      "note": "pattern: scallop (fish scales) | wave (fine parallel waves) | quilt (diamond quilting); auto = chosen by the seed"
+    },
+    "accent": {
+      "default": "auto",
+      "note": "pattern: the foil accent — disc | bar (a slim rule) | none; auto = chosen by the seed"
+    },
+    "centre": {
+      "default": "auto",
+      "note": "crest: where the foil goes — disc (a foil disc in the plain centre) | ring (a foil hairline round it); auto = chosen by the seed"
+    },
+    "scale": {
+      "default": 1,
+      "note": "pattern: size of the repeat, 0.6 = fine … 1.8 = large"
+    },
+    "frame": {
+      "default": true,
+      "note": "the plate mark: the panel inside the margin is sunk by a hair, as on a plate-sunk card"
+    },
+    "foil": {
+      "default": true,
+      "note": "false = entirely blind, no foil"
+    },
+    "relief": {
+      "default": 1,
+      "note": "strength of the light on the relief, 0.4 = barely there … 1.8 = deep"
+    },
+    "soft": {
+      "default": 1,
+      "note": "rounding of the die's edges, 0.6 = crisp … 2 = soft"
+    },
+    "grain": {
+      "default": 1,
+      "note": "cotton tooth of the paper, 0–2"
+    }
+  },
+  "motifs": {
+    "monogram": {
+      "note": "the first letters of the headline (one Hangul syllable or two Latin letters), very large, raised inside a sunk round or rounded-rectangle plate with a foil hairline round it",
+      "topics": [
+        "luxury",
+        "celebration",
+        "fashion",
+        "literature"
+      ]
+    },
+    "pattern": {
+      "note": "an all-over repeat pressed into the art side of the sheet — fish-scale scallops, fine parallel waves or diamond quilting — dissolving into flat paper before the copy, with one small foil disc or slim foil rule",
+      "topics": [
+        "beauty",
+        "fashion",
+        "luxury",
+        "culture"
+      ],
+      "palette": "blush",
+      "layouts": {
+        "landscape": {
+          "layout": "left",
+          "also": [
+            "right",
+            "top",
+            "bottom",
+            "headline",
+            "baseline",
+            "band",
+            "strip"
+          ]
+        },
+        "portrait": {
+          "layout": "top",
+          "also": [
+            "bottom",
+            "corners",
+            "baseline",
+            "vertical",
+            "axis",
+            "side"
+          ]
+        },
+        "square": {
+          "layout": "top",
+          "also": [
+            "vertical",
+            "left",
+            "right"
+          ]
+        }
+      }
+    },
+    "crest": {
+      "note": "a round seal: raised rim, a ring of beads, a laurel wreath laid along the circle and a plain centre, the foil either a disc in that centre or a hairline round it",
+      "topics": [
+        "business",
+        "finance",
+        "celebration",
+        "culture"
+      ],
+      "palette": "ivory",
+      "type": "didone",
+      "types": [
+        "luxe",
+        "fatface",
+        "garamond",
+        "roman",
+        "myeongjo",
+        "elegant"
+      ]
+    }
+  },
+  "topics": [
+    "luxury",
+    "celebration",
+    "business",
+    "finance",
+    "fashion",
+    "beauty",
+    "literature",
+    "culture"
+  ],
+  "layouts": {
+    "landscape": {
+      "layout": "left",
+      "also": [
+        "right",
+        "top",
+        "bottom",
+        "corners",
+        "headline",
+        "baseline",
+        "vertical",
+        "band",
+        "strip"
+      ]
+    },
+    "portrait": {
+      "layout": "top",
+      "also": [
+        "bottom",
+        "corners",
+        "baseline",
+        "vertical",
+        "axis",
+        "side"
+      ]
+    },
+    "square": {
+      "layout": "top",
+      "also": [
+        "vertical",
+        "axis",
+        "left",
+        "right"
+      ]
+    }
+  }
+}

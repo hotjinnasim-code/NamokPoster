@@ -1,0 +1,15 @@
+schema_version: "1.1"
+name: fetched-face-passes-the-font-policy
+expected_outcome: |
+  Three finished poster drafts at 3508x4961 (A3 portrait, the default size) for a horror film
+  night, in clearly different styles, with the English copy verbatim. The user named two faces
+  that are not bundled. Creepster passes the font policy (SIL OFL 1.1, Google Fonts rank within
+  500): the skill checked it with scripts/fonts.mjs, fetched it into the user's cache folder
+  (not into the skill and not into the project), and set the headlines in it through the type
+  theme the script wrote; report.json lists it under fontsFromOutside. Helvetica Now is a paid
+  face on neither source: the skill did not download it from anywhere. It checked whether the
+  face is installed on the computer (scripts/fonts.mjs add --installed) — it is not on the test
+  machine — so it set the details in a bundled face, said why, and asked the user to hand over
+  the font file or install it if they hold a licence. The reply names Creepster, where it came
+  from and its licence in a line, says that Helvetica Now was not used, what stands in for it and
+  how the user can have it used, and says where the files are.

@@ -1,0 +1,271 @@
+{
+  "id": "transit",
+  "label": "Transit Map",
+  "engine": "html",
+  "kind": "object",
+  "mood": "the place of the event drawn as a diagram — a metro map in the modernist manner: thick lines in a few flat colours that run only horizontally, vertically and at 45°, with bends of one radius, page-coloured station dots, capsule interchanges and a numbered bullet at each line end, the lines running off the sheet wherever the page is free; one interchange is picked out in the accent and flagged with the venue from the poster's own copy, the date and time under it, and a few other stations take words of the headline. Also a single route that winds to the venue in numbered stops, and a street map of tinted blocks with a river, a park, one main road in the accent and a pin on the venue's block. Vector (SVG) in the poster's own text face, laid out on an invisible grid from hand-designed skeletons; where `numerals` makes the date the picture, this makes the place the picture. Good for anything people have to find their way to: exhibitions and openings, concerts and festivals, markets and pop-ups, conferences and meet-ups, open days and campus events, neighbourhood and city events, tours and travel.",
+  "tone": "light",
+  "type": "grotesk",
+  "types": ["swiss", "square", "dream", "humanist", "plex", "geometric", "bold", "techno", "gmarket"],
+  "defaultPalette": "network",
+  "palettes": {
+    "network": {
+      "bg": "#f3f0e8",
+      "ink": "#16181c",
+      "accent": "#d6332a",
+      "colors": [
+        "#1d5fb8",
+        "#1c8a52",
+        "#f0b310",
+        "#ea7a1c",
+        "#d6332a"
+      ]
+    },
+    "paper": {
+      "bg": "#f1e9d8",
+      "ink": "#191817",
+      "accent": "#cf3329",
+      "colors": [
+        "#191817",
+        "#cf3329"
+      ]
+    },
+    "mint": {
+      "bg": "#dcefe4",
+      "ink": "#12261f",
+      "accent": "#d03f28",
+      "colors": [
+        "#1d3a6e",
+        "#1f6b4a",
+        "#d39a21",
+        "#d03f28"
+      ]
+    },
+    "signal": {
+      "bg": "#f5c518",
+      "ink": "#151515",
+      "accent": "#bd1e19",
+      "colors": [
+        "#151515",
+        "#ffffff",
+        "#bd1e19"
+      ]
+    },
+    "night": {
+      "bg": "#101a36",
+      "ink": "#e9edf6",
+      "accent": "#ff8fa3",
+      "colors": [
+        "#7cc4ff",
+        "#8be0b8",
+        "#ffc15a",
+        "#ff8fa3"
+      ]
+    }
+  },
+  "params": {
+    "motif": {
+      "default": "metro",
+      "note": "metro | route | blocks"
+    },
+    "lines": {
+      "default": 4,
+      "note": "metro: how many lines, 3–5 (a skeleton draws as many as it holds: the ring three, the others four; the triangle takes a fifth along the foot)"
+    },
+    "map": {
+      "default": "",
+      "note": "metro: the skeleton — triangle | junction | ring; empty = picked by the seed (a strip of a room always gets the flat three-line map)"
+    },
+    "stops": {
+      "default": "",
+      "note": "route: how many numbered stops, the venue included (5–7); empty = picked by the seed"
+    },
+    "names": {
+      "default": 3,
+      "note": "how many other stations / stops / blocks take a short word from the copy (0–5)"
+    }
+  },
+  "motifs": {
+    "metro": {
+      "note": "three to five lines crossing at a few interchanges, some running side by side; one interchange is the venue — a larger marker in the accent with a flag carrying the venue's name, the date and time under it. A few stations are named with words of the headline, line ends carry numbered bullets, and lines run off the page edge where the layout leaves it free",
+      "topics": [
+        "city",
+        "tech",
+        "business",
+        "culture"
+      ],
+      "layouts": {
+        "landscape": {
+          "layout": "left",
+          "also": [
+            "right",
+            "top",
+            "bottom",
+            "band",
+            "strip",
+            "corners",
+            "headline",
+            "baseline",
+            "axis"
+          ]
+        },
+        "portrait": {
+          "layout": "top",
+          "also": [
+            "bottom",
+            "side",
+            "corners",
+            "axis",
+            "baseline"
+          ]
+        },
+        "square": {
+          "layout": "left",
+          "also": [
+            "right",
+            "top",
+            "bottom",
+            "corners",
+            "axis"
+          ]
+        }
+      }
+    },
+    "route": {
+      "note": "a single thick line that winds across the box in long straight runs and 45° bends (a step, a hairpin or an S, by the shape of the room) with five to seven numbered stops, the last one the venue, marked in the accent and flagged; the words of the headline name stops on the way",
+      "topics": [
+        "travel",
+        "education",
+        "community"
+      ],
+      "palette": "mint",
+      "layouts": {
+        "landscape": {
+          "layout": "left",
+          "also": [
+            "right",
+            "top",
+            "bottom",
+            "band",
+            "strip",
+            "corners",
+            "headline",
+            "baseline",
+            "axis"
+          ]
+        },
+        "portrait": {
+          "layout": "top",
+          "also": [
+            "bottom",
+            "side",
+            "corners",
+            "axis",
+            "baseline"
+          ]
+        },
+        "square": {
+          "layout": "left",
+          "also": [
+            "top",
+            "bottom",
+            "corners",
+            "axis"
+          ]
+        }
+      }
+    },
+    "blocks": {
+      "note": "a street map from above that fills the free part of the page and runs off its edge: city blocks as flat tints with paper-coloured streets on a slightly irregular grid, one 45° avenue, a river as one calm band with bridges, a park, one main road in the accent, and a map pin on the venue's block with its flag; a few blocks carry a word of the headline like a district name",
+      "topics": [
+        "market",
+        "community",
+        "city"
+      ],
+      "layouts": {
+        "landscape": {
+          "layout": "left",
+          "also": [
+            "right",
+            "top",
+            "bottom",
+            "band",
+            "strip",
+            "corners",
+            "headline",
+            "baseline",
+            "axis"
+          ]
+        },
+        "portrait": {
+          "layout": "top",
+          "also": [
+            "bottom",
+            "side",
+            "corners",
+            "axis",
+            "baseline"
+          ]
+        },
+        "square": {
+          "layout": "left",
+          "also": [
+            "top",
+            "bottom",
+            "corners",
+            "axis"
+          ]
+        }
+      }
+    }
+  },
+  "topics": [
+    "city",
+    "travel",
+    "community",
+    "market",
+    "tech",
+    "education",
+    "business",
+    "culture"
+  ],
+  "layouts": {
+    "landscape": {
+      "layout": "left",
+      "also": [
+        "right",
+        "top",
+        "bottom",
+        "band",
+        "strip",
+        "corners",
+        "headline",
+        "baseline",
+        "axis"
+      ]
+    },
+    "portrait": {
+      "layout": "top",
+      "also": [
+        "bottom",
+        "side",
+        "corners",
+        "axis",
+        "baseline"
+      ]
+    },
+    "square": {
+      "layout": "left",
+      "also": [
+        "top",
+        "bottom",
+        "corners",
+        "axis"
+      ]
+    }
+  },
+  "grounds": [
+    "haze",
+    "pattern/grid"
+  ]
+}

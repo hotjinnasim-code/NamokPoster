@@ -1,0 +1,20 @@
+/* hand — marker handwriting; classes, clubs, cafés, community notices. */
+.poster[data-type="hand"] {
+  --font-title: "Gaegu", "Pretendard", sans-serif; --font-subtitle: "Gaegu", "Pretendard", sans-serif;
+  --font-eyebrow: "Gaegu", "Pretendard", sans-serif; --font-eyebrow-ko: "Gaegu", "Pretendard", sans-serif;
+  --title-size: 13; --title-weight: 700; --title-leading: 1.0; --title-tracking: -0.01em;
+  --title-leading-ko: 1.12; --title-tracking-ko: -0.03em; --title-wordspace-ko: -0.08em;
+  --eyebrow-size: 2.27; --eyebrow-weight: 700; --eyebrow-tracking: 0.02em; --eyebrow-tracking-ko: 0em; --eyebrow-case: none;
+  --subtitle-size: 3.6; --subtitle-weight: 700; --subtitle-leading: 1.24; --subtitle-leading-ko: 1.28; --subtitle-tracking-ko: -0.03em;
+  --body-size: 1.87; --body-weight: 500; --body-weight-ko: 500;
+  --footer-size: 1.59; --footer-weight: 600; --footer-rule: 1; --grain: 0.2;
+  --gap-eyebrow: 1.2; --gap-subtitle: 1.8;
+}
+.poster[data-type="hand"] .title em { color: var(--c-accent); text-decoration: underline wavy color-mix(in srgb, var(--c-accent) 70%, transparent); text-decoration-thickness: 0.05em; text-underline-offset: 0.12em; }
+.poster[data-type="hand"] .eyebrow { color: var(--c-accent); }
+.poster[data-type="hand"] .subtitle { color: var(--c-ink); }
+.poster[data-type="hand"] .body { color: color-mix(in srgb, var(--c-ink) 82%, transparent); }
+.poster[data-type="hand"] .footer { color: color-mix(in srgb, var(--c-ink) 90%, transparent); }
+.poster[data-type="hand"] .cta { background: transparent; color: var(--c-ink); border: calc(var(--u) * 0.24) solid var(--c-ink); border-radius: 0.5em 1.4em 0.6em 1.2em; font-family: "Gaegu", "Pretendard", sans-serif; font-size: calc(var(--su) * var(--cta-size) * 1.3 * var(--k-small)); }
+.poster[data-type="hand"] .badge { transform: rotate(-5deg); font-family: "Gaegu", "Pretendard", sans-serif; font-size: calc(var(--fu) * 2.2 * var(--k-small)); letter-spacing: 0; border-radius: 0.5em 1.4em 0.6em 1.2em; }
+.poster[data-type="hand"] .bottom.ruled { border-top: calc(var(--u) * 0.2) dashed color-mix(in srgb, var(--c-ink) 55%, transparent); }

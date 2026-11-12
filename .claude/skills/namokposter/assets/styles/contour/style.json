@@ -1,0 +1,177 @@
+{
+  "id": "contour",
+  "label": "Contour Map",
+  "engine": "three",
+  "kind": "picture",
+  "mood": "topographic line drawing — even-width isolines of a height field with heavier index lines, one or two flat tint bands, spot heights and survey marks; precise, calm and exploratory. Good for outdoor and travel, research and data, architecture and planning, reports, anything about place, terrain or finding a way.",
+  "tone": "light",
+  "type": "swiss",
+  "types": [
+    "techno",
+    "slim",
+    "humanist",
+    "elegant",
+    "editorial",
+    "bold"
+  ],
+  "defaultPalette": "survey",
+  "palettes": {
+    "survey": {
+      "bg": "#f3efe4",
+      "ink": "#25221e",
+      "accent": "#d2461f",
+      "colors": [
+        "#9a6238",
+        "#a9c6a2",
+        "#eda65c"
+      ]
+    },
+    "nautical": {
+      "bg": "#f4f2ea",
+      "ink": "#14294a",
+      "accent": "#c2267a",
+      "colors": [
+        "#2c5796",
+        "#9fcbe6",
+        "#ecd49a"
+      ]
+    },
+    "moss": {
+      "bg": "#edf0e3",
+      "ink": "#1b2a20",
+      "accent": "#c4531c",
+      "colors": [
+        "#3d6b4b",
+        "#b7d19c",
+        "#f1c768"
+      ]
+    },
+    "blueprint": {
+      "bg": "#0d1b33",
+      "ink": "#eaf1ff",
+      "accent": "#ffb347",
+      "colors": [
+        "#86b4ff",
+        "#1d4f8a",
+        "#3c8fd6"
+      ]
+    },
+    "carbon": {
+      "bg": "#121314",
+      "ink": "#f1efe8",
+      "accent": "#c8f04a",
+      "colors": [
+        "#9da2a9",
+        "#2f4a3d",
+        "#7f9c2c"
+      ]
+    }
+  },
+  "params": {
+    "motif": {
+      "default": "mountain",
+      "note": "what the map shows: mountain (massif with ridges and a summit) | coast (nautical chart: islands, shallows, soundings) | peak (abstract data landscape: one smooth peak, cross-hair, ascent path)"
+    },
+    "lines": {
+      "default": 1,
+      "note": "contour density: 0.6 = sparse … 1.6 = dense"
+    },
+    "weight": {
+      "default": 1,
+      "note": "pen width multiplier"
+    },
+    "tint": {
+      "default": 1,
+      "note": "strength of the filled elevation bands, 0 = lines only … 1.5"
+    },
+    "scale": {
+      "default": 1,
+      "note": "size of the landform around the focus, 0.7–1.4"
+    },
+    "labels": {
+      "default": true,
+      "note": "spot heights, index figures and registration crosses (false = lines and tints only)"
+    }
+  },
+  "motifs": {
+    "mountain": {
+      "note": "a massif of ridges and spurs with a summit triangle and index figures",
+      "topics": [
+        "outdoor",
+        "travel",
+        "nature",
+        "sports",
+        "wellness"
+      ]
+    },
+    "coast": {
+      "note": "nautical chart: islands, tinted shallows, depth curves and soundings",
+      "topics": [
+        "travel",
+        "summer",
+        "nature",
+        "community",
+        "culture"
+      ]
+    },
+    "peak": {
+      "note": "abstract data landscape: one smooth peak, cross-hair and the dotted path of an ascent",
+      "topics": [
+        "tech",
+        "science",
+        "business",
+        "finance",
+        "education"
+      ]
+    }
+  },
+  "topics": [
+    "outdoor",
+    "travel",
+    "science",
+    "architecture",
+    "tech",
+    "nature"
+  ],
+  "layouts": {
+    "landscape": {
+      "layout": "left",
+      "also": [
+        "right",
+        "top",
+        "bottom",
+        "corners",
+        "headline",
+        "baseline",
+        "vertical",
+        "axis",
+        "band",
+        "strip"
+      ]
+    },
+    "portrait": {
+      "layout": "top",
+      "also": [
+        "bottom",
+        "corners",
+        "baseline",
+        "vertical",
+        "axis",
+        "side"
+      ]
+    },
+    "square": {
+      "layout": "top",
+      "also": [
+        "bottom",
+        "corners",
+        "baseline",
+        "vertical",
+        "axis",
+        "left",
+        "right"
+      ]
+    }
+  },
+  "ground": true
+}

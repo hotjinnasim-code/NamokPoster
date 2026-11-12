@@ -1,0 +1,11 @@
+schema_version: "1.1"
+name: title-breaks-keep-units
+expected_outcome: |
+  Three finished poster drafts at 3508x4961 (A3 portrait, the default size) for a surf festival
+  in Paranggot, in clearly different styles, with the Korean copy verbatim. The skill marked the
+  title's units of sense in the spec (for example "파랑곶 | *서핑* 페스티벌") because the title has
+  three words, and in none of the drafts is the name of the event cut across two lines: the
+  headline never reads "파랑곶 서핑 / 페스티벌" (the place tied to the sport, the event stranded on
+  a line of its own) but breaks as "파랑곶 / 서핑 페스티벌" or sits on one line. The marks themselves
+  are not printed on the posters. Date and place are labelled information rows, nothing overflows,
+  and the reply says where the files are and how the three concepts differ.

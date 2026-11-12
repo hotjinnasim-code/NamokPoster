@@ -1,0 +1,1831 @@
+{
+ "_meta": {
+  "schema": 1,
+  "generated": "2026-11-10",
+  "about": "Topic -> design decisions for the namokposter skill. Keys starting with '_' are not topics. See topic-guide.md.",
+  "topics": ["tech", "science", "business", "finance", "education", "design", "architecture", "art", "culture", "tradition", "literature", "music", "nightlife", "film", "fashion", "luxury", "beauty", "food", "market", "kids", "family", "community", "sports", "outdoor", "travel", "nature", "wellness", "city", "spring", "summer", "autumn", "winter", "gaming", "retro", "celebration", "craft", "general"],
+  "solemn": {"about":"Copy that mourns or remembers the dead is set soberly whatever else it mentions: when one of these words is in the headline, label, sub-headline or paragraph, only the type themes listed here are chosen (best first).", "ko": ["추모", "추도", "위령", "영결", "장례", "분향", "묵념", "순국", "참사", "희생자", "애도", "조문", "빈소", "영정", "기일"], "en": ["memorial", "remembrance", "in memoriam", "funeral", "vigil", "mourning", "condolence", "requiem", "obituary"], "types": ["myeongjo", "batang", "editorial", "garamond", "maru", "elegant", "swiss", "grotesk", "news", "roman", "calli", "brush", "humanist", "bold", "slim", "luxe", "didone", "square", "plex", "flora"]},
+  "palette_rule": "ink/bg >= 7:1 and accent/bg >= 3.5:1 (WCAG relative luminance); every topic has light and dark grounds",
+  "engine_assumed": {
+   "blender": ["studio", "prism", "monolith", "chrome", "paper", "puffy", "softscape", "felt", "knit", "jelly", "wood", "toon", "lowpoly", "isometric", "voxel", "glass", "ceramic", "foil", "neon", "origami", "stone", "metal"],
+   "three": ["aurora", "flux", "wave", "ribbon", "globe", "haze", "bauhaus", "halftone", "pixel", "marble", "watercolor", "turing", "layers", "airbrush", "sumuk", "linocut", "crayon", "collage", "cyanotype", "bojagi", "najeon", "stainedglass", "mosaic", "stitch", "contour", "opart", "memphis", "artdeco", "guilloche", "glitch", "blueprint", "synthwave", "plexus", "glyph", "inkdrop", "bokeh", "caustics", "liquid", "pointcloud"]
+  },
+  "engine_note": "Engines of the planned styles are an assumption (material looks = Blender, graphic and painted looks = three.js); the trios were balanced on it. Re-check against each style.json.",
+  "matching": "Match Korean keywords as substrings and English ones on word boundaries, case-insensitively (acronyms such as AI, UX, DJ, IR, LoL case-sensitively). Where keywords overlap, count only the longest ('푸드 페스티벌' is food, not also music). Weight title and eyebrow about 3x the body. 'general' keywords are stop-words. Keep the top one or two topics; a season is usually a second topic that sets the palette.",
+  "ko_whole_word": {
+   "봄": "spring",
+   "꽃": "spring",
+   "숲": "nature",
+   "산": "outdoor",
+   "책": "literature",
+   "시": "literature",
+   "춤": "culture",
+   "빵": "food",
+   "술": "food",
+   "옷": "fashion"
+  },
+  "ko_not_inside": {"트리": ["트리오", "스트리트", "컨트리", "인더스트리", "트리플", "트리트먼트", "일렉트릭", "메트릭", "센트리"], "파티": ["파티션", "파티클"], "마켓": ["마케팅"], "게임": ["게임 체인저"]},
+  "ko_not_inside_note": "A keyword does not count where it is only part of one of these longer words (the trio is not a Christmas tree).",
+  "ko_whole_word_note": "One-syllable Korean words are left out of the keyword lists because they match inside other words (봄 in 돌봄). Count them only when they stand alone as a whole word after stripping particles (은/는/이/가/을/를/의/에/과/와/도/로).",
+  "month_to_season": {
+   "3": "spring",
+   "4": "spring",
+   "5": "spring",
+   "6": "summer",
+   "7": "summer",
+   "8": "summer",
+   "9": "autumn",
+   "10": "autumn",
+   "11": "autumn",
+   "12": "winter",
+   "1": "winter",
+   "2": "winter"
+  },
+  "month_note": "Korean seasons by month. A date alone is weak evidence: use it to break ties between palettes of the main topic, not to make the poster 'about' the season."
+ },
+
+ "tech": {
+  "ko": ["컨퍼런스", "개발자", "해커톤", "밋업", "AI", "인공지능", "데이터", "클라우드", "디지털 전환", "소프트웨어", "오픈소스", "로보틱스", "로봇", "블록체인", "데모데이", "키노트", "코딩", "프로그래밍", "머신러닝", "딥러닝", "반도체", "메타버스", "사이버보안", "디벨로퍼", "API", "LLM", "빅데이터", "IT", "기술 세미나", "베타 출시"],
+  "en": ["developer", "dev conference", "hackathon", "meetup", "AI", "artificial intelligence", "machine learning", "data", "cloud", "tech", "software", "open source", "robotics", "blockchain", "demo day", "keynote", "coding", "programming", "API", "platform", "SaaS", "cybersecurity", "semiconductor", "LLM", "product launch", "devcon", "engineering", "beta", "startup", "deep learning"],
+  "mood": ["precise", "electric", "forward", "systematic", "optimistic"],
+  "styles": [
+   {"id": "flux", "motif": "light trails streaming toward a vanishing point", "why": "the dark keynote-stage look; energy without a literal subject"},
+   {"id": "plexus", "motif": "a network of nodes and links thinning out behind the copy", "why": "connected systems, AI, data"},
+   {"id": "glass", "motif": "stacked frosted panels over soft colour blobs", "why": "interface metaphor; reads as product, not as 'tech stock art'"},
+   {"id": "studio", "motif": "floating clay cube, torus and a cursor arrow", "why": "approachable launch or recruiting tone"},
+   {"id": "flowfield", "motif": "threads of even weight like a vector field", "why": "data, research, developer events"},
+   {"id": "swiss", "motif": "a dots progression", "why": "conferences that want order, not glow"},
+   {"id": "pointcloud", "motif": "a simple form dissolving into scanned points", "why": "vision, 3D, machine perception"},
+   {"id": "screen", "motif": "interface windows with the date in a dialog", "why": "product, developer and UX events without stock art"},
+   {"id": "transit", "motif": "a metro diagram of lines and interchanges", "why": "meet-ups, hack days"},
+   {"id": "wave", "motif": "dot terrain rising toward one corner", "why": "calm, research-grade B2B"},
+   {"id": "fluted", "motif": "an orb refracted into bars", "why": "product launches with a material feel"},
+   {"id": "isometric", "motif": "a tiny isometric server room or developer desk", "why": "explains a product or community at a glance"},
+   {"id": "prism", "motif": "glass rings around a glowing core", "why": "premium AI or flagship launch"},
+   {"id": "numerals", "motif": "the date on one line, engineered", "why": "launch days and deadlines"},
+   {"id": "blueprint", "motif": "exploded diagram of a device", "why": "hardware, engineering, infrastructure"},
+   {"id": "glitch", "motif": "horizontal slices with RGB shift", "why": "hackathon, security, CTF"},
+   {"id": "pattern", "motif": "a fine grid with a few cells filled", "why": "data, systems, engineering"},
+   {"id": "globe", "motif": "dotted globe with route arcs", "why": "global summit, network"},
+   {"id": "metal", "motif": "anodised machined parts", "why": "devices, robotics, audio hardware"},
+   {"id": "pixel", "motif": "dithered desktop still life", "why": "developer meetup, lo-fi community night"},
+   {"id": "aurora", "motif": "pearly blob on a gradient mesh", "why": "friendly product news"}
+  ],
+  "types": ["techno", "plex", "grotesk", "dream", "impact", "swiss", "paperlogy", "square", "wide", "bold", "geometric"],
+  "palettes": [
+   {"name": "console", "bg": "#07080f", "ink": "#f1f3ff", "accent": "#8f7bff", "colors": ["#6a4cff", "#22d3ee", "#ff4fa3", "#e8ecff"], "note": "dark · near-black blue lit violet and cyan; keynote stage"},
+   {"name": "signal", "bg": "#f2f0ea", "ink": "#14182b", "accent": "#2447e0", "colors": ["#2447e0", "#ff5a1f", "#14182b", "#c9d2f0"], "note": "light · off-white, cobalt and one signal orange; documentation feel"},
+   {"name": "terminal", "bg": "#060b08", "ink": "#e9f7ec", "accent": "#8cf04a", "colors": ["#8cf04a", "#1fd6a0", "#1f5f3f", "#f2fff0"], "note": "dark · phosphor green on black; hackathon, security"},
+   {"name": "daybreak", "bg": "#e6e9fb", "ink": "#1a1d3a", "accent": "#4a35d9", "colors": ["#5b46f0", "#ff7ea8", "#ffc145", "#ffffff"], "note": "light · pale periwinkle with indigo; startup launch"},
+   {"name": "graphite", "bg": "#141517", "ink": "#f4f4f1", "accent": "#ffd400", "colors": ["#ffd400", "#6b7078", "#f4f4f1"], "note": "dark · graphite with one yellow; hardware, infrastructure"}
+  ],
+  "layouts": ["left", "strip", "corners", "headline", "right"],
+  "composition": "Conference identities are systems, not pictures: one abstract shape language (Figma Config's shapes, Meta Connect's wireframe-to-form build) with a short title set large in a grotesque or mono face and date/place as small technical labels. The art sits on one side or behind; the information stays on a strict left edge.",
+  "avoid": [
+   "circuit-board traces, binary rain, glowing brains, robot hands",
+   "blue-on-blue gradient with a lens flare",
+   "more than one accent colour on a dark ground",
+   "decorative script or serif faces for the headline",
+   "busy art behind the information table"
+  ]
+ },
+
+ "science": {
+  "ko": ["과학", "과학축제", "사이언스", "연구", "실험", "우주", "천문", "별자리", "관측", "물리", "화학", "생명과학", "바이오", "뇌과학", "기후", "탐구", "과학관", "학술대회", "심포지엄", "논문", "연구소", "양자", "유전자", "로켓", "망원경", "과학의 날", "과학 강연", "융합", "천체", "현미경"],
+  "en": ["science", "research", "laboratory", "lab", "experiment", "space exploration", "astronomy", "physics", "chemistry", "biology", "biotech", "neuroscience", "climate", "quantum", "genome", "symposium", "colloquium", "observatory", "telescope", "rocket", "STEM", "science fair", "planetarium", "discovery", "scientist", "molecule", "microscope", "cosmos", "science festival"],
+  "mood": ["curious", "exact", "vast", "luminous", "measured"],
+  "styles": [
+   {"id": "turing", "motif": "stripes breaking into dots like a cell pattern", "why": "emergence and biology shown by a real simulation"},
+   {"id": "prism", "motif": "light split through glass rings", "why": "optics, physics, flagship lectures"},
+   {"id": "flowfield", "motif": "threads like a wind map or field lines", "why": "physics, climate, data"},
+   {"id": "airbrush", "motif": "a ringed planet with a soft terminator and stars", "why": "astronomy, space programmes"},
+   {"id": "pointcloud", "motif": "a molecule or brain drawn only in points", "why": "data as form"},
+   {"id": "swiss", "motif": "a dots progression like a measurement", "why": "symposia, lecture series"},
+   {"id": "cyanotype", "motif": "silhouettes of specimens or lab glassware", "why": "the oldest scientific photo-record; natural history"},
+   {"id": "contour", "motif": "isolines of a measured field", "why": "earth science, climate, mapping"},
+   {"id": "plexus", "motif": "neurons or constellations joined by fine lines", "why": "networks, neuroscience, astronomy"},
+   {"id": "wave", "motif": "a standing wave of dots", "why": "signals, acoustics, physics"},
+   {"id": "pattern", "motif": "a fine grid with a few cells filled", "why": "data and measurement"},
+   {"id": "blueprint", "motif": "instrument or rocket drawn as a diagram", "why": "engineering and space hardware"},
+   {"id": "screen", "motif": "a search field with the question typed in", "why": "public lectures that answer a question"},
+   {"id": "caustics", "motif": "nets of light through water", "why": "optics, ocean science"},
+   {"id": "opart", "motif": "interference rings and moiré", "why": "waves and perception"},
+   {"id": "globe", "motif": "dotted earth with a thin atmosphere line", "why": "climate, geoscience"},
+   {"id": "inkdrop", "motif": "a diffusion plume", "why": "chemistry, fluid dynamics"}
+  ],
+  "types": ["plex", "swiss", "grotesk", "techno", "elegant", "humanist", "slim", "garamond", "typewriter"],
+  "palettes": [
+   {"name": "lab", "bg": "#eef3f2", "ink": "#10262b", "accent": "#0b7a75", "colors": ["#0b7a75", "#2f55b8", "#e9b44c", "#ffffff"], "note": "light · cool lab white with teal"},
+   {"name": "deep-field", "bg": "#060a1c", "ink": "#eef1ff", "accent": "#ffb86b", "colors": ["#3a2a8c", "#c0398f", "#e2703a", "#f6d9b0"], "note": "dark · space navy with warm starlight"},
+   {"name": "prussian", "bg": "#0f2a4a", "ink": "#eef4fa", "accent": "#9fd0ff", "colors": ["#f4f7fa", "#9fc4e6", "#5d8fc2"], "note": "dark · cyanotype blue and paper white"},
+   {"name": "specimen", "bg": "#f4f0e4", "ink": "#1e2420", "accent": "#35683f", "colors": ["#3f7a4a", "#c9a13b", "#8a5a2b", "#1e2420"], "note": "light, quiet · herbarium sheet; natural history"},
+   {"name": "spectrum", "bg": "#0a0a0c", "ink": "#f5f5f5", "accent": "#58e0ff", "colors": ["#ff3d6e", "#ffd23f", "#3ee08a", "#3d7bff"], "note": "dark · black with a full spectrum; physics, optics"}
+  ],
+  "layouts": ["corners", "band", "strip", "left", "center", "headline"],
+  "composition": "Science festival identities keep a fixed frame and renew one illustration and palette each year (Co.Scienza's two stripes and overlapping boxes). One phenomenon is shown large and exactly, with captions set like figure labels; type is a plain sans or a book serif, never themed.",
+  "avoid": [
+   "atom symbols, DNA helix clip-art, Erlenmeyer flasks with bubbles",
+   "rainbow gradients on every element",
+   "sci-fi display fonts for a public lecture",
+   "mad-scientist or cartoon tone for research events",
+   "rays radiating from a sun or star disc"
+  ]
+ },
+
+ "business": {
+  "ko": ["비즈니스", "포럼", "서밋", "경영", "리더십", "전략", "마케팅", "네트워킹", "창업", "스타트업 IR", "투자설명회", "채용", "채용설명회", "박람회", "엑스포", "산업전", "B2B", "수출상담회", "기업설명회", "컨설팅", "파트너스 데이", "사업설명회", "브랜드 전략", "임직원", "타운홀", "성과공유회", "킥오프", "브리핑", "CEO", "컨벤션"],
+  "en": ["business", "forum", "summit", "leadership", "strategy", "management", "marketing", "networking", "entrepreneurship", "B2B", "expo", "trade show", "career fair", "recruiting", "hiring", "job fair", "consulting", "partners day", "town hall", "kickoff", "briefing", "industry", "enterprise", "executive", "pitch", "sales conference", "annual meeting", "corporate", "convention", "CEO"],
+  "mood": ["confident", "clear", "credible", "composed"],
+  "styles": [
+   {"id": "wave", "motif": "calm dot terrain rising to the right", "why": "measured growth without a literal chart"},
+   {"id": "glass", "motif": "frosted panels arranged like dashboard cards", "why": "modern corporate, SaaS"},
+   {"id": "swiss", "motif": "bars rising on one baseline", "why": "reports, forums, annual meetings"},
+   {"id": "globe", "motif": "dotted globe with route arcs", "why": "international forum, trade"},
+   {"id": "emboss", "motif": "a monogram on cotton paper", "why": "board-level events, anniversaries"},
+   {"id": "studio", "motif": "steps, a sphere and an arch in clean matte colour", "why": "approachable launch or recruiting"},
+   {"id": "transit", "motif": "a metro diagram", "why": "conferences with a venue to find"},
+   {"id": "flowfield", "motif": "threads converging and parting", "why": "strategy days, annual meetings"},
+   {"id": "numerals", "motif": "the date on one line", "why": "conferences and briefings are a date first"},
+   {"id": "isometric", "motif": "an isometric office floor or city block", "why": "shows how a service or organisation works"},
+   {"id": "haze", "motif": "soft gradient with one hairline circle", "why": "type-led forum poster"},
+   {"id": "calendar", "motif": "the week of the event with its day picked out", "why": "schedules, summits, deadlines"},
+   {"id": "bauhaus", "motif": "an ordered grid of tiles in brand colours", "why": "systematic brand identity"},
+   {"id": "ticket", "motif": "a conference pass with date and hall", "why": "registration-led events"},
+   {"id": "plexus", "motif": "nodes joining into one cluster", "why": "partnership, networking"},
+   {"id": "ribbon", "motif": "one continuous band moving up", "why": "direction, launch"},
+   {"id": "contour", "motif": "terrain lines with one marked route", "why": "strategy as a map"},
+   {"id": "metal", "motif": "brushed bars of different heights", "why": "industry, manufacturing"},
+   {"id": "guilloche", "motif": "an engraved rosette as a seal", "why": "certificates, awards, formal notices"},
+   {"id": "blueprint", "motif": "a plan drawing with dimension ticks", "why": "roadmap, construction, planning"}
+  ],
+  "types": ["swiss", "grotesk", "paperlogy", "bold", "dream", "square", "gmarket", "humanist", "plex", "elegant", "news", "slab"],
+  "palettes": [
+   {"name": "ivory-navy", "bg": "#f3efe6", "ink": "#14213d", "accent": "#c2410c", "colors": ["#14213d", "#e2622a", "#c9cfdb", "#ffffff"], "note": "light · ivory, navy and one orange"},
+   {"name": "boardroom", "bg": "#0d1626", "ink": "#eef2f8", "accent": "#6fb1ff", "colors": ["#2b5fd9", "#6fb1ff", "#ffc56e", "#ffffff"], "note": "dark · deep navy with sky blue"},
+   {"name": "warm-grey", "bg": "#e9e6e1", "ink": "#1c1c1a", "accent": "#1d6b4f", "colors": ["#1d6b4f", "#8f8a80", "#f6f4f0", "#1c1c1a"], "note": "light, quiet · warm grey with forest green"},
+   {"name": "cobalt-white", "bg": "#f7f8fa", "ink": "#0f1730", "accent": "#1f47c8", "colors": ["#1f47c8", "#9db4f2", "#ff7a59", "#0f1730"], "note": "light · clean white and cobalt"},
+   {"name": "charcoal-amber", "bg": "#17181a", "ink": "#f3f1ec", "accent": "#f0a030", "colors": ["#f0a030", "#5a5f66", "#f3f1ec"], "note": "dark · charcoal with amber"}
+  ],
+  "layouts": ["left", "right", "strip", "corners"],
+  "composition": "Split layouts with a strict left edge: a plain-spoken headline, the information table directly beneath, and one abstract image that suggests direction or structure. Colour is two brand hues plus neutrals; the logo strip sits in one equal-height row at the foot.",
+  "avoid": [
+   "handshakes, light bulbs, puzzle pieces, rising arrows, chess pieces",
+   "stock skyline with a blue overlay",
+   "more than two typefaces or centred everything",
+   "gold gradients and bevels",
+   "playful or hand-drawn faces for formal notices"
+  ]
+ },
+
+ "finance": {
+  "ko": ["금융", "투자", "재테크", "자산관리", "증권", "주식", "펀드", "은행", "핀테크", "보험", "연금", "부동산", "경제전망", "경제포럼", "실적발표", "주주총회", "회계", "세무", "절세", "금리", "환율", "가상자산", "ETF", "대출", "예금", "적금", "자본시장", "금융교육", "결산", "IR", "투자자", "주주", "실적", "자산", "자본", "IPO", "상장"],
+  "en": ["finance", "investment", "investing", "wealth", "asset management", "securities", "stocks", "fund", "bank", "banking", "fintech", "insurance", "pension", "real estate", "economic outlook", "investor relations", "earnings", "shareholders", "accounting", "tax", "interest rate", "crypto", "ETF", "capital markets", "investment portfolio", "trading", "annual report", "financial literacy", "mortgage", "audit", "investor", "investors", "investor day", "capital", "shareholder", "annual results", "quarterly results", "IPO", "equity", "asset"],
+  "mood": ["trustworthy", "precise", "stable", "discreet", "assured"],
+  "styles": [
+   {"id": "guilloche", "motif": "banknote rosette and fine lathe-work bands", "why": "the engraving language of money and certificates"},
+   {"id": "emboss", "motif": "a fine guilloché-like pattern pressed blind, one foil disc", "why": "annual reports, private banking"},
+   {"id": "wave", "motif": "dot terrain like a calm market surface", "why": "data without a chart cliché"},
+   {"id": "stone", "motif": "a marble block with one small gold sphere", "why": "permanence, private banking"},
+   {"id": "globe", "motif": "globe with arcs between financial centres", "why": "global markets"},
+   {"id": "glass", "motif": "frosted panels like account cards", "why": "fintech products"},
+   {"id": "prism", "motif": "glass rings in the dark", "why": "premium wealth events"},
+   {"id": "numerals", "motif": "the date on one line", "why": "briefings, deadlines, filings"},
+   {"id": "contour", "motif": "isolines read as yield curves", "why": "outlook reports, research"},
+   {"id": "marble", "motif": "marbled ledger endpaper with fine gilt", "why": "heritage institutions"},
+   {"id": "plexus", "motif": "a sparse settlement network", "why": "payments, digital assets"},
+   {"id": "metal", "motif": "brushed bars of graded height", "why": "an abstract chart with weight"},
+   {"id": "haze", "motif": "quiet gradient with a hairline grid", "why": "type-led outlook or report cover"},
+   {"id": "artdeco", "motif": "stepped skyscraper lines and fans", "why": "the 1920s bank-hall register for galas and anniversaries"},
+   {"id": "isometric", "motif": "city blocks whose heights read as bars", "why": "explainers, financial education"}
+  ],
+  "types": ["elegant", "garamond", "swiss", "didone", "grotesk", "news", "plex", "luxe", "fatface"],
+  "palettes": [
+   {"name": "ledger", "bg": "#edf2ec", "ink": "#10261d", "accent": "#0b6b4a", "colors": ["#0f7a55", "#10261d", "#c9a24a", "#ffffff"], "note": "light, quiet · ledger green"},
+   {"name": "vault", "bg": "#0a1220", "ink": "#f1ede2", "accent": "#d9b464", "colors": ["#d9b464", "#1e3a5f", "#8fa3bf", "#f1ede2"], "note": "dark · deep navy and gold"},
+   {"name": "oxblood", "bg": "#f4efe6", "ink": "#1f1a17", "accent": "#7a1f2b", "colors": ["#7a1f2b", "#b08d57", "#2b3a4a", "#ffffff"], "note": "light · ivory with oxblood and brass; private banking"},
+   {"name": "slate-mint", "bg": "#11181c", "ink": "#eaf3f0", "accent": "#5fe0b0", "colors": ["#5fe0b0", "#2f6f8f", "#c8d6d2"], "note": "dark · slate with mint; fintech"},
+   {"name": "banknote", "bg": "#efe9d6", "ink": "#16302a", "accent": "#1f5a46", "colors": ["#1f5a46", "#8a6a2f", "#b9c7a8", "#16302a"], "note": "light · banknote cream with engraving green"}
+  ],
+  "layouts": ["left", "center", "strip", "corners"],
+  "composition": "Restraint signals trust: a serif or light grotesque headline, generous margins, numerals set in tabular lining figures, and one fine-grained image (engraving, dot field, stone). Challenger fintech reverses it — flat colour, big friendly sans — but still keeps one accent.",
+  "avoid": [
+   "coin stacks, piggy banks, bull and bear, dollar signs, upward arrows",
+   "default corporate blue with a stock chart",
+   "neon gradients for institutions (keep them for fintech)",
+   "metallic gold type effects",
+   "red used for emphasis next to figures (reads as loss; in Korea red also means a rising price, so it is ambiguous)"
+  ]
+ },
+
+ "education": {
+  "ko": ["교육", "강좌", "강의", "특강", "수업", "아카데미", "입학설명회", "입시", "학교", "대학", "캠퍼스", "오픈캠퍼스", "수강생 모집", "모집 요강", "공개강좌", "평생교육", "방과후", "진로", "멘토링", "장학", "졸업", "학술제", "공모전", "스터디", "교원", "연수", "부트캠프", "인문학 강좌", "커리큘럼", "신입생", "이러닝"],
+  "en": ["education", "course", "class", "lecture", "academy", "school", "university", "college", "campus", "open day", "admissions", "enrollment", "curriculum", "bootcamp", "tutoring", "mentoring", "scholarship", "graduation", "commencement", "student", "teacher", "training", "learning", "seminar", "study group", "lifelong learning", "syllabus", "semester", "freshers", "workshop series"],
+  "mood": ["bright", "encouraging", "orderly", "open", "energetic"],
+  "styles": [
+   {"id": "studio", "motif": "a pencil, a book and a sphere as soft clay shapes", "why": "optimistic and clear for courses and recruiting"},
+   {"id": "bauhaus", "motif": "a tidy grid of circles, arches and stripes", "why": "the design-school lineage; ordered but playful"},
+   {"id": "origami", "motif": "a paper plane and a crane", "why": "aspiration, step-by-step making"},
+   {"id": "swiss", "motif": "a grid of dots growing along a diagonal", "why": "lecture series, open days"},
+   {"id": "crayon", "motif": "crayon scribbles, stars and simple shapes", "why": "learning by hand; primary and after-school programmes"},
+   {"id": "calendar", "motif": "a month sheet with the term dates marked", "why": "enrolment, courses, deadlines"},
+   {"id": "transit", "motif": "a route of stops", "why": "campus tours, orientation"},
+   {"id": "gouache", "motif": "fronds as a classroom frieze", "why": "art classes, open days"},
+   {"id": "isometric", "motif": "an isometric campus or classroom", "why": "explains a programme or open day"},
+   {"id": "paper", "motif": "cut-paper hills with a rising disc", "why": "growth, new term"},
+   {"id": "numerals", "motif": "the deadline date, month and day, set enormous", "why": "application and submission dates"},
+   {"id": "blueprint", "motif": "notebook grid with geometry constructions", "why": "STEM, maker classes"},
+   {"id": "screen", "motif": "a search field with the question typed in", "why": "courses that answer a question"},
+   {"id": "glyph", "motif": "letters, numerals and punctuation as pattern", "why": "literacy, language, humanities lectures"},
+   {"id": "collage", "motif": "cut colour blocks with books, hands and stars", "why": "campaign look: colour fields plus cut-outs"},
+   {"id": "stickers", "motif": "letters stickers spelling the subject", "why": "school clubs and fairs"},
+   {"id": "memphis", "motif": "squiggles, dots and confetti shapes", "why": "student festivals, freshers' week"},
+   {"id": "wood", "motif": "wooden blocks and an abacus", "why": "early years, tactile learning"},
+   {"id": "plexus", "motif": "a knowledge graph of linked dots", "why": "graduate schools, research training"},
+   {"id": "halftone", "motif": "riso-printed orbs and shapes", "why": "student-run events, zines"},
+   {"id": "aurora", "motif": "soft gradient blob", "why": "friendly general notices"}
+  ],
+  "types": ["bold", "paperlogy", "friendly", "gmarket", "round", "geometric", "maple", "humanist", "starlight", "dodum", "dongle", "slab", "grotesk", "story", "marker", "square"],
+  "palettes": [
+   {"name": "chalkboard", "bg": "#16352c", "ink": "#f3f0e2", "accent": "#ffd35c", "colors": ["#ffd35c", "#ff8a66", "#9ed0b6", "#f3f0e2"], "note": "dark · chalkboard green with chalk yellow"},
+   {"name": "notebook", "bg": "#f7f3e8", "ink": "#1d2440", "accent": "#c8321e", "colors": ["#d6402a", "#2d4fb8", "#f2c230", "#1d2440"], "note": "light, quiet · notebook cream, blue ink, red pencil"},
+   {"name": "campus-sky", "bg": "#dbeafc", "ink": "#12234a", "accent": "#1c4fd0", "colors": ["#2f6bff", "#ff9f43", "#ff5d8f", "#ffffff"], "note": "light · sky blue and navy"},
+   {"name": "sunny", "bg": "#ffe066", "ink": "#1b1b1b", "accent": "#1d3fb0", "colors": ["#2447c8", "#ff5a36", "#ffffff", "#1b1b1b"], "note": "light · school-bus yellow, black and blue"},
+   {"name": "lilac", "bg": "#e7e0fa", "ink": "#1f1a3d", "accent": "#5a35d6", "colors": ["#6b4eff", "#ff7ea8", "#ffd166", "#ffffff"], "note": "light · lilac with indigo"}
+  ],
+  "layouts": ["left", "band", "strip", "top", "headline"],
+  "composition": "University campaigns work in bold colour fields with large, plain type and one image idea (Goldsmiths: hot pink, yellow and charcoal blocks over black-and-white reportage). Dates, eligibility and how to apply are a clear table — the poster is a form people act on.",
+  "avoid": [
+   "graduation caps, apples, owls, light bulbs, ABC blocks for adult courses",
+   "childish faces for university or professional training",
+   "rainbow of five or more colours",
+   "long paragraphs instead of a label–value table",
+   "clip-art pencils as borders"
+  ]
+ },
+
+ "design": {
+  "ko": ["디자인", "디자인 위크", "디자인페스티벌", "그래픽 디자인", "타이포그래피", "타이포잔치", "브랜딩", "UX", "UI", "제품 디자인", "산업디자인", "디자이너", "스튜디오", "포트폴리오", "졸업전시", "졸전", "디자인 어워드", "폰트", "서체", "일러스트레이션", "편집디자인", "인터랙션", "크리에이티브", "디자인 토크", "모션그래픽", "아트디렉터", "굿디자인", "아이덴티티", "레터링", "디자인 세미나"],
+  "en": ["design", "design week", "design festival", "graphic design", "typography", "branding", "UX", "UI", "product design", "industrial design", "designer", "studio", "portfolio review", "degree show", "design awards", "type design", "font", "illustration", "editorial design", "interaction", "creative", "design talk", "motion graphics", "art director", "identity", "lettering", "poster show", "design conference", "typeface"],
+  "mood": ["sharp", "conceptual", "playful", "ordered", "confident"],
+  "styles": [
+   {"id": "bauhaus", "motif": "a mosaic of circles, quarter-circles and stripes", "why": "the discipline's own geometric vocabulary"},
+   {"id": "swiss", "motif": "concentric arcs that grow and turn by one rule", "why": "the International Style itself"},
+   {"id": "glyph", "motif": "one oversized letterform cropped by the sheet", "why": "type as the image, as Korean studios do with Hangul"},
+   {"id": "flowfield", "motif": "bands packed like a plotter print", "why": "design weeks, studio talks"},
+   {"id": "opart", "motif": "a vibrating field of parallel lines with one distortion", "why": "perception as subject; strong in black and white"},
+   {"id": "fluted", "motif": "an orb sliced by a pane of fluted glass", "why": "the material of current interiors and identities"},
+   {"id": "numerals", "motif": "a stack of month over day, each fitted to one width", "why": "type as the image"},
+   {"id": "halftone", "motif": "overprinted spot-colour orbs, slightly off register", "why": "print culture, book and poster fairs"},
+   {"id": "marquee", "motif": "rows of the headline, solid and outline", "why": "typographic posters for design events"},
+   {"id": "memphis", "motif": "laminate patterns, squiggles and terrazzo", "why": "postmodern design history, playful fairs"},
+   {"id": "studio", "motif": "cube, cone and sphere as a form study", "why": "product and industrial design"},
+   {"id": "haze", "motif": "grainy gradient with hairline geometry", "why": "leaves the sheet to the typography"},
+   {"id": "pattern", "motif": "a fine grid with a few cells filled", "why": "systems, tools, workshops"},
+   {"id": "glass", "motif": "frosted panels overlapping", "why": "UI, product, digital design"},
+   {"id": "collage", "motif": "cut-paper shapes in two or three flat colours", "why": "the cut-out tradition of Matisse and Paul Rand"},
+   {"id": "screen", "motif": "interface windows with the date in a dialog", "why": "digital product and UX events"},
+   {"id": "origami", "motif": "folded planes catching light", "why": "form, material, packaging"},
+   {"id": "monolith", "motif": "arch, stairs and a sphere in low sun", "why": "furniture, space, object design"},
+   {"id": "blueprint", "motif": "construction lines of a letter or product", "why": "process, type design, engineering design"},
+   {"id": "wave", "motif": "dot grid bending once", "why": "systems, identity"}
+  ],
+  "types": ["grotesk", "swiss", "brutal", "geometric", "slim", "dream", "wide", "outline", "editorial", "stencil"],
+  "palettes": [
+   {"name": "primary", "bg": "#f1ece1", "ink": "#161616", "accent": "#c92a12", "colors": ["#e2401c", "#1f47c8", "#f4b81f", "#161616"], "note": "light · red, blue, yellow on cream"},
+   {"name": "black-fluoro", "bg": "#0c0c0c", "ink": "#f5f5f0", "accent": "#d7ff3c", "colors": ["#d7ff3c", "#ff4fa3", "#f5f5f0"], "note": "dark · black with one fluorescent"},
+   {"name": "swiss-red", "bg": "#f6f5f1", "ink": "#111111", "accent": "#d0191b", "colors": ["#e2231a", "#111111", "#bdbab2"], "note": "light, quiet · white, black, one red"},
+   {"name": "odd-pair", "bg": "#f6c9d6", "ink": "#12301f", "accent": "#0d6b3c", "colors": ["#117a45", "#12301f", "#ffffff", "#ff5a36"], "note": "light · pink with deep green; a deliberate odd pairing"},
+   {"name": "cobalt", "bg": "#1630a8", "ink": "#f4f2ea", "accent": "#ffd23f", "colors": ["#ffd23f", "#ff7a59", "#f4f2ea"], "note": "dark · a solid cobalt field with yellow"}
+  ],
+  "layouts": ["headline", "band", "corners", "baseline", "left", "right"],
+  "composition": "Design-event posters are concept-led and type-led: the title is often the image (Sulki & Min build a programme name into the core graphic; Cho Hyun-yeol sets whole posters in letters alone), information is small and pushed to the corners, and colour is one or two inks. The system matters more than the single sheet.",
+  "avoid": [
+   "pencils, rulers, colour swatches, light bulbs, paint splashes",
+   "a gradient plus a drop shadow plus an outline on one headline",
+   "five colours when two would do",
+   "centred symmetrical layout with a decorative script",
+   "imitating a famous studio's signature literally"
+  ]
+ },
+
+ "architecture": {
+  "ko": ["건축", "건축전", "건축가", "도시건축", "건축비엔날레", "인테리어", "설계", "도면", "주거", "주택", "리모델링", "건축문화제", "건축 답사", "오픈하우스", "도시재생", "조경", "건설", "파빌리온", "건축학과", "건축 강연", "모델하우스", "분양", "랜드마크", "공공건축", "건축상", "공간 디자인", "한옥 건축", "건축사", "준공", "단지"],
+  "en": ["architecture", "architect", "architectural", "buildings", "urbanism", "biennale", "interior", "floor plan", "housing", "residence", "renovation", "open house", "urban regeneration", "landscape architecture", "construction", "pavilion", "structure", "facade", "skyscraper", "spatial", "model home", "landmark", "public space", "masterplan", "built environment", "section drawing", "site visit", "urban design"],
+  "mood": ["structural", "calm", "exact", "monumental", "material"],
+  "styles": [
+   {"id": "blueprint", "motif": "plan and section linework with dimension ticks", "why": "the discipline's own drawing"},
+   {"id": "monolith", "motif": "plaster arch, stairs and long shadows", "why": "mass and light, the two things architecture is made of"},
+   {"id": "swiss", "motif": "diagonal bands doubling in width", "why": "structure as image"},
+   {"id": "isometric", "motif": "an axonometric building cut open", "why": "the axonometric is an architect's native view"},
+   {"id": "bauhaus", "motif": "a facade grid of tiles and openings", "why": "modernist lineage"},
+   {"id": "transit", "motif": "a map of city blocks", "why": "urbanism, open-house weekends"},
+   {"id": "fluted", "motif": "an orb behind a glass-block wall", "why": "interiors, material talks"},
+   {"id": "contour", "motif": "site topography with one footprint marked", "why": "landscape, site, urban plans"},
+   {"id": "stone", "motif": "a stone block and a thin slab", "why": "materiality, tectonics"},
+   {"id": "pattern", "motif": "rows of arches", "why": "arcades and facades as pattern"},
+   {"id": "wave", "motif": "a dot grid lifting like a roof shell", "why": "structure, parametric work"},
+   {"id": "layers", "motif": "city silhouettes receding in haze", "why": "urbanism, city-scale programmes"},
+   {"id": "glass", "motif": "translucent panels like a curtain wall", "why": "contemporary practice, interiors"},
+   {"id": "wood", "motif": "timber joinery without nails", "why": "hanok, craft construction, timber building"},
+   {"id": "mosaic", "motif": "a tiled floor pattern", "why": "interiors, heritage buildings"},
+   {"id": "pointcloud", "motif": "a scanned building in points", "why": "digital survey, research"},
+   {"id": "origami", "motif": "folded roof planes", "why": "form studies, pavilions"},
+   {"id": "metal", "motif": "steel sections and a bolted joint", "why": "engineering, industrial architecture"}
+  ],
+  "types": ["grotesk", "swiss", "stencil", "geometric", "slim", "wide", "elegant", "editorial", "condensed"],
+  "palettes": [
+   {"name": "concrete", "bg": "#e4e2dd", "ink": "#1a1a1a", "accent": "#c2410c", "colors": ["#a9a59d", "#f3f2ee", "#e2622a", "#55524c"], "note": "light, quiet · concrete grey and one orange"},
+   {"name": "blueprint", "bg": "#0e2f66", "ink": "#eef4ff", "accent": "#ffd166", "colors": ["#eef4ff", "#8fb4ff", "#ffd166"], "note": "dark · blueprint blue, white line, yellow note"},
+   {"name": "plaster", "bg": "#ece2d3", "ink": "#2a1f1a", "accent": "#a2462d", "colors": ["#c4654a", "#f0dcc4", "#8a3f2c", "#f6efe6"], "note": "light · sunlit plaster and terracotta"},
+   {"name": "black-line", "bg": "#111111", "ink": "#f2f2ee", "accent": "#f4d21f", "colors": ["#f2f2ee", "#7a7a76", "#f4d21f"], "note": "dark · black, white linework, one yellow"},
+   {"name": "sand-cobalt", "bg": "#e9dcc3", "ink": "#17203a", "accent": "#1f47c8", "colors": ["#1f47c8", "#b98a52", "#f5ecd9", "#17203a"], "note": "light · sand and cobalt; Mediterranean modern"}
+  ],
+  "layouts": ["corners", "band", "headline", "baseline", "left", "bottom"],
+  "composition": "School and biennale posters are Swiss in bone structure — grid, grotesque, small information — and then break it once: a generative image under the type, a black-and-white grid that merges stage and screen (Strelka's Future Architect), or a few crossing colour lines as the mark. One drawing or one mass, never a photo collage of buildings.",
+  "avoid": [
+   "compasses, hard hats, cranes, T-squares",
+   "glossy real-estate renders with lens flare",
+   "more than one accent on a grey scheme",
+   "rounded friendly faces",
+   "skyline clip-art for anything smaller than city scale"
+  ]
+ },
+
+ "art": {
+  "ko": ["미술", "전시", "개인전", "기획전", "단체전", "미술관", "갤러리", "아트페어", "비엔날레", "작가", "회화", "조각", "설치미술", "미디어아트", "현대미술", "드로잉", "판화", "사진전", "오프닝", "도슨트", "큐레이터", "레지던시", "소장품", "특별전", "초대전", "작품", "아틀리에", "오픈스튜디오", "아트위크", "전시 연계"],
+  "en": ["art", "exhibition", "solo show", "group show", "museum", "gallery", "art fair", "biennial", "artist", "painting", "sculpture", "installation", "media art", "contemporary art", "drawing", "printmaking", "photography", "opening reception", "vernissage", "curator", "residency", "permanent collection", "retrospective", "open studio", "artwork", "fine art", "curated", "art week", "on view"],
+  "mood": ["quiet", "bold", "conceptual", "tactile", "open"],
+  "styles": [
+   {"id": "collage", "motif": "cut and torn paper shapes with one photographic fragment", "why": "the most direct 'made by hand' signal for a show"},
+   {"id": "gouache", "motif": "fronds cut from painted paper on blocks of colour", "why": "the modernist cut-out; museum and gallery programmes"},
+   {"id": "halftone", "motif": "two overprinted spot-colour forms", "why": "print-shop feel for independent spaces"},
+   {"id": "flowfield", "motif": "bands of flat colour flowing round the type", "why": "generative art; biennials, open studios"},
+   {"id": "monolith", "motif": "a plinth, an arch and a sphere in gallery light", "why": "the white-cube stillness of an exhibition"},
+   {"id": "inkdrop", "motif": "one bloom of pigment in water", "why": "painting and process without illustrating a work"},
+   {"id": "swiss", "motif": "arcs cropped by the sheet", "why": "exhibition posters in the modernist line"},
+   {"id": "watercolor", "motif": "three overlapping washes and bare paper", "why": "drawing, works on paper"},
+   {"id": "fluted", "motif": "an orb half clear and half refracted", "why": "light-and-space exhibitions"},
+   {"id": "marble", "motif": "a marbled sheet with fine veins", "why": "craft-adjacent and collection shows"},
+   {"id": "numerals", "motif": "a stack of opening and closing dates", "why": "exhibition runs as typography"},
+   {"id": "glyph", "motif": "the exhibition title cropped as the image", "why": "type-only posters for concept-led shows"},
+   {"id": "opart", "motif": "a field of lines bending once", "why": "abstraction, perception"},
+   {"id": "haze", "motif": "a single grainy colour field", "why": "leaves room for a bilingual title"},
+   {"id": "marquee", "motif": "steps of the title growing across the sheet", "why": "type-led exhibition posters"},
+   {"id": "stainedglass", "motif": "abstract colour fields held by dark lines", "why": "colour as subject"},
+   {"id": "linocut", "motif": "two bold carved forms", "why": "printmaking, graphic arts"},
+   {"id": "sumuk", "motif": "a single ink stroke on paper", "why": "East Asian painting, calligraphy-related shows"},
+   {"id": "ceramic", "motif": "glazed vessels as a still life", "why": "object-based exhibitions"},
+   {"id": "pointcloud", "motif": "a sculpture dissolving into points", "why": "media art, digital practice"}
+  ],
+  "types": ["editorial", "grotesk", "brutal", "swiss", "didone", "slim", "garamond", "outline", "myeongjo", "maru"],
+  "palettes": [
+   {"name": "gallery", "bg": "#f5f4f0", "ink": "#121212", "accent": "#1a36c9", "colors": ["#2040e0", "#121212", "#e9e2d0", "#ff5a36"], "note": "light, quiet · gallery white with ultramarine"},
+   {"name": "black-pink", "bg": "#0d0d0f", "ink": "#f6f3ee", "accent": "#ff5fa8", "colors": ["#ff5fa8", "#3fb2ff", "#ffe14d"], "note": "dark · black with fluorescent pink"},
+   {"name": "raw-canvas", "bg": "#e9dfcb", "ink": "#211a14", "accent": "#b3261a", "colors": ["#d93a26", "#1f3d7a", "#e3b23c", "#211a14"], "note": "light · raw canvas, vermilion, cobalt"},
+   {"name": "viridian", "bg": "#0f3d33", "ink": "#f1eede", "accent": "#f3c6a5", "colors": ["#f3c6a5", "#e86a4a", "#9ac7b4", "#f1eede"], "note": "dark · museum-wall green with pale peach"},
+   {"name": "lilac-orange", "bg": "#e4dcf5", "ink": "#1c1533", "accent": "#b8400e", "colors": ["#f06a1f", "#5a3fd0", "#1c1533", "#ffffff"], "note": "light · lilac with burnt orange"}
+  ],
+  "layouts": ["corners", "band", "headline", "baseline", "vertical", "side", "bottom"],
+  "composition": "Exhibition posters put one object or one typographic idea in a large calm field and anchor the period, venue and hours in separate corners in small type (the four-corner pattern). Award juries currently reward both extremes: 'minimalist typography and black-and-white' and 'large-scale imagery and expressive colour combinations' (100 Beste Plakate 25), often with visible analogue technique (riso, silkscreen, plotter).",
+  "avoid": [
+   "paint palettes, brushes, easels, gilded picture frames",
+   "a grid of many small artworks",
+   "decorating the title with effects that compete with the work",
+   "themed display fonts",
+   "tight margins — the white space is the gallery wall"
+  ]
+ },
+
+ "culture": {
+  "ko": ["문화", "문화제", "문화예술", "예술제", "연극", "무용", "뮤지컬", "오페라", "극장", "문화재단", "문화센터", "문화의 날", "인문", "인문학", "토크콘서트", "강연", "아카이브", "박물관", "문화도시", "예술교육", "낭독극", "거리예술", "마당극", "국제교류", "아트센터", "시민 문화", "공연예술", "발레", "레퍼토리", "초연"],
+  "en": ["culture", "cultural", "arts", "performing arts", "theatre", "theater", "dance", "musical", "opera", "playhouse", "arts council", "cultural center", "humanities", "talk", "archive", "museum", "heritage", "arts festival", "performance", "stage", "premiere", "repertory", "ballet", "cultural exchange", "repertoire", "new season", "stage play", "drama", "public programme"],
+  "mood": ["warm", "cultured", "lively", "inclusive", "thoughtful"],
+  "styles": [
+   {"id": "halftone", "motif": "overprinted circles and a stage-like arc", "why": "printed-matter warmth for theatres and foundations"},
+   {"id": "paper", "motif": "cut-paper proscenium arches and hills", "why": "handmade and civic at once"},
+   {"id": "collage", "motif": "cut shapes, a hand and a mask-like form", "why": "performing arts, mixed programmes"},
+   {"id": "papercut", "motif": "strata opening like a geode", "why": "festivals, museum programmes"},
+   {"id": "swiss", "motif": "arcs in black and one signal colour", "why": "institutional programmes"},
+   {"id": "gouache", "motif": "fronds on panels of saturated colour", "why": "festivals, museum shops"},
+   {"id": "stamp", "motif": "a single stamp with the date as its value", "why": "exhibitions, heritage days"},
+   {"id": "haze", "motif": "a grainy two-colour field", "why": "type-led season posters"},
+   {"id": "flowfield", "motif": "bands in three inks parting round the copy", "why": "festivals of ideas, talks"},
+   {"id": "numerals", "motif": "the date of the opening, month and day, set enormous", "why": "the Swiss institutional poster: date first"},
+   {"id": "transit", "motif": "a metro diagram", "why": "city-wide festivals, museum nights"},
+   {"id": "bauhaus", "motif": "tiles of circles and arcs", "why": "institutional programme systems"},
+   {"id": "watercolor", "motif": "light washes with pen lines", "why": "talks, readings, humanities"},
+   {"id": "emboss", "motif": "a crest for an institution", "why": "galas, patrons' evenings"},
+   {"id": "calendar", "motif": "a month sheet with the run of days marked", "why": "seasons, runs and programmes"},
+   {"id": "glyph", "motif": "the programme name as the core graphic", "why": "the Korean studio method for cultural series"},
+   {"id": "monolith", "motif": "steps, an arch and a spotlight shadow", "why": "theatre, dance"},
+   {"id": "ticket", "motif": "an admit ticket carrying date and place", "why": "performances and guided visits"},
+   {"id": "stainedglass", "motif": "colour fields held in dark lines", "why": "choral, heritage venues"},
+   {"id": "linocut", "motif": "bold print of figures or objects", "why": "folk and community arts"},
+   {"id": "bojagi", "motif": "patchwork planes in muted colour", "why": "Korean cultural programmes with a contemporary tone"},
+   {"id": "layers", "motif": "local hills or roofs in flat layers", "why": "regional culture festivals"},
+   {"id": "mosaic", "motif": "small tiles forming one simple emblem", "why": "public, civic programmes"}
+  ],
+  "types": ["editorial", "myeongjo", "bold", "maru", "classic", "grotesk", "humanist", "dream", "batang", "brutal", "news", "fatface"],
+  "palettes": [
+   {"name": "cream-crimson", "bg": "#f4ecdd", "ink": "#1d1a17", "accent": "#a81e2c", "colors": ["#c0273a", "#22395a", "#d9a441", "#1d1a17"], "note": "light · warm cream with crimson"},
+   {"name": "teal-gold", "bg": "#0d3b3e", "ink": "#f3eede", "accent": "#e6b955", "colors": ["#e6b955", "#e2725b", "#8fc1b5", "#f3eede"], "note": "dark · deep teal with gold"},
+   {"name": "pink-navy", "bg": "#f7d6dc", "ink": "#14203f", "accent": "#1d3a8a", "colors": ["#1d3a8a", "#e8497a", "#ffffff", "#f2b84b"], "note": "light · pink with navy"},
+   {"name": "black-yellow", "bg": "#111111", "ink": "#f6f2e4", "accent": "#ffd500", "colors": ["#ffd500", "#f6f2e4", "#e8452c"], "note": "dark · black and yellow; theatre"},
+   {"name": "mint-plum", "bg": "#dcefe6", "ink": "#231428", "accent": "#6a2a6e", "colors": ["#6a2a6e", "#1f7a5a", "#f2a65a", "#ffffff"], "note": "light, quiet · mint with plum"}
+  ],
+  "layouts": ["corners", "band", "left", "side", "vertical", "headline"],
+  "composition": "Cultural institutions run series: a fixed signature and a graphic that changes per event (Studio Dumbar's Sinfonietta; Sulki & Min's programme systems), with Korean and English set as equals in parallel columns (studio fnt). Type carries the voice — wood-type weight for theatre, a 명조 for talks — and the image is one bold form.",
+  "avoid": [
+   "comedy and tragedy masks, treble clefs, curtains, spotlights as clip-art",
+   "night-view photo composites (a 2026 Korean public festival brief explicitly rules them out)",
+   "five sponsor logos larger than the date",
+   "hanja or brush fonts added only to look 'cultural'",
+   "equal-size bilingual titles fighting on one line"
+  ]
+ },
+
+ "tradition": {
+  "ko": ["전통", "전통문화", "국악", "판소리", "한복", "한옥", "궁궐", "고궁", "궁중문화축전", "민속", "민화", "서예", "다도", "한지", "탈춤", "사물놀이", "풍물", "농악", "설날", "추석", "단오", "정월대보름", "한가위", "무형유산", "문화유산", "종묘제례", "가야금", "거문고", "한글날", "명절", "연등회", "전통공예", "국가유산", "산조", "종가"],
+  "en": ["tradition", "traditional", "heritage", "folk", "gugak", "pansori", "hanbok", "hanok", "palace", "royal", "calligraphy", "tea ceremony", "hanji", "mask dance", "samulnori", "Seollal", "Chuseok", "Lunar New Year", "Dano", "intangible heritage", "ancestral", "folk painting", "minhwa", "gayageum", "Hangeul Day", "ritual", "dynasty", "Joseon", "lantern festival", "court music"],
+  "mood": ["dignified", "serene", "rooted", "refined", "festive"],
+  "styles": [
+   {"id": "sumuk", "motif": "misty ridgelines, a pine or bamboo in ink wash", "why": "the ground of East Asian painting; most of the sheet stays empty"},
+   {"id": "bojagi", "motif": "jogakbo patchwork planes with visible seams", "why": "traditional geometry that already looks modern"},
+   {"id": "najeon", "motif": "cranes, clouds and peonies in mother-of-pearl on black lacquer", "why": "court and ceremony register"},
+   {"id": "paper", "motif": "hanji paper-cut hills and a full moon", "why": "seasonal greetings, 명절"},
+   {"id": "stitch", "motif": "embroidered peony or longevity symbols", "why": "hanbok, textile and women's craft heritage"},
+   {"id": "linocut", "motif": "woodblock-style tiger and magpie", "why": "minhwa humour, folk festivals"},
+   {"id": "watercolor", "motif": "pale colour wash over line (담채)", "why": "literati painting tone for talks and recitals"},
+   {"id": "ceramic", "motif": "a moon jar or celadon bowl", "why": "white porcelain calm; heritage brands"},
+   {"id": "calendar", "motif": "a tearoff 일력 page on the day", "why": "holidays and seasonal days"},
+   {"id": "wood", "motif": "lattice window and joinery", "why": "hanok, temple, palace programmes"},
+   {"id": "origami", "motif": "folded hanji lotus lanterns", "why": "연등회, Buddha's Birthday, lantern events"},
+   {"id": "layers", "motif": "layered ridgelines as in 산수", "why": "regional heritage festivals"},
+   {"id": "glyph", "motif": "Hangul jamo or 문자도 characters as image", "why": "한글날, calligraphy, typography of tradition"},
+   {"id": "inkdrop", "motif": "ink spreading in water (먹 번짐)", "why": "contemporary gugak, crossover programmes"}
+  ],
+  "types": ["myeongjo", "brush", "calli", "batang", "editorial", "yeonsung", "garamond", "luxe"],
+  "palettes": [
+   {"name": "hanji", "bg": "#f3ecdc", "ink": "#1f1a14", "accent": "#1f3f7a", "colors": ["#1f3f7a", "#b3392b", "#c99a2e", "#3f6f52"], "note": "light · 한지 ground with 쪽빛 indigo, 석간주 red, 치자 yellow, 뇌록 green"},
+   {"name": "lacquer", "bg": "#0e0d0c", "ink": "#f0eadb", "accent": "#d7b56d", "colors": ["#d7b56d", "#7fd1c7", "#e58fb0", "#f0eadb"], "note": "dark · black lacquer with gold and mother-of-pearl tints"},
+   {"name": "ink", "bg": "#f7f5ef", "ink": "#121212", "accent": "#8c1c13", "colors": ["#121212", "#6b6b68", "#b5b3ac", "#a82216"], "note": "light, quiet · 소색 paper, 먹 ink and one red seal"},
+   {"name": "dancheong", "bg": "#0f2b2a", "ink": "#f4eedc", "accent": "#f08a5d", "colors": ["#1f8a70", "#d8402f", "#f2c14e", "#3e6fb5"], "note": "dark · 뇌록 green ground with dancheong red, yellow and blue"},
+   {"name": "jade", "bg": "#dcebe4", "ink": "#162a24", "accent": "#b03a2e", "colors": ["#5fa58c", "#b03a2e", "#f1e3c2", "#1f5a4a"], "note": "light · 옥색 jade with a red accent"},
+   {"name": "saekdong", "bg": "#fbf6ea", "ink": "#1c1c1c", "accent": "#c2253a", "colors": ["#d7263d", "#f4b400", "#1f6fb5", "#2f9e6b"], "note": "light · white ground with 색동 stripes; 설 and 추석 greetings"}
+  ],
+  "layouts": ["vertical", "axis", "center", "side", "corners", "right"],
+  "composition": "Contemporary Korean work treats tradition as a sign system rather than a costume: Typojanchi 2021 set the ten-longevity crane and turtle on a fluorescent ground so that it would not read as a folk painting, with Hangul, hanja and Latin together. Gugak recital posters are reported to be mostly two-part split compositions with generous empty space, so: a vertical 명조 title, one motif, wide margins.",
+  "avoid": [
+   "rays radiating from a sun disc (reads as the Rising Sun flag) — use a plain disc or full moon",
+   "brush fonts on every line; one brushed title at most",
+   "all five 오방색 at full saturation at once",
+   "Chinese or Japanese motifs passed off as Korean (red lanterns, torii, cherry-blossom crests)",
+   "taegeuk and palace-roof clip-art, gold bevelled text",
+   "funeral associations: black-and-white with a ribboned portrait frame"
+  ]
+ },
+
+ "literature": {
+  "ko": ["문학", "도서전", "북페어", "북토크", "작가와의 만남", "낭독회", "시집", "소설", "에세이", "산문", "독서", "독서모임", "북클럽", "서점", "책방", "출간", "신간", "출판", "문학상", "백일장", "글쓰기", "필사", "시인", "소설가", "도서관", "인문서", "문예", "북콘서트", "책 읽는", "독립출판"],
+  "en": ["literature", "literary", "book", "book fair", "book talk", "author", "reading", "poetry", "poem", "novel", "essay", "fiction", "book club", "bookstore", "bookshop", "publishing", "publication", "new release", "literary prize", "writing", "writers", "poet", "novelist", "library", "storytelling", "memoir", "manuscript", "independent publishing", "book launch"],
+  "mood": ["quiet", "intimate", "thoughtful", "textured", "timeless"],
+  "styles": [
+   {"id": "watercolor", "motif": "two washes and a few pen lines", "why": "the tone of a book cover; leaves the page to the words"},
+   {"id": "sumuk", "motif": "one branch and a great deal of empty paper", "why": "poetry, classics"},
+   {"id": "stamp", "motif": "a single stamp cancelled with the date and place", "why": "letters, readings, book fairs"},
+   {"id": "glyph", "motif": "letters and punctuation marks as the image", "why": "writing itself as subject"},
+   {"id": "paper", "motif": "an open book whose pages become cut-paper hills", "why": "book fairs, reading festivals"},
+   {"id": "papercut", "motif": "strata like the pages of a cut book", "why": "book fairs, readings"},
+   {"id": "emboss", "motif": "a monogram as on a cloth-bound cover", "why": "prizes, special editions"},
+   {"id": "linocut", "motif": "a bookplate-style print: bird, lamp or branch", "why": "independent bookshops, small presses"},
+   {"id": "haze", "motif": "a grainy single-hue field", "why": "essay and criticism events; type-first"},
+   {"id": "marble", "motif": "marbled endpapers", "why": "the craft of the book; prizes, anniversaries"},
+   {"id": "numerals", "motif": "month and day of the reading in words, in a book serif", "why": "readings, book talks, fairs"},
+   {"id": "cyanotype", "motif": "pressed leaves on blue", "why": "nature writing, essays, memoir"},
+   {"id": "collage", "motif": "torn pages, clippings and a cut shape", "why": "zines, independent publishing fairs"},
+   {"id": "inkdrop", "motif": "an ink blot opening in water", "why": "fiction, mystery, a single dramatic image"},
+   {"id": "halftone", "motif": "riso orbs in two inks", "why": "book markets, zine fairs"},
+   {"id": "monolith", "motif": "a stack of books on a plinth in window light", "why": "library and museum programmes"}
+  ],
+  "types": ["batang", "myeongjo", "maru", "garamond", "story", "goun", "editorial", "typewriter", "pen", "calli", "humanist", "news"],
+  "palettes": [
+   {"name": "paper-ink", "bg": "#f6f1e6", "ink": "#1b2233", "accent": "#27407a", "colors": ["#2f4f9e", "#b9c4dc", "#c9a24a", "#1b2233"], "note": "light · book paper and blue-black ink"},
+   {"name": "reading-lamp", "bg": "#141a2e", "ink": "#f1ead8", "accent": "#f2c46b", "colors": ["#f2c46b", "#3a4a8a", "#c7d3f2", "#8a5a3c"], "note": "dark · night indigo with lamp yellow"},
+   {"name": "sage-leaf", "bg": "#e3e8dc", "ink": "#1f2a1f", "accent": "#6b4a2b", "colors": ["#7d9471", "#6b4a2b", "#f1eee2", "#3f5445"], "note": "light, quiet · sage and walnut"},
+   {"name": "rose-grey", "bg": "#ead9d6", "ink": "#2a1d22", "accent": "#8a2f4a", "colors": ["#b3536a", "#5a3955", "#f6ece8", "#c9a79f"], "note": "light · dusty rose; poetry, essays"},
+   {"name": "walnut", "bg": "#2a1f1a", "ink": "#f2e8d5", "accent": "#e0a458", "colors": ["#e0a458", "#8a5a3c", "#c9b79a", "#f2e8d5"], "note": "dark · walnut brown with cream; classics"}
+  ],
+  "layouts": ["vertical", "axis", "center", "side", "left", "corners"],
+  "composition": "Book-event posters behave like book covers: a 명조 or old-style serif title with real leading, one small image or none, and paper-coloured space. The Seoul International Book Fair changes its image with each year's theme (2024: Gulliver and the dolphin Jedol by the group Cement) while Workroom's identity stays; a vertical title suits Korean literary subjects.",
+  "avoid": [
+   "quill pens, ink pots, stacks of leather books, flying pages",
+   "ornate script or blackletter",
+   "heavy black gothic headlines (too loud for a reading)",
+   "busy pattern behind long quotations",
+   "justified body text in a narrow column"
+  ]
+ },
+
+ "music": {
+  "ko": ["콘서트", "페스티벌", "공연", "내한", "라이브", "음악", "음악회", "현악", "사중주", "실내악", "피아노", "바이올린", "첼로", "연주회", "리사이틀", "독주회", "오케스트라", "교향악단", "합창", "밴드", "재즈", "인디", "힙합", "클래식", "버스킹", "음악제", "뮤직 페스티벌", "단독 공연", "투어", "라인업", "헤드라이너", "앨범", "쇼케이스", "싱어송라이터", "음감회", "티켓 오픈", "앙코르", "협주곡", "정기연주회"],
+  "en": ["concert", "festival", "live", "gig", "tour", "music", "recital", "quartet", "string quartet", "strings", "chamber music", "piano", "violin", "cello", "sonata", "orchestra", "symphony", "philharmonic", "choir", "band", "jazz", "indie", "hip-hop", "rock", "classical", "busking", "music festival", "lineup", "headliner", "album", "showcase", "singer-songwriter", "listening session", "tickets", "encore", "acoustic", "ensemble", "setlist", "concerto"],
+  "mood": ["rhythmic", "loud", "immersive", "emotional", "electric"],
+  "styles": [
+   {"id": "flux", "motif": "light trails that read as sound moving through a hall", "why": "festival and arena energy"},
+   {"id": "swiss", "motif": "bars in a rhythm of widths, like a score", "why": "the concert-poster tradition; classical and contemporary"},
+   {"id": "halftone", "motif": "overprinted orbs in two or three spot inks", "why": "the gig-poster and record-sleeve tradition"},
+   {"id": "liquid", "motif": "slow lava-lamp colour bands", "why": "psychedelic poster lineage; funk, soul, electronic"},
+   {"id": "flowfield", "motif": "an eddy of bands turning round a still centre", "why": "contemporary and electronic programmes"},
+   {"id": "chrome", "motif": "liquid chrome forms mirroring coloured light", "why": "pop, K-pop, electronic"},
+   {"id": "ticket", "motif": "an admit ticket printed with the night's details", "why": "the ticket stub is the gig poster's oldest prop"},
+   {"id": "fluted", "motif": "a dusk of colour bands stepping like a spectrum", "why": "ambient, jazz, listening sessions"},
+   {"id": "airbrush", "motif": "an airbrushed cosmic gradient with a planet", "why": "album-cover lineage; rock, synth"},
+   {"id": "wave", "motif": "dot terrain as a waveform", "why": "classical, ambient, electronic"},
+   {"id": "marquee", "motif": "rows of the headline as a wall of type", "why": "line-up energy without an image"},
+   {"id": "ribbon", "motif": "one ribbon as a melodic line", "why": "recitals, jazz, awards"},
+   {"id": "numerals", "motif": "the date of the show, month and day, set enormous", "why": "one date to remember"},
+   {"id": "opart", "motif": "curved lines of varying weight", "why": "making sound visible, as orchestra identities do"},
+   {"id": "collage", "motif": "cut-out instrument shapes and blocks of colour", "why": "jazz in the Blue Note and Troxler line"},
+   {"id": "screen", "motif": "a player card with the headline as the track", "why": "listening sessions, releases, playlists"},
+   {"id": "neon", "motif": "a neon sign of one word", "why": "live clubs, late shows"},
+   {"id": "layers", "motif": "hills and a low sun behind a stage silhouette", "why": "outdoor festivals"},
+   {"id": "inkdrop", "motif": "a plume of pigment unfolding", "why": "classical recital, vocal music"},
+   {"id": "glitch", "motif": "sliced, shifted bands", "why": "electronic, experimental"},
+   {"id": "bokeh", "motif": "out-of-focus stage lights", "why": "year-end concerts, ballads"}
+  ],
+  "types": ["impact", "condensed", "dream", "brutal", "wide", "classic", "retro", "editorial", "techno", "outline", "fatface"],
+  "palettes": [
+   {"name": "stage-night", "bg": "#07060f", "ink": "#f4f1ff", "accent": "#b9a8ff", "colors": ["#7c4dff", "#ff3d9a", "#00e5ff", "#ffd166"], "note": "dark · black with violet, magenta and cyan stage light"},
+   {"name": "riso-cream", "bg": "#f3ede0", "ink": "#151515", "accent": "#0b63a8", "colors": ["#ff48b0", "#0078bf", "#ffe100"], "note": "light · riso pink, blue, yellow on cream; indie gigs"},
+   {"name": "sunset-set", "bg": "#2a1746", "ink": "#fff0dc", "accent": "#ffb454", "colors": ["#ff8f6b", "#ffb454", "#c86a9a", "#5b3a8a"], "note": "dark · dusk purple and orange; outdoor festival"},
+   {"name": "lineup-yellow", "bg": "#ffd60a", "ink": "#111111", "accent": "#2b1bb5", "colors": ["#111111", "#2b1bb5", "#ff3b30", "#ffffff"], "note": "light · yellow with black; line-up poster"},
+   {"name": "concert-hall", "bg": "#ece6da", "ink": "#1f1714", "accent": "#7a1f2b", "colors": ["#7a1f2b", "#b08d57", "#2a2a2a", "#f8f4ec"], "note": "light, quiet · warm stone with burgundy and brass; classical"},
+   {"name": "blue-note", "bg": "#0b2545", "ink": "#f3efe4", "accent": "#ff7a3d", "colors": ["#ff7a3d", "#8fb8de", "#f3efe4"], "note": "dark · two-colour jazz sleeve: navy and orange"}
+  ],
+  "layouts": ["headline", "axis", "bottom", "center", "baseline", "corners"],
+  "composition": "A concert poster has to explain itself — concept and information in one image — with the name huge, the date second and everything else a list. Festival line-ups rank by size and position (Coachella's tiers since 2003) or deliberately flatten into A–Z lists and circles; classical seasons keep a fixed signature and vary one graphic per concert.",
+  "avoid": [
+   "symbols sprinkled over the sheet as decoration (floating notes, treble clefs, clip-art instruments) — one instrument made properly in a technique is a subject, a scatter of icons is not",
+   "rainbow equaliser bars",
+   "stock 'rolling hills' landscapes for classical music",
+   "every act at the same size when there is a headliner",
+   "thin elegant type on busy neon art"
+  ]
+ },
+
+ "nightlife": {
+  "ko": ["클럽", "댄스 파티", "DJ", "디제이", "레이브", "테크노", "하우스 뮤직", "EDM", "라운지", "칵테일", "루프탑", "올나잇", "심야", "나이트", "애프터파티", "댄스 플로어", "언더그라운드", "와인바", "해피아워", "불금", "할로윈 파티", "게스트 DJ", "드레스코드", "풀파티", "뮤직바", "믹스셋", "바이닐 셋", "클러빙", "게스트 리스트"],
+  "en": ["club", "dance party", "DJ", "rave", "techno", "house music", "EDM", "lounge", "cocktail", "rooftop", "all night", "late night", "nightclub", "afterparty", "dance floor", "underground", "happy hour", "Halloween party", "guest DJ", "dress code", "pool party", "b2b set", "warehouse", "disco", "DJ set", "guestlist", "doors open", "vinyl set", "club night", "open decks"],
+  "mood": ["dark", "loud", "glossy", "hypnotic", "charged"],
+  "styles": [
+   {"id": "chrome", "motif": "liquid chrome blobs mirroring acid-colour light cards", "why": "the current club-flyer material; reads at thumbnail size"},
+   {"id": "neon", "motif": "bent neon tubing of one word or symbol on a dark wall", "why": "bars, late venues, signage culture"},
+   {"id": "flux", "motif": "dense neon trails in a tight vortex", "why": "techno, big-room nights"},
+   {"id": "fluted", "motif": "an orb of ember light behind glass", "why": "listening bars, lounges"},
+   {"id": "liquid", "motif": "slow lava-lamp gradient bands", "why": "house, disco, psychedelic nights"},
+   {"id": "ticket", "motif": "an admit ticket for the night", "why": "door-list, guest-pass feel"},
+   {"id": "glitch", "motif": "torn scan-lines with RGB shift", "why": "hard techno, experimental"},
+   {"id": "foil", "motif": "crumpled holographic foil catching colour", "why": "pop and queer club nights, Y2K"},
+   {"id": "marquee", "motif": "tape ribbons of repeated type crossing the sheet", "why": "club and warehouse energy"},
+   {"id": "synthwave", "motif": "neon grid running to a horizon", "why": "80s nights, italo, retro wave"},
+   {"id": "bokeh", "motif": "city lights out of focus", "why": "lounges, rooftop bars, listening bars"},
+   {"id": "airbrush", "motif": "airbrushed chrome spheres and gradients", "why": "90s rave-flyer airbrush lineage"},
+   {"id": "opart", "motif": "magic-eye line fields", "why": "minimal techno, hypnotic sets"},
+   {"id": "halftone", "motif": "photocopier-grain forms on black paper", "why": "DIY and underground nights"},
+   {"id": "jelly", "motif": "translucent gummy forms glowing from behind", "why": "candy-coloured pop nights"}
+  ],
+  "types": ["brutal", "wide", "techno", "outline", "impact", "condensed", "elegant", "arcade", "comic"],
+  "palettes": [
+   {"name": "acid", "bg": "#070b08", "ink": "#f3ffe6", "accent": "#b6ff3c", "colors": ["#b6ff3c", "#00d6c4", "#2447ff", "#f6ffe0"], "note": "dark · black with acid green"},
+   {"name": "ultraviolet", "bg": "#12062a", "ink": "#f6efff", "accent": "#ff58b6", "colors": ["#ff58b6", "#7c4dff", "#4fe3ff", "#f6efff"], "note": "dark · violet with magenta"},
+   {"name": "chrome-blue", "bg": "#05070d", "ink": "#eef2f8", "accent": "#8fb8ff", "colors": ["#c8d2e0", "#8fb8ff", "#3d5cff", "#ffffff"], "note": "dark · black, silver and cold blue"},
+   {"name": "flyer-pink", "bg": "#ffc2dc", "ink": "#140a12", "accent": "#b3003c", "colors": ["#e6005c", "#140a12", "#ffe14d", "#ffffff"], "note": "light · photocopy-flyer pink with black"},
+   {"name": "lounge", "bg": "#1c1210", "ink": "#f3e6d3", "accent": "#e6a15a", "colors": ["#e6a15a", "#8a3b2a", "#d9c2a0", "#5a2a1f"], "note": "dark, quiet · amber-lit bar; cocktails, wine, listening bars"}
+  ],
+  "layouts": ["headline", "center", "baseline", "corners", "bottom"],
+  "composition": "Club graphics swing between two poles: gridded calm (Saville's Haçienda work, Fabric's art-directed photography with small plain text) and rave density — brash type, retina-burning colour, cut-and-paste. Either way the night's name is a logo, the line-up is a list, and the sheet must also work as a phone wallpaper.",
+  "avoid": [
+   "disco-ball and cocktail-glass clip-art, dancing silhouettes",
+   "more than two neon hues plus white",
+   "hairline serif type over glowing art",
+   "smiley faces unless the night is explicitly acid-house themed",
+   "daylight palettes for a late-night event"
+  ]
+ },
+
+ "film": {
+  "ko": ["영화", "영화제", "상영회", "시사회", "개봉", "감독", "단편영화", "독립영화", "다큐멘터리", "GV", "관객과의 대화", "시네마", "스크린", "상영작", "필름", "회고전", "야외상영", "영화의 밤", "무비나잇", "애니메이션", "예고편", "주연", "각본", "시네마테크", "개막작", "폐막작", "심야상영", "극장 개봉", "상영 시간표", "씨네"],
+  "en": ["film", "movie", "cinema", "film festival", "screening", "premiere", "director", "short film", "independent film", "documentary", "Q&A", "in theaters", "retrospective", "outdoor screening", "movie night", "animation", "trailer", "starring", "screenplay", "cinematheque", "opening film", "feature film", "now showing", "coming soon", "cast and crew", "produced by", "a film by", "double bill", "matinee"],
+  "mood": ["cinematic", "atmospheric", "tense", "nostalgic", "intimate"],
+  "styles": [
+   {"id": "layers", "motif": "a wide flat landscape with one small figure or house", "why": "one-sheet scale: a small subject in a large mood"},
+   {"id": "halftone", "motif": "a grainy two-ink orb like a projector beam", "why": "independent and repertory cinema"},
+   {"id": "bokeh", "motif": "projector light and lens blur in the dark", "why": "the room itself; film nights, premieres"},
+   {"id": "ticket", "motif": "an admit one cinema ticket", "why": "the object every screening shares"},
+   {"id": "haze", "motif": "a grainy gradient like colour-graded film stock", "why": "type-led festival identity"},
+   {"id": "collage", "motif": "cut frames, strips and a torn edge", "why": "festival programmes, documentary"},
+   {"id": "swiss", "motif": "a diagonal of bands", "why": "festival identities"},
+   {"id": "fluted", "motif": "a dusk horizon in slivers", "why": "atmospheric dramas, retrospectives"},
+   {"id": "glyph", "motif": "the title lettering as the whole image", "why": "Korean indie posters built on Hangul lettering"},
+   {"id": "airbrush", "motif": "a planet and a horizon glow", "why": "science fiction, fantasy"},
+   {"id": "neon", "motif": "a cinema marquee sign", "why": "movie nights, bar screenings"},
+   {"id": "sumuk", "motif": "ink-wash hills and a lone tree", "why": "period drama, arthouse"},
+   {"id": "synthwave", "motif": "a neon grid road at night", "why": "80s genre nights, cult film"},
+   {"id": "glitch", "motif": "a frame torn by scan-lines", "why": "thriller, horror, tech noir"},
+   {"id": "artdeco", "motif": "picture-palace ornament framing the title", "why": "classic-film seasons, anniversary galas"},
+   {"id": "softscape", "motif": "a quiet, set-like pastel scene", "why": "family film, animation, coming-of-age"},
+   {"id": "linocut", "motif": "one bold carved image", "why": "illustrated alternative posters"}
+  ],
+  "types": ["condensed", "classic", "editorial", "didone", "typewriter", "impact", "myeongjo", "news", "slab", "fatface"],
+  "palettes": [
+   {"name": "noir", "bg": "#0b0b0c", "ink": "#f2efe8", "accent": "#e03c31", "colors": ["#e03c31", "#f2efe8", "#6f6f72"], "note": "dark · black, bone and one red"},
+   {"name": "indie-cream", "bg": "#f4ead7", "ink": "#1d1a17", "accent": "#c2410c", "colors": ["#e2622a", "#2f6f6a", "#1d1a17", "#f0c869"], "note": "light · warm cream with orange and teal"},
+   {"name": "festival-night", "bg": "#0f1c40", "ink": "#f4efe0", "accent": "#ffcf4a", "colors": ["#ffcf4a", "#e86a4a", "#8fb0e6", "#f4efe0"], "note": "dark · midnight blue with marquee yellow"},
+   {"name": "fog", "bg": "#dfe2e3", "ink": "#1a1e21", "accent": "#2f4b5c", "colors": ["#6a7c86", "#aab4b9", "#f1f3f3", "#1a1e21"], "note": "light, quiet · fog grey; drama, documentary"},
+   {"name": "technicolor", "bg": "#123c3a", "ink": "#f6efde", "accent": "#ff9a4a", "colors": ["#ff9a4a", "#f2d16b", "#e0563f", "#f6efde"], "note": "dark · teal ground with orange; classic-cinema colour"}
+  ],
+  "layouts": ["bottom", "band", "center", "baseline", "corners", "headline"],
+  "composition": "The one-sheet formula: one key image filling the upper two-thirds, a custom title treatment, and a condensed billing block and date along the foot. Korean indie-film designers put colour first (Siyoung Park asks whether the poster resembles the film) and often draw the Hangul title by hand, condensing two hours into one image.",
+  "avoid": [
+   "clapperboards, film reels, popcorn, director's chairs",
+   "floating heads and orange-teal collage for a small screening",
+   "a comedy-style red-on-white title on a drama",
+   "more than one typeface for credits",
+   "putting the date in the billing block where nobody reads it"
+  ]
+ },
+
+ "fashion": {
+  "ko": ["패션", "패션위크", "패션쇼", "컬렉션", "런웨이", "룩북", "브랜드 론칭", "신상", "시즌오프", "편집숍", "쇼룸", "스타일링", "디자이너 브랜드", "의류", "스트리트", "액세서리", "주얼리", "슈즈", "스니커즈", "팝업스토어", "S/S", "F/W", "캡슐 컬렉션", "드롭", "콜라보", "화보", "텍스타일", "프리오더", "샘플세일", "의상"],
+  "en": ["fashion", "fashion week", "runway", "collection", "lookbook", "new drop", "capsule", "showroom", "styling", "designer label", "apparel", "streetwear", "accessories", "jewelry", "shoes", "sneakers", "pop-up store", "SS26", "FW26", "spring/summer", "fall/winter", "collab", "editorial", "textile", "couture", "atelier", "trunk show", "sample sale", "pre-order", "ready-to-wear"],
+  "mood": ["sleek", "confident", "minimal", "provocative", "tactile"],
+  "styles": [
+   {"id": "chrome", "motif": "one liquid chrome form on a plain wall", "why": "drops, streetwear, Y2K"},
+   {"id": "emboss", "motif": "a monogram blind-embossed on heavy stock", "why": "lookbooks, showroom invitations"},
+   {"id": "fluted", "motif": "a bloom of colour broken into slivers", "why": "campaign and showroom graphics"},
+   {"id": "monolith", "motif": "arch, plinth and a long diagonal shadow", "why": "editorial still life; showroom calm"},
+   {"id": "ribbon", "motif": "a satin band twisting once", "why": "fabric without showing a garment"},
+   {"id": "foil", "motif": "a sheet of holographic foil, lightly creased", "why": "party collections, accessories"},
+   {"id": "marquee", "motif": "tilt rows of the headline cropped by the edge", "why": "lookbook and sample-sale graphics"},
+   {"id": "stone", "motif": "a marble block with a thin metal rod", "why": "jewellery, luxury ready-to-wear"},
+   {"id": "haze", "motif": "one grainy colour field", "why": "type-only campaign in the magazine tradition"},
+   {"id": "numerals", "motif": "a stack of month over day in a contrast serif", "why": "show dates, drops"},
+   {"id": "inkdrop", "motif": "dye unfolding in water", "why": "textile, colour stories"},
+   {"id": "collage", "motif": "cut editorial shapes and a torn edge", "why": "independent labels, lookbooks"},
+   {"id": "stitch", "motif": "running stitches and a single embroidered motif", "why": "craft labels, denim, repair"},
+   {"id": "ticket", "motif": "a receipt for the sale", "why": "sample sales, pop-up shops"},
+   {"id": "marble", "motif": "marbled silk lining", "why": "scarves, prints, heritage houses"},
+   {"id": "opart", "motif": "black-and-white vibrating stripes", "why": "60s mod, graphic collections"},
+   {"id": "glass", "motif": "frosted panels layered like vitrines", "why": "showrooms, pop-up stores"},
+   {"id": "knit", "motif": "a close-up of knit ribs", "why": "knitwear, autumn/winter"},
+   {"id": "metal", "motif": "chain, buckle and rivet in brushed steel", "why": "hardware, leather goods, sneakers"}
+  ],
+  "types": ["didone", "luxe", "wide", "grotesk", "editorial", "elegant", "outline", "brutal", "slim"],
+  "palettes": [
+   {"name": "bone", "bg": "#efebe4", "ink": "#111111", "accent": "#6e5a45", "colors": ["#111111", "#b9ae9f", "#6e5a45", "#ffffff"], "note": "light, quiet · bone, black, taupe"},
+   {"name": "black-red", "bg": "#0a0a0a", "ink": "#f5f2ec", "accent": "#ff2d2d", "colors": ["#ff2d2d", "#f5f2ec", "#8a8a8a"], "note": "dark · black with one red"},
+   {"name": "blush-oxblood", "bg": "#f1d9d2", "ink": "#2a0f14", "accent": "#7d1524", "colors": ["#7d1524", "#c98b7c", "#fff5f0", "#2a0f14"], "note": "light · blush with oxblood"},
+   {"name": "cobalt-drop", "bg": "#1a2fbf", "ink": "#f6f4ee", "accent": "#ffe14d", "colors": ["#f6f4ee", "#ffe14d", "#ff6fb5"], "note": "dark · saturated cobalt; drops, streetwear"},
+   {"name": "olive-cream", "bg": "#e7e3cf", "ink": "#1d2114", "accent": "#55601f", "colors": ["#6b7a2a", "#1d2114", "#c9b27c", "#fffaf0"], "note": "light · olive and cream; autumn/winter"}
+  ],
+  "layouts": ["center", "axis", "corners", "baseline", "bottom", "side", "headline"],
+  "composition": "Fashion communication is the masthead tradition: a didone or an extended grotesque wordmark, capitals with generous tracking, and almost nothing else — one object, one colour, large empty field. Information is tiny and placed at the edges; the confidence is in what is left out.",
+  "avoid": [
+   "hangers, mannequins, scissors, high-heel icons",
+   "more than one accent colour",
+   "rounded friendly faces or handwriting (unless a craft label)",
+   "over-tracked didone at small sizes — hairlines vanish",
+   "discount-flyer starbursts on a collection launch"
+  ]
+ },
+
+ "luxury": {
+  "ko": ["럭셔리", "프리미엄", "하이엔드", "갈라", "갈라 디너", "VIP", "초청", "초대장", "프라이빗", "멤버십", "호텔", "리조트", "스위트", "파인다이닝", "샴페인", "위스키", "와인 디너", "하이주얼리", "명품", "리미티드 에디션", "컬렉터", "경매", "옥션", "요트", "플래티넘", "블랙타이", "익스클루시브", "헤리티지", "소믈리에", "컨시어지", "자선 갈라"],
+  "en": ["luxury", "premium", "high-end", "gala", "gala dinner", "VIP", "by invitation", "private viewing", "members only", "hotel", "resort", "suite", "fine dining", "champagne", "whisky", "wine dinner", "timepiece", "fine jewelry", "limited edition", "collector", "auction", "yacht", "platinum", "black tie", "exclusive", "bespoke", "concierge", "sommelier", "soirée", "maison", "charity gala"],
+  "mood": ["hushed", "opulent", "exact", "ceremonial", "timeless"],
+  "styles": [
+   {"id": "emboss", "motif": "a monogram raised in a sunk plate with a foil hairline", "why": "stationery-grade restraint: the invitation itself"},
+   {"id": "stone", "motif": "polished marble with one small gold accent", "why": "material richness with gold kept under a tenth of the area"},
+   {"id": "marble", "motif": "marbling with gilded hairlines", "why": "invitations, fragrance, wine"},
+   {"id": "artdeco", "motif": "stepped lines and fans in fine gold line", "why": "hotel bars, anniversaries, jazz-age galas"},
+   {"id": "fluted", "motif": "a bloom of muted light behind reeded glass", "why": "hospitality, fragrance, private views"},
+   {"id": "prism", "motif": "glass rings and a glow on black", "why": "galas, launches, night events"},
+   {"id": "najeon", "motif": "mother-of-pearl inlay on black lacquer", "why": "Korean luxury: hotels, heritage brands, 명절 gift sets"},
+   {"id": "ribbon", "motif": "one satin ribbon in champagne tones", "why": "gifting, awards, beauty"},
+   {"id": "guilloche", "motif": "watch-dial guilloché engraving", "why": "watches, private banking, certificates"},
+   {"id": "bokeh", "motif": "warm out-of-focus points of light", "why": "champagne receptions, year-end dinners"},
+   {"id": "monolith", "motif": "a plinth in raking light", "why": "showrooms, hospitality"},
+   {"id": "metal", "motif": "brushed gold and steel bars", "why": "watches, cars, audio"},
+   {"id": "foil", "motif": "a sheet of gold leaf", "why": "limited editions, packaging-led launches"},
+   {"id": "glass", "motif": "crystal-clear frosted slabs", "why": "spirits, skincare, modern hotels"},
+   {"id": "haze", "motif": "a near-flat field with one hairline", "why": "when the name alone should carry it"}
+  ],
+  "types": ["luxe", "didone", "garamond", "elegant", "deco", "editorial", "fatface"],
+  "palettes": [
+   {"name": "onyx", "bg": "#0c0b0a", "ink": "#f1eadc", "accent": "#d6b26a", "colors": ["#d6b26a", "#fff3d6", "#8a6a3c", "#3a3632"], "note": "dark · onyx and gold"},
+   {"name": "ivory-gold", "bg": "#f4efe4", "ink": "#1c1814", "accent": "#8a6420", "colors": ["#b98a3c", "#1c1814", "#e6d7b8", "#ffffff"], "note": "light · ivory with antique gold"},
+   {"name": "emerald", "bg": "#062a22", "ink": "#f3ecd8", "accent": "#e2c78a", "colors": ["#e2c78a", "#1f7a5f", "#fff3d6", "#0e4a3a"], "note": "dark · emerald with champagne"},
+   {"name": "burgundy", "bg": "#3a0d18", "ink": "#f6e9dc", "accent": "#e7b9a0", "colors": ["#e7b9a0", "#b76e79", "#fff1e6", "#7a2334"], "note": "dark · burgundy with rose gold"},
+   {"name": "pearl", "bg": "#e9e7e3", "ink": "#141a2a", "accent": "#3a4a78", "colors": ["#3a4a78", "#b9b4aa", "#ffffff", "#8a93ad"], "note": "light, quiet · pearl grey with midnight blue"}
+  ],
+  "layouts": ["center", "axis", "corners", "side", "left", "bottom"],
+  "composition": "Small type, wide tracking, large silence: a hairline serif or didone in capitals, one spot-lit object, a near-black or ivory field and at most one metallic. Symmetry and a thin frame are allowed here where elsewhere they look static — ceremony is the point.",
+  "avoid": [
+   "gold gradients on type, bevels, sparkles, lens flares",
+   "diamonds, crowns, laurel wreaths as clip-art",
+   "bright saturated colour or more than one accent",
+   "bold heavy sans headlines",
+   "crowded sheets — luxury posters carry roughly half the usual copy"
+  ]
+ },
+
+ "beauty": {
+  "ko": ["뷰티", "화장품", "코스메틱", "스킨케어", "메이크업", "향수", "퍼퓸", "헤어", "네일", "에스테틱", "피부", "세럼", "선크림", "클렌징", "뷰티 클래스", "신제품 출시", "더마", "비건 뷰티", "디퓨저", "살롱", "뷰티 페어", "체험단", "샘플링", "글로우", "톤업", "립스틱", "쿠션", "K-뷰티", "올리브영", "앰플"],
+  "en": ["beauty", "cosmetics", "skincare", "makeup", "fragrance", "perfume", "hair", "nail", "aesthetic clinic", "skin", "lip", "serum", "sunscreen", "cleansing", "beauty class", "new launch", "derma", "vegan beauty", "scent", "diffuser", "salon", "beauty fair", "sampling", "glow", "lash", "complexion", "moisturizer", "K-beauty", "foundation", "ampoule"],
+  "mood": ["soft", "luminous", "clean", "sensual", "fresh"],
+  "styles": [
+   {"id": "inkdrop", "motif": "pigment swirling slowly in clear water", "why": "colour cosmetics, fragrance"},
+   {"id": "fluted", "motif": "a bloom of soft colour behind ribbed glass", "why": "fragrance, skincare, spa"},
+   {"id": "ribbon", "motif": "a satin ribbon in skin and rose tones", "why": "premium launch, gifting"},
+   {"id": "emboss", "motif": "a pattern of scallops pressed into blush paper", "why": "fragrance and skincare launches"},
+   {"id": "marble", "motif": "blush marbling with fine gilt", "why": "fragrance, body care"},
+   {"id": "jelly", "motif": "translucent gel and serum drops lit from behind", "why": "skincare texture as the hero"},
+   {"id": "glass", "motif": "frosted panels over soft colour", "why": "clean, clinical skincare"},
+   {"id": "caustics", "motif": "light nets through shallow water", "why": "hydration, sun care, spa lines"},
+   {"id": "aurora", "motif": "a pearly blob on a soft gradient", "why": "friendly mass-market launches"},
+   {"id": "liquid", "motif": "slow gradient in two close hues", "why": "lip and cheek colour"},
+   {"id": "haze", "motif": "a soft-focus skin-tone field", "why": "type-led minimalist brands"},
+   {"id": "watercolor", "motif": "petal-like washes", "why": "natural and botanical lines"},
+   {"id": "stone", "motif": "a travertine plinth with a single sphere", "why": "premium counters, salons"},
+   {"id": "foil", "motif": "soft holographic sheen", "why": "glitter, nails, youth lines"},
+   {"id": "ceramic", "motif": "a glazed pebble and a small dish", "why": "slow beauty, soap, ritual"}
+  ],
+  "types": ["luxe", "didone", "elegant", "flora", "humanist", "editorial", "calli", "garamond", "melody"],
+  "palettes": [
+   {"name": "blush", "bg": "#f7e3df", "ink": "#2a1418", "accent": "#a8324f", "colors": ["#c9506b", "#f2b8b0", "#fff5f0", "#6a2a3a"], "note": "light · blush with berry"},
+   {"name": "pearl-lilac", "bg": "#ece6f6", "ink": "#1f1630", "accent": "#6a3df0", "colors": ["#7c5cff", "#ff8fc0", "#bfe6ff", "#ffffff"], "note": "light · pearl lilac, iridescent"},
+   {"name": "nude", "bg": "#ecdccb", "ink": "#2a1c14", "accent": "#9c4a2a", "colors": ["#b9623c", "#d9b79a", "#fff6ea", "#5a3a28"], "note": "light, quiet · nude and terracotta"},
+   {"name": "plum", "bg": "#2a0f2a", "ink": "#f8e9ee", "accent": "#ff9ec2", "colors": ["#ff9ec2", "#c0508a", "#ffd9c2", "#5a1f5a"], "note": "dark · deep plum with rose"},
+   {"name": "clean-aqua", "bg": "#dff1ee", "ink": "#0f2a2a", "accent": "#0b6f6a", "colors": ["#1a8f88", "#9fd9d0", "#ffffff", "#0f2a2a"], "note": "light · aqua and deep teal; skincare"}
+  ],
+  "layouts": ["center", "axis", "left", "side", "right", "bottom"],
+  "composition": "Texture is the image — a swatch, a drop, light through water — shown large and alone, with a thin serif or light sans title and tonal colour rather than black: charcoal, plum or muted gold ink on a skin-toned field. Two typefaces at most.",
+  "avoid": [
+   "lipstick kisses, lotus flowers, butterflies, sparkle brushes",
+   "hot pink on everything",
+   "heavy black headlines",
+   "busy pattern behind thin type",
+   "claims and long ingredient lists as body copy"
+  ]
+ },
+
+ "food": {
+  "ko": ["음식", "맛집", "미식", "푸드", "푸드 페스티벌", "레스토랑", "식당", "카페", "커피", "베이커리", "디저트", "브런치", "와인", "맥주", "수제맥주", "막걸리", "전통주", "쿠킹클래스", "요리", "셰프", "메뉴", "시식", "신메뉴", "김장", "한식", "비건", "오마카세", "다이닝", "야식", "먹거리", "칠면조", "치킨", "통닭", "바비큐", "식탁", "포틀럭", "만찬", "밥상", "한 끼", "떡", "과일", "추수감사주일", "추수감사절", "추수감사"],
+  "en": ["food", "restaurant", "dining", "cafe", "coffee", "bakery", "bread", "dessert", "brunch", "wine", "beer", "craft beer", "cooking class", "chef", "menu", "tasting", "new menu", "vegan", "kitchen", "recipe", "gourmet", "street food", "food festival", "barbecue", "pizza", "noodle", "supper club", "pop-up dinner", "brewery", "tea house", "turkey", "chicken", "feast", "potluck", "dinner", "supper", "Thanksgiving", "harvest festival"],
+  "mood": ["warm", "appetising", "handmade", "generous", "convivial"],
+  "styles": [
+   {"id": "linocut", "motif": "carved prints of vegetables, a fish and bread", "why": "market-print honesty; the strongest food-poster tradition"},
+   {"id": "crayon", "motif": "rough oil-pastel fruit and tableware", "why": "the charcoal-and-pastel restaurant identities now common"},
+   {"id": "gouache", "motif": "a still life of vase, bowl and fruit as cut-outs", "why": "bistro menus, markets, tastings"},
+   {"id": "ceramic", "motif": "glazed plates and bowls as a still life", "why": "dining, tableware, slow food"},
+   {"id": "halftone", "motif": "riso-printed fruit shapes in two inks", "why": "cafés, bakeries, pop-ups"},
+   {"id": "ticket", "motif": "a receipt listing date, place and price", "why": "menus, tastings, pop-ups"},
+   {"id": "toon", "motif": "bold cel-shaded food characters", "why": "street food, chicken-and-beer, youth brands"},
+   {"id": "jelly", "motif": "glossy translucent dessert forms", "why": "dessert cafés, drinks"},
+   {"id": "pattern", "motif": "a checker tablecloth", "why": "diners, picnics, bakeries"},
+   {"id": "paper", "motif": "paper-cut produce in a basket", "why": "harvest and seasonal menus"},
+   {"id": "neon", "motif": "an 'open' or noodle-bar sign", "why": "bars, night dining, 포차"},
+   {"id": "watercolor", "motif": "loose washes of produce", "why": "tea, wine, cooking classes"},
+   {"id": "stickers", "motif": "labels like fruit stickers and tags", "why": "markets and seasonal menus"},
+   {"id": "wood", "motif": "a cutting board and wooden spoon", "why": "bakeries, home cooking"},
+   {"id": "collage", "motif": "cut-out ingredients on colour blocks", "why": "food festivals, zines"},
+   {"id": "mosaic", "motif": "a tiled café floor", "why": "bistros, old-town eateries"},
+   {"id": "puffy", "motif": "inflated doughnut and candy shapes", "why": "sweets promotions, kids' menus"}
+  ],
+  "types": ["signage", "euljiro", "retro", "classic", "yeonsung", "hand", "slab", "starlight", "jua", "marker", "calli", "editorial", "gamja", "story"],
+  "palettes": [
+   {"name": "tomato", "bg": "#f6edda", "ink": "#231a14", "accent": "#c2311a", "colors": ["#d93a22", "#2f6f3f", "#f2b632", "#231a14"], "note": "light · cream with tomato red, basil and mustard"},
+   {"name": "mustard", "bg": "#f2c230", "ink": "#1f1408", "accent": "#9c1f10", "colors": ["#1f1408", "#b3261a", "#fff4d0", "#2f6f3f"], "note": "light · mustard with brown and red; diner, bakery"},
+   {"name": "olive-night", "bg": "#1f2616", "ink": "#f4eeda", "accent": "#f2b84b", "colors": ["#f2b84b", "#d9622b", "#a8b87a", "#f4eeda"], "note": "dark · olive with butter and orange; wine bar, bistro"},
+   {"name": "dessert", "bg": "#ffd9e0", "ink": "#3a0f1a", "accent": "#c2185b", "colors": ["#e6336e", "#fff3c4", "#7ad0c0", "#ffffff"], "note": "light · strawberry-milk pink; dessert, café"},
+   {"name": "grill", "bg": "#151312", "ink": "#f6eadb", "accent": "#ff7a2f", "colors": ["#ff7a2f", "#ffc24a", "#c0392b", "#f6eadb"], "note": "dark · charcoal with ember orange; night dining"},
+   {"name": "linen-table", "bg": "#ece7dc", "ink": "#23201b", "accent": "#6a4a2b", "colors": ["#8a6a45", "#c9bfae", "#4f6b45", "#ffffff"], "note": "light, quiet · linen with wood and herb"}
+  ],
+  "layouts": ["left", "top", "right", "center"],
+  "composition": "Recent restaurant identities are toolboxes of rough drawings rather than photographs — Davy Denduyver's Mina uses a hundred charcoal food drawings on warm yellow, olive and blue with layouts borrowed from old film posters: a big image with rows of text above and below. Warm ground, hand-made mark, signage-weight title, the dish named plainly.",
+  "avoid": [
+   "chef hats, crossed cutlery, steam swirls",
+   "blue and cold grey grounds (unappetising) unless seafood or ice",
+   "glossy 3D food that looks plastic",
+   "thin luxury serifs on a casual eatery",
+   "five competing dishes — show one"
+  ]
+ },
+
+ "market": {
+  "ko": ["마켓", "플리마켓", "벼룩시장", "장터", "야시장", "전통시장", "바자회", "프리마켓", "팝업", "세일", "할인", "특가", "오픈런", "굿즈", "셀러 모집", "직거래", "농부시장", "파머스마켓", "로컬 마켓", "아트마켓", "북마켓", "빈티지 마켓", "중고", "나눔장터", "사은품", "1+1", "할인 기획전", "플리", "장날", "특판"],
+  "en": ["market", "flea market", "bazaar", "night market", "farmers market", "pop-up", "sale", "discount", "special offer", "clearance", "merch", "vendors", "sellers wanted", "stall", "booth", "swap", "garage sale", "thrift", "secondhand", "makers market", "craft market", "art market", "book market", "vintage market", "giveaway", "BOGO", "promotion", "deal", "car boot", "street fair"],
+  "mood": ["lively", "handmade", "bright", "local", "bustling"],
+  "styles": [
+   {"id": "halftone", "motif": "riso stickers, price-tag shapes and orbs", "why": "cheap-print charm suits stalls and zines"},
+   {"id": "collage", "motif": "cut-out goods and labels on colour blocks", "why": "the inventory look of flea markets"},
+   {"id": "linocut", "motif": "stamped baskets, produce and hands", "why": "farmers' and makers' markets"},
+   {"id": "pattern", "motif": "a checker picnic cloth beside the copy", "why": "flea markets, food markets, fairs"},
+   {"id": "gouache", "motif": "a still life of fruit and vessels", "why": "produce and craft markets"},
+   {"id": "transit", "motif": "a map of blocks and a pin", "why": "street markets, pop-ups"},
+   {"id": "stamp", "motif": "a sheet of stamps", "why": "flea and book markets"},
+   {"id": "puffy", "motif": "inflated star, tag and heart shapes", "why": "sales and promotions"},
+   {"id": "ticket", "motif": "a market receipt listing the details", "why": "the till receipt as invitation; sample sales"},
+   {"id": "crayon", "motif": "hand-drawn stalls and bunting", "why": "neighbourhood and school bazaars"},
+   {"id": "memphis", "motif": "confetti pattern in loud flat colour", "why": "pop-ups, design markets"},
+   {"id": "stickers", "motif": "labels and price tags with the key words", "why": "stall and bargain energy"},
+   {"id": "paper", "motif": "paper-cut awnings and garlands", "why": "seasonal markets"},
+   {"id": "toon", "motif": "cel-shaded stall and mascot", "why": "night markets, food trucks"},
+   {"id": "marquee", "motif": "tape ribbons shouting the headline", "why": "sales and one-day markets"},
+   {"id": "isometric", "motif": "an isometric market street of little stalls", "why": "map-like overview of many sellers"},
+   {"id": "neon", "motif": "night-market signs glowing", "why": "야시장, late pop-ups"},
+   {"id": "bojagi", "motif": "patchwork cloth as a market awning", "why": "traditional markets, hanok-village fairs"},
+   {"id": "felt", "motif": "felt goods and badges", "why": "handmade and craft markets"},
+   {"id": "wood", "motif": "a wooden crate and stall board", "why": "farm produce, vintage"},
+   {"id": "stitch", "motif": "stitched labels and patches", "why": "vintage clothing, textile markets"}
+  ],
+  "types": ["euljiro", "retro", "signage", "jalnan", "pop", "gmarket", "classic", "yeonsung", "marker", "kkubulim", "hand", "slab", "stencil", "jua", "singleday", "comic"],
+  "palettes": [
+   {"name": "kraft", "bg": "#e3cfa8", "ink": "#1f1a12", "accent": "#a3241a", "colors": ["#c0392b", "#2f6f3f", "#1f1a12", "#fff4dc"], "note": "light, quiet · kraft paper with stamp red and green"},
+   {"name": "signage-yellow", "bg": "#ffd400", "ink": "#111111", "accent": "#0b3fa8", "colors": ["#1247c8", "#e8321e", "#ffffff", "#111111"], "note": "light · price-tag yellow with blue and red"},
+   {"name": "retro-shop", "bg": "#f3e9d2", "ink": "#22201c", "accent": "#c2410c", "colors": ["#e2622a", "#0f7a78", "#f2b632", "#22201c"], "note": "light · cream with orange and teal; 뉴트로"},
+   {"name": "night-market", "bg": "#131a33", "ink": "#fff3d9", "accent": "#ffc23d", "colors": ["#ffc23d", "#ff6a3d", "#5fd0c0", "#fff3d9"], "note": "dark · navy night with lantern yellow"},
+   {"name": "mint-red", "bg": "#d5efe3", "ink": "#16241d", "accent": "#c22a2a", "colors": ["#d93a3a", "#0f7a5a", "#ffffff", "#f2c230"], "note": "light · mint with red"}
+  ],
+  "layouts": ["headline", "top", "strip", "left"],
+  "composition": "Market graphics keep the roughness of the place — the Kapani Market identity built a custom face from old shop signs with handwriting and raw illustration, refusing a clean 'designed' market. Big signboard title, date and hours as large as a price tag, a badge or sticker for the offer, many small things around one clear headline.",
+  "avoid": [
+   "shopping-cart icons, generic 'SALE' starbursts with rays",
+   "polished luxury styling",
+   "more than three ink colours",
+   "thin or light type — it must read from across a street",
+   "hiding date and hours in small print"
+  ]
+ },
+
+ "kids": {
+  "ko": ["어린이", "아동", "유아", "키즈", "어린이날", "유치원", "어린이집", "초등", "동화", "그림책", "인형극", "놀이터", "체험학습", "키즈카페", "캐릭터", "장난감", "색칠", "동요", "어린이 뮤지컬", "방학 특강", "어린이 도서관", "꿈나무", "숲체험", "키즈 풀", "소풍", "생일파티", "어린이 박물관", "놀이", "아기", "꼬마"],
+  "en": ["kids", "children", "child", "toddler", "preschool", "kindergarten", "elementary", "storytime", "picture book", "puppet show", "playground", "field trip", "toys", "coloring", "sing-along", "kids musical", "holiday camp", "day camp", "children's day", "children's museum", "little ones", "junior", "birthday party", "nursery", "playdate", "ages 3", "ages 5", "face painting", "bouncy castle"],
+  "mood": ["playful", "bright", "soft", "curious", "safe"],
+  "styles": [
+   {"id": "puffy", "motif": "inflated star, cloud, flower and a smiling ball", "why": "the toy-like 3D children respond to"},
+   {"id": "gouache", "motif": "fronds and a plain disc in bold flat colour", "why": "joyful without being babyish"},
+   {"id": "felt", "motif": "felt animals and simple shapes with visible fibres", "why": "touchable, picture-book warmth"},
+   {"id": "papercut", "motif": "a canopy of rounded leaves", "why": "picture-book depth without a 3D render"},
+   {"id": "stickers", "motif": "letters stickers spelling the key word", "why": "sticker-book joy; reads from across a corridor"},
+   {"id": "toon", "motif": "bold cel-shaded animal friends", "why": "character-led events, musicals"},
+   {"id": "crayon", "motif": "crayon sun, house, animals and scribbles", "why": "looks like the audience made it"},
+   {"id": "paper", "motif": "paper-cut hills with small animals", "why": "storytelling, seasonal outings"},
+   {"id": "softscape", "motif": "pastel clouds and a hot-air balloon", "why": "dreamy picture-book scene"},
+   {"id": "voxel", "motif": "blocky toy animals and a little house", "why": "building, coding and maker classes"},
+   {"id": "jelly", "motif": "bouncy jelly shapes", "why": "play, summer, sweets"},
+   {"id": "pattern", "motif": "dots that thin out towards the copy", "why": "nursery and play-room graphics"},
+   {"id": "origami", "motif": "paper animals, boats and planes", "why": "making workshops, library programmes"},
+   {"id": "wood", "motif": "wooden toy blocks and a pull-along train", "why": "early years, Montessori-like calm"},
+   {"id": "lowpoly", "motif": "a low-poly island with animals", "why": "nature camps, adventure"},
+   {"id": "isometric", "motif": "a tiny isometric playground", "why": "play spaces, kids' cafés"},
+   {"id": "memphis", "motif": "squiggles, dots and zigzags", "why": "birthday parties, festivals"},
+   {"id": "studio", "motif": "soft clay shapes in candy colours", "why": "calmer, parent-facing notices"}
+  ],
+  "types": ["pop", "maple", "jua", "ssurround", "dongle", "anemone", "hand", "starlight", "gamja", "kkubulim", "friendly", "marker", "round", "comic", "cute", "dodum", "singleday", "sunflower", "bold"],
+  "palettes": [
+   {"name": "sky-primary", "bg": "#cfe6ff", "ink": "#14234a", "accent": "#1c4fd0", "colors": ["#2f6bff", "#ff5d5d", "#ffc93c", "#ffffff"], "note": "light · sky with red, blue and yellow"},
+   {"name": "sunshine", "bg": "#ffe680", "ink": "#1f1a0a", "accent": "#1c4fd0", "colors": ["#2f6bff", "#ff5a36", "#2fc28b", "#ffffff"], "note": "light · sunshine yellow"},
+   {"name": "bubblegum", "bg": "#ffd9e6", "ink": "#3a0f24", "accent": "#c2185b", "colors": ["#ff4f9a", "#35c9a4", "#ffd23f", "#4d7cff"], "note": "light · pink with teal and yellow"},
+   {"name": "mint-orange", "bg": "#cdeee0", "ink": "#12302a", "accent": "#c2410c", "colors": ["#ff7a45", "#ffd43b", "#7c5cff", "#ffffff"], "note": "light, quiet · mint with orange"},
+   {"name": "night-star", "bg": "#141b45", "ink": "#fff6d6", "accent": "#ffd23f", "colors": ["#ffd23f", "#ff7ab8", "#6fd0ff", "#fff6d6"], "note": "dark · bedtime navy with star yellow"}
+  ],
+  "layouts": ["top", "left", "center", "right"],
+  "composition": "High-end children's identities hand the pen to an illustrator and keep the system loose: Bologna Children's Book Fair commissions a young illustrator each year under Chialab's direction; Pentagram's Young V&A mixes a hacked bold typeface with hand-made letters and doodles. Rounded heavy type, one friendly scene, three or four clear colours — and the parent still needs the date, age range and fee in a plain table.",
+  "avoid": [
+   "Comic Sans-style faces and rainbow gradient text",
+   "licensed-character lookalikes",
+   "every colour at once — pick three or four",
+   "tiny or thin type; all-caps long lines",
+   "scary scale: giant faces, dark saturated reds",
+   "talking down — crude drawing is fine, careless typography is not"
+  ]
+ },
+
+ "family": {
+  "ko": ["가족", "온 가족", "가정의 달", "어버이날", "부모", "엄마", "아빠", "육아", "부모교육", "가족 나들이", "가족 캠프", "가족사진", "돌잔치", "세대공감", "조부모", "할머니", "할아버지", "반려동물", "반려견", "가족 음악회", "가족 뮤지컬", "주말 나들이", "패밀리", "태교", "임산부", "신혼부부", "다자녀", "가족 체험", "가족 초청", "우리 집", "반려묘", "펫페어", "펫", "유기동물", "유기견", "동물 보호", "입양", "온 교회", "온 가족이"],
+  "en": ["family", "families", "parents", "mom", "dad", "mother's day", "father's day", "parenting", "family day", "family outing", "family camp", "family photo", "first birthday", "grandparents", "grandma", "grandpa", "pets", "dog-friendly", "family concert", "weekend outing", "all ages", "baby shower", "newlyweds", "household", "generations", "reunion", "siblings", "family-friendly", "bring the kids", "pet", "pet adoption", "dog", "cat"],
+  "mood": ["warm", "gentle", "sunny", "together", "easy-going"],
+  "styles": [
+   {"id": "softscape", "motif": "a picnic hill, soft clouds and a small house", "why": "a calm shared scene for all ages"},
+   {"id": "papercut", "motif": "a paper tide of hills and a plain sun", "why": "gentle, hand-made, for all ages"},
+   {"id": "gouache", "motif": "a shore with a sun disc and birds", "why": "holidays, open days"},
+   {"id": "paper", "motif": "a paper-cut house among hills and trees", "why": "handmade warmth; family months and holidays"},
+   {"id": "felt", "motif": "felt hearts, house and a dog", "why": "touch and care"},
+   {"id": "stickers", "motif": "badges with the date and friendly faces", "why": "family days and fairs"},
+   {"id": "watercolor", "motif": "loose washes of flowers and sky", "why": "invitations, family concerts"},
+   {"id": "crayon", "motif": "a child's family drawing", "why": "parent–child programmes"},
+   {"id": "puffy", "motif": "inflated hearts and flowers", "why": "가정의 달 promotions, family days"},
+   {"id": "calendar", "motif": "a month sheet for the fridge door", "why": "dates families plan round"},
+   {"id": "knit", "motif": "a knitted blanket texture", "why": "cosy winter family events"},
+   {"id": "studio", "motif": "soft shapes in peach and teal", "why": "parent-facing classes and notices"},
+   {"id": "layers", "motif": "a park with hills and a kite", "why": "weekend outings"},
+   {"id": "toon", "motif": "simple cel-shaded pets and picnic things", "why": "pet-friendly and outdoor days"},
+   {"id": "stitch", "motif": "embroidered flowers and a little house", "why": "어버이날, handmade gifts"},
+   {"id": "wood", "motif": "a wooden table set for many", "why": "family meals, reunions"},
+   {"id": "aurora", "motif": "a soft warm gradient", "why": "general family notices"}
+  ],
+  "types": ["friendly", "dodum", "maple", "round", "ssurround", "hand", "starlight", "jua", "dongle", "gamja", "goun", "humanist", "melody", "bold", "story", "pen", "batang"],
+  "palettes": [
+   {"name": "peach", "bg": "#fbe3d0", "ink": "#2a1a14", "accent": "#c2410c", "colors": ["#ff8a5c", "#2f8f83", "#ffd166", "#ffffff"], "note": "light · peach with coral and teal"},
+   {"name": "butter", "bg": "#fff1bf", "ink": "#1f2414", "accent": "#2f6f3f", "colors": ["#3f8f4f", "#ff8a5c", "#ffffff", "#8fc1e6"], "note": "light · butter yellow with leaf green"},
+   {"name": "sky-picnic", "bg": "#d6e9f8", "ink": "#14233a", "accent": "#c2410c", "colors": ["#ff7a45", "#2f6bd9", "#ffd166", "#ffffff"], "note": "light · sky with orange"},
+   {"name": "cream-berry", "bg": "#f6efe2", "ink": "#2a1420", "accent": "#a8324f", "colors": ["#c9506b", "#7d9471", "#f2c14e", "#2a1420"], "note": "light, quiet · cream with berry and sage"},
+   {"name": "dusk-home", "bg": "#1f2747", "ink": "#fff0d6", "accent": "#ffc56e", "colors": ["#ffc56e", "#ff8f6b", "#8fb0e6", "#fff0d6"], "note": "dark · evening blue with window-light yellow"}
+  ],
+  "layouts": ["left", "axis", "top", "center", "right"],
+  "composition": "Softer and quieter than kids' posters: the reader is the adult. A warm ground, one inclusive scene (a place, not a stock 'family of four'), rounded but not cartoon type, and practical information — ages, strollers, cost — easy to find.",
+  "avoid": [
+   "stock silhouettes of a mother, father, boy and girl holding hands",
+   "pink-for-girls and blue-for-boys coding",
+   "baby-talk typography for all-ages events",
+   "hearts on every corner",
+   "dense text — parents read this with a child in one arm"
+  ]
+ },
+
+ "community": {
+  "ko": ["마을", "동네", "주민", "주민자치", "마을축제", "마을공동체", "공동체", "시민", "자원봉사", "봉사활동", "나눔", "기부", "후원", "캠페인", "동아리", "소모임", "주민총회", "반상회", "공청회", "청년", "청년센터", "복지관", "경로당", "협동조합", "사회적경제", "플로깅", "헌혈", "이웃", "주민센터", "마을 학교", "교회", "성당", "예배", "주일", "추수감사", "추수감사절", "추수감사주일", "성탄절", "부활절", "주일학교", "바자회", "성도", "교우", "구역", "친교"],
+  "en": ["community", "neighborhood", "neighbourhood", "residents", "town meeting", "local", "citizens", "volunteer", "volunteering", "charity", "donation", "fundraiser", "campaign", "gathering", "association", "public hearing", "youth center", "senior center", "co-op", "cooperative", "social enterprise", "plogging", "blood drive", "neighbors", "block party", "potluck", "mutual aid", "civic", "nonprofit", "grassroots", "church", "parish", "worship", "congregation", "fellowship", "Thanksgiving", "Sunday school", "bazaar"],
+  "mood": ["friendly", "open", "practical", "hopeful", "local"],
+  "styles": [
+   {"id": "paper", "motif": "a village of paper houses on a hill", "why": "handmade and shared"},
+   {"id": "isometric", "motif": "a neighbourhood block with a park and small shops", "why": "'this is our place' at a glance"},
+   {"id": "crayon", "motif": "hand-drawn streets, people and trees", "why": "made-by-us tone for residents' events"},
+   {"id": "papercut", "motif": "a tide of soft hills", "why": "neighbourhood and seasonal gatherings"},
+   {"id": "transit", "motif": "a map of blocks with a pin on the venue", "why": "neighbourhood events where finding it matters"},
+   {"id": "calendar", "motif": "a month sheet with the day marked", "why": "a notice people pin up and act on"},
+   {"id": "gouache", "motif": "fronds and discs pinned like a notice board", "why": "neighbourhood festivals"},
+   {"id": "collage", "motif": "cut-out hands, houses and speech bubbles", "why": "campaigns, participation"},
+   {"id": "stamp", "motif": "a single stamp and a postmark", "why": "local history, letters to neighbours"},
+   {"id": "linocut", "motif": "print-shop poster of hands and tools", "why": "solidarity, co-ops, volunteering"},
+   {"id": "stickers", "motif": "badges with the date and the key words", "why": "friendly, made-by-us tone"},
+   {"id": "bauhaus", "motif": "tiles of different shapes fitting one grid", "why": "many people, one structure; public bodies"},
+   {"id": "aurora", "motif": "a warm gradient blob", "why": "neutral and friendly notices"},
+   {"id": "numerals", "motif": "month and day in words (11월 15일) above a plain table of facts", "why": "when is the first thing residents ask"},
+   {"id": "felt", "motif": "felt houses and hearts", "why": "care, welfare, seniors' and children's centres"},
+   {"id": "mosaic", "motif": "many small tiles forming one simple picture", "why": "collective effort"},
+   {"id": "screen", "motif": "a chat thread that says what, when and where", "why": "neighbourhood group-chat familiarity"},
+   {"id": "halftone", "motif": "newsletter-style riso shapes", "why": "youth centres, clubs"},
+   {"id": "bojagi", "motif": "many patches sewn into one cloth", "why": "togetherness in a Korean idiom"},
+   {"id": "stitch", "motif": "a line of stitches joining patches", "why": "mending, sharing, care campaigns"},
+   {"id": "toon", "motif": "simple friendly characters", "why": "campaigns for all ages"},
+   {"id": "plexus", "motif": "people as dots joined by lines", "why": "networks, youth and social-economy forums"}
+  ],
+  "types": ["friendly", "gmarket", "hand", "starlight", "round", "dodum", "kkubulim", "bold", "paperlogy", "humanist", "marker", "story", "yeonsung", "slab", "square", "sunflower"],
+  "palettes": [
+   {"name": "warm-white", "bg": "#f7f2e7", "ink": "#1c2a22", "accent": "#1f7a4a", "colors": ["#2a8f5a", "#ff8a3d", "#2f6bd9", "#1c2a22"], "note": "light · warm white with green, orange and blue"},
+   {"name": "notice-yellow", "bg": "#ffd84a", "ink": "#141a33", "accent": "#1d3a8a", "colors": ["#1d3a8a", "#e8452c", "#ffffff", "#141a33"], "note": "light · notice-board yellow with navy"},
+   {"name": "clay-teal", "bg": "#f0d9c8", "ink": "#1a2a2a", "accent": "#0f6f6a", "colors": ["#0f7a78", "#d9622b", "#fff4e6", "#1a2a2a"], "note": "light · clay pink with teal"},
+   {"name": "mint", "bg": "#dff2e6", "ink": "#17261f", "accent": "#1f6f4a", "colors": ["#2a8f5a", "#f2a65a", "#5a7fd9", "#ffffff"], "note": "light, quiet · mint; welfare, health, public notices"},
+   {"name": "deep-teal", "bg": "#0f3a3a", "ink": "#f6f0df", "accent": "#ffc857", "colors": ["#ffc857", "#ff8a5c", "#9fd9c9", "#f6f0df"], "note": "dark · deep teal with warm yellow"}
+  ],
+  "layouts": ["left", "top", "strip", "headline"],
+  "composition": "Community notices succeed when anyone can act on them: who it is for, when, where, free or not, how to join — as a big clear table — under a plain headline. The good ones add one hand-made image and two or three warm colours instead of a template collage; accessibility (large type, strong contrast) is part of the design.",
+  "avoid": [
+   "rings of clip-art people holding hands, puzzle pieces, handshakes",
+   "official-notice grey with a government crest as the only image",
+   "five fonts and WordArt effects",
+   "light text on photos",
+   "institutional jargon in the headline"
+  ]
+ },
+
+ "sports": {
+  "ko": ["스포츠", "체육대회", "운동회", "마라톤", "러닝", "달리기", "하프마라톤", "축구", "풋살", "야구", "농구", "배구", "테니스", "배드민턴", "골프", "수영", "자전거", "라이딩", "피트니스", "크로스핏", "태권도", "리그", "결승", "챔피언십", "올림픽", "선수", "홈경기", "러닝크루", "철인3종", "체전"],
+  "en": ["sports", "athletics", "field day", "marathon", "running", "10K", "half marathon", "soccer", "football", "futsal", "baseball", "basketball", "volleyball", "tennis", "badminton", "golf", "swimming", "cycling", "fitness", "crossfit", "taekwondo", "league", "finals", "championship", "olympics", "athlete", "match day", "game day", "triathlon", "run club"],
+  "mood": ["fast", "powerful", "bold", "competitive", "sweaty"],
+  "styles": [
+   {"id": "flux", "motif": "speed lines streaking in one direction", "why": "motion without a photograph"},
+   {"id": "halftone", "motif": "a coarse-screen ball or arc in two inks", "why": "match-day print tradition"},
+   {"id": "metal", "motif": "a medal, a trophy plate and brushed steel bars", "why": "finals, awards, championships"},
+   {"id": "marquee", "motif": "tape ribbons of the headline", "why": "match-day and street-sport energy"},
+   {"id": "flowfield", "motif": "bands sweeping in one direction", "why": "running, cycling, rowing"},
+   {"id": "lowpoly", "motif": "faceted mountain, track or ball", "why": "trail, cycling and adventure races"},
+   {"id": "toon", "motif": "a bold cel-shaded shoe, ball or whistle", "why": "school and amateur leagues"},
+   {"id": "numerals", "motif": "the match date on one line", "why": "fixtures and race days"},
+   {"id": "glitch", "motif": "motion slices of one shape", "why": "action sports, esports-adjacent"},
+   {"id": "contour", "motif": "course map with elevation lines", "why": "marathons, trail runs, rides"},
+   {"id": "chrome", "motif": "a liquid chrome ball", "why": "sneaker and brand events"},
+   {"id": "ticket", "motif": "an admit ticket for the match", "why": "finals and tournaments"},
+   {"id": "opart", "motif": "track lanes or racing stripes bending", "why": "athletics, motorsport"},
+   {"id": "isometric", "motif": "an isometric court or stadium", "why": "tournaments, facility openings"},
+   {"id": "layers", "motif": "a city skyline along the race route", "why": "city marathons"},
+   {"id": "collage", "motif": "cut-paper shapes thrown diagonally", "why": "the Olympic-poster cut-out lineage"},
+   {"id": "caustics", "motif": "pool water with lane lines", "why": "swimming, water sports"},
+   {"id": "bauhaus", "motif": "rings, arcs and bars in flat colour", "why": "multi-sport games, pictogram systems"}
+  ],
+  "types": ["esamanru", "condensed", "jalnan", "impact", "wide", "dream", "stencil", "slab", "bold", "brutal", "comic", "grotesk"],
+  "palettes": [
+   {"name": "black-volt", "bg": "#0b0c0d", "ink": "#f4f6f2", "accent": "#d4ff3a", "colors": ["#d4ff3a", "#f4f6f2", "#6b7078"], "note": "dark · black with volt yellow-green"},
+   {"name": "club-colours", "bg": "#f5f5f2", "ink": "#101a3a", "accent": "#d0191b", "colors": ["#e2231a", "#14307a", "#101a3a", "#c9ccd4"], "note": "light · white, red and navy"},
+   {"name": "pitch-blue", "bg": "#1238b8", "ink": "#ffffff", "accent": "#ffe14d", "colors": ["#ffffff", "#ffe14d", "#ff5a36"], "note": "dark · saturated blue with white and yellow"},
+   {"name": "orange-crush", "bg": "#ff7a1a", "ink": "#0d0d0d", "accent": "#1b1464", "colors": ["#0d0d0d", "#ffffff", "#1b1464"], "note": "light · solid orange with black; game day"},
+   {"name": "track-grey", "bg": "#e6e6e3", "ink": "#151515", "accent": "#c8102e", "colors": ["#c8102e", "#8f8f8a", "#151515", "#ffffff"], "note": "light, quiet · asphalt grey with one red"}
+  ],
+  "layouts": ["headline", "strip", "bottom", "corners"],
+  "composition": "Bold condensed sans, often oblique, with strong weight and scale contrast, one diagonal for speed and team colours used flat; the number — date, distance, score, edition — is set as large as the title. Event systems (Tokyo 2020's checker pattern, Paris 2024's Art Deco-influenced graphics) show that a geometric pattern can stand in for athletes.",
+  "avoid": [
+   "flames, lightning bolts, grunge splatter, generic silhouettes of runners",
+   "more than two team colours plus white",
+   "light or script type",
+   "tilting everything — one diagonal is enough",
+   "condensed type for small details such as course times"
+  ]
+ },
+
+ "outdoor": {
+  "ko": ["아웃도어", "캠핑", "캠핑장", "글램핑", "백패킹", "등산", "산행", "트레킹", "하이킹", "트레일", "트레일러닝", "둘레길", "숲길", "야영", "차박", "낚시", "카약", "서핑", "패러글라이딩", "스키장", "스노보드", "암벽", "탐조", "별보기", "피크닉", "국립공원", "자연휴양림", "오토캠핑", "클라이밍", "캠프파이어"],
+  "en": ["outdoor", "outdoors", "camping", "campsite", "glamping", "backpacking", "hiking", "trekking", "trail", "trail running", "mountaineering", "fishing", "kayak", "surfing", "paragliding", "ski", "snowboard", "rock climbing", "birdwatching", "stargazing", "picnic", "national park", "campfire", "wilderness", "expedition", "basecamp", "canoe", "bushcraft", "overlanding", "bouldering"],
+  "mood": ["rugged", "fresh", "wide", "adventurous", "earthy"],
+  "styles": [
+   {"id": "contour", "motif": "topographic lines with a marked summit and route", "why": "the map is the outdoor world's own graphic"},
+   {"id": "layers", "motif": "mountain ridges fading into haze with firs", "why": "depth and air; the national-park poster view"},
+   {"id": "papercut", "motif": "a tide of paper ridges receding", "why": "hikes, camps, trail days"},
+   {"id": "lowpoly", "motif": "faceted peaks, a tent and pines", "why": "friendly adventure, gear brands"},
+   {"id": "linocut", "motif": "a woodcut mountain with pines and a bird", "why": "park-print tradition, hand-printed festival posters"},
+   {"id": "softscape", "motif": "a lakeside campsite at golden hour", "why": "glamping, family camping"},
+   {"id": "paper", "motif": "paper-cut hills, pines and a moon", "why": "seasonal hikes, forest programmes"},
+   {"id": "wood", "motif": "a carved trail sign and wood grain", "why": "trailheads, lodges, forest parks"},
+   {"id": "cyanotype", "motif": "ferns and leaves printed white on blue", "why": "nature walks, foraging"},
+   {"id": "isometric", "motif": "a campsite diorama with tent, fire and car", "why": "site maps, auto-camping"},
+   {"id": "watercolor", "motif": "a field-sketch wash of a ridge", "why": "walking festivals, bird walks"},
+   {"id": "stitch", "motif": "an embroidered patch badge", "why": "clubs, scouts, challenge series"},
+   {"id": "sumuk", "motif": "misty peaks in ink", "why": "mountain temples, quiet hikes"},
+   {"id": "airbrush", "motif": "a starry sky over a dark ridge", "why": "stargazing, night hikes"}
+  ],
+  "types": ["slab", "stencil", "condensed", "humanist", "esamanru", "bold", "hand", "editorial", "story", "typewriter"],
+  "palettes": [
+   {"name": "sand-forest", "bg": "#eadfc8", "ink": "#1c2a1f", "accent": "#b8400e", "colors": ["#2f5d46", "#e2622a", "#c9a66b", "#1c2a1f"], "note": "light · sand, forest green and trail-marker orange"},
+   {"name": "forest", "bg": "#12261c", "ink": "#f2ecd9", "accent": "#ff8a3d", "colors": ["#ff8a3d", "#7da04a", "#e9d9a8", "#f2ecd9"], "note": "dark · deep forest with orange"},
+   {"name": "ridge-sky", "bg": "#d9e8f2", "ink": "#14233a", "accent": "#c8321e", "colors": ["#2b4360", "#9bb3cb", "#e2553a", "#ffffff"], "note": "light · mountain-sky blue with red"},
+   {"name": "stone-moss", "bg": "#dfddd4", "ink": "#1f231c", "accent": "#4a5f2a", "colors": ["#5f7a3a", "#8f8a7a", "#f1efe6", "#1f231c"], "note": "light, quiet · stone grey with moss"},
+   {"name": "night-ember", "bg": "#0d1630", "ink": "#f6ecd6", "accent": "#ff9a4a", "colors": ["#ff9a4a", "#ffd27a", "#3a5a9a", "#f6ecd6"], "note": "dark · night sky with campfire ember"}
+  ],
+  "layouts": ["bottom", "band", "strip", "corners", "left", "top"],
+  "composition": "The park-poster formula still works: a landscape in four or five flat colours with one tiny scale cue, a plain bold caption band at the foot. Contemporary versions swap the picture for a contour map or a hand-cut print and use slab or stencil type like trail signage; earthy palette plus one safety-orange.",
+  "avoid": [
+   "compass roses, crossed axes, 'adventure awaits' badges with ribbons",
+   "neon gradients and chrome",
+   "thin elegant type",
+   "photographic HDR sunsets",
+   "rays radiating from a sun over the peaks — use a plain disc"
+  ]
+ },
+
+ "travel": {
+  "ko": ["여행", "관광", "여행지", "휴가", "호캉스", "항공", "항공권", "크루즈", "패키지", "자유여행", "배낭여행", "세계여행", "제주", "해외", "유럽", "기차여행", "로드트립", "한달살기", "워케이션", "여행박람회", "관광공사", "숙소", "게스트하우스", "스테이", "가이드", "여권", "면세", "투어 프로그램", "여행 설명회", "섬 여행"],
+  "en": ["travel", "tourism", "destination", "vacation", "holiday", "getaway", "flight", "airline", "cruise", "package tour", "backpackers", "island", "overseas", "Europe", "rail trip", "road trip", "workation", "travel fair", "tourist", "homestay", "guesthouse", "tour guide", "passport", "duty free", "itinerary", "journey", "voyage", "explorer", "sightseeing", "postcard"],
+  "mood": ["sunlit", "open", "inviting", "nostalgic", "far-away"],
+  "styles": [
+   {"id": "layers", "motif": "a flat-colour coast or mountain view with one landmark", "why": "the golden-age travel-poster view"},
+   {"id": "stamp", "motif": "an airmail corner: striped border, stamp and postmark", "why": "the oldest image of going somewhere"},
+   {"id": "softscape", "motif": "pastel dunes, sea or lake with a small boat", "why": "dreamlike destination"},
+   {"id": "papercut", "motif": "a tide of paper waves and a low disc", "why": "coasts and journeys as a paper diorama"},
+   {"id": "transit", "motif": "one route with numbered stops ending at the venue", "why": "tours, walks, journeys"},
+   {"id": "ticket", "motif": "a boarding pass with date and place as its codes", "why": "the object travel begins with"},
+   {"id": "paper", "motif": "paper-cut sea, islands and a sun disc", "why": "handmade postcards, island trips"},
+   {"id": "gouache", "motif": "a shore in riviera colours", "why": "summer destinations"},
+   {"id": "globe", "motif": "a dotted globe with one route arc", "why": "airlines, world travel fairs"},
+   {"id": "isometric", "motif": "a tiny isometric island town", "why": "city breaks, tour maps"},
+   {"id": "linocut", "motif": "a park-print mountain or lighthouse", "why": "regional tourism with character"},
+   {"id": "watercolor", "motif": "a travel-sketchbook wash", "why": "slow travel, walking tours"},
+   {"id": "lowpoly", "motif": "a faceted island with palms", "why": "resorts, adventure tours"},
+   {"id": "mosaic", "motif": "Mediterranean tile pattern", "why": "southern Europe, old towns, spa towns"},
+   {"id": "contour", "motif": "a map with a dotted route", "why": "road trips, hiking tours"},
+   {"id": "collage", "motif": "stamps, tickets and a cut-out landmark", "why": "travel fairs, backpacking"},
+   {"id": "halftone", "motif": "a vintage-postcard screen of sea and sun", "why": "retro seaside trips"},
+   {"id": "airbrush", "motif": "an airbrushed sunset sky", "why": "cruises, tropical nights"},
+   {"id": "origami", "motif": "a paper plane or boat", "why": "departure, first trips, student travel"}
+  ],
+  "types": ["editorial", "deco", "jalnan", "humanist", "retro", "classic", "slab", "maru", "bold", "calli", "story", "garamond"],
+  "palettes": [
+   {"name": "sunrise", "bg": "#fde6d2", "ink": "#1f2440", "accent": "#c8401f", "colors": ["#f06a4a", "#2c3157", "#ffc7a0", "#8f7fa9"], "note": "light · sunrise peach with coral and navy"},
+   {"name": "sea-sand", "bg": "#d7ecf2", "ink": "#0f2a3a", "accent": "#0b5f8a", "colors": ["#1a7fb0", "#f2d9a8", "#ff7a59", "#ffffff"], "note": "light · sea blue and sand"},
+   {"name": "postcard", "bg": "#f3ead3", "ink": "#1f2a2a", "accent": "#0f6f6a", "colors": ["#0f7a78", "#c8401f", "#e9b44c", "#1f2a2a"], "note": "light, quiet · postcard cream with teal and red"},
+   {"name": "dusk", "bg": "#2a1b4a", "ink": "#fff0dc", "accent": "#ffb45a", "colors": ["#ffb45a", "#f06a58", "#6a3b78", "#120d24"], "note": "dark · dusk purple with orange"},
+   {"name": "aegean", "bg": "#f7f8f6", "ink": "#0f1f4a", "accent": "#1238b8", "colors": ["#1f47c8", "#f2c230", "#ffffff", "#0f1f4a"], "note": "light · whitewash and cobalt"}
+  ],
+  "layouts": ["bottom", "band", "strip", "top", "corners", "right", "center"],
+  "composition": "Golden-age travel posters (Roger Broders for the PLM railway) use simple lines, bold flat colour areas and strong perspective, with plain bold lettering naming the destination and a short slogan. The place fills the sheet, the name sits in a band and one line sells it; modern tourism work keeps the flat landscape and adds a calm serif.",
+  "avoid": [
+   "airplane icons with dotted loops, suitcase stickers, pins on a world map",
+   "stock landmarks montage (Eiffel Tower plus pyramids plus Big Ben)",
+   "rays radiating from a sun disc over the sea",
+   "more than five colours in the landscape",
+   "brush-script 'Wanderlust' lettering"
+  ]
+ },
+
+ "nature": {
+  "ko": ["자연", "숲 해설", "나무", "식물", "정원박람회", "가드닝", "수목원", "식물원", "생태", "생태계", "환경", "환경의 날", "지구의 날", "기후위기", "탄소중립", "제로웨이스트", "업사이클", "동물", "야생", "습지", "갯벌", "하천", "생물다양성", "텃밭", "반려식물", "플랜테리어", "친환경", "야생화", "철새", "해양"],
+  "en": ["nature", "forest", "tree", "plant", "flower", "garden", "gardening", "arboretum", "botanical", "ecology", "ecosystem", "environment", "earth day", "climate crisis", "carbon neutral", "zero waste", "upcycle", "wildlife", "animal", "bird", "wetland", "ocean", "river", "biodiversity", "sustainability", "organic", "conservation", "rewilding", "botanic garden", "native plants"],
+  "mood": ["fresh", "calm", "alive", "earthy", "detailed"],
+  "styles": [
+   {"id": "cyanotype", "motif": "ferns and leaves printed white on Prussian blue", "why": "the botanical sun-print; exact and poetic"},
+   {"id": "papercut", "motif": "a canopy of paper leaves framing deeper sheets", "why": "woods, gardens, conservation"},
+   {"id": "linocut", "motif": "birds, branches and seed heads cut bold", "why": "field-guide print tradition"},
+   {"id": "watercolor", "motif": "botanical washes with fine pen veins", "why": "gardens, plant fairs"},
+   {"id": "turing", "motif": "a growth pattern like lichen or coral", "why": "living systems shown by simulation"},
+   {"id": "layers", "motif": "forest and hills in flat receding layers", "why": "landscape-scale conservation"},
+   {"id": "flowfield", "motif": "threads like grass in wind", "why": "ecology, rivers, weather"},
+   {"id": "paper", "motif": "paper-cut leaves and a hillside", "why": "seasonal nature programmes"},
+   {"id": "contour", "motif": "terrain lines around a wetland or river", "why": "ecology, mapping, restoration"},
+   {"id": "wood", "motif": "tree rings and bark", "why": "forests, timber, arbor days"},
+   {"id": "sumuk", "motif": "bamboo or pine in ink", "why": "quiet gardens, temple forests"},
+   {"id": "softscape", "motif": "a pastel meadow with a lone tree", "why": "gentle environmental campaigns"},
+   {"id": "stitch", "motif": "embroidered wildflowers", "why": "community gardens, seed swaps"},
+   {"id": "felt", "motif": "moss-like wool forms and mushrooms", "why": "forest schools, children's nature days"},
+   {"id": "caustics", "motif": "stream water over pebbles", "why": "rivers, wetlands, ocean days"},
+   {"id": "lowpoly", "motif": "a faceted island with trees and animals", "why": "wildlife education"}
+  ],
+  "types": ["humanist", "flora", "editorial", "garamond", "batang", "maru", "goun", "pen", "dodum", "story", "melody", "myeongjo"],
+  "palettes": [
+   {"name": "botanical", "bg": "#f1eedf", "ink": "#16261a", "accent": "#2a5f3a", "colors": ["#3f7a4a", "#d9788a", "#e3b23c", "#16261a"], "note": "light · cream with deep green and one flower pink"},
+   {"name": "moss", "bg": "#16261a", "ink": "#eef0dc", "accent": "#b9d86a", "colors": ["#b9d86a", "#5f8f4a", "#e9d9a8", "#eef0dc"], "note": "dark · moss green"},
+   {"name": "earth", "bg": "#ead8bd", "ink": "#2a1c10", "accent": "#7a4a16", "colors": ["#a8642a", "#5f6f3a", "#f6ead4", "#2a1c10"], "note": "light, quiet · ochre earth"},
+   {"name": "stream", "bg": "#d9ecec", "ink": "#0f2a30", "accent": "#0b6f7a", "colors": ["#1a8f9a", "#5fa58c", "#ffffff", "#0f2a30"], "note": "light · stream blue-green"},
+   {"name": "prussian", "bg": "#0f2a4a", "ink": "#eef4fa", "accent": "#a8d4ff", "colors": ["#f4f7fa", "#9fc4e6", "#5d8fc2"], "note": "dark · cyanotype blue with white leaves"}
+  ],
+  "layouts": ["left", "band", "corners", "bottom", "right", "center"],
+  "composition": "Specimen logic: one plant, bird or landform shown carefully on a plain ground with a small caption, as in a herbarium sheet or field guide. Environmental campaigns now prefer hand-printed and analogue textures to glossy green gradients; type is a humanist sans or book serif in dark green or brown rather than black.",
+  "avoid": [
+   "a globe held in cupped hands, green light bulbs, recycling arrows as the hero",
+   "leaf-shaped logos and gradient-green 'eco' swooshes",
+   "saturated lime on white",
+   "stock photo of a sapling in soil",
+   "guilt imagery (dying animals) on an invitation"
+  ]
+ },
+
+ "wellness": {
+  "ko": ["웰니스", "요가", "명상", "필라테스", "힐링", "치유", "마음챙김", "스파", "테라피", "아로마", "리트릿", "템플스테이", "호흡", "수면", "스트레칭", "심리 상담", "마음건강", "번아웃", "휴식", "디톡스", "싱잉볼", "사운드배스", "산림치유", "헬스케어", "셀프케어", "건강 강좌", "차 명상", "이완", "온천", "마음 돌봄"],
+  "en": ["wellness", "yoga", "meditation", "pilates", "healing", "mindfulness", "spa", "therapy", "aroma", "health", "retreat", "temple stay", "breathwork", "sleep", "stretching", "counseling", "mental health", "burnout", "restorative", "detox", "singing bowl", "sound bath", "forest bathing", "self-care", "wellbeing", "holistic", "deep rest", "hot spring", "slow living", "recovery"],
+  "mood": ["calm", "soft", "spacious", "warm", "slow"],
+  "styles": [
+   {"id": "haze", "motif": "a soft grainy gradient in two close hues", "why": "nothing to decode; the eye rests"},
+   {"id": "papercut", "motif": "calm strata of one hue, sheet under sheet", "why": "depth without noise; retreats, meditation"},
+   {"id": "fluted", "motif": "a dusk horizon seen through bathroom glass", "why": "calm light, saunas, retreats"},
+   {"id": "softscape", "motif": "a still lake with a lone tree at dawn", "why": "retreats, temple stays"},
+   {"id": "caustics", "motif": "light moving through shallow water", "why": "spa, bathing, breath"},
+   {"id": "sumuk", "motif": "one ink stroke and wide empty paper", "why": "meditation, tea, Seon practice"},
+   {"id": "flowfield", "motif": "threads combed in long calm sweeps", "why": "breath, movement, bodywork"},
+   {"id": "watercolor", "motif": "pale washes bleeding into each other", "why": "gentle classes, counselling"},
+   {"id": "gouache", "motif": "fronds in two calm colours", "why": "yoga, gardens"},
+   {"id": "ceramic", "motif": "a tea bowl and a smooth pebble", "why": "tea meditation, slow living"},
+   {"id": "aurora", "motif": "a pearly form on a warm gradient", "why": "approachable health programmes"},
+   {"id": "calendar", "motif": "the week with the class day picked out", "why": "classes and programmes"},
+   {"id": "inkdrop", "motif": "ink unfolding slowly, like a breath", "why": "breathwork, sound baths"},
+   {"id": "turing", "motif": "ripple-like organic pattern in relief", "why": "body, skin, natural therapies"},
+   {"id": "monolith", "motif": "a sunlit arch with a soft shadow", "why": "studios, architecture of calm"},
+   {"id": "glass", "motif": "frosted panels in milky colour", "why": "clinics, modern wellness brands"},
+   {"id": "stone", "motif": "a smooth stone slab and a bowl of water", "why": "spa, hot spring, sauna"},
+   {"id": "contour", "motif": "raked-sand lines around a stone", "why": "Zen garden reference without cliché figures"},
+   {"id": "liquid", "motif": "a very slow gradient of sage and sand", "why": "sleep, rest programmes"}
+  ],
+  "types": ["elegant", "flora", "humanist", "garamond", "batang", "slim", "luxe", "editorial", "dodum", "melody"],
+  "palettes": [
+   {"name": "sage-clay", "bg": "#e2e6d8", "ink": "#1f2a22", "accent": "#9c4a2a", "colors": ["#7d9471", "#c4654a", "#f3efe2", "#3f5445"], "note": "light · sage with clay"},
+   {"name": "sand", "bg": "#ece2cf", "ink": "#2a2218", "accent": "#5f6f3a", "colors": ["#7a8a4a", "#c9a66b", "#fff8ea", "#2a2218"], "note": "light, quiet · sand and olive"},
+   {"name": "lavender-mist", "bg": "#e6e0f0", "ink": "#221a33", "accent": "#5a3f8a", "colors": ["#7a5fb0", "#e9b6c2", "#ffffff", "#221a33"], "note": "light · lavender mist"},
+   {"name": "deep-water", "bg": "#0c2a2e", "ink": "#eaf4ee", "accent": "#8fe0d0", "colors": ["#8fe0d0", "#2f8f8a", "#f2e6c8", "#eaf4ee"], "note": "dark · deep-water teal"},
+   {"name": "seafoam", "bg": "#dcefe8", "ink": "#12302c", "accent": "#0f6f5f", "colors": ["#2a8f7a", "#9fd9c9", "#ffffff", "#f2c9a8"], "note": "light · sea-foam"}
+  ],
+  "layouts": ["center", "axis", "left", "side", "bottom", "right", "corners"],
+  "composition": "Muted earth tones, a light serif or soft humanist sans, and more empty space than seems necessary: sage, clay and cream with dark green-black text is the category's working palette. Because that look is now the default (a lotus, a muted palette, a sans that whispers calm), the stronger posters add one specific image — water, a bowl, a place — instead of a symbol.",
+  "avoid": [
+   "lotus flowers, stacked pebbles, meditating silhouettes, chakra rainbows",
+   "high-saturation, high-energy colour",
+   "tight leading and heavy black type",
+   "busy mandalas behind text",
+   "medical-blue stock imagery for a retreat"
+  ]
+ },
+
+ "city": {
+  "ko": ["도시", "도시 야경", "대중교통", "빌딩숲", "도심", "길거리", "골목", "광장", "야경", "스카이라인", "지하철", "시내버스", "보행로", "스마트시티", "시정", "차 없는 거리", "도시 축제", "거리 축제", "횡단보도", "야간 개장", "시티투어", "도시 브랜드", "메트로", "다운타운", "교차로", "도시 탐방", "도시 산책", "환승", "도시 기록", "야간 경관"],
+  "en": ["city", "urban", "downtown", "street", "alley", "plaza", "square", "skyline", "night view", "subway", "metro", "transit", "smart city", "city hall", "municipal", "street festival", "riverside", "city tour", "metropolitan", "borough", "district", "avenue", "crosswalk", "commute", "cityscape", "boulevard", "citywide", "open streets", "car-free day"],
+  "mood": ["dense", "bright", "restless", "graphic", "nocturnal"],
+  "styles": [
+   {"id": "layers", "motif": "a skyline at blue hour with lit windows and a river", "why": "the city as one readable silhouette"},
+   {"id": "transit", "motif": "a metro diagram with the venue as the marked interchange", "why": "the city as a diagram; the place is the picture"},
+   {"id": "isometric", "motif": "an isometric block with shops, a crossing and a bus", "why": "street-level life, city programmes"},
+   {"id": "mosaic", "motif": "subway-tile walls with one coloured line", "why": "transit, public space"},
+   {"id": "neon", "motif": "stacked street signs in neon", "why": "night streets, 을지로-style alleys"},
+   {"id": "bokeh", "motif": "traffic and window lights out of focus", "why": "night events, year-end in the city"},
+   {"id": "blueprint", "motif": "a transit-map line drawing", "why": "mobility, urban policy, walking tours"},
+   {"id": "marquee", "motif": "tape ribbons across the sheet", "why": "street events, openings, urban festivals"},
+   {"id": "flowfield", "motif": "bands like traffic seen from above", "why": "urbanism, mobility"},
+   {"id": "voxel", "motif": "a blocky toy city", "why": "smart-city and youth events"},
+   {"id": "halftone", "motif": "street-poster layers in spot colour", "why": "street festivals, flyposting culture"},
+   {"id": "lowpoly", "motif": "a faceted city on a slab", "why": "city marketing, tourism"},
+   {"id": "flux", "motif": "long-exposure traffic trails", "why": "night runs, mobility launches"},
+   {"id": "bauhaus", "motif": "a facade grid of lit and unlit windows", "why": "housing, urban culture"},
+   {"id": "contour", "motif": "street grid and river as map lines", "why": "district plans, city walks"},
+   {"id": "collage", "motif": "signage fragments and tickets", "why": "local-culture zines, alley festivals"},
+   {"id": "glass", "motif": "reflective tower facades", "why": "business districts, openings"}
+  ],
+  "types": ["grotesk", "condensed", "signage", "gmarket", "swiss", "dream", "bold", "euljiro", "square", "news", "wide", "stencil"],
+  "palettes": [
+   {"name": "blue-hour", "bg": "#101b3d", "ink": "#f3eedf", "accent": "#ffc56e", "colors": ["#ffc56e", "#22376e", "#b9697f", "#a8d8ff"], "note": "dark · blue hour with window amber"},
+   {"name": "concrete-red", "bg": "#dedcd6", "ink": "#161616", "accent": "#c8102e", "colors": ["#c8102e", "#8a8780", "#161616", "#f4f3ef"], "note": "light · concrete with signal red"},
+   {"name": "neon-rain", "bg": "#140a2a", "ink": "#f4eefc", "accent": "#ff58b6", "colors": ["#ff58b6", "#4fe3ff", "#3b1c6b", "#ffd23f"], "note": "dark · neon on wet asphalt"},
+   {"name": "dawn", "bg": "#f3e3d6", "ink": "#22263a", "accent": "#b8400e", "colors": ["#3b3a5c", "#9291b3", "#ff9a6a", "#fff0b8"], "note": "light · dawn peach with slate"},
+   {"name": "subway", "bg": "#f4f4f0", "ink": "#111827", "accent": "#0b5fc4", "colors": ["#0b5fc4", "#e8452c", "#1f9d55", "#f2b632"], "note": "light, quiet · tile white with transit-line colours"}
+  ],
+  "layouts": ["bottom", "band", "strip", "corners", "baseline", "headline", "left"],
+  "composition": "City posters borrow the city's own graphics — transit maps, signage, tile, the lit-window grid — and set type like wayfinding: a strong grotesque, clear numerals, colour used as a code. One silhouette or one map, never a landmark montage; at night, one warm light colour against blue.",
+  "avoid": [
+   "tourist-landmark montages, generic skyline vectors with a reflection",
+   "night-view photo composites",
+   "ten transit colours at once",
+   "romantic script type",
+   "the same blue-gradient-with-skyline used by every municipal notice"
+  ]
+ },
+
+ "spring": {
+  "ko": ["봄날", "봄맞이", "봄꽃", "봄 축제", "새봄", "벚꽃", "벚꽃축제", "꽃놀이", "개화", "매화", "진달래", "개나리", "유채꽃", "튤립", "새싹", "입춘", "새학기", "개강", "입학식", "봄 소풍", "봄 나들이", "꽃길", "춘계", "봄 시즌", "식목일", "봄바람", "스프링", "철쭉", "목련", "봄 음악회"],
+  "en": ["spring", "blossom", "cherry blossom", "bloom", "flower festival", "tulip", "sprout", "Easter", "new semester", "spring break", "spring picnic", "spring sale", "springtime", "sakura", "magnolia", "daffodil", "garden party", "spring fair", "spring concert", "spring collection", "May Day", "petals", "hanami", "fresh start", "spring cleaning", "in bloom", "azalea", "vernal", "spring term"],
+  "mood": ["fresh", "light", "tender", "hopeful", "airy"],
+  "styles": [
+   {"id": "watercolor", "motif": "blossom-pink washes with a few fine branches", "why": "soft edges suit petals and mild light"},
+   {"id": "papercut", "motif": "a canopy of new leaves in fresh greens", "why": "seasonal greetings, garden events"},
+   {"id": "gouache", "motif": "fronds in fresh greens and pink", "why": "garden fairs, seasonal menus"},
+   {"id": "paper", "motif": "paper-cut hills with blossom trees and a pale disc", "why": "seasonal greetings, flower festivals"},
+   {"id": "softscape", "motif": "a pastel meadow with trees in bloom", "why": "outings, park events"},
+   {"id": "stitch", "motif": "embroidered wildflowers and buds", "why": "handmade spring fairs"},
+   {"id": "crayon", "motif": "tulips and sprouts in oil pastel", "why": "school term openings, children's spring events"},
+   {"id": "felt", "motif": "felt flowers and leaves", "why": "craft markets, family days"},
+   {"id": "origami", "motif": "paper flowers and butterflies", "why": "new beginnings, classes"},
+   {"id": "pattern", "motif": "dots that thin out", "why": "light, fresh, seasonal sales and fairs"},
+   {"id": "aurora", "motif": "a soft pink-to-green gradient form", "why": "launches timed to spring"},
+   {"id": "layers", "motif": "hills lined with blossom trees", "why": "벚꽃길 drives, regional festivals"},
+   {"id": "linocut", "motif": "sprouts, birds and buds", "why": "planting days, garden markets"},
+   {"id": "inkdrop", "motif": "petal-like pigment opening in water", "why": "beauty and fragrance in spring"},
+   {"id": "ceramic", "motif": "a vase with one flowering branch", "why": "매화, tea and craft events"},
+   {"id": "bojagi", "motif": "patchwork in spring pinks and greens", "why": "spring 한복 and tradition events"},
+   {"id": "haze", "motif": "a pale two-hue field", "why": "type-led spring programmes"}
+  ],
+  "types": ["flora", "pen", "goun", "dodum", "melody", "starlight", "myeongjo", "friendly", "calli", "editorial", "hand", "story", "dongle"],
+  "palettes": [
+   {"name": "blossom", "bg": "#fbe9ee", "ink": "#2a1820", "accent": "#b0305f", "colors": ["#f29ab5", "#7fb069", "#fff6d6", "#b0305f"], "note": "light · cherry-blossom pink with new green"},
+   {"name": "fresh-green", "bg": "#e6f2d6", "ink": "#17260f", "accent": "#2f6f1f", "colors": ["#5fa53a", "#f2d24a", "#ffffff", "#17260f"], "note": "light, quiet · yellow-green of new shoots"},
+   {"name": "forsythia", "bg": "#fff2a8", "ink": "#1f1f0f", "accent": "#1f5f9c", "colors": ["#f2c40f", "#5f9f4a", "#ffffff", "#e87aa0"], "note": "light · 개나리 yellow with sky blue"},
+   {"name": "lilac-bud", "bg": "#ebe2f5", "ink": "#221733", "accent": "#6a3fa8", "colors": ["#8a5fd0", "#9fc96a", "#ffe9a8", "#ffffff"], "note": "light · lilac with bud green"},
+   {"name": "night-blossom", "bg": "#141a3a", "ink": "#fdeef2", "accent": "#ffa8c4", "colors": ["#ffa8c4", "#ffe6ec", "#7fa8e6", "#2a3566"], "note": "dark · 밤벚꽃: navy with blossom pink"}
+  ],
+  "layouts": ["center", "axis", "left", "vertical", "top"],
+  "composition": "High-key and airy: pale grounds, pink against yellow-green, thin or soft type and wide leading. One branch or one drift of petals does more than a field of flowers; night-blossom events invert it to navy with pink.",
+  "avoid": [
+   "petals scattered over the text",
+   "pink on pink with no contrast",
+   "heavy black gothic headlines",
+   "Japanese sakura crests on a Korean 벚꽃 event",
+   "pastel type on a pastel ground (fails contrast)"
+  ]
+ },
+
+ "summer": {
+  "ko": ["여름", "여름밤", "여름 축제", "한여름", "썸머", "바캉스", "피서", "해변", "해수욕장", "바다 축제", "워터파크", "수박", "빙수", "장마", "열대야", "여름방학", "여름 캠프", "납량", "서머 세일", "하계", "휴가철", "파도", "맥주 축제", "치맥", "썸머 나이트", "물총", "물놀이", "서머", "아이스", "시원한"],
+  "en": ["summer", "summertime", "midsummer", "beach", "seaside", "pool", "water park", "watermelon", "shaved ice", "monsoon", "tropical night", "summer vacation", "summer camp", "summer festival", "summer sale", "heatwave", "sunshine", "surf", "waves", "ice cream", "lemonade", "sunset session", "open-air", "tropical", "splash", "summer night", "popsicle", "beach party", "poolside", "dog days"],
+  "mood": ["hot", "bright", "loose", "juicy", "open-air"],
+  "styles": [
+   {"id": "caustics", "motif": "sunlight nets on a pool floor", "why": "instant coolness; the summer image with no clichés"},
+   {"id": "gouache", "motif": "a shore of wave bands, a disc and gulls", "why": "beach, holiday, open-air"},
+   {"id": "layers", "motif": "open sea, a low disc and a glitter path", "why": "beach festivals, coastal trips"},
+   {"id": "fluted", "motif": "a dusk over water behind glass", "why": "rooftop and pool-side evenings"},
+   {"id": "jelly", "motif": "ice cubes, soda bubbles and fruit jelly", "why": "drinks, desserts, cooling promotions"},
+   {"id": "softscape", "motif": "a pastel beach with parasols", "why": "resorts, family holidays"},
+   {"id": "liquid", "motif": "a hot gradient from coral to yellow", "why": "music and night events in summer"},
+   {"id": "pattern", "motif": "wavy stripes in two inks", "why": "parasols, pools, awnings"},
+   {"id": "puffy", "motif": "inflated pool floats and a beach ball", "why": "water parks, sales"},
+   {"id": "paper", "motif": "paper-cut waves and a sun disc", "why": "seaside festivals, greetings"},
+   {"id": "mosaic", "motif": "pool tiles under water", "why": "swim, spa, rooftop pools"},
+   {"id": "halftone", "motif": "riso sun, fruit and waves", "why": "indie summer festivals"},
+   {"id": "synthwave", "motif": "a neon coast road at night", "why": "summer-night drives, city pop"},
+   {"id": "toon", "motif": "watermelon, ice cream and flip-flops", "why": "children's and street events"},
+   {"id": "cyanotype", "motif": "seaweed prints on blue", "why": "coastal ecology, quiet seaside programmes"},
+   {"id": "memphis", "motif": "beach-towel stripes and zigzags", "why": "pop-ups, pool parties"},
+   {"id": "neon", "motif": "a glowing 'open late' sign", "why": "night markets, beer festivals"}
+  ],
+  "types": ["pop", "jalnan", "wide", "ssurround", "bold", "retro", "anemone", "condensed", "marker", "sunflower", "impact", "comic", "dongle"],
+  "palettes": [
+   {"name": "pool", "bg": "#d3f1f3", "ink": "#0a2a3a", "accent": "#0b6f9c", "colors": ["#1aa0c8", "#7fe0e0", "#ffffff", "#ff7a59"], "note": "light, quiet · pool aqua with coral"},
+   {"name": "lemon-cobalt", "bg": "#ffe14d", "ink": "#0f1a4a", "accent": "#1238b8", "colors": ["#1f47c8", "#ff5a36", "#ffffff", "#0f1a4a"], "note": "light · lemon and cobalt"},
+   {"name": "watermelon", "bg": "#ffdfe0", "ink": "#12301f", "accent": "#c2253a", "colors": ["#e8394f", "#2f8f4a", "#12301f", "#ffffff"], "note": "light · watermelon pink with rind green"},
+   {"name": "summer-night", "bg": "#0b1a3d", "ink": "#f4f7ff", "accent": "#5fe0d0", "colors": ["#5fe0d0", "#ffd166", "#3f6bb5", "#f4f7ff"], "note": "dark · deep-sea navy with mint"},
+   {"name": "ultramarine", "bg": "#f6f8fb", "ink": "#0a1a5c", "accent": "#1a36d0", "colors": ["#1a36d0", "#7fb0ff", "#ffd23f", "#ffffff"], "note": "light · white with ultramarine"}
+  ],
+  "layouts": ["headline", "bottom", "left"],
+  "composition": "High contrast and high saturation — the opposite of spring: white or yellow against cobalt, hard shadows, big loud type. Water does the cooling (aqua, tile, glitter path); for evening events the palette drops to navy with mint or coral.",
+  "avoid": [
+   "rays radiating from a sun disc (Rising Sun reading) — use a plain disc",
+   "palm-tree and flamingo clip-art for a Korean beach",
+   "red-orange type on yellow (vibrates)",
+   "pale pastel palettes that read as spring",
+   "sunglasses-wearing sun mascots"
+  ]
+ },
+
+ "autumn": {
+  "ko": ["가을", "가을밤", "가을 축제", "단풍", "단풍놀이", "낙엽", "은행나무", "억새", "코스모스", "추수", "수확", "독서의 계절", "가을 소풍", "가을 음악회", "추계", "국화", "국화축제", "고구마", "핼러윈", "할로윈", "가을 학기", "2학기", "가을 나들이", "가을걷이", "만추", "입추", "오텀", "감나무", "도토리", "갈대", "추수감사주일", "추수감사절", "추수감사"],
+  "en": ["autumn", "fall", "foliage", "maple", "fallen leaves", "ginkgo", "harvest", "harvest festival", "pumpkin", "Halloween", "Thanksgiving", "autumn festival", "fall semester", "back to school", "cozy", "chrysanthemum", "cider", "hayride", "autumn concert", "fall collection", "Oktoberfest", "bonfire", "sweater weather", "acorn", "golden hour", "rustic", "orchard", "leaf peeping", "fall fair"],
+  "mood": ["warm", "mellow", "textured", "reflective", "golden"],
+  "styles": [
+   {"id": "linocut", "motif": "maple and ginkgo leaves and a persimmon branch", "why": "warm ink and rough edges match the season"},
+   {"id": "layers", "motif": "ridges in red, ochre and brown", "why": "단풍 hikes, mountain festivals"},
+   {"id": "papercut", "motif": "a tide of hills in clay and oxblood", "why": "harvest, foliage, long evenings"},
+   {"id": "sumuk", "motif": "a bare branch, a moon and geese", "why": "late autumn, poetry, 만추"},
+   {"id": "stamp", "motif": "a single stamp in rust and mustard", "why": "harvest fairs, seasonal greetings"},
+   {"id": "watercolor", "motif": "leaf-coloured washes", "why": "concerts, book events"},
+   {"id": "paper", "motif": "paper-cut maple hills under a full moon", "why": "추석 and harvest greetings"},
+   {"id": "wood", "motif": "wood grain, acorns and a turned bowl", "why": "harvest tables, craft"},
+   {"id": "knit", "motif": "chunky wool in rust and mustard", "why": "the first cold; cosy markets"},
+   {"id": "felt", "motif": "felt leaves and a pumpkin", "why": "family harvest days, Halloween for children"},
+   {"id": "stitch", "motif": "embroidered chrysanthemums", "why": "국화 festivals, textile events"},
+   {"id": "bojagi", "motif": "patchwork in persimmon and chestnut", "why": "추석 and traditional autumn events"},
+   {"id": "ceramic", "motif": "stoneware with a persimmon branch", "why": "tea, craft fairs, slow food"},
+   {"id": "softscape", "motif": "a golden field of reeds", "why": "억새 and reed festivals, walks"},
+   {"id": "collage", "motif": "pressed leaves and torn paper", "why": "reading season, journals"},
+   {"id": "halftone", "motif": "riso leaves in two warm inks", "why": "indie autumn festivals"}
+  ],
+  "types": ["myeongjo", "batang", "garamond", "maru", "slab", "editorial", "brush", "calli", "story", "typewriter", "news"],
+  "palettes": [
+   {"name": "maple", "bg": "#f5e8d0", "ink": "#2a1410", "accent": "#b3261a", "colors": ["#c9421f", "#e3a028", "#6a3a1f", "#f8dba6"], "note": "light · maple red and ginkgo gold on cream"},
+   {"name": "persimmon", "bg": "#fbd9b8", "ink": "#2a160a", "accent": "#b8400e", "colors": ["#e8641c", "#7a3a16", "#fff0d6", "#5f6f2a"], "note": "light · persimmon orange"},
+   {"name": "ginkgo", "bg": "#f2cf4a", "ink": "#231a08", "accent": "#6a2a10", "colors": ["#231a08", "#8a4a1a", "#fff3c4", "#b3261a"], "note": "light · ginkgo yellow with bark brown"},
+   {"name": "ember-brown", "bg": "#2a1810", "ink": "#f6e6cc", "accent": "#f0a030", "colors": ["#f0a030", "#c9421f", "#8a5a2b", "#f6e6cc"], "note": "dark · chestnut brown with amber"},
+   {"name": "mist", "bg": "#e2ddd4", "ink": "#2a1a1c", "accent": "#7a2030", "colors": ["#8a2a3a", "#a89a8a", "#f3efe6", "#5a4a3a"], "note": "light, quiet · late-autumn mist with burgundy"}
+  ],
+  "layouts": ["vertical", "left", "bottom", "center"],
+  "composition": "Low sun and warm ink: rust, ochre and brown on cream, with serif or 명조 type and visible paper or wood texture. It is the reading and concert season in Korea, so the tone leans literary — a vertical title and one branch — rather than festive.",
+  "avoid": [
+   "pumpkins and scarecrows on a Korean 단풍 or 추석 event",
+   "leaves falling across the text",
+   "orange type on a red ground",
+   "cold blue-grey palettes",
+   "Halloween horror fonts outside Halloween"
+  ]
+ },
+
+ "winter": {
+  "ko": ["겨울", "겨울밤", "겨울 축제", "눈꽃", "눈꽃축제", "첫눈", "크리스마스", "성탄", "겨울방학", "눈썰매", "얼음", "빙어축제", "산타", "트리", "캐럴", "동지", "겨울 캠프", "동계", "한파", "핫초코", "군고구마", "붕어빵", "겨울 음악회", "윈터", "홀리데이", "크리스마스 마켓", "눈사람", "스케이트", "연말 콘서트", "눈 내리는"],
+  "en": ["winter", "snow", "snowflake", "first snow", "Christmas", "Xmas", "holiday season", "winter break", "sledding", "ice rink", "Santa", "tree lighting", "carol", "winter solstice", "winter camp", "cold wave", "hot chocolate", "winter concert", "holiday market", "snowman", "frost", "advent", "Noel", "mittens", "fireside", "winter sale", "nutcracker", "skating", "snowfall", "wintertide"],
+  "mood": ["crisp", "hushed", "glowing", "cosy", "clear"],
+  "styles": [
+   {"id": "knit", "motif": "a Nordic sweater pattern in wool", "why": "warmth you can feel; markets, charity drives"},
+   {"id": "bokeh", "motif": "holiday lights out of focus on a dark street", "why": "year-end concerts, city lights festivals"},
+   {"id": "papercut", "motif": "midnight strata round a pale moon", "why": "quiet winter programmes"},
+   {"id": "stainedglass", "motif": "a glowing window in deep colours", "why": "carols, cathedral concerts, Christmas"},
+   {"id": "stamp", "motif": "a single stamp and a postmark", "why": "year-end cards, markets"},
+   {"id": "felt", "motif": "wool trees, a snowman and stars", "why": "family and children's winter events"},
+   {"id": "paper", "motif": "paper-cut snowy pines under a moon", "why": "greetings, winter festivals"},
+   {"id": "softscape", "motif": "a snowfield with a small cabin", "why": "ski resorts, winter stays"},
+   {"id": "layers", "motif": "snow-capped ridges in blue haze", "why": "눈꽃 hikes, mountain festivals"},
+   {"id": "calendar", "motif": "a tearoff calendar page", "why": "year-end and new-year dates"},
+   {"id": "sumuk", "motif": "snow on a pine branch in ink (설경)", "why": "quiet year-end, tea, temple events"},
+   {"id": "origami", "motif": "paper snowflakes and stars", "why": "workshops, school winter fairs"},
+   {"id": "glass", "motif": "frosted panels like ice", "why": "ice rinks, winter launches"},
+   {"id": "lowpoly", "motif": "faceted snowy peaks and firs", "why": "ski and snowboard events"},
+   {"id": "foil", "motif": "silver foil stars", "why": "parties, gift promotions"},
+   {"id": "neon", "motif": "a warm neon sign in the snow", "why": "winter night markets, 붕어빵 pop-ups"},
+   {"id": "aurora", "motif": "a northern-lights gradient", "why": "night events, stargazing"}
+  ],
+  "types": ["elegant", "didone", "myeongjo", "calli", "goun", "luxe", "bold", "deco", "dodum", "story", "melody"],
+  "palettes": [
+   {"name": "snow", "bg": "#f1f5f8", "ink": "#12233f", "accent": "#c2253a", "colors": ["#d93a4a", "#1f3f7a", "#b9cbe0", "#ffffff"], "note": "light · snow white, navy and one red"},
+   {"name": "midnight", "bg": "#0a1430", "ink": "#eef3fb", "accent": "#bcd0ee", "colors": ["#dfe8f5", "#8fa8d0", "#ffd98a", "#2a3f7a"], "note": "dark · midnight navy with silver"},
+   {"name": "evergreen", "bg": "#123524", "ink": "#f6efdd", "accent": "#f2c14e", "colors": ["#d93a3a", "#f2c14e", "#f6efdd", "#2f6f4a"], "note": "dark · evergreen with red and gold"},
+   {"name": "ice", "bg": "#e3eef6", "ink": "#14233a", "accent": "#2a4f8a", "colors": ["#3f6fb5", "#9bb3cb", "#ffffff", "#14233a"], "note": "light, quiet · ice blue"},
+   {"name": "candle", "bg": "#1c1a1a", "ink": "#f6ecd9", "accent": "#e8b45a", "colors": ["#e8b45a", "#c9422a", "#8a7a6a", "#f6ecd9"], "note": "dark · charcoal with candle gold"}
+  ],
+  "layouts": ["center", "axis", "bottom", "left", "vertical"],
+  "composition": "Two registers: cold and clear (white, navy, silver, lots of empty sky) or dark with a warm light (candle gold, lit windows, bokeh), with light elegant or classic serif type and one small red or gold accent. Wool, paper and frost textures carry the season better than snowflake icons.",
+  "avoid": [
+   "snowflake clip-art sprinkled everywhere, clip-art Santa and reindeer",
+   "red plus green at full saturation side by side",
+   "blue on blue with no warm note",
+   "heavy summer-style display type",
+   "religious imagery on a secular year-end event (and the reverse)"
+  ]
+ },
+
+ "gaming": {
+  "ko": ["게임", "게임잼", "e스포츠", "이스포츠", "게이머", "스팀", "콘솔", "인디게임", "보드게임", "TRPG", "아케이드", "오락실", "레트로 게임", "스트리머", "길드", "랭크", "신작 출시", "베타테스트", "지스타", "게임쇼", "코스프레", "닌텐도", "플레이엑스포", "모바일 게임", "PC방", "LAN 파티", "스피드런", "픽셀", "플레이어", "퀘스트", "리그 오브 레전드", "e스포츠 리그", "e스포츠 대회", "프로게이머", "게임 대회"],
+  "en": ["game", "gaming", "game jam", "esports", "gamer", "LoL", "Steam", "console", "indie game", "board game", "TRPG", "arcade", "retro game", "streamer", "guild", "ranked", "beta test", "game show", "cosplay", "Nintendo", "mobile game", "LAN party", "speedrun", "pixel", "RPG", "level up", "player", "co-op mode", "boss fight", "quest", "e-sports", "League of Legends", "gaming tournament"],
+  "mood": ["energetic", "immersive", "neon", "playful", "competitive"],
+  "styles": [
+   {"id": "pixel", "motif": "a dithered desktop scene with chunky pixels", "why": "game jams, indie showcases"},
+   {"id": "voxel", "motif": "a blocky little world with a character and loot", "why": "sandbox games, family gaming"},
+   {"id": "glitch", "motif": "a logo-like shape torn by scan-lines", "why": "esports, FPS tournaments"},
+   {"id": "synthwave", "motif": "a neon grid to the horizon", "why": "retro arcades, esports nights"},
+   {"id": "screen", "motif": "interface windows with a dialog and a cursor", "why": "retro desktop and launcher feel"},
+   {"id": "lowpoly", "motif": "a faceted island level", "why": "indie and PS1-nostalgia titles"},
+   {"id": "neon", "motif": "an arcade sign with a joystick shape", "why": "arcade bars, board-game cafés at night"},
+   {"id": "flux", "motif": "energy trails around a core", "why": "launches, championship finals"},
+   {"id": "isometric", "motif": "an isometric game level or dungeon room", "why": "strategy, simulation, TRPG"},
+   {"id": "stickers", "motif": "badges and stars", "why": "community meet-ups, tournaments"},
+   {"id": "toon", "motif": "cel-shaded items: sword, potion, coin", "why": "RPG events, community meet-ups"},
+   {"id": "chrome", "motif": "a liquid chrome controller-like form", "why": "hardware and peripheral launches"},
+   {"id": "foil", "motif": "holographic trading-card sheen", "why": "card games, collectibles"},
+   {"id": "airbrush", "motif": "an 80s box-art planet and grid", "why": "retro-game exhibitions"},
+   {"id": "jelly", "motif": "slime and gem shapes", "why": "casual and mobile games"},
+   {"id": "pointcloud", "motif": "a character silhouette in points", "why": "tech-led showcases, VR"}
+  ],
+  "types": ["arcade", "dunggeunmo", "bitmap", "maple", "techno", "esamanru", "cute", "impact", "comic", "wide", "stencil", "outline", "brutal"],
+  "palettes": [
+   {"name": "arcade", "bg": "#170f33", "ink": "#f6eaff", "accent": "#5fe6ff", "colors": ["#5fe6ff", "#ff7ad9", "#b23ad0", "#ffe14d"], "note": "dark · arcade purple with cyan and magenta"},
+   {"name": "crt", "bg": "#041008", "ink": "#d8ffe0", "accent": "#5cff7a", "colors": ["#5cff7a", "#1f8f3a", "#d8ffe0"], "note": "dark · CRT phosphor green"},
+   {"name": "pocket", "bg": "#c9d8a2", "ink": "#0f2a0f", "accent": "#2d5e2e", "colors": ["#0f380f", "#306230", "#8bac0f"], "note": "light, quiet · handheld LCD greens"},
+   {"name": "versus", "bg": "#0c0c0e", "ink": "#f5f5f5", "accent": "#ff3b3b", "colors": ["#ff3b3b", "#3d7bff", "#f5f5f5"], "note": "dark · black with red against blue; esports"},
+   {"name": "console-white", "bg": "#f2f3f5", "ink": "#101426", "accent": "#2438d6", "colors": ["#2438d6", "#ff3b5c", "#ffc21a", "#101426"], "note": "light · console white with button colours"}
+  ],
+  "layouts": ["headline", "corners", "baseline", "bottom", "left"],
+  "composition": "Game shows commission key art that changes every year and runs across the whole venue (G-STAR 2025 used an illustration by the manhwa artist Moon Jung-hoo); brand systems go either neon on dark with angular display type or, as Pentagram's Nuverse did with glossy 3D player shapes in saturated colour, playful and theatrical rather than 'techy'. One pixel or arcade face for the title, a clean sans for everything else.",
+  "avoid": [
+   "pixel fonts for every line — exhausting to read",
+   "generic controller icons and 'GAME OVER' jokes",
+   "copying a specific franchise's logo style",
+   "rainbow RGB on everything",
+   "tiny grey text on black"
+  ]
+ },
+
+ "retro": {
+  "ko": ["레트로", "뉴트로", "복고", "빈티지", "추억", "옛날", "그때 그 시절", "7080", "8090", "90년대", "Y2K", "세기말", "다방", "LP", "바이닐", "카세트", "필름 카메라", "레코드", "디스코", "시티팝", "롤러장", "문방구", "달고나", "올드스쿨", "아날로그", "브라운관", "복고풍", "클래식카", "응답하라", "청춘"],
+  "en": ["retro", "newtro", "vintage", "throwback", "nostalgia", "old school", "70s", "80s", "90s", "Y2K", "vinyl", "LP", "cassette", "film camera", "record fair", "disco", "city pop", "roller rink", "analog", "CRT", "VHS", "mixtape", "diner", "jukebox", "classic car", "mid-century", "groovy", "flashback", "rewind", "oldies"],
+  "mood": ["nostalgic", "warm", "cheeky", "grainy", "bold"],
+  "styles": [
+   {"id": "halftone", "motif": "coarse dots, arches and stars in two inks", "why": "the printed look of the era; 뉴트로 staple"},
+   {"id": "synthwave", "motif": "a neon grid and a plain setting disc", "why": "80s video and arcade"},
+   {"id": "memphis", "motif": "squiggles, laminate patterns and terrazzo", "why": "80s postmodern pop"},
+   {"id": "pattern", "motif": "a warped checker in two warm inks", "why": "1970s graphics without rays"},
+   {"id": "airbrush", "motif": "an airbrushed chrome sphere and gradient sky", "why": "late-70s and 80s album art"},
+   {"id": "pixel", "motif": "a dithered early-computer desktop", "why": "90s computing, PC통신"},
+   {"id": "liquid", "motif": "lava-lamp blobs in orange and brown", "why": "60s–70s psychedelia"},
+   {"id": "ticket", "motif": "an admit ticket with a perforated stub", "why": "old cinema and dance-hall ephemera"},
+   {"id": "neon", "motif": "a 다방 or diner sign in tubing", "why": "old-shop signage"},
+   {"id": "opart", "motif": "black-and-white 60s op patterns", "why": "mod, 60s nights"},
+   {"id": "stickers", "motif": "badges like vintage seals", "why": "newtro stickers"},
+   {"id": "artdeco", "motif": "stepped arches and fans in gold line", "why": "1920s–30s 경성 modern, jazz age"},
+   {"id": "collage", "motif": "magazine cut-outs and ticket stubs", "why": "70080 music cafés, scrapbooks"},
+   {"id": "bauhaus", "motif": "wavy stripes, arches and checkerboards", "why": "70s supergraphics without sunbursts"},
+   {"id": "chrome", "motif": "bubbly Y2K chrome", "why": "Y2K, 세기말 parties"},
+   {"id": "mosaic", "motif": "a 70s bathhouse or café tile wall", "why": "목욕탕-tile nostalgia, old cafés"}
+  ],
+  "types": ["retro", "classic", "euljiro", "signage", "deco", "dunggeunmo", "slab", "yeonsung", "dream", "outline", "typewriter", "bitmap", "fatface", "sunflower", "cute"],
+  "palettes": [
+   {"name": "seventies", "bg": "#f2e2c4", "ink": "#2a1a10", "accent": "#b8400e", "colors": ["#d9622b", "#8a4a1a", "#e3a028", "#2f6f5f"], "note": "light · 70s cream, orange, brown and mustard"},
+   {"name": "teal-pink", "bg": "#0c4f55", "ink": "#fff3e0", "accent": "#ff9ac0", "colors": ["#ff9ac0", "#ffd166", "#fff3e0", "#0a3f44"], "note": "dark · 80s teal with pink"},
+   {"name": "newtro", "bg": "#f6ecd4", "ink": "#1f1a14", "accent": "#c22a1f", "colors": ["#d9372a", "#1f6f4a", "#f2b632", "#1f1a14"], "note": "light · 뉴트로: cream, signboard red and green"},
+   {"name": "dabang", "bg": "#2a1a12", "ink": "#f6e3c0", "accent": "#e8a53a", "colors": ["#e8a53a", "#c2552a", "#6f8a5a", "#f6e3c0"], "note": "dark · 다방 brown with mustard"},
+   {"name": "mid-century", "bg": "#e6e0cf", "ink": "#22251f", "accent": "#2f5f5a", "colors": ["#5f8a80", "#d98a4a", "#e3c14a", "#22251f"], "note": "light, quiet · muted mid-century teal, orange and mustard"}
+  ],
+  "layouts": ["headline", "center", "top"],
+  "composition": "Name the decade and stay in it: each era has its own type (deco caps, 60s grotesque, 70s fat serif, 80s signboard gothic, Y2K chrome) and its own two or three inks. Korean 뉴트로 rests on square-frame Hangul lettering in the signboard tradition, revived since Kim Kijo's 2008 lettering for 장기하와 얼굴들; a solid drop shadow, a label on a block, print grain.",
+  "avoid": [
+   "rays radiating from a sun disc — the commonest retro motif and the one that reads as the Rising Sun flag; use arches, wavy stripes, checkerboards, stars",
+   "mixing decades (deco frame + Y2K chrome + 70s stripes)",
+   "fake distress textures over small text",
+   "sepia photo filters as the whole idea",
+   "more than three inks"
+  ]
+ },
+
+ "celebration": {
+  "ko": ["축하", "기념", "기념식", "주년", "창립", "개업", "개관", "그랜드 오픈", "개막식", "시상식", "어워즈", "수상", "송년회", "신년회", "새해", "해맞이", "카운트다운", "불꽃축제", "불꽃놀이", "결혼식", "웨딩", "청첩장", "생일", "페스타", "기념행사", "감사제", "준공식", "출범식", "환영회", "축하연", "잔치", "파티", "감사절", "축제 한마당", "애찬", "만찬", "한마당"],
+  "en": ["celebration", "celebrate", "anniversary", "founding", "grand opening", "opening ceremony", "awards", "award ceremony", "winner", "year-end party", "new year", "countdown", "fireworks", "wedding", "save the date", "birthday", "congratulations", "commemoration", "ribbon cutting", "inauguration", "welcome party", "jubilee", "champagne toast", "cheers", "milestone", "confetti", "launch party", "farewell", "reception", "festa", "feast", "banquet", "Thanksgiving"],
+  "mood": ["joyful", "bright", "ceremonial", "sparkling", "generous"],
+  "styles": [
+   {"id": "foil", "motif": "foil balloons and confetti catching light", "why": "party shine with real reflections"},
+   {"id": "emboss", "motif": "a crest of rings, beads and a wreath pressed into the sheet", "why": "weddings, anniversaries, award nights"},
+   {"id": "puffy", "motif": "inflated numerals, stars and hearts", "why": "anniversaries and openings; the number as hero"},
+   {"id": "bokeh", "motif": "warm points of light out of focus", "why": "year-end, awards nights, countdowns"},
+   {"id": "stickers", "motif": "badges and stars with the date", "why": "party invitations, birthdays, thank-you events"},
+   {"id": "ribbon", "motif": "one satin ribbon looping", "why": "openings, awards, gifts"},
+   {"id": "artdeco", "motif": "stepped arches and fans in gold line", "why": "galas and jubilees; never rays from a disc"},
+   {"id": "stamp", "motif": "a sheet of stamps, one cancelled", "why": "invitations, anniversaries"},
+   {"id": "calendar", "motif": "a tearoff calendar page on the big day", "why": "anniversaries, openings, countdowns"},
+   {"id": "paper", "motif": "paper garlands, lanterns and a moon", "why": "handmade festivities, 명절"},
+   {"id": "origami", "motif": "paper stars and cranes", "why": "graduations, wishes, new year"},
+   {"id": "ticket", "motif": "an admit ticket as the invitation", "why": "parties and galas you are let into"},
+   {"id": "memphis", "motif": "confetti shapes in flat colour", "why": "birthdays, pop openings"},
+   {"id": "numerals", "motif": "the date of the party, month and day, set enormous", "why": "save-the-date posters"},
+   {"id": "stone", "motif": "a plinth with a small gold form", "why": "awards, commemorations"},
+   {"id": "neon", "motif": "a neon 'open' or numeral", "why": "grand openings, night launches"},
+   {"id": "pattern", "motif": "a checker ground in party colours", "why": "retro party graphics"},
+   {"id": "bojagi", "motif": "a gift-wrapping cloth in festive colour", "why": "설, 추석, weddings — bojagi wraps gifts"},
+   {"id": "najeon", "motif": "cranes and clouds in mother-of-pearl", "why": "milestone anniversaries, formal honours"},
+   {"id": "prism", "motif": "glass rings with a bright core", "why": "awards night, premium launches"},
+   {"id": "jelly", "motif": "a glossy cake-like form with candles", "why": "birthdays, sweet promotions"}
+  ],
+  "types": ["deco", "luxe", "jalnan", "pop", "anemone", "calli", "ssurround", "didone", "bold", "kkubulim", "retro", "yeonsung", "comic", "outline", "dongle"],
+  "palettes": [
+   {"name": "confetti", "bg": "#fff7ea", "ink": "#1f1a2e", "accent": "#d6246e", "colors": ["#ff4f9a", "#ffc21a", "#2f6bff", "#2fc28b"], "note": "light · white with confetti colours"},
+   {"name": "navy-gold", "bg": "#0d1638", "ink": "#f8f0dc", "accent": "#e6c06a", "colors": ["#e6c06a", "#fff3d6", "#8fa8e6", "#2a3a7a"], "note": "dark · navy and gold; awards, anniversaries"},
+   {"name": "festive-red", "bg": "#8f1218", "ink": "#fff1dc", "accent": "#ffd27a", "colors": ["#ffd27a", "#fff1dc", "#e8452c"], "note": "dark · deep red with gold; 명절, year-end"},
+   {"name": "ivory-rose", "bg": "#f7efe6", "ink": "#2a1a1c", "accent": "#a8455a", "colors": ["#c9506b", "#d9b26a", "#ffffff", "#8a6a5a"], "note": "light, quiet · ivory with rose and gold; weddings"},
+   {"name": "black-tie", "bg": "#0e0e10", "ink": "#f5f1e8", "accent": "#e0c27a", "colors": ["#e0c27a", "#f5f1e8", "#6a6a70"], "note": "dark · black, white and gold"},
+   {"name": "party-pink", "bg": "#ffc9de", "ink": "#2a0a1a", "accent": "#c2185b", "colors": ["#ff3d7f", "#ffd23f", "#ffffff", "#7c5cff"], "note": "light · party pink"}
+  ],
+  "layouts": ["center", "axis", "headline", "top", "corners"],
+  "composition": "The number or the name is the hero — '10th', '2027', the couple's names — set very large and centred, with one kind of sparkle (foil, lights or confetti, not all three). Formal occasions go dark with a single gold; informal ones go white with four confetti colours; the date and place still read as a table.",
+  "avoid": [
+   "rays radiating from a disc as a 'burst' behind the number",
+   "clip-art fireworks, champagne glasses and balloons together",
+   "gold gradient type with bevels",
+   "five script fonts",
+   "white chrysanthemums or black-and-white ribbons (funeral codes in Korea)",
+   "red ink for people's names (a death taboo in Korea)"
+  ]
+ },
+
+ "craft": {
+  "ko": ["공예", "수공예", "핸드메이드", "도예", "도자기", "목공", "가죽공예", "금속공예", "섬유", "자수", "뜨개", "뜨개질", "퀼트", "매듭", "한지공예", "유리공예", "캔들", "원데이 클래스", "공방", "작업실", "메이커", "공예주간", "공예트렌드페어", "손작업", "라탄", "터프팅", "도예전", "장인", "옻칠", "손끝"],
+  "en": ["craft", "handmade", "handcrafted", "pottery", "ceramics", "woodworking", "leathercraft", "metalwork", "textile", "embroidery", "knitting", "crochet", "quilt", "macrame", "glassblowing", "candle making", "soap making", "one-day class", "atelier class", "maker", "makers", "craft week", "craft fair", "artisan", "weaving", "tufting", "lacquer", "bookbinding", "letterpress", "DIY"],
+  "mood": ["tactile", "honest", "slow", "warm", "skilled"],
+  "styles": [
+   {"id": "ceramic", "motif": "glazed bowls and a vase with a visible foot ring", "why": "the object itself, with its material"},
+   {"id": "papercut", "motif": "strata cut by hand, each sheet a shade deeper", "why": "the hand is visible in every edge"},
+   {"id": "stitch", "motif": "embroidery stitches forming a simple motif", "why": "textile, 자수, visible mending"},
+   {"id": "wood", "motif": "turned wood, joinery and shavings", "why": "woodworking, furniture"},
+   {"id": "gouache", "motif": "a still life cut with scissors", "why": "workshops, makers' fairs"},
+   {"id": "stamp", "motif": "a sheet of stamps in several colourways", "why": "print fairs, stationery"},
+   {"id": "linocut", "motif": "tools and hands cut in bold print", "why": "printmaking, workshops, makers' fairs"},
+   {"id": "knit", "motif": "close-up knit stitches", "why": "yarn fairs, knitting circles"},
+   {"id": "felt", "motif": "needle-felted forms", "why": "wool craft, soft goods"},
+   {"id": "bojagi", "motif": "jogakbo patchwork with seams", "why": "Korean textile craft, 규방공예"},
+   {"id": "stickers", "motif": "labels and tags with the key words", "why": "makers' markets, workshops"},
+   {"id": "najeon", "motif": "mother-of-pearl inlay pattern", "why": "나전칠기, lacquer, heritage craft"},
+   {"id": "paper", "motif": "layered hanji cut by hand", "why": "paper craft, bookbinding"},
+   {"id": "pattern", "motif": "terrazzo chips", "why": "material and making"},
+   {"id": "marble", "motif": "marbled paper", "why": "bookbinding, stationery fairs"},
+   {"id": "turing", "motif": "letterpress-like relief pattern", "why": "print studios, natural dye"},
+   {"id": "mosaic", "motif": "hand-cut tiles", "why": "tile and glass workshops"},
+   {"id": "origami", "motif": "folded paper forms", "why": "paper workshops"},
+   {"id": "cyanotype", "motif": "sun-printed plants and lace", "why": "natural-dye and print classes"}
+  ],
+  "types": ["hand", "pen", "kkubulim", "story", "goun", "humanist", "starlight", "batang", "typewriter", "maru", "slab", "garamond", "melody", "gamja", "editorial", "calli"],
+  "palettes": [
+   {"name": "indigo-linen", "bg": "#ebe4d3", "ink": "#1a2233", "accent": "#24407a", "colors": ["#2f4f9e", "#c9a66b", "#f6f0e2", "#1a2233"], "note": "light · linen with indigo dye"},
+   {"name": "terracotta", "bg": "#f0e2d0", "ink": "#2a1a14", "accent": "#a2462d", "colors": ["#c4654a", "#7d9471", "#f6efe6", "#8a3f2c"], "note": "light · bisque with terracotta and sage"},
+   {"name": "celadon", "bg": "#dbe7dc", "ink": "#1c2a24", "accent": "#3f6a55", "colors": ["#6fa58c", "#8a5a3c", "#f1eee2", "#1c2a24"], "note": "light, quiet · celadon glaze with walnut"},
+   {"name": "charcoal-ochre", "bg": "#1f1c1a", "ink": "#f2e8d5", "accent": "#e0a030", "colors": ["#e0a030", "#c4654a", "#8a8275", "#f2e8d5"], "note": "dark · kiln charcoal with ochre"},
+   {"name": "cream-moss", "bg": "#f4efdf", "ink": "#20261a", "accent": "#4f6b2a", "colors": ["#6b8a3a", "#c98a4a", "#ffffff", "#20261a"], "note": "light · cream with moss and thread colours"}
+  ],
+  "layouts": ["left", "corners", "side", "top", "right", "vertical"],
+  "composition": "Craft fairs show material before message: the poster looks made of the thing — clay, thread, wood, paper — photographed or rendered plainly, in natural-dye colours, with quiet type (a humanist sans, a book serif, or one handwritten line). The Korea Craft Trend Fair's recent themes, 'everyday masterpieces' and 'aesthetics at the fingertips', point the same way: hands and daily use, not ornament.",
+  "avoid": [
+   "scissors-and-thread clip-art, 'handmade with love' badges",
+   "glossy plastic-looking 3D",
+   "bright synthetic colour",
+   "more than one handwriting font",
+   "tight luxury styling that hides the hand"
+  ]
+ },
+
+ "general": {
+  "ko": ["안내", "공지", "모집", "행사", "일시", "장소", "참가", "신청", "접수", "무료", "초대", "알림", "이벤트", "공고", "설명회", "세미나", "워크숍", "개최", "참여", "대상", "문의", "주최", "주관", "후원", "선착순", "사전등록", "프로그램", "오픈", "소식", "발표"],
+  "en": ["notice", "announcement", "event", "invitation", "join us", "register", "sign up", "free", "open call", "apply", "deadline", "programme", "program", "schedule", "venue", "date", "time", "hosted by", "organized by", "sponsored by", "RSVP", "admission", "all welcome", "save the date", "info session", "update", "news", "open", "presentation", "session"],
+  "note": "Fallback when no other topic scores. These words appear on almost every poster: treat them as stop-words for classification, not as evidence for a topic.",
+  "mood": ["clear", "balanced", "modern", "friendly"],
+  "styles": [
+   {"id": "haze", "motif": "a soft grainy gradient with one hairline circle", "why": "type-first and safe for any subject"},
+   {"id": "studio", "motif": "three simple shapes floating before a plain wall", "why": "polished and neutral"},
+   {"id": "papercut", "motif": "tonal strata round the focus", "why": "a tactile image that suits most subjects"},
+   {"id": "swiss", "motif": "arcs built by one rule", "why": "exact and timeless; suits most announcements"},
+   {"id": "aurora", "motif": "a pearly blob on a gradient", "why": "friendly, modern"},
+   {"id": "fluted", "motif": "an orb and a pane of fluted glass", "why": "luminous and calm; suits most subjects"},
+   {"id": "flowfield", "motif": "bands flowing round the type", "why": "a strong abstract for most subjects"},
+   {"id": "numerals", "motif": "the date of the event, month and day, set enormous", "why": "works for anything with one date"},
+   {"id": "wave", "motif": "a field of dots rolling once", "why": "calm, considered"},
+   {"id": "bauhaus", "motif": "a small mosaic of geometric tiles", "why": "ordered and cheerful"},
+   {"id": "calendar", "motif": "a month sheet with the day marked", "why": "any dated event"},
+   {"id": "paper", "motif": "cut-paper hills behind a round window", "why": "warm, seasonal, handmade"},
+   {"id": "halftone", "motif": "two overprinted orbs", "why": "independent, printed feel"},
+   {"id": "pattern", "motif": "a checker field beside the copy", "why": "a friendly graphic ground"},
+   {"id": "layers", "motif": "flat hills or a skyline in three layers", "why": "a picture without a specific story"},
+   {"id": "glass", "motif": "two frosted panels over colour", "why": "contemporary, product-like"},
+   {"id": "marquee", "motif": "rows of the headline", "why": "when the words are the picture"},
+   {"id": "ribbon", "motif": "a single ribbon loop", "why": "announcements, openings"},
+   {"id": "watercolor", "motif": "two pale washes", "why": "gentle invitations"},
+   {"id": "softscape", "motif": "a quiet pastel landscape", "why": "calm general greetings"}
+  ],
+  "types": ["bold", "gmarket", "swiss", "paperlogy", "editorial", "friendly", "dream", "elegant", "jalnan", "grotesk", "humanist", "round", "square", "maru"],
+  "palettes": [
+   {"name": "paper-red", "bg": "#f3efe6", "ink": "#161616", "accent": "#c8321e", "colors": ["#e2401c", "#16224f", "#f4b81f", "#161616"], "note": "light · paper with one red; the safe default"},
+   {"name": "midnight", "bg": "#0a0f1f", "ink": "#eef2fb", "accent": "#7fb2ff", "colors": ["#2f55ff", "#7fb2ff", "#ffc56e", "#eef2fb"], "note": "dark · midnight blue"},
+   {"name": "sand", "bg": "#ebe3d5", "ink": "#22201c", "accent": "#1f6f4a", "colors": ["#2a8f5a", "#c8553d", "#f8f4ec", "#22201c"], "note": "light, quiet · sand with green"},
+   {"name": "graphite", "bg": "#151617", "ink": "#f4f4f1", "accent": "#ffd400", "colors": ["#ffd400", "#62666d", "#f4f4f1"], "note": "dark · graphite with yellow"},
+   {"name": "soft-lilac", "bg": "#e9e4fa", "ink": "#1c1838", "accent": "#5438e8", "colors": ["#6b4eff", "#ff7ea8", "#ffd166", "#ffffff"], "note": "light · soft lilac; friendly announcements"}
+  ],
+  "layouts": ["left", "band", "strip", "center", "baseline", "corners"],
+  "composition": "When the subject gives no cue, let hierarchy do the work: one short headline several times larger than anything else, the information table directly under it, one calm abstract image, two colours plus neutrals. Offer one bright, one dark and one quiet draft and let the reader's choice reveal the topic.",
+  "avoid": [
+   "decorating to fill space",
+   "themed imagery guessed from a single word",
+   "more than two typefaces",
+   "centred everything",
+   "low-contrast pastel text"
+  ]
+ },
+
+ "_trios": {
+  "tech": [
+   {"tone": "light", "style": "studio", "motif": "floating clay cube, torus and a cursor arrow", "type": "bold", "palette": "daybreak", "layout": "left"},
+   {"tone": "dark", "style": "flux", "motif": "light trails streaming toward a vanishing point", "type": "techno", "palette": "console", "layout": "corners"},
+   {"tone": "quiet", "style": "wave", "motif": "dot terrain rising toward one corner", "type": "plex", "palette": "signal", "layout": "headline"}
+  ],
+  "science": [
+   {"tone": "light", "style": "turing", "motif": "stripes breaking into dots like a cell pattern", "type": "plex", "palette": "lab", "layout": "left"},
+   {"tone": "dark", "style": "prism", "motif": "light split through glass rings", "type": "elegant", "palette": "deep-field", "layout": "center"},
+   {"tone": "quiet", "style": "contour", "motif": "isolines of a measured field", "type": "garamond", "palette": "specimen", "layout": "corners"}
+  ],
+  "business": [
+   {"tone": "light", "style": "studio", "motif": "steps, a sphere and an arch in clean matte colour", "type": "bold", "palette": "ivory-navy", "layout": "left"},
+   {"tone": "dark", "style": "globe", "motif": "dotted globe with route arcs", "type": "grotesk", "palette": "boardroom", "layout": "corners"},
+   {"tone": "quiet", "style": "wave", "motif": "calm dot terrain rising to the right", "type": "swiss", "palette": "warm-grey", "layout": "panel"}
+  ],
+  "finance": [
+   {"tone": "light", "style": "guilloche", "motif": "banknote rosette and fine lathe-work bands", "type": "garamond", "palette": "banknote", "layout": "center"},
+   {"tone": "dark", "style": "stone", "motif": "a marble block with one small gold sphere", "type": "elegant", "palette": "vault", "layout": "left"},
+   {"tone": "quiet", "style": "wave", "motif": "dot terrain like a calm market surface", "type": "swiss", "palette": "ledger", "layout": "panel"}
+  ],
+  "education": [
+   {"tone": "light", "style": "studio", "motif": "a pencil, a book and a sphere as soft clay shapes", "type": "bold", "palette": "sunny", "layout": "left"},
+   {"tone": "dark", "style": "bauhaus", "motif": "a tidy grid of circles, arches and stripes", "type": "geometric", "palette": "chalkboard", "layout": "panel"},
+   {"tone": "quiet", "style": "glyph", "motif": "letters, numerals and punctuation as pattern", "type": "humanist", "palette": "notebook", "layout": "headline"}
+  ],
+  "design": [
+   {"tone": "light", "style": "bauhaus", "motif": "a mosaic of circles, quarter-circles and stripes", "type": "geometric", "palette": "primary", "layout": "corners"},
+   {"tone": "dark", "style": "glyph", "motif": "one oversized letterform cropped by the sheet", "type": "brutal", "palette": "black-fluoro", "layout": "headline"},
+   {"tone": "quiet", "style": "studio", "motif": "cube, cone and sphere as a form study", "type": "grotesk", "palette": "swiss-red", "layout": "left"}
+  ],
+  "architecture": [
+   {"tone": "light", "style": "monolith", "motif": "plaster arch, stairs and long shadows", "type": "elegant", "palette": "plaster", "layout": "left"},
+   {"tone": "dark", "style": "blueprint", "motif": "plan and section linework with dimension ticks", "type": "stencil", "palette": "blueprint", "layout": "corners"},
+   {"tone": "quiet", "style": "contour", "motif": "site topography with one footprint marked", "type": "grotesk", "palette": "concrete", "layout": "headline"}
+  ],
+  "art": [
+   {"tone": "light", "style": "collage", "motif": "cut and torn paper shapes with one photographic fragment", "type": "grotesk", "palette": "gallery", "layout": "corners"},
+   {"tone": "dark", "style": "inkdrop", "motif": "one bloom of pigment in water", "type": "didone", "palette": "black-pink", "layout": "bottom"},
+   {"tone": "quiet", "style": "monolith", "motif": "a plinth, an arch and a sphere in gallery light", "type": "editorial", "palette": "raw-canvas", "layout": "vertical"}
+  ],
+  "culture": [
+   {"tone": "light", "style": "paper", "motif": "cut-paper proscenium arches and hills", "type": "myeongjo", "palette": "cream-crimson", "layout": "vertical"},
+   {"tone": "dark", "style": "halftone", "motif": "overprinted circles and a stage-like arc", "type": "brutal", "palette": "black-yellow", "layout": "headline"},
+   {"tone": "quiet", "style": "haze", "motif": "a grainy two-colour field", "type": "editorial", "palette": "mint-plum", "layout": "corners"}
+  ],
+  "tradition": [
+   {"tone": "light", "style": "paper", "motif": "hanji paper-cut hills and a full moon", "type": "myeongjo", "palette": "hanji", "layout": "vertical"},
+   {"tone": "dark", "style": "najeon", "motif": "cranes, clouds and peonies in mother-of-pearl on black lacquer", "type": "editorial", "palette": "lacquer", "layout": "center"},
+   {"tone": "quiet", "style": "sumuk", "motif": "misty ridgelines, a pine or bamboo in ink wash", "type": "brush", "palette": "ink", "layout": "right"}
+  ],
+  "literature": [
+   {"tone": "light", "style": "watercolor", "motif": "two washes and a few pen lines", "type": "batang", "palette": "paper-ink", "layout": "left"},
+   {"tone": "dark", "style": "paper", "motif": "an open book whose pages become cut-paper hills", "type": "myeongjo", "palette": "reading-lamp", "layout": "vertical"},
+   {"tone": "quiet", "style": "glyph", "motif": "letters and punctuation marks as the image", "type": "garamond", "palette": "sage-leaf", "layout": "center"}
+  ],
+  "music": [
+   {"tone": "light", "style": "halftone", "motif": "overprinted orbs in two or three spot inks", "type": "condensed", "palette": "riso-cream", "layout": "headline"},
+   {"tone": "dark", "style": "chrome", "motif": "liquid chrome forms mirroring coloured light", "type": "impact", "palette": "stage-night", "layout": "bottom"},
+   {"tone": "quiet", "style": "wave", "motif": "dot terrain as a waveform", "type": "editorial", "palette": "concert-hall", "layout": "corners"}
+  ],
+  "nightlife": [
+   {"tone": "light", "style": "liquid", "motif": "slow lava-lamp gradient bands", "type": "outline", "palette": "flyer-pink", "layout": "center"},
+   {"tone": "dark", "style": "neon", "motif": "bent neon tubing of one word or symbol on a dark wall", "type": "wide", "palette": "acid", "layout": "headline"},
+   {"tone": "quiet", "style": "bokeh", "motif": "city lights out of focus", "type": "elegant", "palette": "lounge", "layout": "corners"}
+  ],
+  "film": [
+   {"tone": "light", "style": "layers", "motif": "a wide flat landscape with one small figure or house", "type": "editorial", "palette": "indie-cream", "layout": "bottom"},
+   {"tone": "dark", "style": "neon", "motif": "a cinema marquee sign", "type": "condensed", "palette": "noir", "layout": "center"},
+   {"tone": "quiet", "style": "haze", "motif": "a grainy gradient like colour-graded film stock", "type": "typewriter", "palette": "fog", "layout": "corners"}
+  ],
+  "fashion": [
+   {"tone": "light", "style": "monolith", "motif": "arch, plinth and a long diagonal shadow", "type": "didone", "palette": "bone", "layout": "center"},
+   {"tone": "dark", "style": "inkdrop", "motif": "dye unfolding in water", "type": "wide", "palette": "black-red", "layout": "headline"},
+   {"tone": "quiet", "style": "haze", "motif": "one grainy colour field", "type": "luxe", "palette": "olive-cream", "layout": "corners"}
+  ],
+  "luxury": [
+   {"tone": "light", "style": "marble", "motif": "marbling with gilded hairlines", "type": "didone", "palette": "ivory-gold", "layout": "center"},
+   {"tone": "dark", "style": "stone", "motif": "polished marble with one small gold accent", "type": "luxe", "palette": "onyx", "layout": "left"},
+   {"tone": "quiet", "style": "guilloche", "motif": "watch-dial guilloché engraving", "type": "garamond", "palette": "pearl", "layout": "corners"}
+  ],
+  "beauty": [
+   {"tone": "light", "style": "inkdrop", "motif": "pigment swirling slowly in clear water", "type": "luxe", "palette": "blush", "layout": "center"},
+   {"tone": "dark", "style": "ribbon", "motif": "a satin ribbon in skin and rose tones", "type": "didone", "palette": "plum", "layout": "left"},
+   {"tone": "quiet", "style": "glass", "motif": "frosted panels over soft colour", "type": "elegant", "palette": "nude", "layout": "right"}
+  ],
+  "food": [
+   {"tone": "light", "style": "linocut", "motif": "carved prints of vegetables, a fish and bread", "type": "signage", "palette": "tomato", "layout": "left"},
+   {"tone": "dark", "style": "neon", "motif": "an 'open' or noodle-bar sign", "type": "retro", "palette": "grill", "layout": "center"},
+   {"tone": "quiet", "style": "ceramic", "motif": "glazed plates and bowls as a still life", "type": "editorial", "palette": "linen-table", "layout": "top"}
+  ],
+  "market": [
+   {"tone": "light", "style": "halftone", "motif": "riso stickers, price-tag shapes and orbs", "type": "retro", "palette": "signage-yellow", "layout": "headline"},
+   {"tone": "dark", "style": "neon", "motif": "night-market signs glowing", "type": "signage", "palette": "night-market", "layout": "top"},
+   {"tone": "quiet", "style": "linocut", "motif": "stamped baskets, produce and hands", "type": "hand", "palette": "kraft", "layout": "left"}
+  ],
+  "kids": [
+   {"tone": "light", "style": "puffy", "motif": "inflated star, cloud, flower and a smiling ball", "type": "pop", "palette": "sky-primary", "layout": "top"},
+   {"tone": "dark", "style": "crayon", "motif": "crayon stars, moon and animals like scratch-art on dark paper", "type": "jua", "palette": "night-star", "layout": "center"},
+   {"tone": "quiet", "style": "paper", "motif": "paper-cut hills with small animals", "type": "dodum", "palette": "mint-orange", "layout": "left"}
+  ],
+  "family": [
+   {"tone": "light", "style": "softscape", "motif": "a picnic hill, soft clouds and a small house", "type": "friendly", "palette": "peach", "layout": "left"},
+   {"tone": "dark", "style": "layers", "motif": "a park at dusk with hills and lit windows", "type": "bold", "palette": "dusk-home", "layout": "center"},
+   {"tone": "quiet", "style": "watercolor", "motif": "loose washes of flowers and sky", "type": "batang", "palette": "cream-berry", "layout": "top"}
+  ],
+  "community": [
+   {"tone": "light", "style": "isometric", "motif": "a neighbourhood block with a park and small shops", "type": "friendly", "palette": "warm-white", "layout": "left"},
+   {"tone": "dark", "style": "linocut", "motif": "print-shop poster of hands and tools", "type": "slab", "palette": "deep-teal", "layout": "headline"},
+   {"tone": "quiet", "style": "bauhaus", "motif": "tiles of different shapes fitting one grid", "type": "humanist", "palette": "mint", "layout": "panel"}
+  ],
+  "sports": [
+   {"tone": "light", "style": "halftone", "motif": "a coarse-screen ball or arc in two inks", "type": "condensed", "palette": "club-colours", "layout": "headline"},
+   {"tone": "dark", "style": "metal", "motif": "a medal, a trophy plate and brushed steel bars", "type": "impact", "palette": "black-volt", "layout": "bottom"},
+   {"tone": "quiet", "style": "contour", "motif": "course map with elevation lines", "type": "grotesk", "palette": "track-grey", "layout": "corners"}
+  ],
+  "outdoor": [
+   {"tone": "light", "style": "lowpoly", "motif": "faceted peaks, a tent and pines", "type": "slab", "palette": "sand-forest", "layout": "bottom"},
+   {"tone": "dark", "style": "layers", "motif": "mountain ridges at night with a campfire glow", "type": "condensed", "palette": "night-ember", "layout": "corners"},
+   {"tone": "quiet", "style": "contour", "motif": "topographic lines with a marked summit and route", "type": "humanist", "palette": "stone-moss", "layout": "left"}
+  ],
+  "travel": [
+   {"tone": "light", "style": "softscape", "motif": "pastel dunes, sea or lake with a small boat", "type": "editorial", "palette": "sunrise", "layout": "bottom"},
+   {"tone": "dark", "style": "layers", "motif": "a flat-colour coast at dusk with one landmark", "type": "deco", "palette": "dusk", "layout": "center"},
+   {"tone": "quiet", "style": "watercolor", "motif": "a travel-sketchbook wash", "type": "humanist", "palette": "postcard", "layout": "corners"}
+  ],
+  "nature": [
+   {"tone": "light", "style": "linocut", "motif": "birds, branches and seed heads cut bold", "type": "humanist", "palette": "botanical", "layout": "left"},
+   {"tone": "dark", "style": "cyanotype", "motif": "ferns and leaves printed white on Prussian blue", "type": "editorial", "palette": "prussian", "layout": "bottom"},
+   {"tone": "quiet", "style": "wood", "motif": "tree rings and bark", "type": "garamond", "palette": "earth", "layout": "corners"}
+  ],
+  "wellness": [
+   {"tone": "light", "style": "softscape", "motif": "a still lake with a lone tree at dawn", "type": "flora", "palette": "sage-clay", "layout": "left"},
+   {"tone": "dark", "style": "caustics", "motif": "light moving through shallow water", "type": "elegant", "palette": "deep-water", "layout": "center"},
+   {"tone": "quiet", "style": "haze", "motif": "a soft grainy gradient in two close hues", "type": "garamond", "palette": "sand", "layout": "bottom"}
+  ],
+  "city": [
+   {"tone": "light", "style": "isometric", "motif": "an isometric block with shops, a crossing and a bus", "type": "grotesk", "palette": "dawn", "layout": "left"},
+   {"tone": "dark", "style": "layers", "motif": "a skyline at blue hour with lit windows and a river", "type": "condensed", "palette": "blue-hour", "layout": "bottom"},
+   {"tone": "quiet", "style": "blueprint", "motif": "a transit-map line drawing", "type": "swiss", "palette": "subway", "layout": "corners"}
+  ],
+  "spring": [
+   {"tone": "light", "style": "paper", "motif": "paper-cut hills with blossom trees and a pale disc", "type": "flora", "palette": "blossom", "layout": "left"},
+   {"tone": "dark", "style": "watercolor", "motif": "blossom washes glowing on a night ground", "type": "myeongjo", "palette": "night-blossom", "layout": "vertical"},
+   {"tone": "quiet", "style": "stitch", "motif": "embroidered wildflowers and buds", "type": "pen", "palette": "fresh-green", "layout": "center"}
+  ],
+  "summer": [
+   {"tone": "light", "style": "puffy", "motif": "inflated pool floats and a beach ball", "type": "pop", "palette": "lemon-cobalt", "layout": "left"},
+   {"tone": "dark", "style": "layers", "motif": "open sea at night with a moon and its glitter path", "type": "bold", "palette": "summer-night", "layout": "bottom"},
+   {"tone": "quiet", "style": "caustics", "motif": "sunlight nets on a pool floor", "type": "wide", "palette": "pool", "layout": "headline"}
+  ],
+  "autumn": [
+   {"tone": "light", "style": "linocut", "motif": "maple and ginkgo leaves and a persimmon branch", "type": "slab", "palette": "maple", "layout": "left"},
+   {"tone": "dark", "style": "layers", "motif": "ridges in ember colours at dusk", "type": "batang", "palette": "ember-brown", "layout": "bottom"},
+   {"tone": "quiet", "style": "ceramic", "motif": "stoneware with a persimmon branch", "type": "myeongjo", "palette": "mist", "layout": "vertical"}
+  ],
+  "winter": [
+   {"tone": "light", "style": "knit", "motif": "a Nordic sweater pattern in wool", "type": "bold", "palette": "snow", "layout": "left"},
+   {"tone": "dark", "style": "bokeh", "motif": "holiday lights out of focus on a dark street", "type": "didone", "palette": "midnight", "layout": "center"},
+   {"tone": "quiet", "style": "sumuk", "motif": "snow on a pine branch in ink (설경)", "type": "myeongjo", "palette": "ice", "layout": "vertical"}
+  ],
+  "gaming": [
+   {"tone": "light", "style": "voxel", "motif": "a blocky little world with a character and loot", "type": "arcade", "palette": "console-white", "layout": "left"},
+   {"tone": "dark", "style": "synthwave", "motif": "a neon grid to the horizon", "type": "impact", "palette": "arcade", "layout": "headline"},
+   {"tone": "quiet", "style": "pixel", "motif": "a dithered desktop scene with chunky pixels", "type": "bitmap", "palette": "pocket", "layout": "corners"}
+  ],
+  "retro": [
+   {"tone": "light", "style": "halftone", "motif": "coarse dots, arches and stars in two inks", "type": "retro", "palette": "seventies", "layout": "headline"},
+   {"tone": "dark", "style": "neon", "motif": "a 다방 or diner sign in tubing", "type": "signage", "palette": "dabang", "layout": "center"},
+   {"tone": "quiet", "style": "bauhaus", "motif": "wavy stripes, arches and checkerboards", "type": "typewriter", "palette": "mid-century", "layout": "panel"}
+  ],
+  "celebration": [
+   {"tone": "light", "style": "puffy", "motif": "inflated numerals, stars and hearts", "type": "pop", "palette": "confetti", "layout": "top"},
+   {"tone": "dark", "style": "bokeh", "motif": "warm points of light out of focus", "type": "calli", "palette": "navy-gold", "layout": "center"},
+   {"tone": "quiet", "style": "ribbon", "motif": "one satin ribbon looping", "type": "luxe", "palette": "ivory-rose", "layout": "corners"}
+  ],
+  "craft": [
+   {"tone": "light", "style": "ceramic", "motif": "glazed bowls and a vase with a visible foot ring", "type": "humanist", "palette": "terracotta", "layout": "left"},
+   {"tone": "dark", "style": "linocut", "motif": "tools and hands cut in bold print", "type": "slab", "palette": "charcoal-ochre", "layout": "corners"},
+   {"tone": "quiet", "style": "stitch", "motif": "embroidery stitches forming a simple motif", "type": "pen", "palette": "cream-moss", "layout": "top"}
+  ],
+  "general": [
+   {"tone": "light", "style": "studio", "motif": "three simple shapes floating before a plain wall", "type": "bold", "palette": "paper-red", "layout": "left"},
+   {"tone": "dark", "style": "wave", "motif": "a field of dots rolling once", "type": "elegant", "palette": "midnight", "layout": "corners"},
+   {"tone": "quiet", "style": "haze", "motif": "a soft grainy gradient with one hairline circle", "type": "editorial", "palette": "sand", "layout": "center"}
+  ]
+ }
+}

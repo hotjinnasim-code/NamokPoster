@@ -1,0 +1,24 @@
+/* jalnan — the heavy, forward-leaning display gothic of a travel app's promotions (여기어때 잘난체; 굵고 앞으로 기운 듯한 홍보 제목체): sales, recruiting, launch notices and events that want to be seen across a street. Face: Jalnan 2, with its own Latin and figures; Pretendard for the details. */
+.poster[data-type="jalnan"] {
+  --font-title: "Jalnan 2", "Black Han Sans", "Pretendard", sans-serif;   /* one face: its own Latin and figures */
+  --font-eyebrow: "Jalnan 2", "Pretendard", sans-serif; --font-eyebrow-ko: "Jalnan 2", "Pretendard", sans-serif;
+  --font-subtitle: "Pretendard", sans-serif; --font-subtitle-ko: "Pretendard", sans-serif;
+  --title-size: 10.6; --title-weight: 400; --title-leading: 1.08; --title-tracking: -0.02em;
+  --title-leading-ko: 1.2; --title-tracking-ko: -0.04em; --title-wordspace-ko: 0.04em;
+  --eyebrow-size: 1.72; --eyebrow-weight: 400; --eyebrow-tracking: 0.04em; --eyebrow-tracking-ko: 0em; --eyebrow-case: none;
+  --subtitle-size: 2.88; --subtitle-weight: 700; --subtitle-leading: 1.34; --subtitle-weight-ko: 700;
+  --body-size: 1.82; --body-weight: 500; --body-weight-ko: 500;
+  --meta-weight: 500; --meta-label-weight: 400;
+  --footer-size: 1.52; --footer-weight: 700; --footer-rule: 1; --grain: 0.08;
+  --gap-eyebrow: 2.2; --gap-subtitle: 2.5;
+}
+.poster[data-type="jalnan"] .title em { color: var(--c-accent); }
+/* the label leans with the face: a block of the accent colour cut slanted at both ends (cut, not skewed, so it keeps to its own box) */
+.poster[data-type="jalnan"] .eyebrow { color: var(--c-on-accent, var(--c-paper)); background: var(--c-accent); padding: 0.4em 1em 0.32em; line-height: 1.16; clip-path: polygon(0.36em 0, 100% 0, calc(100% - 0.36em) 100%, 0 100%); }
+.poster[data-type="jalnan"] .main[data-mode="vertical"] .eyebrow { clip-path: none; padding: 0.9em 0.36em; }
+.poster[data-type="jalnan"] .subtitle { color: var(--c-ink); }
+.poster[data-type="jalnan"] .body { color: color-mix(in srgb, var(--c-ink) 84%, transparent); }
+.poster[data-type="jalnan"] .meta dt { font-family: var(--font-eyebrow-ko); }   /* the label in the display face, the value plain */
+.poster[data-type="jalnan"] .cta { border-radius: 0.2em; background: var(--c-ink); color: var(--c-paper); font-family: var(--font-eyebrow-ko); font-weight: 400; clip-path: polygon(0.4em 0, 100% 0, calc(100% - 0.4em) 100%, 0 100%); }
+.poster[data-type="jalnan"] .badge { border-radius: 0.2em; transform: rotate(-6deg); font-family: var(--font-eyebrow-ko); font-weight: 400; }
+.poster[data-type="jalnan"] .bottom.ruled { border-top: calc(var(--u) * 0.34) solid var(--c-ink); padding-top: calc(var(--u) * 1.6); }

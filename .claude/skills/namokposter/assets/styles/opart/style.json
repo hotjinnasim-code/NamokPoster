@@ -1,0 +1,186 @@
+{
+  "id": "opart",
+  "label": "Op Art",
+  "engine": "three",
+  "kind": "picture",
+  "mood": "optical art — hard-edged stripes, checks or dot grids printed on a sheet that bulges, ripples or folds, so a flat two- or three-colour print seems to move; the pattern tapers to hairlines and bare paper where the copy sits. Bold, hypnotic, 1960s-modern. Good for music and club nights, design and fashion events, exhibitions, tech launches, anything that should vibrate.",
+  "tone": "light",
+  "type": "swiss",
+  "types": [
+    "bold",
+    "slim",
+    "impact",
+    "brutal",
+    "techno",
+    "elegant"
+  ],
+  "defaultPalette": "classic",
+  "palettes": {
+    "classic": {
+      "bg": "#f3f0e8",
+      "ink": "#111112",
+      "accent": "#d7321e",
+      "colors": [
+        "#111112",
+        "#111112",
+        "#f3f0e8"
+      ]
+    },
+    "signal": {
+      "bg": "#f4f0e6",
+      "ink": "#141416",
+      "accent": "#d7321e",
+      "colors": [
+        "#141416",
+        "#e0391f",
+        "#f4f0e6"
+      ]
+    },
+    "cobalt": {
+      "bg": "#f1eee6",
+      "ink": "#12205c",
+      "accent": "#1f3fd0",
+      "colors": [
+        "#1c37c2",
+        "#12205c",
+        "#f1eee6"
+      ]
+    },
+    "pool": {
+      "bg": "#f2efe6",
+      "ink": "#10343c",
+      "accent": "#d2452c",
+      "colors": [
+        "#0f4f5c",
+        "#e2543a",
+        "#a9dcd2"
+      ]
+    },
+    "noir": {
+      "bg": "#0c0c0e",
+      "ink": "#f3efe6",
+      "accent": "#ffd23f",
+      "colors": [
+        "#f3efe6",
+        "#f3efe6",
+        "#0c0c0e"
+      ]
+    },
+    "acid": {
+      "bg": "#17102e",
+      "ink": "#f6f1ff",
+      "accent": "#ffd23f",
+      "colors": [
+        "#ff5c93",
+        "#ffd23f",
+        "#3a2a7a"
+      ]
+    }
+  },
+  "params": {
+    "motif": {
+      "default": "sphere",
+      "note": "how the sheet is bent: sphere (a ball pressing through the grid) | wave (ripples slanting across the stripes) | fold (pleated like a paper screen)"
+    },
+    "pattern": {
+      "default": "auto",
+      "note": "what is printed on it: auto | stripes | checks | dots (auto = checks on the sphere, stripes on wave and fold)"
+    },
+    "density": {
+      "default": 1,
+      "note": "pattern fineness: 0.6 = bold … 1.8 = fine"
+    },
+    "bend": {
+      "default": 1,
+      "note": "strength of the bulge / ripple / pleat, 0.4–1.5"
+    },
+    "fade": {
+      "default": 1,
+      "note": "how far from the copy the print reaches full weight: 0.5 = abrupt … 1.8 = long taper"
+    },
+    "angle": {
+      "default": "auto",
+      "note": "rotation of the print in degrees, or auto (chosen from the seed)"
+    }
+  },
+  "motifs": {
+    "sphere": {
+      "note": "a chequered ball bulging out of the grid (Vasarely's Vega)",
+      "topics": [
+        "science",
+        "tech",
+        "sports",
+        "gaming",
+        "art"
+      ]
+    },
+    "wave": {
+      "note": "stripes rippling like water or sound (Riley)",
+      "topics": [
+        "music",
+        "nightlife",
+        "fashion",
+        "summer",
+        "wellness"
+      ]
+    },
+    "fold": {
+      "note": "striped planes pleated into a zigzag screen",
+      "topics": [
+        "architecture",
+        "design",
+        "business",
+        "education",
+        "retro"
+      ]
+    }
+  },
+  "topics": [
+    "art",
+    "design",
+    "music",
+    "nightlife",
+    "fashion",
+    "retro"
+  ],
+  "layouts": {
+    "landscape": {
+      "layout": "left",
+      "also": [
+        "right",
+        "top",
+        "bottom",
+        "corners",
+        "headline",
+        "baseline",
+        "vertical",
+        "axis",
+        "band",
+        "strip"
+      ]
+    },
+    "portrait": {
+      "layout": "top",
+      "also": [
+        "bottom",
+        "corners",
+        "baseline",
+        "vertical",
+        "axis",
+        "side"
+      ]
+    },
+    "square": {
+      "layout": "top",
+      "also": [
+        "bottom",
+        "corners",
+        "baseline",
+        "vertical",
+        "axis",
+        "left",
+        "right"
+      ]
+    }
+  }
+}

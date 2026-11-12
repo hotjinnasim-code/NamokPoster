@@ -1,0 +1,136 @@
+{
+  "id": "wave",
+  "label": "Dot Wave",
+  "engine": "three",
+  "mood": "calm, precise, minimal — a field of dots rolling like terrain or sound, lots of white space. Good for B2B/tech, research, finance, architecture, reports, anything that should feel considered rather than loud.",
+  "tone": "light",
+  "type": "swiss",
+  "types": [
+    "elegant",
+    "slim",
+    "square",
+    "techno",
+    "editorial",
+    "bold"
+  ],
+  "defaultPalette": "paper",
+  "palettes": {
+    "paper": {
+      "bg": "#f2f0ea",
+      "ink": "#121316",
+      "accent": "#f0441a",
+      "colors": [
+        "#16224f",
+        "#2f55ff",
+        "#ff4b1f"
+      ]
+    },
+    "midnight": {
+      "bg": "#070b18",
+      "ink": "#f1f4ff",
+      "accent": "#7fb2ff",
+      "colors": [
+        "#2f55ff",
+        "#6ea8ff",
+        "#c9f6ff"
+      ]
+    },
+    "forest": {
+      "bg": "#eef1e6",
+      "ink": "#11231a",
+      "accent": "#1c7a4a",
+      "colors": [
+        "#11231a",
+        "#1f7a4d",
+        "#b9d82c"
+      ]
+    },
+    "graphite": {
+      "bg": "#101112",
+      "ink": "#f4f4f1",
+      "accent": "#ffd400",
+      "colors": [
+        "#62666d",
+        "#f4f4f1",
+        "#ffd400"
+      ]
+    },
+    "blush": {
+      "bg": "#f7ecec",
+      "ink": "#2a1418",
+      "accent": "#cf3348",
+      "colors": [
+        "#2a1418",
+        "#d43d51",
+        "#ff9e80"
+      ]
+    }
+  },
+  "params": {
+    "height": {
+      "default": 1.0,
+      "note": "wave amplitude multiplier"
+    },
+    "detail": {
+      "default": 1.0,
+      "note": "0.6 = broad swells … 1.8 = choppy"
+    },
+    "dot": {
+      "default": 1.0,
+      "note": "dot size multiplier"
+    }
+  },
+  "layouts": {
+    "landscape": {
+      "layout": "left",
+      "focus": [
+        0.72,
+        0.56
+      ],
+      "also": [
+        "right",
+        "top",
+        "bottom",
+        "corners",
+        "headline",
+        "baseline",
+        "vertical",
+        "axis",
+        "band",
+        "strip"
+      ]
+    },
+    "portrait": {
+      "layout": "top",
+      "focus": [
+        0.5,
+        0.74
+      ],
+      "also": [
+        "bottom",
+        "corners",
+        "baseline",
+        "vertical",
+        "axis",
+        "side"
+      ]
+    },
+    "square": {
+      "layout": "top",
+      "focus": [
+        0.5,
+        0.74
+      ],
+      "also": [
+        "bottom",
+        "corners",
+        "baseline",
+        "vertical",
+        "axis",
+        "left",
+        "right"
+      ]
+    }
+  },
+  "ground": true
+}

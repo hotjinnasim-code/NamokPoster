@@ -1,0 +1,164 @@
+{
+  "id": "stone",
+  "label": "Marble & Gold",
+  "engine": "blender",
+  "kind": "object",
+  "mood": "polished veined marble with small gold accents in a soft studio — plinths, steps, spheres and arches, the language of a product podium; composed, expensive, calm. Good for luxury and beauty launches, galas and awards, finance, architecture, exhibitions.",
+  "tone": "light",
+  "type": "luxe",
+  "types": [
+    "editorial",
+    "fatface",
+    "elegant",
+    "myeongjo",
+    "swiss"
+  ],
+  "matchBackground": true,
+  "fallback": "haze",
+  "defaultPalette": "carrara",
+  "palettes": {
+    "carrara": {
+      "bg": "#e8e4de",
+      "ink": "#1d1b19",
+      "accent": "#8a6524",
+      "colors": [
+        "#f1efea",
+        "#878b93",
+        "#26272b",
+        "#d8ab52"
+      ]
+    },
+    "nero": {
+      "bg": "#121315",
+      "ink": "#f2eee6",
+      "accent": "#d9b46a",
+      "colors": [
+        "#2b2c31",
+        "#e6e1d6",
+        "#eeece7",
+        "#dcb05c"
+      ]
+    },
+    "verde": {
+      "bg": "#0f1f1a",
+      "ink": "#f1ede2",
+      "accent": "#dab968",
+      "colors": [
+        "#1e4c3d",
+        "#cfe2d4",
+        "#ebe6da",
+        "#dbb15b"
+      ]
+    },
+    "rosa": {
+      "bg": "#eedfd8",
+      "ink": "#33201d",
+      "accent": "#a2523b",
+      "colors": [
+        "#dca595",
+        "#f7ebe4",
+        "#5a2c2c",
+        "#cf9a52"
+      ]
+    },
+    "lapis": {
+      "bg": "#0d1530",
+      "ink": "#f3efe6",
+      "accent": "#e3c173",
+      "colors": [
+        "#213f86",
+        "#e8d7a2",
+        "#f0ede5",
+        "#e0b55c"
+      ]
+    }
+  },
+  "params": {
+    "motif": {
+      "default": "podium",
+      "note": "podium | balance | arch"
+    }
+  },
+  "layouts": {
+    "landscape": {
+      "layout": "left",
+      "also": [
+        "right",
+        "top",
+        "bottom",
+        "corners",
+        "headline",
+        "baseline",
+        "vertical",
+        "band",
+        "strip"
+      ]
+    },
+    "portrait": {
+      "layout": "top",
+      "also": [
+        "bottom",
+        "corners",
+        "baseline",
+        "vertical",
+        "axis",
+        "side"
+      ]
+    },
+    "square": {
+      "layout": "top",
+      "also": [
+        "bottom",
+        "corners",
+        "baseline",
+        "vertical",
+        "axis",
+        "left",
+        "right"
+      ]
+    }
+  },
+  "motifs": {
+    "podium": {
+      "note": "a stepped plinth with a sphere and a brass ring",
+      "topics": [
+        "luxury",
+        "beauty",
+        "fashion",
+        "celebration"
+      ]
+    },
+    "balance": {
+      "note": "spheres and slabs in equilibrium",
+      "topics": [
+        "wellness",
+        "art",
+        "design",
+        "finance"
+      ]
+    },
+    "arch": {
+      "note": "an arch gateway of veined stone",
+      "topics": [
+        "architecture",
+        "culture",
+        "luxury",
+        "art"
+      ]
+    }
+  },
+  "topics": [
+    "luxury",
+    "beauty",
+    "architecture",
+    "art"
+  ],
+  "cutout": true,
+  "grounds": [
+    "haze",
+    "halftone",
+    "pattern/arches",
+    "pattern/grid",
+    "pattern/dots"
+  ]
+}

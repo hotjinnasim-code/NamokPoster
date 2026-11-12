@@ -1,0 +1,188 @@
+{
+  "id": "inkdrop",
+  "label": "Ink in Water",
+  "engine": "three",
+  "kind": "object",
+  "mood": "high-speed ink photography — pigment blooming in clear water: translucent bells and veils rolled up by a real fluid simulation, their edges gathering into fine curling filaments, one to three inks on a clean pale or black ground. Quiet, sensual, a little scientific. Good for exhibitions and art programmes, literature and calligraphy, beauty and fragrance, classical and jazz nights, science talks, tea and wellness brands.",
+  "tone": "light",
+  "type": "editorial",
+  "types": [
+    "myeongjo",
+    "calli",
+    "luxe",
+    "elegant",
+    "swiss"
+  ],
+  "defaultPalette": "indigo",
+  "palettes": {
+    "indigo": {
+      "bg": "#f6f3ec",
+      "ink": "#161a2e",
+      "accent": "#c8324b",
+      "colors": [
+        "#1f2f8f",
+        "#d43b55",
+        "#f2a13a"
+      ]
+    },
+    "sumi": {
+      "bg": "#f2efe7",
+      "ink": "#1a1a1a",
+      "accent": "#b5382a",
+      "colors": [
+        "#15151b",
+        "#59616c",
+        "#b5382a"
+      ]
+    },
+    "lagoon": {
+      "bg": "#eef5f3",
+      "ink": "#0d2b33",
+      "accent": "#0b7f8c",
+      "colors": [
+        "#0b7f8c",
+        "#2a4fb0",
+        "#49b89a"
+      ]
+    },
+    "noir": {
+      "bg": "#07070a",
+      "ink": "#f5f2ea",
+      "accent": "#ffc56e",
+      "colors": [
+        "#efe9dd",
+        "#ffb14a",
+        "#6fd3ff"
+      ]
+    },
+    "nebula": {
+      "bg": "#0a0a1e",
+      "ink": "#f3efff",
+      "accent": "#ff7ab8",
+      "colors": [
+        "#ff4f9a",
+        "#5b7bff",
+        "#ffd166"
+      ]
+    }
+  },
+  "params": {
+    "motif": {
+      "default": "plume",
+      "note": "plume (one drop rising) | drop (falling from above) | duet (two inks meeting) | band (a horizontal train of puffs)"
+    },
+    "inks": {
+      "default": 2,
+      "note": "how many of the palette's inks are used, 1–3"
+    },
+    "strength": {
+      "default": 1.0,
+      "note": "how concentrated the ink is: 0.5 = pale veils … 2 = dense"
+    },
+    "filaments": {
+      "default": 1.0,
+      "note": "share of ink gathered into crisp edge filaments (0–2.5)"
+    },
+    "ripple": {
+      "default": 1.0,
+      "note": "waviness of the bells round their axis: 0 = smooth, lathed … 2 = frilled"
+    },
+    "size": {
+      "default": 1.0,
+      "note": "how much of the art area the ink fills (0.5–1.3)"
+    },
+    "grain": {
+      "default": 1.0,
+      "note": "film grain (0–2)"
+    }
+  },
+  "motifs": {
+    "plume": {
+      "note": "one ink drop rising: a bell-shaped head trailing a thin stem",
+      "topics": [
+        "art",
+        "science",
+        "wellness",
+        "literature"
+      ]
+    },
+    "drop": {
+      "note": "the same drop falling from above",
+      "topics": [
+        "beauty",
+        "luxury",
+        "design",
+        "food"
+      ]
+    },
+    "duet": {
+      "note": "two inks released towards each other, meeting and wrapping round one another",
+      "topics": [
+        "music",
+        "culture",
+        "fashion",
+        "community"
+      ]
+    },
+    "band": {
+      "note": "a horizontal train of puffs: a cloud band of braided inks",
+      "topics": [
+        "film",
+        "tradition",
+        "education",
+        "autumn"
+      ]
+    }
+  },
+  "topics": [
+    "art",
+    "literature",
+    "beauty",
+    "science",
+    "music",
+    "tradition"
+  ],
+  "vars": {
+    "--grain": 0.06
+  },
+  "layouts": {
+    "landscape": {
+      "layout": "left",
+      "also": [
+        "right",
+        "top",
+        "bottom",
+        "corners",
+        "headline",
+        "baseline",
+        "vertical",
+        "axis",
+        "band",
+        "strip"
+      ]
+    },
+    "portrait": {
+      "layout": "top",
+      "also": [
+        "bottom",
+        "corners",
+        "baseline",
+        "vertical",
+        "axis",
+        "side"
+      ]
+    },
+    "square": {
+      "layout": "top",
+      "also": [
+        "bottom",
+        "corners",
+        "baseline",
+        "vertical",
+        "axis",
+        "left",
+        "right"
+      ]
+    }
+  }
+}

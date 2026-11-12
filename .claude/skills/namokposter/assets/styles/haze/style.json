@@ -1,0 +1,141 @@
+{
+  "id": "haze",
+  "label": "Gradient Haze",
+  "engine": "three",
+  "mood": "quiet, atmospheric, type-first — large soft orbs of colour pooling around the copy and dissolving into a flat ground, with one or two hairline circles for structure. Good for typography-led posters: talks and lecture series, editorial covers, product statements, playlists, wellness, anything where the words are the hero.",
+  "tone": "light",
+  "type": "editorial",
+  "types": [
+    "swiss",
+    "slim",
+    "maru",
+    "humanist",
+    "elegant",
+    "myeongjo",
+    "brutal"
+  ],
+  "defaultPalette": "dawn",
+  "palettes": {
+    "dawn": {
+      "bg": "#f6f1ea",
+      "ink": "#1b1620",
+      "accent": "#c63419",
+      "colors": [
+        "#ff7a45",
+        "#ff4f8b",
+        "#7a5cff",
+        "#ffc24a"
+      ]
+    },
+    "lagoon": {
+      "bg": "#eef4f5",
+      "ink": "#0c1c26",
+      "accent": "#0b5fc4",
+      "colors": [
+        "#2f7bff",
+        "#19c9c2",
+        "#8f7bff",
+        "#b6f0d8"
+      ]
+    },
+    "orchard": {
+      "bg": "#f4f2e6",
+      "ink": "#1a2013",
+      "accent": "#286e33",
+      "colors": [
+        "#8fd14f",
+        "#ffd24a",
+        "#2fae7a",
+        "#ff9a5c"
+      ]
+    },
+    "midnight": {
+      "bg": "#07080f",
+      "ink": "#f2f3fb",
+      "accent": "#9db4ff",
+      "colors": [
+        "#3355ff",
+        "#8a4dff",
+        "#00b8d4",
+        "#ff5fa2"
+      ]
+    },
+    "embers": {
+      "bg": "#0d0807",
+      "ink": "#fff4ea",
+      "accent": "#ffb07a",
+      "colors": [
+        "#ff4d2e",
+        "#ff9a3d",
+        "#c2247a",
+        "#ffd27a"
+      ]
+    }
+  },
+  "params": {
+    "strength": {
+      "default": 1,
+      "note": "how much colour: 0.6 = a whisper … 1.3 = saturated"
+    },
+    "spread": {
+      "default": 1,
+      "note": "size of the colour field around the focus (0.7 = tight pool … 1.4 = fills the frame)"
+    },
+    "accent": {
+      "default": "rings",
+      "note": "hairline accents: rings (circle + arc) | grid (circle + grid fragment) | circle | both | none"
+    },
+    "line": {
+      "default": 1,
+      "note": "hairline weight multiplier"
+    }
+  },
+  "vars": {
+    "--scrim": 0,
+    "--scrim-center": 0
+  },
+  "layouts": {
+    "landscape": {
+      "layout": "center",
+      "also": [
+        "left",
+        "right",
+        "top",
+        "bottom",
+        "corners",
+        "headline",
+        "baseline",
+        "vertical",
+        "axis",
+        "band",
+        "strip"
+      ]
+    },
+    "portrait": {
+      "layout": "center",
+      "also": [
+        "top",
+        "bottom",
+        "corners",
+        "baseline",
+        "vertical",
+        "axis",
+        "side"
+      ]
+    },
+    "square": {
+      "layout": "center",
+      "also": [
+        "top",
+        "bottom",
+        "corners",
+        "baseline",
+        "vertical",
+        "axis",
+        "left",
+        "right"
+      ]
+    }
+  },
+  "ground": true
+}

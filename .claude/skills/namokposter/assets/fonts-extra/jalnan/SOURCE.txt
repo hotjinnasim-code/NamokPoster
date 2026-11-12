@@ -1,0 +1,11 @@
+여기어때 잘난체 (Jalnan 2) — GC Company (여기어때컴퍼니)
+Publisher's page: https://gccompany.co.kr/font
+Licence kind: publisher-redistributable
+Fetched: 2026-11-12
+
+Jalnan2.otf (weight 400)
+  published as: Jalnan2/Jalnan2.otf in https://gccompany.co.kr/media/files/uK4mTd9JFejCoAXNZyXHV6glsI.zip
+  sha256 of the published file: fbb5e40dce9602bc1bc4aa48d930a0ece789fe12f0e473a41e95b73b69e81e62 (2760076 bytes)
+  in this folder as published, unchanged
+
+여기어때_잘난체_사용가이드.pdf: the publisher's licence document, unchanged (sha256 96013b3acb50a169b6b8152d296baaeb937566d488e57e1302c95ba841f93d85)

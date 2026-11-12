@@ -1,0 +1,21 @@
+에스코어 드림 (S-Core Dream) — S-Core Co., Ltd.
+Publisher's page: https://s-core.co.kr/company/font2/
+Licence kind: publisher-redistributable
+Fetched: 2026-11-12
+
+SCDream4.otf (weight 400)
+  published as: SCDream4.otf in https://s-core.co.kr/wp-content/uploads/2020/03/S-Core_Dream_OTF.zip
+  sha256 of the published file: 1dc288e8cfdf96eb083c0b016fb5f107bc83208e748b6a61422404b9e42a95a4 (729724 bytes)
+  in this folder as published, unchanged
+
+SCDream6.otf (weight 700)
+  published as: SCDream6.otf in https://s-core.co.kr/wp-content/uploads/2020/03/S-Core_Dream_OTF.zip
+  sha256 of the published file: 7dd3e0240002feedd37d0f33033a44e17b1ab11f84a93acf8482184adc33aa1a (743480 bytes)
+  in this folder as published, unchanged
+
+SCDream9.otf (weight 900)
+  published as: SCDream9.otf in https://s-core.co.kr/wp-content/uploads/2020/03/S-Core_Dream_OTF.zip
+  sha256 of the published file: 5c246f2a17dd1eca7ecebcae1d180e8c27108533c4ad098702904bea5aee331a (742664 bytes)
+  in this folder as published, unchanged
+
+S-Core-Dream-licence.png: the publisher's licence document, unchanged (sha256 6b706afa8929b2b63b46276ac862da5ab7a3f79da1256b73057cd6f50baf2257)

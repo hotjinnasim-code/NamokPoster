@@ -1,0 +1,25 @@
+/* square — the square-cut gothic of public notices, company briefings and campus banners (네모 고딕; 나눔스퀘어 네오): terminals cut flat, counters squared, a headline that states a fact. One family: NanumSquare Neo Heavy over Regular, its own Latin and figures. */
+.poster[data-type="square"] {
+  --font-title: "NanumSquareNeo", "Pretendard", sans-serif;   /* one family: its own Latin and figures */
+  --font-body: "NanumSquareNeo", "Pretendard", sans-serif;
+  --font-label-ko: "NanumSquareNeo", "Pretendard", sans-serif;
+  --title-size: 10.8; --title-weight: 900; --title-leading: 1.06; --title-tracking: -0.02em;
+  --title-leading-ko: 1.2; --title-tracking-ko: -0.045em; --title-wordspace-ko: 0.04em;
+  --eyebrow-size: 1.5; --eyebrow-weight: 900; --eyebrow-tracking: 0.1em; --eyebrow-tracking-ko: 0.02em;
+  --subtitle-size: 2.86; --subtitle-weight: 400; --subtitle-leading: 1.36; --subtitle-tracking: -0.01em; --subtitle-tracking-ko: -0.03em;
+  --body-size: 1.8; --body-weight: 400; --body-leading: 1.62; --body-tracking-ko: -0.02em;
+  --meta-size: 2.62; --meta-weight: 400; --meta-label-weight: 900;
+  --footer-size: 1.46; --footer-weight: 400; --footer-tracking: 0.02em; --footer-rule: 1;
+  --gap-eyebrow: 2.6; --gap-subtitle: 2.6; --grain: 0.1;
+}
+.poster[data-type="square"] .title em { color: var(--c-accent); }
+/* a square of the accent colour before the label, the bullet of a briefing slide */
+.poster[data-type="square"] .eyebrow { display: flex; align-items: center; gap: 0.7em; color: var(--c-ink); }
+.poster[data-type="square"] .eyebrow::before { content: ""; width: 0.72em; height: 0.72em; background: var(--c-accent); flex: none; }
+.poster[data-type="square"] [data-halign="center"] > .eyebrow { justify-content: center; }
+.poster[data-type="square"] .main[data-mode="vertical"] .eyebrow::before { display: none; }
+.poster[data-type="square"] .subtitle { color: color-mix(in srgb, var(--c-ink) 92%, transparent); }
+.poster[data-type="square"] .meta dt[data-script="ko"], .poster[data-type="square"] .meta dd[data-script="ko"] { letter-spacing: -0.03em; }
+.poster[data-type="square"] .cta { border-radius: 0; background: var(--c-ink); color: var(--c-paper); font-weight: 900; }
+.poster[data-type="square"] .badge { border-radius: 0; font-weight: 900; letter-spacing: 0.04em; }
+.poster[data-type="square"] .bottom.ruled { border-top: calc(var(--u) * 0.24) solid var(--c-ink); padding-top: calc(var(--u) * 1.6); }

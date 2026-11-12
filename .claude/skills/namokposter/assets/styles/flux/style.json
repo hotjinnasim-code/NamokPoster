@@ -1,0 +1,117 @@
+{
+  "id": "flux",
+  "label": "Neon Flux",
+  "engine": "three",
+  "kind": "picture",
+  "mood": "dark, electric, high-energy — thousands of glowing light trails swirling through a flow field. Good for tech conferences, music/club nights, gaming, hackathons, launches that want drama.",
+  "tone": "dark",
+  "type": "impact",
+  "types": ["techno", "elegant", "brutal", "esamanru"],
+  "defaultPalette": "ultraviolet",
+  "palettes": {
+    "ultraviolet": {
+      "bg": "#06050e",
+      "ink": "#f5f3ff",
+      "accent": "#c4b0ff",
+      "colors": [
+        "#7c4dff",
+        "#ff3d9a",
+        "#00e5ff",
+        "#ffd166"
+      ]
+    },
+    "ember": {
+      "bg": "#0c0605",
+      "ink": "#fff5ea",
+      "accent": "#ffb347",
+      "colors": [
+        "#ff5a1f",
+        "#ffb300",
+        "#ff2d55",
+        "#ffe8a3"
+      ]
+    },
+    "aqua": {
+      "bg": "#030d16",
+      "ink": "#eefcff",
+      "accent": "#5ff0ff",
+      "colors": [
+        "#00e5ff",
+        "#00ffa3",
+        "#2f6bff",
+        "#b6fff0"
+      ]
+    },
+    "lime": {
+      "bg": "#060905",
+      "ink": "#f6ffe9",
+      "accent": "#c6ff3d",
+      "colors": [
+        "#c6ff3d",
+        "#3dffb5",
+        "#ffe93d",
+        "#ffffff"
+      ]
+    },
+    "mono": {
+      "bg": "#08080a",
+      "ink": "#ffffff",
+      "accent": "#d6d6dc",
+      "colors": [
+        "#ffffff",
+        "#9aa0a6",
+        "#e8e8e8",
+        "#6d7178"
+      ]
+    }
+  },
+  "params": {
+    "density": {
+      "default": 1.0,
+      "note": "0.5 = airy … 2 = dense trails"
+    },
+    "turbulence": {
+      "default": 1.0,
+      "note": "0 = clean orbit … 2 = chaotic"
+    },
+    "bloom": {
+      "default": 1.0,
+      "note": "glow strength"
+    }
+  },
+  "vars": {
+    "--scrim": 0.55
+  },
+  "layouts": {
+    "landscape": {
+      "layout": "left",
+      "also": [
+        "top",
+        "bottom",
+        "corners",
+        "headline",
+        "vertical",
+        "axis",
+        "band",
+        "strip"
+      ]
+    },
+    "portrait": {
+      "layout": "top",
+      "also": [
+        "corners",
+        "vertical",
+        "axis",
+        "side"
+      ]
+    },
+    "square": {
+      "layout": "top",
+      "also": [
+        "corners",
+        "vertical",
+        "axis"
+      ]
+    }
+  }
+}

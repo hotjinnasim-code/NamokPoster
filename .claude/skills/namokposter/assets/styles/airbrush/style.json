@@ -1,0 +1,196 @@
+{
+  "id": "airbrush",
+  "label": "Airbrush Space Art",
+  "engine": "three",
+  "mood": "retro science-fiction airbrush — soft sprayed gradients, fine grain and glowing rims, as on 1970s paperback covers: a ringed planet in a star field, moons rising over alien dunes, or an orrery of planets on fine orbit lines; clouds and glows thin out behind the copy. Good for science and tech events, film and music nights, launches, sci-fi and gaming.",
+  "kind": "picture",
+  "tone": "dark",
+  "type": "elegant",
+  "types": [
+    "techno",
+    "luxe",
+    "impact"
+  ],
+  "defaultPalette": "nebula",
+  "palettes": {
+    "nebula": {
+      "bg": "#070a1c",
+      "ink": "#f2f0ff",
+      "accent": "#ffb86b",
+      "colors": [
+        "#3a2a8c",
+        "#c0398f",
+        "#e2703a",
+        "#f6d9b0"
+      ]
+    },
+    "ember": {
+      "bg": "#0d0708",
+      "ink": "#fff3e8",
+      "accent": "#ffc978",
+      "colors": [
+        "#8a1f2e",
+        "#d4552a",
+        "#5d7fb8",
+        "#dfe6f5"
+      ]
+    },
+    "glacier": {
+      "bg": "#050d18",
+      "ink": "#eef7ff",
+      "accent": "#9be7ff",
+      "colors": [
+        "#12466e",
+        "#2a8fa8",
+        "#8fb9d6",
+        "#f2fbff"
+      ]
+    },
+    "jade": {
+      "bg": "#04100f",
+      "ink": "#effff8",
+      "accent": "#ffd98a",
+      "colors": [
+        "#0e5c58",
+        "#3aa17e",
+        "#e0705a",
+        "#f4d6b8"
+      ]
+    },
+    "pastel": {
+      "bg": "#e9e3f6",
+      "ink": "#2a2350",
+      "accent": "#d6456b",
+      "colors": [
+        "#b9c8f5",
+        "#f6c1d6",
+        "#f4a58a",
+        "#fff3c9"
+      ]
+    }
+  },
+  "params": {
+    "motif": {
+      "default": "planet",
+      "note": "planet | moons | orbits — what the picture shows"
+    },
+    "ring": {
+      "default": true,
+      "note": "planet: ringed planet; the ring is turned and sized so it clears the copy (false = plain planet, a little larger). orbits: a ring round the largest planet"
+    },
+    "moon": {
+      "default": true,
+      "note": "planet: a small crescent moon near the planet"
+    },
+    "nebula": {
+      "default": 1.0,
+      "note": "nebula density: 0 = stars only … 1.5 = heavy clouds"
+    },
+    "stars": {
+      "default": 1.0,
+      "note": "star density and number of bright stars"
+    },
+    "bands": {
+      "default": 1.0,
+      "note": "cloud bands on the planets: 0.5 = broad … 2 = many fine bands"
+    },
+    "size": {
+      "default": 1.0,
+      "note": "size multiplier of the hero (planet, big moon, or the whole orrery)"
+    },
+    "flare": {
+      "default": 1.0,
+      "note": "soft round glow of the bright stars and of the sunlit limb, 0 = none (there are no spikes or streaks)"
+    },
+    "moons": {
+      "default": 3,
+      "note": "moons: how many moons rise (1–3)"
+    },
+    "planets": {
+      "default": 5,
+      "note": "orbits: number of planets / orbit lines (3–6)"
+    }
+  },
+  "vars": {
+    "--scrim-center": 0.25,
+    "--grain": 0.1
+  },
+  "layouts": {
+    "landscape": {
+      "layout": "left",
+      "also": [
+        "right",
+        "top",
+        "bottom",
+        "corners",
+        "headline",
+        "baseline",
+        "vertical",
+        "axis",
+        "band",
+        "strip"
+      ]
+    },
+    "portrait": {
+      "layout": "top",
+      "also": [
+        "bottom",
+        "corners",
+        "baseline",
+        "vertical",
+        "axis",
+        "side"
+      ]
+    },
+    "square": {
+      "layout": "top",
+      "also": [
+        "bottom",
+        "corners",
+        "baseline",
+        "vertical",
+        "axis",
+        "left",
+        "right"
+      ]
+    }
+  },
+  "motifs": {
+    "planet": {
+      "note": "a large ringed planet with a sunlit limb, a small moon, stars and nebula",
+      "topics": [
+        "science",
+        "tech",
+        "film",
+        "music",
+        "gaming"
+      ]
+    },
+    "moons": {
+      "note": "two or three moons rising over soft alien dunes, a warm glow along the horizon",
+      "topics": [
+        "film",
+        "music",
+        "nightlife",
+        "literature",
+        "travel"
+      ]
+    },
+    "orbits": {
+      "note": "a small sun with planets on fine elliptical orbit lines, like an orrery",
+      "topics": [
+        "science",
+        "education",
+        "tech",
+        "kids"
+      ]
+    }
+  },
+  "topics": [
+    "science",
+    "tech",
+    "film",
+    "gaming",
+    "retro"
+  ]
+}

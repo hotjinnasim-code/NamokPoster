@@ -1,0 +1,156 @@
+{
+  "id": "metal",
+  "label": "Machined Metal",
+  "engine": "blender",
+  "kind": "object",
+  "mood": "machined and anodised metal — turned and brushed aluminium, anodised colour, knurling and chamfers under strip lights; exact, engineered, cool. Good for tech and hardware launches, engineering and science events, audio and music gear, automotive, finance.",
+  "tone": "dark",
+  "type": "techno",
+  "types": ["swiss", "square", "impact", "bold", "elegant", "dream"],
+  "matchBackground": true,
+  "fallback": "bauhaus",
+  "defaultPalette": "graphite",
+  "palettes": {
+    "graphite": {
+      "bg": "#16181b",
+      "ink": "#f1f2f3",
+      "accent": "#ff7a2f",
+      "colors": [
+        "#ff6a1c",
+        "#30343a",
+        "#c9a25c",
+        "#d6d9dd"
+      ]
+    },
+    "silver": {
+      "bg": "#e3e5e8",
+      "ink": "#16181b",
+      "accent": "#d83a1e",
+      "colors": [
+        "#e2432a",
+        "#23262b",
+        "#2f6fd6",
+        "#dadde1"
+      ]
+    },
+    "cobalt": {
+      "bg": "#0b111f",
+      "ink": "#eef2f8",
+      "accent": "#5d9bff",
+      "colors": [
+        "#2f6bff",
+        "#141821",
+        "#22c3c9",
+        "#d5dae2"
+      ]
+    },
+    "champagne": {
+      "bg": "#eae4d9",
+      "ink": "#221d16",
+      "accent": "#9a6a2a",
+      "colors": [
+        "#c9a36a",
+        "#5e4636",
+        "#8c8f6a",
+        "#dfd9cf"
+      ]
+    },
+    "violet": {
+      "bg": "#130f1c",
+      "ink": "#f3f0f8",
+      "accent": "#b18cff",
+      "colors": [
+        "#8558ff",
+        "#1d1a26",
+        "#ff4f9d",
+        "#d8d6e0"
+      ]
+    }
+  },
+  "params": {
+    "motif": {
+      "default": "dial",
+      "note": "dial | rods | blocks"
+    }
+  },
+  "layouts": {
+    "landscape": {
+      "layout": "left",
+      "also": [
+        "right",
+        "top",
+        "bottom",
+        "corners",
+        "headline",
+        "baseline",
+        "vertical",
+        "axis",
+        "band",
+        "strip"
+      ]
+    },
+    "portrait": {
+      "layout": "top",
+      "also": [
+        "bottom",
+        "corners",
+        "baseline",
+        "vertical",
+        "axis",
+        "side"
+      ]
+    },
+    "square": {
+      "layout": "top",
+      "also": [
+        "bottom",
+        "corners",
+        "baseline",
+        "vertical",
+        "axis",
+        "left",
+        "right"
+      ]
+    }
+  },
+  "motifs": {
+    "dial": {
+      "note": "a stack of precision rings and discs, like an instrument dial",
+      "topics": [
+        "tech",
+        "design",
+        "music",
+        "business"
+      ]
+    },
+    "rods": {
+      "note": "turned tubes and rods standing on a plate",
+      "topics": [
+        "architecture",
+        "science",
+        "business"
+      ]
+    },
+    "blocks": {
+      "note": "a landscape of machined blocks with chamfers and knurling",
+      "topics": [
+        "tech",
+        "city",
+        "design"
+      ]
+    }
+  },
+  "topics": [
+    "tech",
+    "design",
+    "business",
+    "science"
+  ],
+  "cutout": true,
+  "grounds": [
+    "haze",
+    "halftone",
+    "pattern/grid",
+    "pattern/dots"
+  ]
+}

@@ -1,0 +1,183 @@
+{
+  "id": "caustics",
+  "label": "Water Caustics",
+  "engine": "three",
+  "kind": "picture",
+  "mood": "sunlit water seen from above — bright caustic nets of refracted light rippling over a pool floor, sand or a plain ground, with gentle colour fringes, sun glints and the shadow of something floating. The light is computed, not painted: rays are refracted through a wave field and gather where the water focuses them. Fresh, summery, clean. Good for summer festivals and pool parties, swimming and water sports, resorts and travel, spas and wellness, drinks, beauty and glassware, design programmes.",
+  "tone": "light",
+  "type": "bold",
+  "types": ["swiss", "round", "slim", "friendly", "editorial", "elegant", "retro", "gmarket"],
+  "defaultPalette": "pool",
+  "palettes": {
+    "pool": {
+      "bg": "#63c9d8",
+      "ink": "#052a40",
+      "accent": "#ff5a3c",
+      "colors": [
+        "#1479b8",
+        "#e6faf6",
+        "#ff5a3c",
+        "#ffd23f"
+      ]
+    },
+    "lagoon": {
+      "bg": "#8edbc3",
+      "ink": "#06363a",
+      "accent": "#f2603c",
+      "colors": [
+        "#1f9c8f",
+        "#effcec",
+        "#f2603c",
+        "#ffe07a"
+      ]
+    },
+    "shore": {
+      "bg": "#7fd0cf",
+      "ink": "#0a3140",
+      "accent": "#e8623a",
+      "colors": [
+        "#2191ad",
+        "#f3e3bd",
+        "#e8623a",
+        "#fff3d6"
+      ]
+    },
+    "midnight": {
+      "bg": "#0d2f52",
+      "ink": "#eaf6ff",
+      "accent": "#ffb84d",
+      "colors": [
+        "#061a33",
+        "#7fe0f0",
+        "#ffb84d",
+        "#ff6f91"
+      ]
+    },
+    "prism": {
+      "bg": "#f5f2ec",
+      "ink": "#18181f",
+      "accent": "#ff4f6d",
+      "colors": [
+        "#19b5e6",
+        "#ff4f9a",
+        "#ffc928",
+        "#7b5cff"
+      ]
+    }
+  },
+  "params": {
+    "motif": {
+      "default": "pool",
+      "note": "pool (tiles, lane line, swim ring) | sand (shallow sea over rippled sand, fish) | gel (abstract pools of coloured liquid on a plain ground)"
+    },
+    "waves": {
+      "default": 1.0,
+      "note": "how strongly the water focuses the light: 0.5 = soft dapples … 1.8 = sharp, busy nets"
+    },
+    "scale": {
+      "default": 1.0,
+      "note": "size of the waves and so of the caustic cells (0.5–2)"
+    },
+    "fringe": {
+      "default": 1.0,
+      "note": "colour fringes on the caustic lines (0 = none)"
+    },
+    "float": {
+      "default": "auto",
+      "note": "what floats and casts a shadow: auto | ring | fish | none"
+    },
+    "glint": {
+      "default": 1.0,
+      "note": "sun glints on the surface (0–2)"
+    },
+    "tiles": {
+      "default": 1.0,
+      "note": "pool motif: tile density (0.5 = large tiles … 2 = mosaic)"
+    },
+    "grain": {
+      "default": 1.0,
+      "note": "film grain (0–2)"
+    }
+  },
+  "motifs": {
+    "pool": {
+      "note": "square pool tiles, a darker lane line, a swim ring and its shadow",
+      "topics": [
+        "summer",
+        "sports",
+        "celebration",
+        "kids"
+      ]
+    },
+    "sand": {
+      "note": "shallow sea over rippled sand shading into deeper water, a few small fish",
+      "topics": [
+        "travel",
+        "nature",
+        "wellness",
+        "outdoor"
+      ],
+      "palette": "shore"
+    },
+    "gel": {
+      "note": "abstract: pools of coloured liquid on a plain ground, each throwing its own caustic net",
+      "topics": [
+        "design",
+        "beauty",
+        "science",
+        "art"
+      ],
+      "palette": "prism",
+      "type": "swiss"
+    }
+  },
+  "topics": [
+    "summer",
+    "travel",
+    "wellness",
+    "sports",
+    "beauty",
+    "design"
+  ],
+  "vars": {
+    "--grain": 0.05
+  },
+  "layouts": {
+    "landscape": {
+      "layout": "left",
+      "also": [
+        "right",
+        "top",
+        "bottom",
+        "corners",
+        "headline",
+        "baseline",
+        "vertical",
+        "axis",
+        "band",
+        "strip"
+      ]
+    },
+    "portrait": {
+      "layout": "top",
+      "also": [
+        "bottom",
+        "corners",
+        "baseline",
+        "axis",
+        "side"
+      ]
+    },
+    "square": {
+      "layout": "top",
+      "also": [
+        "bottom",
+        "corners",
+        "baseline",
+        "axis",
+        "left",
+        "right"
+      ]
+    }
+  }
+}

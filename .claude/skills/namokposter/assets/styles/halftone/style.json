@@ -1,0 +1,131 @@
+{
+  "id": "halftone",
+  "label": "Riso Halftone Orbs",
+  "engine": "three",
+  "mood": "tactile, lo-fi, independent — big overlapping spheres printed as halftone dot screens in two or three spot inks, slightly out of register, on paper. Good for zines, indie music, exhibitions, film nights, book fairs, record sleeves, anything that should feel hand-printed.",
+  "tone": "light",
+  "type": "swiss",
+  "types": ["brutal", "fatface", "classic", "comic", "jalnan", "yeonsung", "retro", "impact", "editorial"],
+  "defaultPalette": "fluoro",
+  "palettes": {
+    "fluoro": {
+      "bg": "#f3ede0",
+      "ink": "#17171b",
+      "accent": "#0b6fb3",
+      "colors": [
+        "#ff48b0",
+        "#0078bf",
+        "#ffe100"
+      ]
+    },
+    "sunset": {
+      "bg": "#f4eee2",
+      "ink": "#16181c",
+      "accent": "#00727a",
+      "colors": [
+        "#ff665e",
+        "#00838a",
+        "#ffb511"
+      ]
+    },
+    "duotone": {
+      "bg": "#efe9dd",
+      "ink": "#15161b",
+      "accent": "#2f4f9e",
+      "colors": [
+        "#f15060",
+        "#3255a4"
+      ]
+    },
+    "kelp": {
+      "bg": "#eef0e4",
+      "ink": "#0c1a14",
+      "accent": "#00804a",
+      "colors": [
+        "#00a95c",
+        "#235ba8",
+        "#ffb511"
+      ]
+    },
+    "blackpaper": {
+      "bg": "#17161a",
+      "ink": "#f3efe6",
+      "accent": "#ff7ab8",
+      "colors": [
+        "#ff5fa8",
+        "#3fb2ff",
+        "#ffe14d"
+      ]
+    }
+  },
+  "params": {
+    "orbs": {
+      "default": 3,
+      "note": "number of spheres, 1–3"
+    },
+    "dot": {
+      "default": 1.0,
+      "note": "halftone pitch multiplier: 0.6 = fine screen … 2 = coarse pop-art dots"
+    },
+    "misregister": {
+      "default": 1.0,
+      "note": "how far the ink layers slip out of register: 0 = perfect … 3 = sloppy"
+    },
+    "shade": {
+      "default": 1.0,
+      "note": "strength of the second-ink shadow on each sphere, 0–1.3"
+    },
+    "wear": {
+      "default": 0.5,
+      "note": "uneven ink lay-down: 0 = perfectly even … 1 = patchy, well-used drum"
+    },
+    "angle": {
+      "default": 0,
+      "note": "rotates all screen angles, degrees"
+    }
+  },
+  "vars": {
+    "--scrim-center": 0
+  },
+  "layouts": {
+    "landscape": {
+      "layout": "left",
+      "also": [
+        "right",
+        "top",
+        "bottom",
+        "corners",
+        "headline",
+        "baseline",
+        "vertical",
+        "axis",
+        "band",
+        "strip"
+      ]
+    },
+    "portrait": {
+      "layout": "top",
+      "also": [
+        "bottom",
+        "corners",
+        "baseline",
+        "vertical",
+        "axis",
+        "side"
+      ]
+    },
+    "square": {
+      "layout": "top",
+      "also": [
+        "bottom",
+        "corners",
+        "baseline",
+        "vertical",
+        "axis",
+        "left",
+        "right"
+      ]
+    }
+  },
+  "ground": true
+}

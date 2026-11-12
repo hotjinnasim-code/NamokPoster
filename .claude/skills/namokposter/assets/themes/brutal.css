@@ -1,0 +1,24 @@
+/* brutal — the headline is the image: ultra-heavy, tight, edge to edge, thick rules. */
+.poster[data-type="brutal"] {
+  --font-title: "Archivo", "Black Han Sans", "Pretendard", sans-serif;
+  --font-title-ko: "Archivo KR", "Black Han Sans", "Pretendard", sans-serif;
+  --font-eyebrow: "Archivo", "Pretendard", sans-serif;
+  --title-size: 13.5; --title-weight: 900; --title-leading: 0.9; --title-tracking: -0.035em; --title-case: uppercase; --title-fit-max: 1.34;
+  --title-leading-ko: 1.1; --title-tracking-ko: -0.025em; --title-wordspace-ko: 0.02em; --title-weight-ko: 400;
+  --eyebrow-size: 1.47; --eyebrow-weight: 800; --eyebrow-tracking: 0.04em; --eyebrow-tracking-ko: 0em;
+  --subtitle-size: 2.76; --subtitle-weight: 700; --subtitle-leading: 1.26; --subtitle-tracking: -0.02em; --subtitle-weight-ko: 700;
+  --body-size: 1.8; --body-weight: 500; --body-leading: 1.5; --body-leading-ko: 1.62; --body-weight-ko: 500;
+  --footer-size: 1.52; --footer-weight: 800; --footer-tracking: 0; --footer-rule: 1; --grain: 0.18;
+  --gap-eyebrow: 1.8; --gap-subtitle: 2.2; --margin: 6.5;
+}
+.poster[data-type="brutal"] .title { font-stretch: 68%; word-spacing: 0.12em; }   /* condensed caps set this tight need their word gaps back */
+.poster[data-type="brutal"] .title[data-script="ko"] { word-spacing: 0; }
+.poster[data-type="brutal"] .title em { color: var(--c-accent); }
+.poster[data-type="brutal"] .eyebrow { color: var(--c-paper); background: var(--c-ink); padding: 0.42em 0.8em; }
+.poster[data-type="brutal"] .subtitle, .poster[data-type="brutal"] .footer { color: var(--c-ink); }
+.poster[data-type="brutal"] .body { color: color-mix(in srgb, var(--c-ink) 84%, transparent); }
+.poster[data-type="brutal"] .cta { border-radius: 0; text-transform: uppercase; font-weight: 800; }
+.poster[data-type="brutal"] .badge { border-radius: 0; background: var(--c-ink); color: var(--c-paper); }
+.poster[data-type="brutal"] .bottom.ruled { border-top: calc(var(--u) * 0.7) solid var(--c-ink); padding-top: calc(var(--u) * 1.5); }
+.poster[data-type="brutal"] .meta.bar { border-top-width: calc(var(--u) * 0.4); border-top-color: var(--c-ink); }
+.poster[data-type="brutal"] { --meta-weight: 600; --meta-label-weight: 800; }

@@ -1,0 +1,190 @@
+{
+  "id": "najeon",
+  "label": "Mother-of-Pearl Inlay (나전칠기)",
+  "engine": "three",
+  "kind": "picture",
+  "context": "korean",
+  "mood": "Korean mother-of-pearl inlay on polished lacquer — cut shell feathers and petals, snapped strips and crackled fragments that shimmer pink, green and blue in deep black, oxblood, green or navy lacquer, framed by an inlaid border. Precious, traditional, quietly luxurious. Good for traditional music and heritage programmes, museum and craft exhibitions, galas and awards, seasonal greetings, luxury and beauty launches, weddings.",
+  "tone": "dark",
+  "type": "myeongjo",
+  "types": [
+    "elegant",
+    "calli",
+    "luxe",
+    "editorial",
+    "brush"
+  ],
+  "defaultPalette": "black",
+  "palettes": {
+    "black": {
+      "bg": "#0d0c0c",
+      "ink": "#efe9df",
+      "accent": "#d9b46a",
+      "colors": [
+        "#f3c3d6",
+        "#b4ead2",
+        "#a6c4f4",
+        "#e9dcb4"
+      ]
+    },
+    "oxblood": {
+      "bg": "#3a0e10",
+      "ink": "#f4e8dc",
+      "accent": "#e6be72",
+      "colors": [
+        "#f6c6cf",
+        "#c9ecd6",
+        "#b4c8f2",
+        "#f1dfb0"
+      ]
+    },
+    "green": {
+      "bg": "#0e2a22",
+      "ink": "#eef0e6",
+      "accent": "#e3c37a",
+      "colors": [
+        "#bfeedd",
+        "#a9d0f4",
+        "#f1c6da",
+        "#e7e3b4"
+      ]
+    },
+    "navy": {
+      "bg": "#0e1830",
+      "ink": "#eef0f6",
+      "accent": "#e2bf78",
+      "colors": [
+        "#a8c8f8",
+        "#c3a9ee",
+        "#f3c5d8",
+        "#b5ecd8"
+      ]
+    },
+    "ivory": {
+      "bg": "#efe6d2",
+      "ink": "#2a1d16",
+      "accent": "#8e2a22",
+      "colors": [
+        "#e98fb4",
+        "#6fc6a6",
+        "#7d9de8",
+        "#d9b66e"
+      ]
+    }
+  },
+  "params": {
+    "motif": {
+      "default": "cranes",
+      "note": "cranes | blossom | lattice | waves"
+    },
+    "crackle": {
+      "default": 1,
+      "note": "how strongly the crackled (타발) shell shows its cracks, 0–2"
+    },
+    "sheen": {
+      "default": 1,
+      "note": "strength of the pink–green–blue iridescence, 0 = silvery … 2 = vivid"
+    },
+    "gloss": {
+      "default": 1,
+      "note": "the polished reflection across the lacquer, 0–2"
+    },
+    "border": {
+      "default": true,
+      "note": "an inlaid frame of strips and lozenges round the picture"
+    },
+    "density": {
+      "default": 1,
+      "note": "how many clouds, twigs or lattice cells, 0.5–1.6"
+    }
+  },
+  "layouts": {
+    "landscape": {
+      "layout": "left",
+      "also": [
+        "right",
+        "top",
+        "bottom",
+        "corners",
+        "headline",
+        "baseline",
+        "vertical",
+        "axis",
+        "band",
+        "strip"
+      ]
+    },
+    "portrait": {
+      "layout": "top",
+      "also": [
+        "bottom",
+        "corners",
+        "baseline",
+        "vertical",
+        "axis",
+        "side"
+      ]
+    },
+    "square": {
+      "layout": "top",
+      "also": [
+        "bottom",
+        "corners",
+        "baseline",
+        "vertical",
+        "axis",
+        "left",
+        "right"
+      ]
+    }
+  },
+  "motifs": {
+    "cranes": {
+      "note": "two cranes in flight among scroll clouds before a crackled shell moon (십장생)",
+      "topics": [
+        "tradition",
+        "culture",
+        "celebration",
+        "music",
+        "luxury"
+      ]
+    },
+    "blossom": {
+      "note": "a plum branch in flower: crackled bough, strip twigs, five-petal blossoms",
+      "topics": [
+        "spring",
+        "tradition",
+        "beauty",
+        "wellness",
+        "celebration"
+      ]
+    },
+    "lattice": {
+      "note": "abstract: a roundel of tortoise-shell lattice with flowers, ringed by lozenges",
+      "topics": [
+        "design",
+        "architecture",
+        "luxury",
+        "fashion",
+        "craft"
+      ]
+    },
+    "waves": {
+      "note": "mountain peaks above rows of curling waves, a moon and a cloud",
+      "topics": [
+        "nature",
+        "travel",
+        "tradition",
+        "outdoor"
+      ]
+    }
+  },
+  "topics": [
+    "tradition",
+    "culture",
+    "craft",
+    "luxury",
+    "art",
+    "celebration"
+  ]
+}

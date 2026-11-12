@@ -1,0 +1,230 @@
+{
+  "id": "stamp",
+  "label": "Stamps & Postmark",
+  "engine": "html",
+  "kind": "object",
+  "mood": "the event as a piece of post — a large postage stamp with perforated edges, a paper border and a hairline frame, a small flat vignette in two or three inks (a disc over wavy bands, two hills, a sprig of five leaves, three arches on a line) and the date as its denomination in the poster's display face, cancelled by a hand-struck round postmark that carries the venue round its ring, the date in the middle and wavy cancellation lines running off to one side; also a block of stamps still joined along their perforations with one torn out, each in another pairing of the inks, or the corner of an airmail envelope with its slanted two-colour border and a PAR AVION label. Flat printing inks and exact geometry drawn in SVG, vector in the PDF; the words are the copy's own and nothing imitates a real country's stamp. Quiet and literary. Good for book fairs, readings and letter-writing, travel and exchange programmes, markets and craft fairs, exhibitions and small concerts, autumn and winter programmes, community notices and anything with one date and one place to remember.",
+  "tone": "light",
+  "type": "editorial",
+  "types": [
+    "garamond",
+    "fatface",
+    "story",
+    "maru",
+    "yeonsung",
+    "typewriter",
+    "slab",
+    "myeongjo",
+    "news"
+  ],
+  "defaultPalette": "post",
+  "palettes": {
+    "post": {
+      "bg": "#ece3cf",
+      "ink": "#18264a",
+      "accent": "#c4302b",
+      "colors": [
+        "#c4302b",
+        "#3b6cb4",
+        "#fbf6ea"
+      ]
+    },
+    "olive": {
+      "bg": "#e3e0d2",
+      "ink": "#2a2f17",
+      "accent": "#a8481f",
+      "colors": [
+        "#b4522a",
+        "#cf9b27",
+        "#f7f4ea"
+      ]
+    },
+    "rose": {
+      "bg": "#f0d6d0",
+      "ink": "#4a1426",
+      "accent": "#b03459",
+      "colors": [
+        "#c2476b",
+        "#7c987c",
+        "#fcf3ee"
+      ]
+    },
+    "kraft": {
+      "bg": "#c9a77c",
+      "ink": "#17120e",
+      "accent": "#8a1a12",
+      "colors": [
+        "#b3271e",
+        "#efe2c6",
+        "#f8f0de"
+      ]
+    },
+    "night": {
+      "bg": "#131c33",
+      "ink": "#f2ead8",
+      "accent": "#f0705a",
+      "colors": [
+        "#e4553f",
+        "#7db2e0",
+        "#f5eedc"
+      ]
+    }
+  },
+  "params": {
+    "motif": {
+      "default": "single",
+      "note": "single | sheet | airmail"
+    },
+    "vignette": {
+      "default": "auto",
+      "note": "the little picture on the stamp: auto (seeded) | sea (a disc over three wavy bands) | hills (two hills and a small disc) | sprig (a sprig of five leaves) | arcs (three arches on a line). In a sheet it is the first stamp's; the others follow in a seeded order"
+    },
+    "orient": {
+      "default": "auto",
+      "note": "the stamps: auto (whichever fills the room best; a single stamp prefers upright) | portrait (4 : 5) | landscape (5 : 4)"
+    },
+    "tilt": {
+      "default": "",
+      "note": "degrees the stamp or the block is turned (the direction is seeded); empty = a few degrees, 0 = square to the page. The postmark keeps its own 12°"
+    }
+  },
+  "motifs": {
+    "single": {
+      "note": "one large stamp turned 2–4°: perforated edge, paper border, hairline frame, the headline as a line of small caps, the vignette in its window, the date as the denomination (03.21) with the year; a round postmark struck over its upper left corner — venue round the ring, weekday at the foot, year / date / time in the middle — with five wavy lines running off the free side",
+      "topics": [
+        "literature",
+        "culture",
+        "travel",
+        "autumn",
+        "winter"
+      ]
+    },
+    "sheet": {
+      "note": "a block of stamps still joined along their perforations (3 × 2 or 2 × 3; a strip of three or four in a long low or tall narrow room), each in another pairing of the palette's inks with another vignette, the one at the upper right torn out; the postmark is struck in the gap over its two neighbours and its lines run off through it",
+      "topics": [
+        "market",
+        "community",
+        "craft",
+        "celebration",
+        "culture"
+      ],
+      "layouts": {
+        "landscape": {
+          "layout": "left",
+          "also": [
+            "right",
+            "top",
+            "bottom",
+            "band",
+            "strip",
+            "baseline",
+            "headline"
+          ]
+        },
+        "portrait": {
+          "layout": "top",
+          "also": [
+            "bottom",
+            "side",
+            "corners",
+            "axis",
+            "baseline"
+          ]
+        },
+        "square": {
+          "layout": "left",
+          "also": [
+            "bottom",
+            "top"
+          ]
+        }
+      }
+    },
+    "airmail": {
+      "note": "the corner of an airmail envelope: a band of slanted stripes in the two inks along the top and down the outer side, the stamp in the corner they make, the postmark on its inner edge with the lines running into the envelope, and a plain rectangle label reading PAR AVION (항공우편 for Korean copy)",
+      "topics": [
+        "travel",
+        "literature",
+        "celebration",
+        "winter",
+        "community"
+      ],
+      "layouts": {
+        "landscape": {
+          "layout": "left",
+          "also": [
+            "right",
+            "top",
+            "bottom",
+            "strip",
+            "baseline",
+            "headline"
+          ]
+        },
+        "portrait": {
+          "layout": "bottom",
+          "also": [
+            "top",
+            "corners",
+            "baseline"
+          ]
+        },
+        "square": {
+          "layout": "bottom",
+          "also": [
+            "left"
+          ]
+        }
+      },
+      "grounds": [
+        "haze"
+      ]
+    }
+  },
+  "topics": [
+    "travel",
+    "literature",
+    "culture",
+    "market",
+    "community",
+    "autumn",
+    "winter",
+    "celebration",
+    "craft"
+  ],
+  "layouts": {
+    "landscape": {
+      "layout": "left",
+      "also": [
+        "right",
+        "top",
+        "bottom",
+        "strip",
+        "baseline",
+        "headline"
+      ]
+    },
+    "portrait": {
+      "layout": "top",
+      "also": [
+        "bottom",
+        "side",
+        "corners",
+        "axis",
+        "baseline"
+      ]
+    },
+    "square": {
+      "layout": "left",
+      "also": [
+        "bottom",
+        "top"
+      ]
+    }
+  },
+  "grounds": [
+    "haze",
+    "pattern/grid",
+    "flowfield/threads"
+  ]
+}

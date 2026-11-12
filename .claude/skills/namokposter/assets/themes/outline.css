@@ -1,0 +1,19 @@
+/* outline — the experimental outline display of Korean independent graphic design (art-book-fair and club posters, riso prints with a slipped second colour): a hollow headline that lets the picture through, its emphasised word printed solid. Faces: Black Han Sans for Hangul and Archivo ExtraBold for Latin, drawn as outlines; Pretendard for the details. */
+.poster[data-type="outline"] {
+  --font-title: "Archivo", "Black Han Sans", "Pretendard", sans-serif; --font-title-ko: "Archivo KR", "Black Han Sans", "Pretendard", sans-serif;
+  --title-size: 12; --title-weight: 800; --title-leading: 1.02; --title-tracking: 0em; --title-fit-max: 1.3;
+  --title-leading-ko: 1.16; --title-tracking-ko: 0.01em; --title-wordspace-ko: 0.04em; --title-weight-ko: 800;
+  --eyebrow-size: 1.4; --eyebrow-weight: 600; --eyebrow-tracking: 0.18em; --eyebrow-tracking-ko: 0.08em;
+  --subtitle-size: 2.8; --subtitle-weight: 500; --subtitle-leading: 1.36; --subtitle-weight-ko: 500;
+  --body-size: 1.8; --body-weight: 400; --body-weight-ko: 450;
+  --footer-size: 1.44; --footer-weight: 500; --footer-tracking: 0.06em; --footer-rule: 1; --grain: 0.16;
+  --gap-eyebrow: 2.6; --gap-subtitle: 2.8;
+}
+/* the letters are drawn as a line round their shape; the emphasised word is the one printed solid, in the accent colour */
+.poster[data-type="outline"] .title { color: transparent; -webkit-text-stroke: 0.024em var(--c-ink); paint-order: stroke fill; }
+.poster[data-type="outline"] .title em { color: var(--c-accent); -webkit-text-stroke-color: var(--c-accent); }
+.poster[data-type="outline"] .eyebrow { color: var(--c-ink); border: calc(var(--u) * 0.13) solid currentColor; border-radius: 99em; padding: 0.56em 1.2em; line-height: 1.1; }
+.poster[data-type="outline"] .subtitle { color: var(--c-ink); }
+.poster[data-type="outline"] .cta { background: transparent; color: var(--c-ink); border: calc(var(--u) * 0.13) solid var(--c-ink); font-weight: 600; }
+.poster[data-type="outline"] .badge { background: transparent; color: var(--c-accent); border: calc(var(--u) * 0.13) solid var(--c-accent); }
+.poster[data-type="outline"] .bottom.ruled { border-top-color: var(--c-ink); border-top-width: calc(var(--u) * 0.13); }

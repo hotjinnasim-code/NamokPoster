@@ -1,0 +1,176 @@
+{
+  "id": "pointcloud",
+  "label": "Point Cloud Stipple",
+  "engine": "three",
+  "kind": "object",
+  "mood": "a form drawn only with dots — a surface sampled into tens of thousands of points whose size and density follow the light: ink stippling like an engraving on a pale sheet, or a luminous 3D scan on black. Precise, quiet, scientific. Good for science and research, architecture and design talks, museums and exhibitions, tech launches, craft and heritage programmes.",
+  "tone": "light",
+  "type": "swiss",
+  "types": [
+    "editorial",
+    "slim",
+    "plex",
+    "techno",
+    "garamond"
+  ],
+  "defaultPalette": "engraving",
+  "palettes": {
+    "engraving": {
+      "bg": "#f3efe6",
+      "ink": "#16171c",
+      "accent": "#c2412d",
+      "colors": [
+        "#16192a",
+        "#3b4766",
+        "#c2412d"
+      ]
+    },
+    "sepia": {
+      "bg": "#efe5d3",
+      "ink": "#2b1d12",
+      "accent": "#9c3d1c",
+      "colors": [
+        "#2e1c10",
+        "#7a4a26",
+        "#b8642e"
+      ]
+    },
+    "cobalt": {
+      "bg": "#eef1f6",
+      "ink": "#0f1d40",
+      "accent": "#e0482b",
+      "colors": [
+        "#0e2a8a",
+        "#2f6bd8",
+        "#e0482b"
+      ]
+    },
+    "scan": {
+      "bg": "#05070d",
+      "ink": "#eef6ff",
+      "accent": "#59f0ff",
+      "colors": [
+        "#1c3a9e",
+        "#2fb5ff",
+        "#d4fcff"
+      ]
+    },
+    "ember": {
+      "bg": "#0c0807",
+      "ink": "#fff2e6",
+      "accent": "#ffb15c",
+      "colors": [
+        "#7a1f1a",
+        "#ff6a3d",
+        "#ffe3b8"
+      ]
+    }
+  },
+  "params": {
+    "motif": {
+      "default": "knot",
+      "note": "knot | terrain | vase | shell — the form the dots describe"
+    },
+    "dot": {
+      "default": 1.0,
+      "note": "dot spacing and size (0.4 = fine engraving … 2.5 = coarse)"
+    },
+    "contrast": {
+      "default": 1.0,
+      "note": "how hard the light sorts the dots (0.3 = soft … 2 = graphic)"
+    },
+    "contour": {
+      "default": 1.0,
+      "note": "extra dots along the silhouettes, 0 = none"
+    },
+    "color": {
+      "default": 1.0,
+      "note": "0 = one ink (pale grounds) … 1 = palette colours for shadow and mid-tone dots"
+    }
+  },
+  "layouts": {
+    "landscape": {
+      "layout": "left",
+      "also": [
+        "right",
+        "top",
+        "bottom",
+        "corners",
+        "headline",
+        "baseline",
+        "vertical",
+        "axis",
+        "band",
+        "strip"
+      ]
+    },
+    "portrait": {
+      "layout": "top",
+      "also": [
+        "bottom",
+        "corners",
+        "baseline",
+        "vertical",
+        "axis",
+        "side"
+      ]
+    },
+    "square": {
+      "layout": "top",
+      "also": [
+        "bottom",
+        "corners",
+        "baseline",
+        "vertical",
+        "axis",
+        "left",
+        "right"
+      ]
+    }
+  },
+  "motifs": {
+    "knot": {
+      "note": "a torus-knot sculpture in stipple",
+      "topics": [
+        "science",
+        "tech",
+        "design",
+        "education"
+      ]
+    },
+    "terrain": {
+      "note": "a block of mountain terrain cut out like a scan specimen, strata on its walls",
+      "topics": [
+        "outdoor",
+        "nature",
+        "travel",
+        "science"
+      ]
+    },
+    "vase": {
+      "note": "an amphora-like vessel standing on its stippled shadow",
+      "topics": [
+        "art",
+        "culture",
+        "craft",
+        "tradition"
+      ]
+    },
+    "shell": {
+      "note": "a conical sea shell winding up to its tip",
+      "topics": [
+        "nature",
+        "science",
+        "summer",
+        "literature"
+      ]
+    }
+  },
+  "topics": [
+    "science",
+    "tech",
+    "art",
+    "design",
+    "architecture"
+  ]
+}
